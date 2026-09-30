@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Carvit 백서</title>
 <meta name="description" content="모델 크기가 아니라 출력 형식과 가드레일이 자율 코드 수정의 성패를 가른다는 실측. Upstage Solar-pro4와 Llama 3.3 70B로 측정했습니다.">
+<link rel="canonical" href="https://carvit.ai/ko/">
+<link rel="alternate" hreflang="en" href="https://carvit.ai/">
+<link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/">
+<link rel="alternate" hreflang="x-default" href="https://carvit.ai/">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
@@ -93,10 +97,12 @@
     for (var i = 0; i < links.length; i++) {
       links[i].addEventListener('click', function () { localStorage.setItem(KEY, this.getAttribute('data-lang')); });
     }
-    var here = document.documentElement.lang;
-    var saved = localStorage.getItem(KEY);
-    var want = saved || ((navigator.language || 'en').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en');
-    if (!saved && want !== here && !location.hash) { location.replace(document.querySelector('a.lang').getAttribute('href')); }
+    // 자동 이동은 영문 첫 화면(/)에서만, 한국어를 고른 적이 있거나 브라우저 언어가 한국어일 때. /ko/ 직접 접속은 절대 이동하지 않는다(검색 로봇·공유 링크 보호).
+    if (document.documentElement.lang === 'en' && !location.hash) {
+      var saved = localStorage.getItem(KEY);
+      var want = saved || ((navigator.language || 'en').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en');
+      if (want === 'ko') { location.replace(document.querySelector('a.lang').getAttribute('href')); }
+    }
   } catch (e) {}
 })();
 </script>
