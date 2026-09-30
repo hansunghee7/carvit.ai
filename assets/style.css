@@ -63,6 +63,7 @@ header.hero{padding-block:clamp(48px,7vw,96px) clamp(64px,8vw,96px)}
 :lang(ko) .sect h2{max-width:22ch;letter-spacing:-0.035em;line-height:1.18}
 .sect .lead{font-size:clamp(16px,1.3vw,19px);max-width:62ch;margin:0 0 var(--sp-6)}
 .sect .note,.repro{font-size:14px;color:var(--muted-foreground);max-width:72ch}
+.pull{font-size:clamp(18px,1.6vw,22px);line-height:1.5;margin:0 0 var(--sp-6);padding-left:var(--sp-6);border-left:3px solid var(--foreground);max-width:62ch}
 .sub-h{font-size:18px;font-weight:600;margin:var(--sp-12) 0 var(--sp-4)}
 .cases{padding-left:var(--sp-6);max-width:72ch;margin:0}
 .cases li{margin-bottom:var(--sp-4)}
