@@ -9,15 +9,32 @@
 <link rel="alternate" hreflang="en" href="https://carvit.ai/">
 <link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/">
 <link rel="alternate" hreflang="x-default" href="https://carvit.ai/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Carvit">
+<meta property="og:title" content="Carvit makes AI code fixes provable">
+<meta property="og:description" content="How output format and guardrails, not model size, decided whether autonomous code repair worked. Measured on Upstage Solar-pro4 and Llama 3.3 70B.">
+<meta property="og:url" content="https://carvit.ai/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:image" content="https://carvit.ai/assets/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Carvit White Paper: a range patch turned the duplicate-function target from 0/4 into 4/4">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Carvit makes AI code fixes provable">
+<meta name="twitter:description" content="How output format and guardrails, not model size, decided whether autonomous code repair worked. Measured on Upstage Solar-pro4 and Llama 3.3 70B.">
+<meta name="twitter:image" content="https://carvit.ai/assets/og-en.png">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<header class="hero">
-  <div class="page">
+<div class="site-nav"><div class="page">
     <nav class="top" aria-label="Primary">
       <a class="brand" href="./"><span class="nowrap">Carvit</span></a>
       <div class="links"><a href="#how">How it works</a><a href="#results">Results</a><a href="#limits">Limits</a><a class="lang" href="ko/" data-lang="ko">한국어</a></div>
     </nav>
+</div></div>
+<header class="hero">
+  <div class="page">
     <h1><span class="nowrap">Carvit</span> makes AI code fixes provable.</h1>
     <p class="sub">White paper: how the output format and guardrails, not model size, decided whether autonomous code repair worked. Measured on Upstage Solar-pro4 and Llama 3.3 70B.</p>
     <div class="actions"><a class="btn" href="#results">Read the results</a><a class="btn ghost lang" href="ko/" data-lang="ko">한국어</a></div>
@@ -45,6 +62,10 @@
   </div>
 </header>
 <main>
+<section class="sect alt" id="origin"><div class="page narrow">
+  <h2>Background and origin</h2>
+  <p class="lead">This paper began as a maintenance chore. We wanted a local model to take over a repetitive job, fixing lint errors in small Python files, so that a more expensive agent would not have to. The first runs looked like successes: the linter reported zero errors. Then we compared the files. A docstring had vanished, a function call was gone, a function body had attached itself to the function above. Every one of those passed the linter.</p><p class="lead">That changed the question. It stopped being which model is best and became what has to stand between a model and a file, so that a passing score means the code is still correct. The answer we measured is in the sections below: a narrow output format, and guards written as code.</p><p class="lead">It is also our position on agents in general: reliability comes from a strict output format, guardrails and deterministic verification, not from model size alone. Two models and four small targets do not prove that position, so this paper reports what we measured and what we did not.</p>
+</div></section>
 <section class="sect" id="problem"><div class="page">
   <h2>Passing lint is not the same as staying correct.</h2>
   <p class="lead">We asked two models to fix lint errors in small Python files and scored them with a linter. Three failure shapes passed the linter while damaging the code:</p>

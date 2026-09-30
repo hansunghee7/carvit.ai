@@ -9,15 +9,32 @@
 <link rel="alternate" hreflang="en" href="https://carvit.ai/">
 <link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/">
 <link rel="alternate" hreflang="x-default" href="https://carvit.ai/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Carvit">
+<meta property="og:title" content="Carvit은 AI 코드 수정을 증명 가능하게 만듭니다">
+<meta property="og:description" content="모델 크기가 아니라 출력 형식과 가드레일이 자율 코드 수정의 성패를 가른다는 실측. Upstage Solar-pro4와 Llama 3.3 70B로 측정했습니다.">
+<meta property="og:url" content="https://carvit.ai/ko/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://carvit.ai/assets/og-ko.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Carvit 백서: 범위 패치가 중복 함수 타겟을 0/4에서 4/4로 바꿨다">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Carvit은 AI 코드 수정을 증명 가능하게 만듭니다">
+<meta name="twitter:description" content="모델 크기가 아니라 출력 형식과 가드레일이 자율 코드 수정의 성패를 가른다는 실측. Upstage Solar-pro4와 Llama 3.3 70B로 측정했습니다.">
+<meta name="twitter:image" content="https://carvit.ai/assets/og-ko.png">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
 <body>
-<header class="hero">
-  <div class="page">
+<div class="site-nav"><div class="page">
     <nav class="top" aria-label="Primary">
       <a class="brand" href="./"><span class="nowrap">Carvit</span></a>
       <div class="links"><a href="#how">작동 방식</a><a href="#results">결과</a><a href="#limits">한계</a><a class="lang" href="../" data-lang="en">English</a></div>
     </nav>
+</div></div>
+<header class="hero">
+  <div class="page">
     <h1><span class="nowrap">Carvit</span>은 AI 코드 수정을 증명 가능하게 만듭니다.</h1>
     <p class="sub">백서: 모델 크기가 아니라 출력 형식과 가드레일이 자율 코드 수정의 성패를 가른다는 실측입니다. Upstage Solar-pro4와 Llama 3.3 70B로 측정했습니다.</p>
     <div class="actions"><a class="btn" href="#results">결과 보기</a><a class="btn ghost lang" href="../" data-lang="en">English</a></div>
@@ -45,6 +62,10 @@
   </div>
 </header>
 <main>
+<section class="sect alt" id="origin"><div class="page narrow">
+  <h2>Carvit은 어떻게 시작되었는가</h2>
+  <p class="lead">이 백서는 잡무에서 시작됐습니다. 작은 파이썬 파일의 린트 오류를 고치는 반복 작업을 로컬 모델에게 넘겨서, 더 비싼 에이전트가 그 일을 하지 않아도 되게 하고 싶었습니다. 처음 결과는 성공처럼 보였습니다. 린터가 오류 0건이라고 했기 때문입니다. 그런데 파일을 비교해 보니 docstring이 사라져 있었고, 함수 호출이 빠져 있었고, 함수 본문이 위 함수에 붙어 있었습니다. 전부 린터를 통과한 결과였습니다.</p><p class="lead">그 뒤로 질문이 바뀌었습니다. 어느 모델이 가장 좋은가가 아니라, 통과 점수가 곧 코드가 멀쩡하다는 뜻이 되려면 모델과 파일 사이에 무엇이 서 있어야 하는가였습니다. 우리가 잰 답이 아래 섹션에 있습니다. 좁힌 출력 형식과, 코드로 쓴 가드입니다.</p><p class="lead">이것은 에이전트 전반에 대한 우리의 입장이기도 합니다. 신뢰성은 모델 크기만으로 생기지 않고, 엄격한 출력 형식과 가드레일, 결정적인 검증에서 나온다는 것입니다. 모델 두 개와 작은 타겟 네 개로 이 입장을 증명할 수는 없으므로, 이 백서는 우리가 잰 것과 재지 못한 것을 그대로 적습니다.</p>
+</div></section>
 <section class="sect" id="problem"><div class="page">
   <h2>린트를 통과했다고 코드가 멀쩡한 것은 아닙니다.</h2>
   <p class="lead">두 모델에게 작은 파이썬 파일의 린트 오류를 고치게 하고 린터로 채점했습니다. 린터는 통과하지만 코드를 망가뜨리는 실패가 세 가지 나왔습니다.</p>

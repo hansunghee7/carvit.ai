@@ -13,7 +13,7 @@
   --hero-bg:oklch(0.13 0 0); --hero-fg:oklch(0.96 0 0); --hero-muted:oklch(0.78 0 0); --hero-line:oklch(1 0 0 / .05);
 }
 *{box-sizing:border-box}
-html{color-scheme:light;scroll-behavior:smooth}
+html{color-scheme:light;scroll-behavior:smooth;scroll-padding-top:var(--sp-16)}
 body{margin:0;background:var(--background);color:var(--foreground);font-family:var(--font-sans),'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
 a{color:var(--foreground)}
 code,pre,.stat{font-family:var(--font-mono),ui-monospace,Consolas,monospace}
@@ -25,9 +25,12 @@ code{background:var(--muted);border:1px solid var(--border);border-radius:6px;pa
 /* 히어로: 어두운 바탕 + 48px 격자 (가이드 1.37) */
 .hero{background:var(--hero-bg);color:var(--hero-fg);
   background-image:linear-gradient(var(--hero-line) 1px,transparent 1px),linear-gradient(90deg,var(--hero-line) 1px,transparent 1px);background-size:48px 48px}
-header.hero{padding-block:var(--sp-6) clamp(64px,8vw,96px)}
+header.hero{padding-block:clamp(48px,7vw,96px) clamp(64px,8vw,96px)}
 .hero a{color:var(--hero-fg)}
-.top{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-4);padding-block:var(--sp-2) clamp(48px,7vw,96px)}
+/* 고정 상단 메뉴: 본문이 비쳐 글자가 겹쳐 보이지 않도록 반투명 배경 + 흐림 */
+.site-nav{position:sticky;top:0;z-index:100;background:color-mix(in oklch,var(--hero-bg) 94%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--hero-line)}
+.site-nav a{color:var(--hero-fg)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-4);padding-block:var(--sp-3)}
 .brand{font-weight:600;font-size:18px;text-decoration:none;letter-spacing:-0.035em}
 .links{display:flex;flex-wrap:wrap;gap:var(--sp-2) var(--sp-6);font-size:14px}
 .links a{text-decoration:none;color:var(--hero-muted)}
@@ -101,4 +104,5 @@ header.hero{padding-block:var(--sp-6) clamp(64px,8vw,96px)}
 .cta-band h2{font-size:clamp(40px,5.5vw,72px);line-height:1.08;letter-spacing:-0.035em;max-width:18ch;margin:0 0 var(--sp-4);font-weight:600;word-break:keep-all}
 .foot{background:var(--background);border-top:1px solid var(--border);padding-block:var(--sp-6);font-size:14px;color:var(--muted-foreground)}
 .foot p{margin:0}
+@media (max-width:600px){.links{gap:var(--sp-4)}.links a[href="#limits"]{display:none}}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
