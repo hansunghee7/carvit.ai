@@ -1,0 +1,104 @@
+/* Carvit 백서 스타일. 값은 Carvit 가이드 1.34(흑백 정갈, Geist)와 1.37(홈 구성)의 토큰만 쓴다. 라이트 고정, 강조색 없음. */
+@font-face{font-family:'Geist';src:url(https://cdn.jsdelivr.net/npm/geist@1/dist/fonts/geist-sans/Geist-Variable.woff2) format('woff2')}
+@font-face{font-family:'Geist Mono';src:url(https://cdn.jsdelivr.net/npm/geist@1/dist/fonts/geist-mono/GeistMono-Variable.woff2) format('woff2')}
+:root{
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-6:24px; --sp-12:48px; --sp-16:64px; --sp-24:96px;
+  --radius:0.625rem;
+  --background:oklch(1 0 0); --foreground:oklch(0.145 0 0); --card:oklch(1 0 0);
+  --muted:oklch(0.97 0 0); --muted-foreground:oklch(0.556 0 0);
+  --primary:oklch(0.205 0 0); --primary-foreground:oklch(0.985 0 0);
+  --border:oklch(0.922 0 0); --ring:oklch(0.708 0 0); --destructive:oklch(0.577 0.245 27.325);
+  --font-sans:'Geist',ui-sans-serif,system-ui,sans-serif;
+  --font-mono:'Geist Mono',ui-monospace,monospace;
+  --hero-bg:oklch(0.13 0 0); --hero-fg:oklch(0.96 0 0); --hero-muted:oklch(0.78 0 0); --hero-line:oklch(1 0 0 / .05);
+}
+*{box-sizing:border-box}
+html{color-scheme:light;scroll-behavior:smooth}
+body{margin:0;background:var(--background);color:var(--foreground);font-family:var(--font-sans),'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:var(--foreground)}
+code,pre,.stat{font-family:var(--font-mono),ui-monospace,Consolas,monospace}
+code{background:var(--muted);border:1px solid var(--border);border-radius:6px;padding:0 var(--sp-1);overflow-wrap:anywhere}
+.nowrap{white-space:nowrap}
+.page{max-width:1200px;margin-inline:auto;padding-inline:clamp(16px,4vw,32px)}
+.page.narrow{max-width:760px}
+
+/* 히어로: 어두운 바탕 + 48px 격자 (가이드 1.37) */
+.hero{background:var(--hero-bg);color:var(--hero-fg);
+  background-image:linear-gradient(var(--hero-line) 1px,transparent 1px),linear-gradient(90deg,var(--hero-line) 1px,transparent 1px);background-size:48px 48px}
+header.hero{padding-block:var(--sp-6) clamp(64px,8vw,96px)}
+.hero a{color:var(--hero-fg)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-4);padding-block:var(--sp-2) clamp(48px,7vw,96px)}
+.brand{font-weight:600;font-size:18px;text-decoration:none;letter-spacing:-0.035em}
+.links{display:flex;flex-wrap:wrap;gap:var(--sp-2) var(--sp-6);font-size:14px}
+.links a{text-decoration:none;color:var(--hero-muted)}
+.links a:hover,.links a:focus-visible{color:var(--hero-fg);text-decoration:underline}
+.hero h1{font-size:clamp(40px,6.5vw,88px);line-height:1.02;letter-spacing:-0.045em;max-width:14ch;margin:0 0 var(--sp-6);font-weight:600;word-break:keep-all}
+:lang(ko) .hero h1{max-width:16ch;line-height:1.12;letter-spacing:-0.035em}
+.hero .sub{font-size:clamp(18px,1.6vw,22px);max-width:40ch;color:var(--hero-muted);margin:0 0 var(--sp-6)}
+:lang(ko) .hero .sub{max-width:44ch}
+.actions{display:flex;flex-wrap:wrap;gap:var(--sp-3);margin-bottom:var(--sp-4)}
+.btn{display:inline-block;padding:var(--sp-3) var(--sp-6);border-radius:var(--radius);border:1px solid transparent;font-size:16px;font-weight:600;text-decoration:none;background:var(--primary);color:var(--primary-foreground)}
+.hero .btn{background:var(--hero-fg);color:var(--hero-bg)}
+.hero .btn.ghost{background:transparent;color:var(--hero-fg);border-color:oklch(0.4 0 0)}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+.meta{font-size:14px;color:var(--hero-muted);margin:0 0 var(--sp-12)}
+.demo{max-width:1040px;margin-inline:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(480px,100%),1fr));gap:var(--sp-4);margin-top:var(--sp-12)}
+.demo + .meta{margin:var(--sp-4) 0 0;text-align:center}
+.term{background:oklch(0.17 0 0);border:1px solid oklch(0.3 0 0);border-radius:var(--radius);padding:var(--sp-4) var(--sp-4) var(--sp-2);overflow:hidden;min-width:0}
+.term-h{font-size:14px;color:var(--hero-muted);margin-bottom:var(--sp-3);font-weight:600}
+.term pre.cmd{white-space:pre;overflow-x:auto;margin:0 0 var(--sp-3);font-size:14px;line-height:1.5;color:var(--hero-fg)}
+.term .ln{display:flex;flex-wrap:wrap;gap:var(--sp-2) var(--sp-3);align-items:baseline;font-size:14px;line-height:1.55;margin:0 0 var(--sp-3);color:var(--hero-muted);min-width:0}
+.term .ln code{background:transparent;border:0;padding:0;color:var(--hero-fg);white-space:pre;overflow-x:auto;max-width:100%}
+.term .k{flex:none;min-width:56px;font-weight:600;color:var(--hero-fg)}
+.term .k.bad{text-decoration:underline wavy var(--destructive);text-underline-offset:4px}
+.term .k.ok{text-decoration:underline;text-underline-offset:4px}
+
+/* 섹션 */
+.sect{padding-block:clamp(64px,9vw,128px)}
+.sect.alt{background:var(--muted)}
+.sect h2{font-size:clamp(32px,4vw,56px);line-height:1.08;letter-spacing:-0.035em;max-width:20ch;margin:0 0 var(--sp-6);font-weight:600;word-break:keep-all}
+:lang(ko) .sect h2{max-width:22ch;letter-spacing:-0.035em;line-height:1.18}
+.sect .lead{font-size:clamp(16px,1.3vw,19px);max-width:62ch;margin:0 0 var(--sp-6)}
+.sect .note,.repro{font-size:14px;color:var(--muted-foreground);max-width:72ch}
+.sub-h{font-size:18px;font-weight:600;margin:var(--sp-12) 0 var(--sp-4)}
+.cases{padding-left:var(--sp-6);max-width:72ch;margin:0}
+.cases li{margin-bottom:var(--sp-4)}
+.bento{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:var(--sp-4);margin-top:var(--sp-6)}
+.bento.four{grid-template-columns:1fr}
+@media (min-width:600px){.bento.four{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1200px){.bento.four{grid-template-columns:repeat(4,1fr)}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:var(--sp-6)}
+.card h3{font-size:18px;margin:var(--sp-3) 0 var(--sp-2);font-weight:600}
+.card p{margin:0;font-size:14px;color:var(--muted-foreground)}
+.card .num{width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--primary-foreground);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px}
+.card.big .stat{font-size:24px;line-height:1.1;letter-spacing:-0.035em;font-weight:600;margin-bottom:var(--sp-3);white-space:nowrap}
+:lang(ko) .card.big .stat{font-family:var(--font-sans),'Apple SD Gothic Neo','Malgun Gothic',sans-serif}
+
+/* 막대 차트: 값과 단위를 글자로 보인다. 가로 막대라 좁은 폭에서도 잘리지 않는다 (가이드 1.36) */
+.chart{margin-top:var(--sp-4);max-width:760px}
+.axis{display:flex;justify-content:space-between;font-size:12px;color:var(--muted-foreground);border-bottom:1px solid var(--border);padding-bottom:var(--sp-1);margin-bottom:var(--sp-3)}
+.bar-row{margin-bottom:var(--sp-6)}
+.bar-label{font-size:14px;font-weight:600;margin-bottom:var(--sp-2)}
+.bar-line{background:var(--muted);border-radius:6px;margin-bottom:var(--sp-2);overflow:hidden}
+.bar{min-width:fit-content;border-radius:6px;padding:var(--sp-1) var(--sp-3);font-size:14px;white-space:nowrap}
+.bar.before{background:var(--ring);color:var(--foreground)}
+.bar.after{background:var(--primary);color:var(--primary-foreground)}
+
+/* 표 (가이드 1.36: 좁은 폭에서 열을 자르지 않고 한 행을 두 줄로) */
+.tbl{width:100%;border-collapse:collapse;font-size:14px;margin-top:var(--sp-2)}
+.tbl th,.tbl td{text-align:left;padding:var(--sp-3);border-bottom:1px solid var(--border);vertical-align:top}
+.tbl thead th{font-size:12px;color:var(--muted-foreground);font-weight:600}
+.tbl th.name{font-weight:600}
+@media (max-width:600px){
+  .tbl thead{position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip-path:inset(50%)}
+  .tbl tr{display:block;padding:var(--sp-3) 0;border-bottom:1px solid var(--border)}
+  .tbl th,.tbl td{display:block;border:0;padding:var(--sp-1) 0}
+  .tbl td::before{content:attr(data-label) ': ';color:var(--muted-foreground);font-size:12px;display:block}
+}
+.limits{padding-left:var(--sp-6);max-width:72ch;margin:0}
+.limits li{margin-bottom:var(--sp-3)}
+.cta-band{padding-block:clamp(64px,9vw,128px)}
+.cta-band h2{font-size:clamp(40px,5.5vw,72px);line-height:1.08;letter-spacing:-0.035em;max-width:18ch;margin:0 0 var(--sp-4);font-weight:600;word-break:keep-all}
+.foot{background:var(--background);border-top:1px solid var(--border);padding-block:var(--sp-6);font-size:14px;color:var(--muted-foreground)}
+.foot p{margin:0}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
