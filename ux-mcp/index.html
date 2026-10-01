@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carvit UX MCP</title>
+<meta name="description" content="Connect your company's UX guide to AI coding tools. They look up the sections they need and record what they used.">
+<link rel="canonical" href="https://carvit.ai/ux-mcp/">
+<link rel="alternate" hreflang="en" href="https://carvit.ai/ux-mcp/">
+<link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/ux-mcp/">
+<link rel="alternate" hreflang="x-default" href="https://carvit.ai/ux-mcp/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Carvit">
+<meta property="og:title" content="Carvit UX MCP">
+<meta property="og:description" content="Connect your company's UX guide to AI coding tools. They look up the sections they need and record what they used.">
+<meta property="og:url" content="https://carvit.ai/ux-mcp/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:image" content="https://carvit.ai/assets/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Carvit UX MCP">
+<meta name="twitter:description" content="Connect your company's UX guide to AI coding tools. They look up the sections they need and record what they used.">
+<meta name="twitter:image" content="https://carvit.ai/assets/og-en.png">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="site-nav"><div class="page">
+    <nav class="top" aria-label="Primary">
+      <a class="brand" href="/"><span class="nowrap">Carvit</span></a>
+      <div class="links"><a href="/ux-mcp/" aria-current="page"><span class="nowrap">UX MCP</span></a><a href="/tech-report/"><span class="nowrap">Tech Report</span></a><a class="lang" href="/ko/ux-mcp/" data-lang="ko">한국어</a><a class="login" href="https://saegim-mcp-175301711490.asia-northeast3.run.app/login">Log in</a></div>
+    </nav>
+</div></div>
+<nav class="subnav" aria-label="UX MCP"><div class="page"><div class="tabs"><a class="tab" href="/ux-mcp/" aria-current="page">Overview</a><a class="tab" href="https://saegim-mcp-175301711490.asia-northeast3.run.app/login">Dashboard</a><a class="tab" href="https://saegim-mcp-175301711490.asia-northeast3.run.app/login">Guide</a><a class="tab" href="https://saegim-mcp-175301711490.asia-northeast3.run.app/login">Versions</a><a class="tab" href="https://saegim-mcp-175301711490.asia-northeast3.run.app/login">Keys</a><a class="tab" href="https://saegim-mcp-175301711490.asia-northeast3.run.app/login">Settings</a></div></div></nav>
+<header class="pagehead">
+  <div class="page">
+    <h1><span class="nowrap">Carvit UX MCP</span></h1>
+    <p class="sub">Connect your company's UX guide to AI coding tools. They look up the sections they need and record what they used.</p>
+  </div>
+</header>
+<main>
+<section class="sect alt" id="tools"><div class="page">
+  <h2>What your AI tool gets.</h2>
+  <p class="lead">Five tools it can call:</p>
+  <ul class="tools"><li><code>lookup</code> Finds up to a few sections for a topic and returns their text.</li><li><code>get_section</code> Reads one section by its number.</li><li><code>list_sections</code> Lists every section, for when a search finds nothing.</li><li><code>cite</code> Records that a section changed the work, with a one-line reason.</li><li><code>usage</code> Counts views, citations and searches that found nothing, by day and by person.</li></ul>
+</div></section>
+<section class="sect" id="connect"><div class="page">
+  <h2>Connect it.</h2>
+  <p class="lead">Paste this command into your terminal. You receive the address and the secret key in your sign-up email.</p>
+  <div class="term big"><pre class="cmd">claude mcp add --transport http carvit &lt;address&gt; --scope user --header "Authorization: Bearer &lt;company code&gt;:&lt;secret key&gt;"</pre></div>
+</div></section>
+<section class="sect" id="limits"><div class="page">
+  <h2>What it does not do.</h2>
+  <p class="lead">Search matches words in section titles and text, not meaning. When nothing matches, the answer is empty, the search is recorded as a miss, and the full section list is the fallback.</p>
+</div></section>
+<section class="cta-band alt"><div class="page">
+  <h2>Already connected?</h2>
+  <p class="sub">Log in to see usage, the guide, and your keys.</p>
+  <div class="actions"><a class="btn" href="https://saegim-mcp-175301711490.asia-northeast3.run.app/login">Log in</a></div>
+</div></section>
+</main>
+<footer class="foot"><div class="page"><p>Carvit · tam@carvit.ai</p></div></footer>
+<script src="/assets/site.js"></script>
+</body>
+</html>

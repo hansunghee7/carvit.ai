@@ -28,12 +28,12 @@
 </head>
 <body>
 <div class="site-nav"><div class="page">
-    <nav class="top" aria-label="Primary">
+    <nav class="top" aria-label="주 메뉴">
       <a class="brand" href="/ko/"><span class="nowrap">Carvit</span></a>
-      <div class="links"><a href="#how">작동 방식</a><a href="#results">결과</a><a href="#limits">한계</a><a class="lang" href="/tech-report/white-paper/" data-lang="en">English</a></div>
+      <div class="links"><a href="/ko/ux-mcp/"><span class="nowrap">UX MCP</span></a><a href="/ko/tech-report/" aria-current="page"><span class="nowrap">Tech Report</span></a><a class="lang" href="/tech-report/white-paper/" data-lang="en">English</a><a class="login" href="https://saegim-mcp-175301711490.asia-northeast3.run.app/login">로그인</a></div>
     </nav>
 </div></div>
-<header class="hero">
+<header class="pagehead">
   <div class="page">
     <h1><span class="nowrap">Carvit</span>은 AI 코드 수정을 증명 가능하게 만듭니다.</h1>
     <p class="sub">백서: 모델 크기가 아니라 출력 형식과 가드레일이 자율 코드 수정의 성패를 가른다는 실측입니다. Upstage <span class="nowrap">Solar-pro4</span>와 <span class="nowrap">Llama 3.3 70B</span>로 측정했습니다.</p>
@@ -108,29 +108,13 @@
   <h3 class="sub-h">재현 정보</h3>
   <p class="repro">참조 구현 파일(이름 기준): <code>actor_critic_loop.py</code>(루프와 가드), <code>scripts/ops/or_ask.py</code>(OpenRouter 호출기), <code>scripts/ops/lora_validate.py</code>(오프라인 재생 검증기), <code>bench/</code>(네 타겟). 로컬 재현: <code>scripts/ops/ollama_ask.py</code>, <code>scripts/ops/bench_acl.py</code>. 모델: 로컬 <span class="nowrap">Hermes Agent</span> 런타임을 거친 Upstage <span class="nowrap">Solar-pro4</span>, OpenRouter를 거친 meta-llama/llama-3.3-70b-instruct, 우리 <span class="nowrap">RTX 4090</span>에서 Ollama로 돌린 qwen2.5-coder:14b. 린터: ruff 0.16.9. 측정일: 2026-09-30.</p>
 </div></section>
-<section class="hero cta-band"><div class="page">
+<section class="cta-band alt"><div class="page">
   <h2>질문이 있거나 직접 재현해 보고 싶으신가요?</h2>
   <p class="sub">저자에게 써 주세요. 모든 메시지를 읽고 답합니다.</p>
   <div class="actions"><a class="btn" href="mailto:tam@carvit.ai">tam@carvit.ai</a></div>
 </div></section>
 </main>
 <footer class="foot"><div class="page"><p>Carvit 백서 · 버전 1.0 · 2026-09-30</p></div></footer>
-<script>
-(function () {
-  try {
-    var KEY = 'carvit-lang';
-    var links = document.querySelectorAll('a.lang');
-    for (var i = 0; i < links.length; i++) {
-      links[i].addEventListener('click', function () { localStorage.setItem(KEY, this.getAttribute('data-lang')); });
-    }
-    // 자동 이동은 영문 첫 화면(/)에서만, 한국어를 고른 적이 있거나 브라우저 언어가 한국어일 때. /ko/ 직접 접속은 절대 이동하지 않는다(검색 로봇·공유 링크 보호).
-    if (document.documentElement.lang === 'en' && !location.hash) {
-      var saved = localStorage.getItem(KEY);
-      var want = saved || ((navigator.language || 'en').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en');
-      if (want === 'ko') { location.replace(document.querySelector('a.lang').getAttribute('href')); }
-    }
-  } catch (e) {}
-})();
-</script>
+<script src="/assets/site.js"></script>
 </body>
 </html>

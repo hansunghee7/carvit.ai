@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carvit UX MCP</title>
+<meta name="description" content="회사의 UX 가이드를 AI 코딩 도구에 연결합니다. 도구가 필요한 절을 찾아 읽고 쓴 기록을 남깁니다.">
+<link rel="canonical" href="https://carvit.ai/ko/ux-mcp/">
+<link rel="alternate" hreflang="en" href="https://carvit.ai/ux-mcp/">
+<link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/ux-mcp/">
+<link rel="alternate" hreflang="x-default" href="https://carvit.ai/ux-mcp/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Carvit">
+<meta property="og:title" content="Carvit UX MCP">
+<meta property="og:description" content="회사의 UX 가이드를 AI 코딩 도구에 연결합니다. 도구가 필요한 절을 찾아 읽고 쓴 기록을 남깁니다.">
+<meta property="og:url" content="https://carvit.ai/ko/ux-mcp/">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="https://carvit.ai/assets/og-ko.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Carvit UX MCP">
+<meta name="twitter:description" content="회사의 UX 가이드를 AI 코딩 도구에 연결합니다. 도구가 필요한 절을 찾아 읽고 쓴 기록을 남깁니다.">
+<meta name="twitter:image" content="https://carvit.ai/assets/og-ko.png">
+<link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+<div class="site-nav"><div class="page">
+    <nav class="top" aria-label="주 메뉴">
+      <a class="brand" href="/ko/"><span class="nowrap">Carvit</span></a>
+      <div class="links"><a href="/ko/ux-mcp/" aria-current="page"><span class="nowrap">UX MCP</span></a><a href="/ko/tech-report/"><span class="nowrap">Tech Report</span></a><a class="lang" href="/ux-mcp/" data-lang="en">English</a><a class="login" href="https://saegim-mcp-175301711490.asia-northeast3.run.app/login">로그인</a></div>
+    </nav>
+</div></div>
+<nav class="subnav" aria-label="UX MCP"><div class="page"><div class="tabs"><a class="tab" href="/ko/ux-mcp/" aria-current="page">소개</a><a class="tab" href="https://saegim-mcp-175301711490.asia-northeast3.run.app/login">대시보드</a><a class="tab" href="https://saegim-mcp-175301711490.asia-northeast3.run.app/login">가이드</a><a class="tab" href="https://saegim-mcp-175301711490.asia-northeast3.run.app/login">버전 기록</a><a class="tab" href="https://saegim-mcp-175301711490.asia-northeast3.run.app/login">키</a><a class="tab" href="https://saegim-mcp-175301711490.asia-northeast3.run.app/login">설정</a></div></div></nav>
+<header class="pagehead">
+  <div class="page">
+    <h1><span class="nowrap">Carvit UX MCP</span></h1>
+    <p class="sub">회사의 UX 가이드를 AI 코딩 도구에 연결합니다. 도구가 필요한 절을 찾아 읽고 쓴 기록을 남깁니다.</p>
+  </div>
+</header>
+<main>
+<section class="sect alt" id="tools"><div class="page">
+  <h2>AI 도구가 받는 것.</h2>
+  <p class="lead">호출할 수 있는 도구는 다섯 가지입니다.</p>
+  <ul class="tools"><li><code>lookup</code> 주제에 맞는 절을 몇 개 찾아 본문과 함께 돌려줍니다.</li><li><code>get_section</code> 절 번호로 한 절을 읽습니다.</li><li><code>list_sections</code> 검색이 비었을 때 전체 절 목록을 봅니다.</li><li><code>cite</code> 절을 근거로 작업을 고쳤다는 기록을 한 줄 이유와 함께 남깁니다.</li><li><code>usage</code> 조회·인용·찾지 못한 검색의 수를 날짜별, 사람별로 셉니다.</li></ul>
+</div></section>
+<section class="sect" id="connect"><div class="page">
+  <h2>연결하기.</h2>
+  <p class="lead">아래 명령어를 터미널에 붙여 넣습니다. 주소와 비밀키는 가입 메일로 받습니다.</p>
+  <div class="term big"><pre class="cmd">claude mcp add --transport http carvit &lt;주소&gt; --scope user --header "Authorization: Bearer &lt;회사 코드&gt;:&lt;비밀키&gt;"</pre></div>
+</div></section>
+<section class="sect" id="limits"><div class="page">
+  <h2>하지 못하는 것.</h2>
+  <p class="lead">검색은 의미가 아니라 절 제목과 본문의 단어가 맞는지로 찾습니다. 맞는 절이 없으면 빈 결과가 나오고, 그 검색은 찾지 못한 검색으로 기록되며, 전체 목록을 보는 쪽으로 넘어갑니다.</p>
+</div></section>
+<section class="cta-band alt"><div class="page">
+  <h2>이미 연결했나요?</h2>
+  <p class="sub">로그인하면 사용 기록, 가이드, 키를 볼 수 있습니다.</p>
+  <div class="actions"><a class="btn" href="https://saegim-mcp-175301711490.asia-northeast3.run.app/login">로그인</a></div>
+</div></section>
+</main>
+<footer class="foot"><div class="page"><p>Carvit · tam@carvit.ai</p></div></footer>
+<script src="/assets/site.js"></script>
+</body>
+</html>

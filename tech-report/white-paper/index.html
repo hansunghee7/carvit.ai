@@ -30,10 +30,10 @@
 <div class="site-nav"><div class="page">
     <nav class="top" aria-label="Primary">
       <a class="brand" href="/"><span class="nowrap">Carvit</span></a>
-      <div class="links"><a href="#how">How it works</a><a href="#results">Results</a><a href="#limits">Limits</a><a class="lang" href="/ko/tech-report/white-paper/" data-lang="ko">한국어</a></div>
+      <div class="links"><a href="/ux-mcp/"><span class="nowrap">UX MCP</span></a><a href="/tech-report/" aria-current="page"><span class="nowrap">Tech Report</span></a><a class="lang" href="/ko/tech-report/white-paper/" data-lang="ko">한국어</a><a class="login" href="https://saegim-mcp-175301711490.asia-northeast3.run.app/login">Log in</a></div>
     </nav>
 </div></div>
-<header class="hero">
+<header class="pagehead">
   <div class="page">
     <h1><span class="nowrap">Carvit</span> makes AI code fixes provable.</h1>
     <p class="sub">White paper: how the output format and guardrails, not model size, decided whether autonomous code repair worked. Measured on Upstage <span class="nowrap">Solar-pro4</span> and <span class="nowrap">Llama 3.3 70B</span>.</p>
@@ -108,29 +108,13 @@
   <h3 class="sub-h">Reproducibility</h3>
   <p class="repro">The reference implementation files, by name: <code>actor_critic_loop.py</code> (the loop and guards), <code>scripts/ops/or_ask.py</code> (OpenRouter caller), <code>scripts/ops/lora_validate.py</code> (offline replay validator), <code>bench/</code> (the four targets). Local replay: <code>scripts/ops/ollama_ask.py</code> and <code>scripts/ops/bench_acl.py</code>. Models: Upstage <span class="nowrap">Solar-pro4</span> through a local <span class="nowrap">Hermes Agent</span> runtime, meta-llama/llama-3.3-70b-instruct through OpenRouter, and qwen2.5-coder:14b through Ollama on our own <span class="nowrap">RTX 4090</span>. Linter: ruff 0.16.9. Runs were made on 2026-09-30.</p>
 </div></section>
-<section class="hero cta-band"><div class="page">
+<section class="cta-band alt"><div class="page">
   <h2>Questions, or want to reproduce this?</h2>
   <p class="sub">Write to the author. I read and answer every message.</p>
   <div class="actions"><a class="btn" href="mailto:tam@carvit.ai">tam@carvit.ai</a></div>
 </div></section>
 </main>
 <footer class="foot"><div class="page"><p>Carvit White Paper · Version 1.0 · 2026-09-30</p></div></footer>
-<script>
-(function () {
-  try {
-    var KEY = 'carvit-lang';
-    var links = document.querySelectorAll('a.lang');
-    for (var i = 0; i < links.length; i++) {
-      links[i].addEventListener('click', function () { localStorage.setItem(KEY, this.getAttribute('data-lang')); });
-    }
-    // 자동 이동은 영문 첫 화면(/)에서만, 한국어를 고른 적이 있거나 브라우저 언어가 한국어일 때. /ko/ 직접 접속은 절대 이동하지 않는다(검색 로봇·공유 링크 보호).
-    if (document.documentElement.lang === 'en' && !location.hash) {
-      var saved = localStorage.getItem(KEY);
-      var want = saved || ((navigator.language || 'en').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en');
-      if (want === 'ko') { location.replace(document.querySelector('a.lang').getAttribute('href')); }
-    }
-  } catch (e) {}
-})();
-</script>
+<script src="/assets/site.js"></script>
 </body>
 </html>
