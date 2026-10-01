@@ -82,14 +82,14 @@ header.hero > .page{width:100%}  /* flex 세로 배치에서도 글 칸의 왼�
 .term.big .ln{font-size:16px}
 .term.big pre.cmd{white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}  /* 연결 명령어는 줄을 접어 잘리지 않게 */
 .card.report{max-width:760px}
-.card.report h2{font-size:clamp(24px,2.6vw,32px);line-height:1.15;letter-spacing:-0.03em;margin:0 0 var(--sp-3);max-width:none}
+.card.report h2{font-size:clamp(20px,2.4vw,28px);line-height:1.15;letter-spacing:-0.03em;margin:0 0 var(--sp-3);max-width:none}
 .card.report .note{margin:0 0 var(--sp-2)}
 .cta-band.alt{background:var(--muted)}
 
 /* 섹션 */
 .sect{padding-block:clamp(64px,9vw,128px)}
 .sect.alt{background:var(--muted)}
-.sect h2{font-size:clamp(32px,4vw,56px);line-height:1.08;letter-spacing:-0.035em;max-width:20ch;margin:0 0 var(--sp-6);font-weight:600;word-break:keep-all}
+.sect h2{font-size:clamp(20px,2.9vw,31px);line-height:1.15;letter-spacing:-0.02em;max-width:24ch;margin:0 0 var(--sp-6);font-weight:600;word-break:keep-all}
 :lang(ko) .sect h2{max-width:22ch;letter-spacing:-0.035em;line-height:1.18}
 .sect .lead{font-size:clamp(16px,1.3vw,19px);max-width:62ch;margin:0 0 var(--sp-6)}
 .sect .note,.repro{font-size:14px;color:var(--muted-foreground);max-width:72ch}
@@ -105,7 +105,7 @@ header.hero > .page{width:100%}  /* flex 세로 배치에서도 글 칸의 왼�
 .card h3{font-size:18px;margin:var(--sp-3) 0 var(--sp-2);font-weight:600}
 .card p{margin:0;font-size:14px;color:var(--muted-foreground)}
 .card .num{width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--primary-foreground);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px}
-.card.big .stat{font-variant-numeric:tabular-nums;font-size:24px;line-height:1.1;letter-spacing:-0.035em;font-weight:600;margin-bottom:var(--sp-3);white-space:nowrap}
+.card.big .stat{font-variant-numeric:tabular-nums;font-size:22px;line-height:1.1;letter-spacing:-0.035em;font-weight:600;margin-bottom:var(--sp-3);white-space:nowrap}
 
 /* 막대 차트: 값과 단위를 글자로 보인다. 가로 막대라 좁은 폭에서도 잘리지 않는다 (가이드 1.36) */
 .chart{margin-top:var(--sp-4);max-width:760px}
@@ -131,7 +131,7 @@ header.hero > .page{width:100%}  /* flex 세로 배치에서도 글 칸의 왼�
 .limits{padding-left:var(--sp-6);max-width:72ch;margin:0}
 .limits li{margin-bottom:var(--sp-3)}
 .cta-band{padding-block:clamp(64px,9vw,128px)}
-.cta-band h2{font-size:clamp(40px,5.5vw,72px);line-height:1.08;letter-spacing:-0.035em;max-width:18ch;margin:0 0 var(--sp-4);font-weight:600;word-break:keep-all}
+.cta-band h2{font-size:clamp(20px,2.9vw,31px);line-height:1.15;letter-spacing:-0.02em;max-width:24ch;margin:0 0 var(--sp-4);font-weight:600;word-break:keep-all}
 .foot{background:var(--background);border-top:1px solid var(--border);padding-block:var(--sp-6);font-size:14px;color:var(--muted-foreground)}
 .foot p{margin:0}
 /* 480px 이하: 링크·버튼 누르는 영역 44px (1.34), 코드·작동 장면은 줄을 접는다 (1.37) */
