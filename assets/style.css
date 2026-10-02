@@ -29,13 +29,17 @@ header.hero{min-height:clamp(440px,56vh,540px);display:flex;flex-direction:colum
 header.hero > .page{width:100%}  /* flex 세로 배치에서도 글 칸의 왼쪽 기준선을 머리 로고와 같게 */
 .hero a{color:var(--hero-fg)}
 /* 고정 상단 메뉴: 본문이 비쳐 글자가 겹쳐 보이지 않도록 반투명 배경 + 흐림 */
-.site-nav{position:sticky;top:0;z-index:100;background:color-mix(in oklch,var(--hero-bg) 94%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--hero-line)}
-.site-nav a{color:var(--hero-fg)}
+.site-nav{position:sticky;top:0;z-index:100;background:color-mix(in oklch,var(--background) 94%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}  /* 가이드 1.39: 흰 머리, 로고 왼쪽·메뉴와 로그인 오른쪽 */
+.site-nav a{color:var(--foreground)}
 .top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--sp-2) var(--sp-6);min-height:72px;padding-block:var(--sp-3)}
 .brand{display:inline-flex;align-items:center;min-height:44px;font-weight:600;font-size:20px;text-decoration:none;letter-spacing:-0.035em}
-.links{display:flex;flex-wrap:wrap;gap:var(--sp-2) var(--sp-6);font-size:14px}
-.links a{display:inline-flex;align-items:center;min-height:44px;padding-inline:var(--sp-2);border-radius:var(--radius);text-decoration:none;color:var(--hero-muted)}
-.links a:hover,.links a:focus-visible{color:var(--hero-fg);text-decoration:underline}
+.links{display:flex;flex-wrap:wrap;gap:var(--sp-1) var(--sp-3);font-size:14px}
+.links{align-items:center}
+.links a{display:inline-flex;align-items:center;min-height:44px;padding-inline:var(--sp-3);border-radius:var(--radius);text-decoration:none;color:var(--muted-foreground)}
+.links a:hover,.links a:focus-visible{color:var(--foreground);text-decoration:underline}
+.links a[aria-current=page]{background:var(--muted);color:var(--foreground);font-weight:500}
+.links a.login{background:var(--primary);color:var(--primary-foreground);font-weight:600;padding-inline:var(--sp-4)}  /* 로그인 전 주 동작 하나(채움) */
+.links a.login:hover,.links a.login:focus-visible{color:var(--primary-foreground)}
 .hero h1{font-size:clamp(24px,4.2vw,45px);line-height:1.08;letter-spacing:-0.03em;max-width:18ch;margin:0 0 var(--sp-6);font-weight:600;word-break:keep-all}
 :lang(ko) .hero h1{max-width:18ch;line-height:1.15;letter-spacing:-0.03em}
 .hero .sub{font-size:clamp(16px,1.6vw,20px);max-width:56ch;color:var(--hero-muted);margin:0 0 var(--sp-6)}
@@ -57,10 +61,35 @@ header.hero > .page{width:100%}  /* flex 세로 배치에서도 글 칸의 왼�
 .term .k.bad{color:var(--destructive)}  /* 물결 밑줄 금지, 거부는 글자 라벨과 --destructive 색 (1.34) */
 .term .k.ok{text-decoration:underline;text-underline-offset:4px}
 
+/* 하위 메뉴: 머리 아래 밑줄 탭(가이드 1.40). 탭 첫 글자의 왼쪽 선은 로고와 같게 */
+.subnav{border-bottom:1px solid var(--border);background:var(--background)}
+.subnav .tabs{display:flex;gap:var(--sp-1);overflow-x:auto;scrollbar-width:none}  /* 줄바꿈 없이 가로로 밀기. 잘린 탭이 밀어 보라는 단서 */
+.subnav .tabs::-webkit-scrollbar{display:none}
+.subnav .tab{display:inline-flex;align-items:center;min-height:48px;padding:12px 14px;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;color:var(--muted-foreground);text-decoration:none}
+.subnav .tab:first-child{padding-left:0}
+.subnav .tab:hover,.subnav .tab:focus-visible{color:var(--foreground)}
+.subnav .tab[aria-current=page]{color:var(--foreground);font-weight:500;border-bottom-color:var(--foreground)}
+
+/* 하위 화면 머리: 어두운 바탕은 홈 히어로만(가이드 1.37), 하위 화면은 흰 바탕 */
+.pagehead{padding-block:clamp(48px,7vw,88px) clamp(32px,5vw,56px)}
+.pagehead h1{font-size:clamp(28px,4vw,45px);line-height:1.1;letter-spacing:-0.035em;max-width:24ch;margin:0 0 var(--sp-4);font-weight:600;word-break:keep-all}
+.pagehead .sub,.cta-band .sub{font-size:clamp(16px,1.6vw,20px);max-width:56ch;color:var(--muted-foreground);margin:0 0 var(--sp-6)}
+.hero .sub{color:var(--hero-muted)}
+.btn.ghost{background:transparent;color:var(--foreground);border-color:var(--border)}
+.tools{padding-left:var(--sp-6);max-width:72ch;margin:0}
+.tools li{margin-bottom:var(--sp-3)}
+.term.big{max-width:880px;margin-top:var(--sp-6)}
+.term.big .ln{font-size:16px}
+.term.big pre.cmd{white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}  /* 연결 명령어는 줄을 접어 잘리지 않게 */
+.card.report{max-width:760px}
+.card.report h2{font-size:clamp(20px,2.4vw,28px);line-height:1.15;letter-spacing:-0.03em;margin:0 0 var(--sp-3);max-width:none}
+.card.report .note{margin:0 0 var(--sp-2)}
+.cta-band.alt{background:var(--muted)}
+
 /* 섹션 */
 .sect{padding-block:clamp(64px,9vw,128px)}
 .sect.alt{background:var(--muted)}
-.sect h2{font-size:clamp(32px,4vw,56px);line-height:1.08;letter-spacing:-0.035em;max-width:20ch;margin:0 0 var(--sp-6);font-weight:600;word-break:keep-all}
+.sect h2{font-size:clamp(20px,2.9vw,31px);line-height:1.15;letter-spacing:-0.02em;max-width:24ch;margin:0 0 var(--sp-6);font-weight:600;word-break:keep-all}
 :lang(ko) .sect h2{max-width:22ch;letter-spacing:-0.035em;line-height:1.18}
 .sect .lead{font-size:clamp(16px,1.3vw,19px);max-width:62ch;margin:0 0 var(--sp-6)}
 .sect .note,.repro{font-size:14px;color:var(--muted-foreground);max-width:72ch}
@@ -76,7 +105,7 @@ header.hero > .page{width:100%}  /* flex 세로 배치에서도 글 칸의 왼�
 .card h3{font-size:18px;margin:var(--sp-3) 0 var(--sp-2);font-weight:600}
 .card p{margin:0;font-size:14px;color:var(--muted-foreground)}
 .card .num{width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--primary-foreground);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px}
-.card.big .stat{font-variant-numeric:tabular-nums;font-size:24px;line-height:1.1;letter-spacing:-0.035em;font-weight:600;margin-bottom:var(--sp-3);white-space:nowrap}
+.card.big .stat{font-variant-numeric:tabular-nums;font-size:22px;line-height:1.1;letter-spacing:-0.035em;font-weight:600;margin-bottom:var(--sp-3);white-space:nowrap}
 
 /* 막대 차트: 값과 단위를 글자로 보인다. 가로 막대라 좁은 폭에서도 잘리지 않는다 (가이드 1.36) */
 .chart{margin-top:var(--sp-4);max-width:760px}
@@ -102,12 +131,12 @@ header.hero > .page{width:100%}  /* flex 세로 배치에서도 글 칸의 왼�
 .limits{padding-left:var(--sp-6);max-width:72ch;margin:0}
 .limits li{margin-bottom:var(--sp-3)}
 .cta-band{padding-block:clamp(64px,9vw,128px)}
-.cta-band h2{font-size:clamp(40px,5.5vw,72px);line-height:1.08;letter-spacing:-0.035em;max-width:18ch;margin:0 0 var(--sp-4);font-weight:600;word-break:keep-all}
+.cta-band h2{font-size:clamp(20px,2.9vw,31px);line-height:1.15;letter-spacing:-0.02em;max-width:24ch;margin:0 0 var(--sp-4);font-weight:600;word-break:keep-all}
 .foot{background:var(--background);border-top:1px solid var(--border);padding-block:var(--sp-6);font-size:14px;color:var(--muted-foreground)}
 .foot p{margin:0}
-@media (max-width:600px){.links{gap:var(--sp-4)}.links a[href="#limits"]{display:none}}
 /* 480px 이하: 링크·버튼 누르는 영역 44px (1.34), 코드·작동 장면은 줄을 접는다 (1.37) */
 @media (max-width:480px){
+  .site-nav{position:static}  /* 머리가 세 줄이 되면 고정하지 않는다(화면의 1/5을 가림) */
   nav a,.btn{display:inline-flex;align-items:center;min-height:44px}
   .term pre.cmd,.term .ln code{white-space:pre-wrap;overflow-wrap:anywhere}
 }
