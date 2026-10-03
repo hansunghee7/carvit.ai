@@ -126,18 +126,4 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/brand/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/brand/"/>
   </url>
-  <url>
-    <loc>https://carvit.ai/brand/guide/</loc>
-    <lastmod>2026-10-03</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/brand/guide/"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/brand/guide/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/brand/guide/"/>
-  </url>
-  <url>
-    <loc>https://carvit.ai/ko/brand/guide/</loc>
-    <lastmod>2026-10-03</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/brand/guide/"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/brand/guide/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/brand/guide/"/>
-  </url>
 </urlset>
