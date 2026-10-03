@@ -317,3 +317,8 @@ main.post .page > p.note,main.post .page > p.repro{max-width:680px}
 .brand-page .sect{padding-block:clamp(40px,5vw,60px)}
 .brand-page .pagehead{padding-block:clamp(72px,8vw,112px) clamp(24px,3vw,40px)}
 .brand-page .limits{max-width:680px}
+
+/* 글 페이지(테크리포트 글) 섹션 간격: 위아래 40px씩 = 섹션 사이 80px. 홈의 150px 간격을 가져와 휑했던 것을 줄임. 비교 사이트 실측 64~144px(사장님 2026-10-03) */
+body:has(main.post) .sect{padding-block:clamp(32px,4vw,40px)}
+body:has(main.post) .post-top{padding-block:8px 0}
+body:has(main.post) .cta-band{padding-block:clamp(56px,6vw,80px)}
