@@ -1,0 +1,16 @@
+# 머리 메뉴가 정본 menu.json과 맞는지(모든 페이지·모바일 시트·menu.sha256) 병합 전에 검사한다(2026-10-03 탐, 대장 N127).
+# 실패하면 로컬에서 `python tools/build_menu.py`를 돌려 바뀐 파일을 같이 커밋한다.
+name: menu-check
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/build_menu.py --check
