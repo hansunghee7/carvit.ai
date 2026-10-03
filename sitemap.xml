@@ -16,17 +16,10 @@
   </url>
   <url>
     <loc>https://carvit.ai/tech-report/</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/tech-report/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/tech-report/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/tech-report/"/>
-  </url>
-  <url>
-    <loc>https://carvit.ai/tech-report/white-paper/</loc>
-    <lastmod>2026-10-01</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/tech-report/white-paper/"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/tech-report/white-paper/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/tech-report/white-paper/"/>
   </url>
   <url>
     <loc>https://carvit.ai/ko/</loc>
@@ -44,17 +37,10 @@
   </url>
   <url>
     <loc>https://carvit.ai/ko/tech-report/</loc>
-    <lastmod>2026-10-01</lastmod>
+    <lastmod>2026-10-03</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/tech-report/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/tech-report/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/tech-report/"/>
-  </url>
-  <url>
-    <loc>https://carvit.ai/ko/tech-report/white-paper/</loc>
-    <lastmod>2026-10-01</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/tech-report/white-paper/"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/tech-report/white-paper/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/tech-report/white-paper/"/>
   </url>
   <url>
     <loc>https://carvit.ai/privacy/</loc>
@@ -85,6 +71,21 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/terms/"/>
   </url>
   <url>
+    <loc>https://carvit.ai/brand/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/brand/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/brand/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/brand/"/>
+  </url>
+  <url>
+    <loc>https://carvit.ai/ko/brand/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/brand/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/brand/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/brand/"/>
+  </url>
+  <!--rp:sitemap-->
+  <url>
     <loc>https://carvit.ai/tech-report/pass-security-model/</loc>
     <lastmod>2026-10-03</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/tech-report/pass-security-model/"/>
@@ -113,17 +114,18 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/tech-report/agent-launch-qa/"/>
   </url>
   <url>
-    <loc>https://carvit.ai/brand/</loc>
-    <lastmod>2026-10-03</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/brand/"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/brand/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/brand/"/>
+    <loc>https://carvit.ai/tech-report/white-paper/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/tech-report/white-paper/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/tech-report/white-paper/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/tech-report/white-paper/"/>
   </url>
   <url>
-    <loc>https://carvit.ai/ko/brand/</loc>
-    <lastmod>2026-10-03</lastmod>
-    <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/brand/"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/brand/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/brand/"/>
+    <loc>https://carvit.ai/ko/tech-report/white-paper/</loc>
+    <lastmod>2026-09-30</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/tech-report/white-paper/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/tech-report/white-paper/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/tech-report/white-paper/"/>
   </url>
+  <!--/rp:sitemap-->
 </urlset>
