@@ -328,3 +328,8 @@ body:has(main.post) .cta-band{padding-block:clamp(56px,6vw,80px)}
 .sizes{display:flex;gap:32px;align-items:flex-end;flex-wrap:wrap;padding:24px;border:1px solid var(--border);border-radius:6px}
 .sizes span{display:flex;flex-direction:column;align-items:center;gap:8px}
 .sizes small{font-size:14px;color:var(--muted-foreground)}
+
+/* 하위 탭 모바일 값(N8, 지투·노트 확정 2026-10-04, 앱 mcp.carvit.ai와 같은 값): 760px 이하 15px·좌우 10px·첫 탭 왼쪽 0, 340px 이하 14px·8px, 영어는 380px 이하 14px·8px. 데스크톱은 그대로. */
+@media (max-width:760px){.subnav .tabs{gap:0}.subnav .tab{font-size:15px;padding-inline:10px}.subnav .tab:first-child{padding-left:0}}
+@media (max-width:340px){.subnav .tab{font-size:14px;padding-inline:8px}.subnav .tab:first-child{padding-left:0}}
+@media (max-width:380px){html[lang=en] .subnav .tab{font-size:14px;padding-inline:8px}html[lang=en] .subnav .tab:first-child{padding-left:0}}
