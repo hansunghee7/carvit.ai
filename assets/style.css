@@ -276,8 +276,8 @@ main.post .page > p.note,main.post .page > p.repro,main.post figcaption{font-siz
 main.post .page > p.note,main.post .page > p.repro{max-width:680px}
 .post-top{padding-block:8px 0}
 .summary,.toc{max-width:680px;border-radius:6px;padding:var(--sp-6)}
-.summary{background:rgba(var(--w),.12);margin:0 0 var(--sp-6)}
-.toc{border:1px solid rgba(var(--w),.2);margin:0}
+.summary{background:rgba(var(--w),.04);margin:0 0 var(--sp-6)}
+.toc{border:1px solid rgba(var(--w),.12);margin:0}
 .box-h{font-size:14px;font-weight:600;line-height:1.5;color:rgba(var(--w),.6);margin:0 0 var(--sp-3)}
 .summary ul,.toc ol{margin:0;padding-left:var(--sp-6)}
 .summary li,.toc li{font-size:17px;line-height:1.6;margin-bottom:var(--sp-2)}
@@ -286,7 +286,7 @@ main.post .page > p.note,main.post .page > p.repro{max-width:680px}
 .fig figcaption{margin:var(--sp-2) 0 var(--sp-6)}
 .refs{padding-left:var(--sp-6);max-width:680px;margin:0}
 .refs li{font-size:17px;line-height:1.6;margin-bottom:var(--sp-2);overflow-wrap:anywhere}
-.cite{font-size:14px;line-height:1.5;max-width:680px;padding:var(--sp-4);border:1px solid rgba(var(--w),.2);border-radius:6px;overflow-wrap:anywhere;margin:0 0 var(--sp-12)}
+.cite{font-size:14px;line-height:1.5;max-width:680px;padding:var(--sp-4);border:1px solid rgba(var(--w),.12);border-radius:6px;overflow-wrap:anywhere;margin:0 0 var(--sp-12)}
 .link-btn{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 20px;border:1px solid rgba(var(--w),.2);border-radius:40px;font-size:14px;font-weight:500;color:var(--foreground,#fff);text-decoration:none}
 .link-btn:hover{border-color:rgba(var(--w),.5)}
 .pn{display:flex;flex-wrap:wrap;align-items:center;gap:var(--sp-3) var(--sp-4)}
@@ -322,3 +322,9 @@ main.post .page > p.note,main.post .page > p.repro{max-width:680px}
 body:has(main.post) .sect{padding-block:clamp(32px,4vw,40px)}
 body:has(main.post) .post-top{padding-block:8px 0}
 body:has(main.post) .cta-band{padding-block:clamp(56px,6vw,80px)}
+
+/* 테크리포트 4: 그림·크기 줄 */
+.fig img{width:100%;height:auto;display:block;border:1px solid var(--border);border-radius:6px;background:#fff}
+.sizes{display:flex;gap:32px;align-items:flex-end;flex-wrap:wrap;padding:24px;border:1px solid var(--border);border-radius:6px}
+.sizes span{display:flex;flex-direction:column;align-items:center;gap:8px}
+.sizes small{font-size:14px;color:var(--muted-foreground)}
