@@ -70,9 +70,12 @@ h3{font-size:var(--h3);font-weight:500;line-height:1.32;letter-spacing:-.01em;te
 .nav{position:absolute;left:0;right:0;top:0;z-index:30;color:#000}
 .nav .in{display:flex;align-items:center;gap:28px;height:64px;padding:0 32px}
 .logo{font-weight:600;font-size:19px;letter-spacing:-.02em}
-.menu{display:flex;gap:24px;font-size:14px;margin-right:auto}
-.menu a{color:rgba(0,0,0,.8)}
-.menu a:hover{color:#000}
+/* 메뉴 모양은 서브 페이지 .links 와 같게(크기 14/500·알약·간격 0+좌우 12·활성 표시), 색만 히어로 위에서 읽히는 검정 계열 유지 (N127, 지투 요청) */
+.menu{display:flex;align-items:center;gap:0;font-size:14px;margin-right:auto}
+.menu a{display:inline-flex;align-items:center;min-height:44px;padding-inline:12px;border-radius:40px;font-weight:500;color:rgba(0,0,0,.8)}
+.menu a:first-child{margin-left:-12px}
+.menu a:hover,.menu a:focus-visible{color:#000;background:rgba(0,0,0,.08)}
+.menu a[aria-current=page]{background:rgba(0,0,0,.08);color:#000}
 .nav .btn.black{height:36px;padding:0 16px}
 .lang{font-size:14px;color:rgba(0,0,0,.8);margin-right:-12px}
 .lang:hover{color:#000}
@@ -287,12 +290,12 @@ footer .fine{margin-top:48px;color:var(--dim);font-size:13px}
   <nav class="nav" aria-label="Primary">
     <div class="in">
       <a class="logo" href="/ko/"><svg class="mk" viewBox="0 0 64 64" width="22" height="22" aria-hidden="true"><path d="M46.34 17.00 L55.00 22.00 L55.00 13.00 L48.00 6.00 L23.00 6.00 L9.00 20.00 L9.00 44.00 L23.00 58.00 L48.00 58.00 L55.00 51.00 L55.00 42.00 L46.34 47.00 L28.26 47.00 L21.00 39.74 L21.00 24.26 L28.26 17.00 Z" fill="currentColor"/></svg>Carvit</a>
-      <div class="menu"><a href="/ko/ux-mcp/">UX MCP</a><a href="/ko/tech-report/">테크리포트</a><a href="/ko/brand/">브랜드</a></div>
+      <div class="menu"><!--mn:head--><a href="/ko/ux-mcp/">UX MCP</a><a href="/ko/tech-report/">테크리포트</a><a href="/ko/brand/">브랜드</a><!--/mn:head--></div>
       <a class="lang" data-lang="en" href="/" hreflang="en">English</a>
       <a class="btn black" href="https://mcp.carvit.ai/login">로그인</a>
       <button class="burger" id="burger" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="sheet"><i></i><i></i><i></i></button>
     </div>
-    <div class="sheet" id="sheet"><a href="/ko/ux-mcp/">UX MCP</a><a href="/ko/tech-report/">테크리포트</a><a href="/" hreflang="en">English</a></div>
+    <div class="sheet" id="sheet"><!--mn:sheet--><a href="/ko/ux-mcp/">UX MCP</a><a href="/ko/tech-report/">테크리포트</a><a href="/ko/brand/">브랜드</a><!--/mn:sheet--><a href="/" hreflang="en">English</a></div>
   </nav>
 
   <div class="sheen" aria-hidden="true"></div>
@@ -417,7 +420,7 @@ footer .fine{margin-top:48px;color:var(--dim);font-size:13px}
 
 <footer><div class="w">
   <div class="cols">
-    <div><h5><a href="/ko/ux-mcp/">UX MCP</a></h5><a href="/ko/ux-mcp/">소개</a><a href="https://mcp.carvit.ai/dashboard">대시보드</a><a href="https://mcp.carvit.ai/guide">가이드</a><a href="https://mcp.carvit.ai/connect">연결 방법</a></div>
+    <div><h5><a href="/ko/ux-mcp/">UX MCP</a></h5><a href="/ko/ux-mcp/">소개</a><a href="https://mcp.carvit.ai/dashboard">대시보드</a><a href="https://mcp.carvit.ai/guide">UX 가이드</a><a href="https://mcp.carvit.ai/connect">연결 방법</a></div>
     <div><h5><a href="/ko/tech-report/">테크리포트</a></h5><!--rp:foot--><a href="/ko/tech-report/logo-making-process/">테크리포트 4</a><a href="/ko/tech-report/pass-security-model/">테크리포트 3</a><a href="/ko/tech-report/agent-launch-qa/">테크리포트 2</a><a href="/ko/tech-report/white-paper/">테크리포트 1</a><!--/rp:foot--></div>
     <div><h5><a href="/ko/brand/">브랜드</a></h5><a href="/ko/brand/">브랜드</a></div><div><h5>문의</h5><a href="mailto:hello@carvit.ai">hello@carvit.ai</a></div>
     <div><h5>약관</h5><a href="/ko/privacy/">개인정보처리방침</a><a href="/ko/terms/">이용약관</a></div>
