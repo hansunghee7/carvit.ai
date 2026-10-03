@@ -78,6 +78,32 @@
         "en": "What Carvit Pass protects, and what it does not.",
         "ko": "Carvit Pass가 지키는 것과 지키지 못하는 것."
       }
+    },
+    {
+      "n": 4,
+      "slug": "logo-making-process",
+      "version": "1.0",
+      "date": "2026-10-03",
+      "field": {
+        "en": "Brand",
+        "ko": "브랜드"
+      },
+      "author": {
+        "en": "Jitu",
+        "ko": "지투"
+      },
+      "card_title": {
+        "en": "How we chose the Carvit logo",
+        "ko": "Carvit 로고를 정한 과정"
+      },
+      "summary": {
+        "en": "Research before drawing, four failed first candidates, a map of 40 real logos, two expert reviews, and the numbers that changed the mark.",
+        "ko": "그리기 전의 조사, 탈락한 첫 후보 4개, 실제 로고 40개 지도, 두 번의 전문가 검토, 마크를 바꾼 수치."
+      },
+      "nav_title": {
+        "en": "How we chose the Carvit logo, one step at a time.",
+        "ko": "Carvit 로고를 정한 과정, 한 단계씩."
+      }
     }
   ]
 }
