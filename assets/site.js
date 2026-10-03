@@ -19,7 +19,8 @@
     // 자동 이동은 영문 첫 화면(/)에서만, 쿠키(없으면 localStorage)로 한국어를 고른 적이 있거나 브라우저 언어가 한국어일 때. /ko/ 직접 접속은 절대 이동하지 않는다(검색 로봇·공유 링크 보호).
     var here = document.documentElement.lang === 'ko' ? 'ko' : 'en';
     var want = null;
-    if (here === 'en' && !location.hash) {
+    // 영문 글 주소(/tech-report/...)를 한국어 브라우저에서 열어도 한국어 페이지로 보내지 않는다(2026-10-03: 영문 글 제목이 한글로 나온다는 신고의 원인. 주석은 '/에서만'이었는데 코드는 모든 영문 페이지에서 이동했다).
+    if (here === 'en' && !location.hash && location.pathname === '/') {
       var saved = getCookie() || localStorage.getItem(KEY);
       want = saved || ((navigator.language || 'en').toLowerCase().indexOf('ko') === 0 ? 'ko' : 'en');
       if (want === 'ko') { location.replace(document.querySelector('a.lang').getAttribute('href')); return; }

@@ -259,3 +259,32 @@ body{font-family:var(--font-sans),'Noto Sans KR','Apple SD Gothic Neo','Malgun G
 .brand-fig figcaption{font-size:14px;color:rgba(255,255,255,.6);margin-top:10px}
 .foot .cols{grid-template-columns:repeat(5,1fr)}
 @media (max-width:760px){.foot .cols{grid-template-columns:1fr 1fr}}
+
+/* 글 페이지(가이드 1.42 v35, 2026-10-03): 본문 17px·줄 간격 1.6(휴대폰 16px)·글 폭 680px, 글 머리 한 줄, 핵심 요약·글 안 목차, 표 설명, 참고·인용, 이전·다음 글.
+   제목 h1·h2 크기는 1.37 ⑧이 이미 맞아 건드리지 않는다(h1=섹션 제목 토큰 32~48, h2=기능 제목 토큰 24~30). 이동 행동은 1.37 ⑨ 알약 보조 버튼. */
+.post-meta{font-size:14px;line-height:1.5;color:rgba(255,255,255,.6);margin:0 0 var(--sp-4)}
+main.post .page > p,main.post .page > ul,main.post .page > ol,main.post .cases li,main.post .limits li{font-size:17px;line-height:1.6}
+main.post .page > p,main.post .page > ul,main.post .page > ol,main.post .page > h3,main.post .pull{max-width:680px}
+main.post .page > p.note,main.post .page > p.repro,main.post figcaption{font-size:14px;line-height:1.5;color:rgba(255,255,255,.6)}
+main.post .page > p.note,main.post .page > p.repro{max-width:680px}
+.post-top{padding-block:8px 0}
+.summary,.toc{max-width:680px;border-radius:6px;padding:var(--sp-6)}
+.summary{background:rgba(255,255,255,.12);margin:0 0 var(--sp-6)}
+.toc{border:1px solid rgba(255,255,255,.2);margin:0}
+.box-h{font-size:14px;font-weight:600;line-height:1.5;color:rgba(255,255,255,.6);margin:0 0 var(--sp-3)}
+.summary ul,.toc ol{margin:0;padding-left:var(--sp-6)}
+.summary li,.toc li{font-size:17px;line-height:1.6;margin-bottom:var(--sp-2)}
+.toc a,.refs a{text-decoration:underline;text-underline-offset:3px}
+.fig{margin:var(--sp-2) 0 0}
+.fig figcaption{margin:var(--sp-2) 0 var(--sp-6)}
+.refs{padding-left:var(--sp-6);max-width:680px;margin:0}
+.refs li{font-size:17px;line-height:1.6;margin-bottom:var(--sp-2);overflow-wrap:anywhere}
+.cite{font-size:14px;line-height:1.5;max-width:680px;padding:var(--sp-4);border:1px solid rgba(255,255,255,.2);border-radius:6px;overflow-wrap:anywhere;margin:0 0 var(--sp-12)}
+.link-btn{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 20px;border:1px solid rgba(255,255,255,.2);border-radius:40px;font-size:14px;font-weight:500;color:var(--foreground,#fff);text-decoration:none}
+.link-btn:hover{border-color:rgba(255,255,255,.5)}
+.pn{display:flex;flex-wrap:wrap;align-items:center;gap:var(--sp-3) var(--sp-4)}
+.pn-t{font-size:14px;color:rgba(255,255,255,.6)}
+@media (max-width:760px){
+  main.post .page > p,main.post .page > ul,main.post .page > ol,main.post .cases li,main.post .limits li,.summary li,.toc li,.refs li{font-size:16px}
+  main.post .page > p.note,main.post .page > p.repro{font-size:14px}
+}
