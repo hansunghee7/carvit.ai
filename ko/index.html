@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png">
 <title>Carvit · AI가 만든 화면, 우리 가이드 그대로</title>
 <meta name="description" content="Carvit은 AI 코딩 도구용 MCP 서버입니다. 회사 UX 가이드를 찾아 그 값대로 만들고, 어느 절을 썼는지 남깁니다.">
 <link rel="canonical" href="https://carvit.ai/ko/">
@@ -268,13 +270,18 @@ footer .fine{margin-top:48px;color:var(--dim);font-size:13px}
   .pane .prev{position:static;width:auto;margin-top:16px}
   footer .cols{grid-template-columns:1fr 1fr}
 }
+.logo{display:inline-flex;align-items:center;gap:10px}
+.logo .mk{flex:none}
+.appicon svg{width:58px;height:58px;overflow:visible}
+@media (prefers-reduced-motion:no-preference){.appicon .sel{animation:sel 7s ease-in-out infinite}@keyframes sel{0%,15%{opacity:0}30%,62%{opacity:1}78%,100%{opacity:0}}}
+@media (prefers-reduced-motion:reduce){.appicon .sel{opacity:0}}
 </style>
 </head>
 <body>
 <header class="hero">
   <nav class="nav" aria-label="Primary">
     <div class="in">
-      <a class="logo" href="/ko/">Carvit</a>
+      <a class="logo" href="/ko/"><svg class="mk" viewBox="0 0 64 64" width="22" height="22" aria-hidden="true"><path d="M46.34 17.00 L55.00 22.00 L55.00 13.00 L48.00 6.00 L23.00 6.00 L9.00 20.00 L9.00 44.00 L23.00 58.00 L48.00 58.00 L55.00 51.00 L55.00 42.00 L46.34 47.00 L28.26 47.00 L21.00 39.74 L21.00 24.26 L28.26 17.00 Z" fill="currentColor"/></svg>Carvit</a>
       <div class="menu"><a href="/ko/ux-mcp/">UX MCP</a><a href="/ko/tech-report/">테크리포트</a></div>
       <a class="lang" data-lang="en" href="/" hreflang="en">English</a>
       <a class="btn black" href="https://mcp.carvit.ai/login">로그인</a>
@@ -285,7 +292,7 @@ footer .fine{margin-top:48px;color:var(--dim);font-size:13px}
 
   <div class="sheen" aria-hidden="true"></div>
 <div class="first">
-  <div class="appicon" aria-hidden="true"><svg viewBox="0 0 52 52" fill="none"><path d="M36 15.5A15 15 0 1 0 36 36.5" stroke="#111" stroke-width="5.5" stroke-linecap="round"/><path d="M27 26h13" stroke="#111" stroke-width="5.5" stroke-linecap="round"/></svg></div>
+  <div class="appicon" aria-hidden="true"><svg viewBox="-2 -4 68 72" aria-hidden="true"><g class="sel"><rect x="3" y="1" width="58" height="62" fill="none" stroke="#111" stroke-width="1.5"/><rect x="0" y="-2" width="6" height="6" fill="#fff" stroke="#111" stroke-width="1.5"/><rect x="58" y="-2" width="6" height="6" fill="#fff" stroke="#111" stroke-width="1.5"/><rect x="0" y="60" width="6" height="6" fill="#fff" stroke="#111" stroke-width="1.5"/><rect x="58" y="60" width="6" height="6" fill="#fff" stroke="#111" stroke-width="1.5"/></g><path d="M46.34 17.00 L55.00 22.00 L55.00 13.00 L48.00 6.00 L23.00 6.00 L9.00 20.00 L9.00 44.00 L23.00 58.00 L48.00 58.00 L55.00 51.00 L55.00 42.00 L46.34 47.00 L28.26 47.00 L21.00 39.74 L21.00 24.26 L28.26 17.00 Z" fill="#111"/></svg></div>
   <h1>AI가 만든 화면, 우리 가이드 그대로</h1>
   <p class="sub">회사 UX 가이드를 찾아 그 값대로 만들고, 어느 절을 썼는지 남깁니다.</p>
   <div class="cta"><a class="btn black" href="https://mcp.carvit.ai/login">무료로 시작하기</a><a class="btn soft" href="#how">작동 방식 보기</a></div>
