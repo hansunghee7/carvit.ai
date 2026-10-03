@@ -38,6 +38,12 @@ def load():
     return sorted(d['reports'], key=lambda r: -r['n'])
 
 
+def rd(p):
+    # Path.read_text(newline=)은 파이썬 3.13부터라 3.12에서도 돌도록 open을 쓴다
+    with open(p, encoding='utf-8', newline='') as f:
+        return f.read()
+
+
 def nl_of(s):
     return '\r\n' if '\r\n' in s else '\n'
 
@@ -65,7 +71,7 @@ def build_outputs(reports):
     # 1) 목록 카드 + 꼬리 메뉴
     for f in files:
         p = ROOT / f
-        s = p.read_text(encoding='utf-8', newline='')
+        s = rd(p)
         orig = s
         nl = nl_of(s)
         lang = 'ko' if f.startswith('ko/') else 'en'
@@ -101,7 +107,7 @@ def build_outputs(reports):
             out[f] = s
     # 3) 사이트맵
     sp = ROOT / 'sitemap.xml'
-    s = sp.read_text(encoding='utf-8', newline='')
+    s = rd(sp)
     nl = nl_of(s)
     blocks = []
     for r in reports:
