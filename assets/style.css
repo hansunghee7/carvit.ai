@@ -312,3 +312,8 @@ main.post .page > p.note,main.post .page > p.repro{max-width:680px}
   .links a.lang{margin:0}
   .links{justify-content:flex-end}
 }
+
+/* 브랜드 한 페이지: 섹션 사이 120px(홈의 150px 간격을 가져와 휑했던 것을 줄임, 사장님 2026-10-03 승인) */
+.brand-page .sect{padding-block:clamp(40px,5vw,60px)}
+.brand-page .pagehead{padding-block:clamp(72px,8vw,112px) clamp(24px,3vw,40px)}
+.brand-page .limits{max-width:680px}
