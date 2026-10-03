@@ -1,0 +1,16 @@
+# 테크리포트 연결(사이트맵·목록·꼬리 메뉴·이전/다음 링크)이 reports.json과 맞는지 병합 전에 검사한다(2026-10-03 탐, 대장 N123).
+# 실패하면 로컬에서 `python tools/build_reports.py`를 돌려 바뀐 파일을 같이 커밋한다.
+name: reports-check
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python tools/build_reports.py --check

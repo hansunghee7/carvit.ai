@@ -26,3 +26,11 @@ Limits are stated in the paper: four runs per target, four synthetic targets, py
 중복 함수를 지우는 범위 패치를 넣자 F811 중복 함수 타겟이 두 모델 모두 0/4에서 4/4가 됐습니다. 모델별 16회 기준 전체 통과율은 Solar-pro4가 63%에서 88%, Llama 3.3 70B가 75%에서 100%로 올랐습니다.
 
 한계는 본문에 적었습니다. 타겟당 4회, 합성 타겟 4개, pyflakes 규칙만 채점, 라운드 사이에 가드와 프롬프트가 바뀜, 비용과 응답 시간은 재지 않았습니다.
+
+## 테크리포트 발행 방법 (자동 연결)
+글 본문만 쓰면 나머지 연결은 스크립트가 만든다. 정본은 `reports.json`이다.
+1. `python tools/build_reports.py --next` 로 다음 글 번호를 확인한다.
+2. 영문 `tech-report/<slug>/index.html`, 한글 `ko/tech-report/<slug>/index.html` 을 만든다(가까운 글을 복사해 고친다. 글 맨 아래 `nav.pn`과 꼬리 메뉴 표시자는 그대로 둔다).
+3. `reports.json`에 항목을 추가한다(번호, 주소 이름, 날짜, 분야, 한·영 제목·요약·저자).
+4. `python tools/build_reports.py` 를 실행하면 목록 카드, 모든 페이지 꼬리 메뉴, 이전·다음 글 링크, 사이트맵이 갱신된다.
+5. 바뀐 파일을 함께 커밋해 PR을 올린다. 깃허브 검사(`reports-check`)가 정본과 다르면 실패시켜 병합을 막는다.

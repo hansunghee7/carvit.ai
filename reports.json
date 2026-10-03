@@ -1,0 +1,83 @@
+{
+  "_설명": "테크리포트 목록 정본. tools/build_reports.py가 읽어 사이트맵·목록 카드·꼬리 메뉴·이전/다음 링크를 만든다. 문자열은 HTML 그대로 들어간다.",
+  "reports": [
+    {
+      "n": 1,
+      "slug": "white-paper",
+      "version": "1.0",
+      "date": "2026-09-30",
+      "field": {
+        "en": "Reliability",
+        "ko": "신뢰성"
+      },
+      "author": {
+        "en": "Tam",
+        "ko": "탐"
+      },
+      "card_title": {
+        "en": "Carvit makes AI code fixes provable",
+        "ko": "Carvit은 AI 코드 수정을 증명 가능하게 만듭니다"
+      },
+      "summary": {
+        "en": "How output format and guardrails, not model size, decided whether autonomous code repair worked. Measured on Upstage Solar-pro4 and Llama 3.3 70B.",
+        "ko": "자율 코드 수정의 성패를 모델 크기가 아니라 출력 형식과 가드레일이 갈랐습니다. Upstage Solar-pro4와 Llama 3.3 70B로 잰 결과입니다."
+      },
+      "nav_title": {
+        "en": "Carvit makes AI code fixes provable.",
+        "ko": "Carvit은 AI 코드 수정을 증명 가능하게 만듭니다."
+      }
+    },
+    {
+      "n": 2,
+      "slug": "agent-launch-qa",
+      "version": "1.0",
+      "date": "2026-10-03",
+      "field": {
+        "en": "QA",
+        "ko": "QA"
+      },
+      "author": {
+        "en": "Jitu",
+        "ko": "지투"
+      },
+      "card_title": {
+        "en": "Passing review did not mean ready to launch",
+        "ko": "리뷰 통과는 출시 가능이 아니었습니다"
+      },
+      "summary": {
+        "en": "Two AI agents built self-service onboarding with no human QA, then tested it with agents that knew nothing about it. Two defects showed up only when the test agents called the real server.",
+        "ko": "사람 QA 없이 AI 에이전트 둘이 셀프서비스 온보딩을 만들고, 배경지식 없는 에이전트로 시험했습니다. 결함 2건은 시험 에이전트가 실제 서버를 부를 때만 나왔습니다."
+      },
+      "nav_title": {
+        "en": "Code that passed review still blocked a first-time user.",
+        "ko": "리뷰를 통과한 코드가 처음 온 사용자를 막았습니다."
+      }
+    },
+    {
+      "n": 3,
+      "slug": "pass-security-model",
+      "version": "1.0",
+      "date": "2026-10-03",
+      "field": {
+        "en": "Security",
+        "ko": "보안"
+      },
+      "author": {
+        "en": "Tam",
+        "ko": "탐"
+      },
+      "card_title": {
+        "en": "What Carvit Pass protects, and what it does not",
+        "ko": "Carvit Pass가 지키는 것과 지키지 못하는 것"
+      },
+      "summary": {
+        "en": "The security model of a vault that lets AI agents use your keys without seeing them: what it protects, what it does not, how its keys are layered, and the threats we answered and could not.",
+        "ko": "AI 에이전트가 키를 보지 않고 쓰게 하는 보관함의 보안 모델. 지키는 것과 지키지 못하는 것, 열쇠의 겹, 답한 위협과 답하지 못한 위협을 적었다."
+      },
+      "nav_title": {
+        "en": "What Carvit Pass protects, and what it does not.",
+        "ko": "Carvit Pass가 지키는 것과 지키지 못하는 것."
+      }
+    }
+  ]
+}
