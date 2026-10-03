@@ -101,10 +101,10 @@ def main():
                 p.write_bytes((t.replace(NL, chr(13) + NL) if crlf else t).encode('utf-8'))
     sha = ROOT / 'menu.sha256'
     want = digest(m) + NL
-    if not sha.exists() or sha.read_text(encoding='utf-8') != want:
+    if not sha.exists() or sha.read_bytes().decode('utf-8').replace(chr(13) + NL, NL) != want:
         changed.append('menu.sha256')
         if not check:
-            sha.write_text(want, encoding='utf-8')
+            sha.write_bytes(want.encode('utf-8'))  # 줄바꿈은 항상 LF(앱이 한 줄 해시를 그대로 읽는다)
     if check:
         if changed:
             print('menu 정본과 어긋난 파일:', ', '.join(changed))
