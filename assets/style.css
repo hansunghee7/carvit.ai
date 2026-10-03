@@ -224,3 +224,7 @@ code{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12)}
 .foot .cols h5 a{color:rgba(255,255,255,.44);display:inline;margin:0}
 .card.report h2{max-width:none}
 body{font-family:var(--font-sans),'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif}
+
+/* 로고 마크(안1 단일 C 체계, 2026-10-03 확정) */
+.brand{gap:10px}
+.brand .mk{flex:none}
