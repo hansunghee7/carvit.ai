@@ -145,8 +145,8 @@ h3{font-size:var(--h3);font-weight:500;line-height:1.32;letter-spacing:-.01em;te
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
 .plan{border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;min-height:320px}
 .plan h3{margin-bottom:12px}
-.plan .big{margin-top:auto;font-size:30px;font-weight:500;letter-spacing:-.01em;line-height:1.2}
-.plan .big small{display:none}
+.plan .big{margin-top:auto;padding-top:16px;border-top:1px solid var(--line);font-size:17px;font-weight:500;letter-spacing:-.01em;line-height:1.4}  /* 제목(30px)과 같은 무게로 보이던 보조 정보: 17px로 낮추고 윗선으로 구분 */
+.plan .big small{display:block;margin-top:2px;font-size:14px;font-weight:400;color:rgba(255,255,255,.6)}
 .plan .btn{margin-top:24px;width:100%}
 
 /* 기능 줄: 글 432 + 그림 897 교차 */
@@ -194,7 +194,8 @@ h3{font-size:var(--h3);font-weight:500;line-height:1.32;letter-spacing:-.01em;te
 .card .img .mini{display:flex;align-items:flex-end;gap:5px;height:110px;border-bottom:1px solid rgba(255,255,255,.15)}
 .card .img .mini i{flex:1;background:rgba(255,255,255,.6)}
 .card .img .li{border-bottom:1px solid rgba(255,255,255,.1);padding-bottom:10px}.card .img .li b{color:#fff;font-weight:500;margin-right:8px}
-.card h3{font-size:22px;line-height:1.26;padding:16px 12px 0}
+.card h3{font-size:18px;line-height:1.26;padding:16px 12px 0}
+.card .cap{margin:6px 12px 0;font-size:14px;line-height:22px;color:rgba(255,255,255,.6)}  /* 카드 제목 아래 한 줄 설명 */
 .card .btn{margin:16px 12px 0}
 .card code{display:inline-flex;align-items:center;justify-content:center;height:40px;margin:16px 12px 0;border-radius:40px;background:#fff;color:#000;font-family:var(--mono);font-size:11px;letter-spacing:0}
 
@@ -388,10 +389,10 @@ footer .fine{margin-top:48px;color:var(--dim);font-size:13px}
 <section class="sec" style="padding-top:0"><div class="w">
   <div class="head"><h2>One guide, everywhere you work</h2><p>Your AI tool, the web dashboard, and the guide view all read the same company guide.</p><a class="btn white" href="/ux-mcp/#connect">How to connect</a></div>
   <div class="cards">
-    <div class="card"><div class="img"><span class="cmd">claude mcp add<br>--transport http carvit<br>https://mcp.carvit.ai/mcp</span></div><h3><span class="nowrap">Claude Code</span></h3><a class="btn white" href="https://mcp.carvit.ai/connect">Get install code</a></div>
-    <div class="card"><div class="img"><span>758 lookups · 254 citations</span><div class="mini"><i style="height:4%"></i><i style="height:5%"></i><i style="height:18%"></i><i style="height:61%"></i><i style="height:100%"></i><i style="height:3%"></i><i style="height:13%"></i><i style="height:10%"></i><i style="height:18%"></i></div></div><h3>Web dashboard</h3><a class="btn white" href="https://mcp.carvit.ai/dashboard">Open dashboard</a></div>
-    <div class="card"><div class="img"><div class="li"><b>1.39</b>Header menu</div><div class="li"><b>1.38</b>Confirm dialogs</div><div class="li" style="border:0"><b>1.35</b>Inputs</div></div><h3>Guide view</h3><a class="btn white" href="https://mcp.carvit.ai/guide">View guide</a></div>
-    <div class="card"><div class="img"><span style="color:#fff;font-size:17px">Cursor, Codex</span><span>Tools that support MCP connect to the same address. We have not measured them ourselves yet.</span></div><h3>Other MCP tools</h3><a class="btn white" href="https://mcp.carvit.ai/connect">Get the address</a></div>
+    <div class="card"><div class="img"><span class="cmd">claude mcp add<br>--transport http carvit<br>https://mcp.carvit.ai/mcp</span></div><h3><span class="nowrap">Claude Code</span></h3><p class="cap">Connect with one line in your terminal</p><a class="btn white" href="https://mcp.carvit.ai/connect">Get install code</a></div>
+    <div class="card"><div class="img"><span>758 lookups · 254 citations</span><div class="mini"><i style="height:4%"></i><i style="height:5%"></i><i style="height:18%"></i><i style="height:61%"></i><i style="height:100%"></i><i style="height:3%"></i><i style="height:13%"></i><i style="height:10%"></i><i style="height:18%"></i></div></div><h3>Web dashboard</h3><p class="cap">See lookups and citations by date</p><a class="btn white" href="https://mcp.carvit.ai/dashboard">Open dashboard</a></div>
+    <div class="card"><div class="img"><div class="li"><b>1.39</b>Header menu</div><div class="li"><b>1.38</b>Confirm dialogs</div><div class="li" style="border:0"><b>1.35</b>Inputs</div></div><h3>Guide view</h3><p class="cap">Read the section list and full text</p><a class="btn white" href="https://mcp.carvit.ai/guide">View guide</a></div>
+    <div class="card"><div class="img"><span style="color:#fff;font-size:17px">Cursor, Codex</span><span>Tools that support MCP connect to the same address. We have not measured them ourselves yet.</span></div><h3>Other MCP tools</h3><p class="cap">Any tool that supports MCP</p><a class="btn white" href="https://mcp.carvit.ai/connect">Get the address</a></div>
   </div>
 </div></section>
 
