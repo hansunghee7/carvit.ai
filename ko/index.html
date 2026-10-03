@@ -60,8 +60,10 @@ h3{font-size:var(--h3);font-weight:500;line-height:1.32;letter-spacing:-.01em;te
 .btn.soft{background:var(--ink-soft);color:#000}
 .btn.white{background:#fff;color:#000}
 .btn.glass{background:rgba(255,255,255,.16);color:#fff}
-.link{color:var(--fg);font-size:17px}
-.link:hover{opacity:.7}
+/* 섹션 끝 이동 행동은 테두리 알약 보조 버튼 + 화살표(가이드 1.37 ⑨, v36): 글자 색만 다른 링크는 클릭할 수 있다는 게 안 보인다(사장님 2026-10-03) */
+.link{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 20px;border:1px solid var(--line);border-radius:40px;font-size:14px;font-weight:500;color:var(--fg);text-decoration:none}
+.link::after{content:"→"}
+.link:hover{border-color:rgba(255,255,255,.5)}
 :focus-visible{outline:2px solid currentColor;outline-offset:3px}
 
 /* 머리: 히어로 위 투명, 왼쪽 로고·메뉴, 오른쪽 로그인 */
