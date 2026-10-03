@@ -85,6 +85,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/terms/"/>
   </url>
   <url>
+    <loc>https://carvit.ai/tech-report/pass-security-model/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/tech-report/pass-security-model/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/tech-report/pass-security-model/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/tech-report/pass-security-model/"/>
+  </url>
+  <url>
+    <loc>https://carvit.ai/ko/tech-report/pass-security-model/</loc>
+    <lastmod>2026-10-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/tech-report/pass-security-model/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/tech-report/pass-security-model/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/tech-report/pass-security-model/"/>
+  </url>
+  <url>
     <loc>https://carvit.ai/tech-report/agent-launch-qa/</loc>
     <lastmod>2026-10-03</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/tech-report/agent-launch-qa/"/>
