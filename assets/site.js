@@ -14,3 +14,15 @@
     }
   } catch (e) {}
 })();
+
+/* 휴대폰 햄버거(하위 페이지 공용) */
+(function () {
+  var b = document.getElementById('burger'), s = document.getElementById('sheet');
+  if (!b || !s || b.dataset.bound || !b.closest('.site-nav')) return;  // 홈은 자체 스크립트
+  b.dataset.bound = '1';
+  var open = b.getAttribute('aria-label'), close = b.getAttribute('data-close') || open;
+  b.addEventListener('click', function () {
+    var o = s.classList.toggle('open');
+    b.setAttribute('aria-expanded', o); b.setAttribute('aria-label', o ? close : open);
+  });
+})();
