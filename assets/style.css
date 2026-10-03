@@ -244,3 +244,18 @@ body{font-family:var(--font-sans),'Noto Sans KR','Apple SD Gothic Neo','Malgun G
   .sheet a{font-size:22px;line-height:30px;font-weight:500;padding:12px 0;color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.08)}
   .sheet a[aria-current=page]{color:#fff}
 }
+
+/* 브랜드 페이지 그림(로고 견본) */
+.brand-art{display:grid;place-items:center;min-height:180px;border-radius:6px;margin-bottom:12px}
+.brand-art.dark{background:#0d0d0d;border:1px solid rgba(255,255,255,.1)}
+.brand-art.light{background:radial-gradient(70% 60% at 50% 40%,#f2f1ee 0%,#cfcdc8 100%);color:#000}
+.brand-art.lock{display:flex;justify-content:center;align-items:center;gap:20px;font-weight:600;font-size:44px;letter-spacing:-.02em;color:#fff}
+.brand-art.light.lock{color:#000}
+.bento.guide{grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr))}
+.card .dl{margin-top:12px;font-size:14px}
+.card .dl a{color:#fff}
+.brand-fig{margin:40px 0 0}
+.brand-fig img{width:100%;height:auto;border-radius:6px;background:#fff}
+.brand-fig figcaption{font-size:14px;color:rgba(255,255,255,.6);margin-top:10px}
+.foot .cols{grid-template-columns:repeat(5,1fr)}
+@media (max-width:760px){.foot .cols{grid-template-columns:1fr 1fr}}
