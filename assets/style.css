@@ -228,3 +228,19 @@ body{font-family:var(--font-sans),'Noto Sans KR','Apple SD Gothic Neo','Malgun G
 /* 로고 마크(안1 단일 C 체계, 2026-10-03 확정) */
 .brand{gap:10px}
 .brand .mk{flex:none}
+
+/* 휴대폰 머리: 로고 + 로그인 + 햄버거, 메뉴·언어는 시트 안(가이드 1.37 ⑦, Cursor·Linear 방식 10/3) */
+.burger{display:none;width:40px;height:40px;border:0;background:transparent;cursor:pointer;padding:0}
+.burger i{display:block;width:18px;height:1.5px;background:#fff;margin:5px auto}
+.sheet{display:none}
+@media (max-width:760px){
+  .site-nav{position:sticky}
+  .top{flex-wrap:nowrap}
+  .links a:not(.login){display:none}
+  .links{margin-left:auto}
+  .links a.login{min-height:36px}
+  .burger{display:block}
+  .sheet.open{display:flex;flex-direction:column;background:#000;border-bottom:1px solid rgba(255,255,255,.12);padding:4px 0 20px}
+  .sheet a{font-size:22px;line-height:30px;font-weight:500;padding:12px 0;color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.08)}
+  .sheet a[aria-current=page]{color:#fff}
+}

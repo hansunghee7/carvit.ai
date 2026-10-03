@@ -228,9 +228,11 @@ footer .fine{margin-top:48px;color:var(--dim);font-size:13px}
 @media (max-width:760px){
   .memo{padding:8px 24px}
   .nav .in{padding:0 24px;height:56px}
-  .menu,.lang,.nav .btn.black{display:none}
+  .menu,.lang{display:none}
+  .nav .btn.black{height:36px;padding:0 14px;margin-left:auto}
+  .burger{margin-left:4px}
   .burger{display:block}
-  .sheet.open{display:flex;flex-direction:column;position:absolute;top:56px;left:0;right:0;background:#fff;padding:8px 24px 24px;box-shadow:0 20px 40px rgba(0,0,0,.2)}
+  .sheet.open{display:flex;flex-direction:column;position:absolute;top:56px;left:0;right:0;text-align:left;background:#fff;padding:8px 24px 24px;box-shadow:0 20px 40px rgba(0,0,0,.2)}
   .sheet a{font-size:24px;line-height:32px;font-weight:500;padding:12px 0;color:#000}
   .sheet .btn{margin-top:16px;align-self:stretch}
   .first{padding:88px 0 48px}
@@ -287,7 +289,7 @@ footer .fine{margin-top:48px;color:var(--dim);font-size:13px}
       <a class="btn black" href="https://mcp.carvit.ai/login">Log in</a>
       <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><i></i><i></i><i></i></button>
     </div>
-    <div class="sheet" id="sheet"><a href="/ux-mcp/">UX MCP</a><a href="/tech-report/">Tech Report</a><a href="/ko/" hreflang="ko">한국어</a><a class="btn black" href="https://mcp.carvit.ai/login">Log in</a></div>
+    <div class="sheet" id="sheet"><a href="/ux-mcp/">UX MCP</a><a href="/tech-report/">Tech Report</a><a href="/ko/" hreflang="ko">한국어</a></div>
   </nav>
 
   <div class="sheen" aria-hidden="true"></div>
