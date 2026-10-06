@@ -355,12 +355,12 @@ footer .fine{margin-top:48px;color:var(--dim);font-size:13px}
   <div class="head"><h2>AI로 화면을 만드는 가장 정확한 방법</h2></div>
 
   <div class="feat">
-    <div class="txt"><h3>누가 만들어도 같은 기준으로 시작합니다</h3><p>화면을 만들기 직전, <span class="nowrap">Carvit</span>이 맞는 가이드 절을 찾아 줍니다. 담당자가 바뀌어도, 사람 대신 AI가 만들어도 같은 기준에서 출발합니다.</p></div>
+    <div class="txt"><h3>누가 만들어도 같은 기준으로 시작합니다</h3><p>화면을 만들기 직전, <span class="nowrap">Carvit</span>이 맞는 가이드 항목(절)을 찾아 줍니다. 담당자가 바뀌어도, 사람 대신 AI가 만들어도 같은 기준에서 출발합니다.</p></div>
     <div class="shot"><div class="pane"><div class="t">carvit · lookup</div>query = <b>"결제 확인 버튼 순서"</b><br><br>→ <b>1.38</b> 확인 창은 결과를 말하고, 버튼은 [취소] [주 동작] 순서로<br>→ <b>1.12</b> 주 동작과 보조 동작은 시각적 크기로 구분한다<br>→ <b>1.7</b> 버튼 라벨은 동사와 결과로 쓴다<br><br><span class="chip">값</span>.confirm-actions{ justify-content:flex-end; gap:8px }<br><span class="chip">값</span>.btn.primary{ background:var(--primary) }</div></div>
   </div>
 
   <div class="feat r">
-    <div class="txt"><h3>말뿐인 원칙이 아니라 실제 값으로</h3><p>가이드에는 색, 여백, 둥글기, 문구가 실제 값으로 들어 있어 해석이 갈릴 여지가 적습니다. 가이드에 없는 결정은 만들어 쓰지 않고, 새 절로 넣을지 먼저 묻습니다.</p></div>
+    <div class="txt"><h3>말뿐인 원칙이 아니라 실제 값으로</h3><p>가이드에는 색, 여백, 둥글기, 문구가 실제 값으로 들어 있어 해석이 갈릴 여지가 적습니다. 가이드에 없는 결정은 만들어 쓰지 않고, 새 항목으로 넣을지 먼저 묻습니다.</p></div>
     <div class="shot sq"><div class="pane"><div class="t">carvit · draft_screen</div><b>:root</b>{<br>&nbsp;&nbsp;--primary: #171717;<br>&nbsp;&nbsp;--background: #ffffff;<br>&nbsp;&nbsp;--destructive: #e7000b;<br>&nbsp;&nbsp;--radius: 10px;<br>}<br><br>.confirm-actions{<br>&nbsp;&nbsp;justify-content: flex-end;<br>&nbsp;&nbsp;gap: 8px;  <span class="chip">1.38</span><br>}<div class="prev" style="top:56px;bottom:auto"><b>버전을 바꿀까요?</b>v3가 현재 가이드가 됩니다. 언제든 되돌릴 수 있어요.<div class="acts"><span class="o">취소</span><span class="f">v3로 바꾸기</span></div></div></div></div>
   </div>
 
@@ -370,7 +370,7 @@ footer .fine{margin-top:48px;color:var(--dim);font-size:13px}
   </div>
 
   <div class="feat r">
-    <div class="txt"><h3>가이드를 지켰다는 증거가 남습니다</h3><p>근거가 된 절마다 한 줄 메모가 남고, 대시보드에서 날짜별로 봅니다. 조회는 AI가 가이드를 찾아본 횟수, 인용은 근거를 남긴 횟수입니다. 대표는 기준이 지켜지는지 확인하고, 실무자는 왜 이렇게 만들었는지 설명하는 수고를 덜 수 있습니다.</p></div>
+    <div class="txt"><h3>가이드를 지켰다는 증거가 남습니다</h3><p>근거가 된 항목마다 한 줄 메모가 남고, 대시보드에서 날짜별로 봅니다. 조회는 AI가 가이드를 찾아본 횟수, 인용은 근거를 남긴 횟수입니다. 대표는 기준이 지켜지는지 확인하고, 실무자는 왜 이렇게 만들었는지 설명하는 수고를 덜 수 있습니다.</p></div>
     <div class="shot"><div class="pane"><div class="t">대시보드 · 최근 30일 · 실제 기록</div><span class="chip">조회 758</span><span class="chip">인용 254</span><span class="chip">찾지 못한 검색 4</span>
       <div class="bars"><i style="height:4%"></i><i style="height:4%"></i><i style="height:1%"></i><i style="height:5%"></i><i style="height:18%"></i><i style="height:61%"></i><i style="height:100%"></i><i style="height:3%"></i><i style="height:1%"></i><i style="height:1%"></i><i style="height:13%"></i><i style="height:10%"></i><i style="height:18%"></i></div>
       <b>1.38</b> 설치 코드 확인 창의 버튼 순서</div></div>
