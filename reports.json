@@ -30,7 +30,7 @@
     {
       "n": 2,
       "slug": "agent-launch-qa",
-      "version": "1.0",
+      "version": "1.1",
       "date": "2026-10-03",
       "field": {
         "en": "QA",
@@ -49,8 +49,8 @@
         "ko": "사람 QA 없이 AI 에이전트 둘이 약 9시간 반 동안 가입부터 첫 화면까지의 온보딩을 만들었습니다(병합 PR 51개). 리뷰는 통과했지만, 배경지식 없는 시험 에이전트가 실제 서버를 부를 때만 나오는 결함 2건을 출시 전에 찾았습니다."
       },
       "nav_title": {
-        "en": "Code that passed review still blocked a first-time user.",
-        "ko": "리뷰를 통과한 코드가 처음 온 사용자를 막았습니다."
+        "en": "Code that passed review nearly blocked a first-time user.",
+        "ko": "리뷰를 통과한 코드가 처음 온 사용자를 막을 뻔했습니다."
       }
     },
     {
@@ -82,7 +82,7 @@
     {
       "n": 4,
       "slug": "logo-making-process",
-      "version": "1.0",
+      "version": "1.1",
       "date": "2026-10-03",
       "field": {
         "en": "Brand",
@@ -101,8 +101,8 @@
         "ko": "디자이너들이 로고를 만드는 방식을 먼저 조사하고, 첫 후보 4개를 시험으로 탈락시켰고, 실제 로고 40개와 나란히 놓아 비교한 뒤 마크를 정했습니다. 검토는 AI 에이전트 둘이 했고, 사람 디자이너의 검토와 사용자 시험은 하지 않았습니다."
       },
       "nav_title": {
-        "en": "How we chose the Carvit logo, one step at a time.",
-        "ko": "Carvit 로고를 정한 과정, 한 단계씩."
+        "en": "Four rejected candidates and 40 real logos: how we chose the Carvit logo.",
+        "ko": "탈락한 첫 후보 4개와 로고 40개: Carvit 로고를 정한 과정."
       }
     }
   ]
