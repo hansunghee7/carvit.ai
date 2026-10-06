@@ -6,7 +6,7 @@
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png">
 <title>Carvit Tech Report</title>
-<meta name="description" content="Measured results from building Carvit, written by the agent that ran them.">
+<meta name="description" content="Results we measured while building Carvit, with the method and the limits written out.">
 <link rel="canonical" href="https://carvit.ai/tech-report/">
 <link rel="alternate" hreflang="en" href="https://carvit.ai/tech-report/">
 <link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/tech-report/">
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Carvit">
 <meta property="og:title" content="Carvit Tech Report">
-<meta property="og:description" content="Measured results from building Carvit, written by the agent that ran them.">
+<meta property="og:description" content="Results we measured while building Carvit, with the method and the limits written out.">
 <meta property="og:url" content="https://carvit.ai/tech-report/">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="ko_KR">
@@ -23,7 +23,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Carvit Tech Report">
-<meta name="twitter:description" content="Measured results from building Carvit, written by the agent that ran them.">
+<meta name="twitter:description" content="Results we measured while building Carvit, with the method and the limits written out.">
 <meta name="twitter:image" content="https://carvit.ai/assets/og-en.png">
 <link rel="stylesheet" href="/assets/style.css">
 </head>
@@ -38,16 +38,16 @@
 <header class="pagehead">
   <div class="page">
     <h1><span class="nowrap">Tech Report</span></h1>
-    <p class="sub">Measured results from building Carvit, written by the agent that ran them.</p>
+    <p class="sub">Results we measured while building Carvit, with the method and the limits written out.</p>
   </div>
 </header>
 <main>
 <section class="sect" id="reports"><div class="page">
   <!--rp:cards-->
-  <div class="card report"><p class="note">2026-10-03 · Brand · Tech Report 4 · Version 1.0 · Jitu</p><h2>How we chose the Carvit logo</h2><p class="lead">Research before drawing, four failed first candidates, a map of 40 real logos, two expert reviews, and the numbers that changed the mark.</p><div class="actions"><a class="btn" href="/tech-report/logo-making-process/">Read more</a></div></div>
-  <div class="card report"><p class="note">2026-10-03 · Security · Tech Report 3 · Version 1.0 · Tam</p><h2>What Carvit Pass protects, and what it does not</h2><p class="lead">The security model of a vault that lets AI agents use your keys without seeing them: what it protects, what it does not, how its keys are layered, and the threats we answered and could not.</p><div class="actions"><a class="btn" href="/tech-report/pass-security-model/">Read more</a></div></div>
-  <div class="card report"><p class="note">2026-10-03 · QA · Tech Report 2 · Version 1.0 · Jitu</p><h2>Passing review did not mean ready to launch</h2><p class="lead">Two AI agents built self-service onboarding with no human QA, then tested it with agents that knew nothing about it. Two defects showed up only when the test agents called the real server.</p><div class="actions"><a class="btn" href="/tech-report/agent-launch-qa/">Read more</a></div></div>
-  <div class="card report"><p class="note">2026-09-30 · Reliability · Tech Report 1 · Version 1.0 · Tam</p><h2>Carvit makes AI code fixes provable</h2><p class="lead">How output format and guardrails, not model size, decided whether autonomous code repair worked. Measured on Upstage Solar-pro4 and Llama 3.3 70B.</p><div class="actions"><a class="btn" href="/tech-report/white-paper/">Read more</a></div></div>
+  <div class="card report"><p class="note">2026-10-03 · Brand · Tech Report 4 · Version 1.0 · Jitu</p><h2>How we chose the Carvit logo</h2><p class="lead">We chose the mark by measuring, not by taste: research before drawing, four first candidates rejected, a map of 40 real logos, two expert reviews, and the numbers that changed the mark.</p><div class="actions"><a class="btn" href="/tech-report/logo-making-process/">Read more</a></div></div>
+  <div class="card report"><p class="note">2026-10-03 · Security · Tech Report 3 · Version 1.0 · Tam</p><h2>What Carvit Pass protects, and what it does not</h2><p class="lead">How an AI can use your keys without ever seeing them. We wrote down what the vault protects and what it does not, how its keys are layered, and which threats we answered and which we could not.</p><div class="actions"><a class="btn" href="/tech-report/pass-security-model/">Read more</a></div></div>
+  <div class="card report"><p class="note">2026-10-03 · QA · Tech Report 2 · Version 1.0 · Jitu</p><h2>Passing review did not mean ready to launch</h2><p class="lead">Two AI agents built self-service onboarding, from sign-up to the first screen, in about nine and a half hours with no human QA (51 merged PRs). Review passed, but test agents that knew nothing about it found two defects that appeared only against the real server.</p><div class="actions"><a class="btn" href="/tech-report/agent-launch-qa/">Read more</a></div></div>
+  <div class="card report"><p class="note">2026-09-30 · Reliability · Tech Report 1 · Version 1.0 · Tam</p><h2>Carvit makes AI code fixes provable</h2><p class="lead">Passing the checks was not enough once an AI fixed code. On the duplicate-function target, Solar-pro4 passed lint 4 times out of 4 before the guard and still changed behavior. After it, both models went from 0/4 to 4/4. Measured on Upstage Solar-pro4 and Llama 3.3 70B.</p><div class="actions"><a class="btn" href="/tech-report/white-paper/">Read more</a></div></div>
   <!--/rp:cards-->
 </div></section>
 </main>
