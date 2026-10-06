@@ -4,7 +4,7 @@
     {
       "n": 1,
       "slug": "white-paper",
-      "version": "1.0",
+      "version": "1.1",
       "date": "2026-09-30",
       "field": {
         "en": "Reliability",
@@ -15,16 +15,16 @@
         "ko": "탐"
       },
       "card_title": {
-        "en": "Carvit makes AI code fixes provable",
-        "ko": "Carvit은 AI 코드 수정을 증명 가능하게 만듭니다"
+        "en": "An AI fixed the code. Passing lint was not enough",
+        "ko": "AI가 고친 코드, 린트 통과만으로는 부족했습니다"
       },
       "summary": {
         "en": "Passing the checks was not enough once an AI fixed code. On the duplicate-function target, Solar-pro4 passed lint 4 times out of 4 before the guard and still changed behavior. After it, both models went from 0/4 to 4/4. Measured on Upstage Solar-pro4 and Llama 3.3 70B.",
         "ko": "AI가 코드를 고쳤을 때 검사를 통과했다는 것만으로는 부족했습니다. 중복 함수 대상에서 Solar-pro4는 안전장치 전에 4번 중 4번 린트를 통과하고도 동작이 바뀌었고, 장치를 더하자 두 모델 모두 0/4에서 4/4가 되었습니다. Upstage Solar-pro4와 Llama 3.3 70B로 잰 결과입니다."
       },
       "nav_title": {
-        "en": "Carvit makes AI code fixes provable.",
-        "ko": "Carvit은 AI 코드 수정을 증명 가능하게 만듭니다."
+        "en": "An AI fixed the code. Passing lint was not enough.",
+        "ko": "AI가 고친 코드, 린트 통과만으로는 부족했습니다."
       }
     },
     {
@@ -56,7 +56,7 @@
     {
       "n": 3,
       "slug": "pass-security-model",
-      "version": "1.0",
+      "version": "1.1",
       "date": "2026-10-03",
       "field": {
         "en": "Security",
