@@ -345,3 +345,7 @@ body:has(main.post) .cta-band{padding-block:clamp(56px,6vw,80px)}
 .faq summary:focus-visible{outline:2px solid var(--foreground);outline-offset:2px}
 .faq .ans{padding-bottom:var(--sp-4);color:var(--muted-foreground)}
 .faq .ans p{margin:0 0 var(--sp-3);max-width:62ch}
+
+/* 글 페이지(UX MCP 소개) 간격: 섹션 위아래 80(휴대폰 56), 머리 위 96 아래 48 (가이드 1.37 ⑪). 150은 홈 전용 */
+.text-page .sect,.text-page .cta-band{padding-block:clamp(56px,6vw,80px)}
+.text-page .pagehead{padding-block:clamp(72px,7vw,96px) 48px}
