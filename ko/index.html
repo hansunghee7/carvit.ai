@@ -259,7 +259,7 @@ footer .fine{margin-top:48px;color:var(--dim);font-size:13px}
   .plans{grid-template-columns:1fr}
   .plan{min-height:0}
   .plan .big{margin-top:40px}
-  .tiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}  /* 두 칸 폭을 같게(내용 폭에 밀리지 않게), 다섯 번째도 같은 크기 */
+  .tiles{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}  /* 휴대폰은 한 칸 전체 폭, 다섯 장 모두 같은 크기(1.37 ⑦) */
   .mock{height:200px}
   .tpl{min-height:0;padding:120px 0}
   .marks svg{width:22px;height:22px}
