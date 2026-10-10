@@ -40,18 +40,33 @@
   <div class="page">
     <h1><span class="nowrap">Carvit UX MCP</span></h1>
     <p class="sub">Connect your company's UX guide to AI coding tools so every screen starts from the same standard. Each section it used is recorded, and your team can check it.</p>
+    <p class="sub">Already using it? <a href="https://mcp.carvit.ai/dashboard">Dashboard</a> · <a href="https://mcp.carvit.ai/guide">My UX guide</a> · <a href="https://mcp.carvit.ai/connect">How to connect</a></p>
   </div>
 </header>
 <main>
-<section class="sect alt" id="tools"><div class="page">
-  <h2>What you can do once connected.</h2>
-  <p class="lead">The main things. The name in brackets is the tool your AI calls.</p>
-  <ul class="tools"><li>Find the right guide sections (<code>lookup</code>): finds up to a few sections for a topic and returns their text.</li><li>Read one section exactly (<code>get_section</code>): reads one section by its number.</li><li>See the full contents (<code>list_sections</code>): lists every section, for when a search finds nothing.</li><li>Record the reason (<code>cite</code>): records that a section changed the work, with a one-line reason.</li><li>See usage (<code>usage</code>): counts lookups (how often the guide was searched), citations (how often a reason was left) and searches that found nothing, by day and by person.</li></ul>
-</div></section>
 <section class="sect" id="connect"><div class="page">
   <h2>Connect it.</h2>
   <p class="lead">Paste this command into your terminal. After you sign in, copy the address and your install code from the Connect screen.</p>
   <div class="term big"><pre class="cmd">claude mcp add --transport http carvit &lt;address&gt; --scope user --header "Authorization: Bearer &lt;company code&gt;:&lt;install code&gt;"</pre></div>
+  <h3 class="sub-h">Check that it worked.</h3>
+  <p class="lead">In the same terminal, run <code>claude mcp list</code>. If carvit shows as Connected, you are done. This check is for Claude Code. In other tools, look for carvit in that tool's MCP list.</p>
+</div></section>
+<section class="sect alt" id="register"><div class="page">
+  <h2>Add your guide.</h2>
+  <p class="lead">Once connected, adding your guide takes three steps.</p>
+  <ol class="tools"><li>Get a document ready. DESIGN.md, a design doc, screenshots, a website address or existing style code all work. With no document, pick a starter template in the UX Guide tab after you log in.</li><li>Attach the document or paste its link in your AI tool and say "Upload this to Carvit UX."</li><li>Check the uploaded guide in the <a href="https://mcp.carvit.ai/guide">UX Guide</a> tab. If you are not an editor, the AI sends your change as a proposal, and the guide stays as it is until an editor approves.</li></ol>
+</div></section>
+<section class="sect" id="example"><div class="page">
+  <h2>What it looks like.</h2>
+  <p class="lead">Once connected, just talk as usual. This is an example conversation; the sections it finds depend on your company's guide.</p>
+  <div class="term big"><pre class="cmd">You  Add a save button to the settings screen. Follow our company UX guide.
+AI   (lookup) Found 2 sections about buttons. Built it with one primary button per screen, as the section says.
+AI   (cite) Recorded the section I used, with a one-line reason.</pre></div>
+</div></section>
+<section class="sect alt" id="tools"><div class="page">
+  <h2>What you can do once connected.</h2>
+  <p class="lead">The main things. The name in brackets is the tool your AI calls.</p>
+  <ul class="tools"><li>Find the right guide sections (<code>lookup</code>): finds up to a few sections for a topic and returns their text.</li><li>Read one section exactly (<code>get_section</code>): reads one section by its number.</li><li>See the full contents (<code>list_sections</code>): lists every section, for when a search finds nothing.</li><li>Record the reason (<code>cite</code>): records that a section changed the work, with a one-line reason.</li><li>See usage (<code>usage</code>): counts lookups (how often the guide was searched), citations (how often a reason was left) and searches that found nothing, by day and by person.</li></ul>
 </div></section>
 <section class="sect" id="limits"><div class="page">
   <h2>What it does not do.</h2>
