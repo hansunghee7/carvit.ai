@@ -40,6 +40,7 @@
   <div class="page">
     <h1><span class="nowrap">Carvit UX MCP</span></h1>
     <p class="sub">회사의 UX 가이드를 AI 코딩 도구에 연결해, 화면을 만들 때마다 같은 기준을 쓰게 합니다. 어떤 절을 썼는지는 기록으로 남아 팀이 확인할 수 있습니다.</p>
+    <p class="sub">이미 쓰고 계신가요? <a href="https://mcp.carvit.ai/dashboard">대시보드</a> · <a href="https://mcp.carvit.ai/guide">내 UX 가이드</a> · <a href="https://mcp.carvit.ai/connect">연결 방법</a></p>
   </div>
 </header>
 <main>
@@ -50,23 +51,28 @@
   <h3 class="sub-h">연결됐는지 확인하기.</h3>
   <p class="lead">같은 터미널에서 <code>claude mcp list</code>를 실행해 carvit이 Connected로 나오면 연결이 끝난 것입니다. 이 확인은 Claude Code 기준입니다. 다른 도구는 그 도구의 MCP 목록 화면에서 carvit이 보이는지 확인하세요.</p>
 </div></section>
-<section class="sect alt" id="example"><div class="page">
+<section class="sect alt" id="register"><div class="page">
+  <h2>가이드 올리기.</h2>
+  <p class="lead">연결한 뒤 가이드를 올리는 길은 세 단계입니다.</p>
+  <ol class="tools"><li>문서를 준비합니다. DESIGN.md, 디자인 문서, 화면 캡처, 웹사이트 주소, 기존 스타일 코드 모두 됩니다. 문서가 없으면 로그인 뒤 "UX 가이드" 탭에서 시작 템플릿을 고를 수 있습니다.</li><li>AI 도구에 문서를 첨부하거나 링크를 붙이고 "Carvit UX에 올려줘"라고 말합니다.</li><li>올라간 가이드는 위쪽 <a href="https://mcp.carvit.ai/guide">UX 가이드</a> 탭에서 확인합니다. 편집자가 아니면 AI가 제안으로 올리고, 편집자가 승인하기 전까지 가이드는 그대로입니다.</li></ol>
+</div></section>
+<section class="sect" id="example"><div class="page">
   <h2>이렇게 쓰입니다.</h2>
   <p class="lead">연결한 뒤에는 평소처럼 말하면 됩니다. 아래는 예시 대화이고, 실제로 찾아오는 절은 회사 가이드에 따라 다릅니다.</p>
   <div class="term big"><pre class="cmd">나   설정 화면에 저장 버튼을 만들어줘. 우리 회사 UX 가이드를 따라줘.
 AI   (lookup) '버튼'과 관련된 절 2개를 찾았습니다. 주 버튼은 화면에 하나만 둔다는 절대로 만들었습니다.
 AI   (cite) 근거로 쓴 절을 한 줄 이유와 함께 기록했습니다.</pre></div>
 </div></section>
-<section class="sect" id="tools"><div class="page">
+<section class="sect alt" id="tools"><div class="page">
   <h2>연결하면 할 수 있는 일.</h2>
   <p class="lead">주요 기능입니다. 괄호 안은 AI 도구가 부르는 도구 이름입니다.</p>
   <ul class="tools"><li>필요한 가이드 찾기 (<code>lookup</code>): 주제에 맞는 절을 몇 개 찾아 본문과 함께 돌려줍니다.</li><li>정확한 절 읽기 (<code>get_section</code>): 절 번호로 한 절을 읽습니다.</li><li>전체 목차 보기 (<code>list_sections</code>): 검색이 비었을 때 전체 절 목록을 봅니다.</li><li>근거 남기기 (<code>cite</code>): 절을 근거로 작업을 고쳤다는 기록을 한 줄 이유와 함께 남깁니다.</li><li>사용 현황 보기 (<code>usage</code>): 조회(찾아본 횟수), 인용(근거를 남긴 횟수), 찾지 못한 검색의 수를 날짜별, 사람별로 셉니다.</li></ul>
 </div></section>
-<section class="sect alt" id="limits"><div class="page">
+<section class="sect" id="limits"><div class="page">
   <h2>하지 못하는 것.</h2>
   <p class="lead">검색은 의미가 아니라 절 제목과 본문의 단어가 맞는지로 찾습니다. 맞는 절이 없으면 빈 결과가 나오고, 그 검색은 찾지 못한 검색으로 기록되며, 전체 목록을 보는 쪽으로 넘어갑니다.</p>
 </div></section>
-<section class="sect" id="faq"><div class="page">
+<section class="sect alt" id="faq"><div class="page">
   <h2>자주 묻는 질문.</h2>
   <p class="lead">처음 연결한 분이 가장 많이 묻는 것을 모았습니다.</p>
   <div class="faq">
