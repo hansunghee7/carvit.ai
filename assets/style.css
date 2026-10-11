@@ -350,21 +350,8 @@ body:has(main.post) .cta-band{padding-block:clamp(56px,6vw,80px)}
 .text-page .sect,.text-page .cta-band{padding-block:clamp(56px,6vw,80px)}
 .text-page .pagehead{padding-block:clamp(72px,7vw,96px) 48px}
 
-/* UX MCP 소개: 도구별 연결 탭(자바스크립트 없이 라디오로 전환, 키보드 방향키 동작) */
-.tabset{position:relative;margin-top:var(--sp-4)}
-.tabset>input{position:absolute;opacity:0;width:1px;height:1px;pointer-events:none}
-.tabset .tablist{display:flex;gap:var(--sp-1);overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--border)}
-.tabset .tablist::-webkit-scrollbar{display:none}
-.tabset .tablist label{display:inline-flex;align-items:center;min-height:44px;padding:0 var(--sp-4);border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;cursor:pointer;color:var(--muted-foreground);font-weight:500}
-.tabset .tablist label:hover{color:var(--foreground)}
-.tabset .tp{display:none;padding-top:var(--sp-4)}
-#t-code:checked~.tablist label[for=t-code],#t-codex:checked~.tablist label[for=t-codex],#t-ag:checked~.tablist label[for=t-ag],#t-cursor:checked~.tablist label[for=t-cursor]{color:var(--foreground);border-bottom-color:var(--foreground)}
-#t-code:focus-visible~.tablist label[for=t-code],#t-codex:focus-visible~.tablist label[for=t-codex],#t-ag:focus-visible~.tablist label[for=t-ag],#t-cursor:focus-visible~.tablist label[for=t-cursor]{outline:2px solid var(--ring);outline-offset:2px}
-#t-code:checked~.p-code,#t-codex:checked~.p-codex,#t-ag:checked~.p-ag,#t-cursor:checked~.p-cursor{display:block}
-.tabset .tp .lead{margin-top:0}
-.tabset .step-l{font-size:14px;color:var(--muted-foreground);margin:var(--sp-3) 0 var(--sp-1)}
+/* UX MCP 소개: 버튼 */
 .btn.outline{background:var(--background);color:var(--foreground);border:2px solid var(--foreground)}
 .btn.outline:hover{background:var(--muted)}
 .hero-actions{display:flex;flex-wrap:wrap;gap:var(--sp-3);margin-top:var(--sp-6)}
 .hero-actions .btn{min-height:44px}
-@media (max-width:480px){.tabset .tablist label{padding:0 var(--sp-2);font-size:14px}}
