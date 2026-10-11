@@ -46,8 +46,14 @@
 <main>
 <section class="sect" id="connect"><div class="page">
   <h2>연결하기.</h2>
-  <p class="lead">아래 명령어를 터미널에 붙여 넣습니다. 주소와 설치 코드는 로그인한 뒤 연결 방법 화면에서 바로 복사할 수 있습니다.</p>
+  <p class="lead">쓰시는 도구에 맞는 방법으로 연결합니다. 주소와 설치 코드는 로그인한 뒤 '연결 방법' 화면에서 복사합니다. 아래는 모양을 보여 주는 예시이고, 그대로는 실행되지 않습니다.</p>
+  <h3 class="sub-h">Claude Code</h3>
+  <p class="lead">Claude Code 대화창이나 터미널에 붙여 넣고 Enter를 누릅니다.</p>
   <div class="term big"><pre class="cmd">claude mcp add --transport http carvit &lt;주소&gt; --scope user --header "Authorization: Bearer &lt;회사 코드&gt;:&lt;설치 코드&gt;"</pre></div>
+  <h3 class="sub-h">Antigravity와 Cursor</h3>
+  <p class="lead">AI 입력창에 아래 문장을 붙여 넣으면 도구가 설정을 대신 만들어 줍니다. 설정 파일을 고쳐도 되는지 물으면 허용하세요.</p>
+  <div class="term big"><pre class="cmd" style="white-space:pre-wrap">아래 MCP 서버를 이 도구에 추가해 줘. 이름: carvit / 종류: 원격 HTTP / 주소: &lt;주소&gt; / 요청 헤더 Authorization: Bearer &lt;회사 코드&gt;:&lt;설치 코드&gt;</pre></div>
+  <div class="actions" style="margin-top:var(--sp-4)"><a class="btn" href="https://mcp.carvit.ai/login?next=connect">로그인하고 내 설치 코드 복사</a></div>
   <h3 class="sub-h">연결됐는지 확인하기.</h3>
   <p class="lead">같은 터미널에서 <code>claude mcp list</code>를 실행해 carvit이 Connected로 나오면 연결이 끝난 것입니다. 이 확인은 Claude Code 기준입니다. 다른 도구는 그 도구의 MCP 목록 화면에서 carvit이 보이는지 확인하세요.</p>
 </div></section>
@@ -76,11 +82,9 @@ AI   (cite) 근거로 쓴 절을 한 줄 이유와 함께 기록했습니다.</p
   <h2>자주 묻는 질문.</h2>
   <p class="lead">처음 연결한 분이 가장 많이 묻는 것을 모았습니다.</p>
   <div class="faq">
-<details id="faq-feedback"><summary>Carvit 팀에 의견은 어떻게 보내나요?</summary><div class="ans"><p>AI 도구에 "Carvit 팀에 의견 보내줘"라고 말하면 됩니다. 불편한 점, 바라는 기능, 칭찬 무엇이든 괜찮습니다. 도구가 말씀하신 내용을 정리해 <code>feedback</code> 도구로 Carvit 팀에 전달합니다.</p><p>답을 받고 싶으면 연락받을 방법(이메일 등)도 같이 말해 주세요. 남기지 않으면 의견은 전달되지만 회신은 드릴 수 없습니다.</p></div></details>
-<details><summary>AI 도구가 스스로 의견을 보낼 수도 있나요?</summary><div class="ans"><p>네. 일하다 막히면 <code>feedback</code>을 호출하라고 시켜 두면 됩니다. 어느 화면에서, 무엇을 하려다, 무엇이 막혔는지, 화면에 보인 문구 그대로 네 가지를 적으면 가장 쓸모 있습니다. 한 건에 한 주제로 쓰는 것이 좋습니다.</p></div></details>
-<details><summary>의견에 넣지 말아야 할 것이 있나요?</summary><div class="ans"><p>설치 코드, 비밀번호, 고객 이름, 비공개 사업 내용은 적지 마세요. 문제는 일반적인 말로 설명해 주시면 됩니다.</p></div></details>
+<details id="faq-feedback"><summary>Carvit 팀에 의견은 어떻게 보내나요?</summary><div class="ans"><p>AI 도구에 "Carvit 팀에 의견 보내줘"라고 말하면 됩니다. 불편한 점, 바라는 기능, 칭찬 무엇이든 괜찮습니다. 도구가 말씀하신 내용을 정리해 <code>feedback</code> 도구로 Carvit 팀에 전달합니다.</p><p>답을 받고 싶으면 연락받을 방법(이메일 등)도 같이 말해 주세요. 남기지 않으면 의견은 전달되지만 회신은 드릴 수 없습니다.</p><p>AI 도구가 일하다 막혔을 때 스스로 보내게 할 수도 있습니다. <code>feedback</code>을 호출하라고 시켜 두고, 어느 화면에서 무엇을 하려다 무엇이 막혔는지, 화면에 보인 문구 그대로 네 가지를 한 건에 한 주제로 적게 하세요.</p><p>설치 코드, 비밀번호, 고객 이름, 비공개 사업 내용은 적지 마세요. 문제는 일반적인 말로 설명해 주시면 됩니다.</p></div></details>
 <details><summary>연결했는데 무엇을 할 수 있는지 어떻게 보나요?</summary><div class="ans"><p>AI 도구에 "Carvit 도움말 보여줘"라고 말하거나, Claude Code에서 <code>/carvit:help</code>를 실행하세요. UX 가이드 만들기, 업데이트, 보기, MCP로 서비스 만들기, 동료 초대, 의견 보내기가 번호로 나옵니다.</p></div></details>
-<details id="faq-update"><summary>처음 가입했는데, 제가 가진 UX 가이드는 어떻게 올리고 나중에 고치나요?</summary><div class="ans"><p>올리기: 클로드 코드 같은 AI 도구의 프롬프트 창에 UX 가이드 문서를 첨부하거나 링크를 첨부한 뒤 "Carvit UX에 올려줘"라고 요청하면 됩니다. DESIGN.md, 디자인 문서, 화면 캡처, 웹사이트 주소, 기존 스타일 코드 모두 적용할 수 있습니다.</p><p>고치기: "주 버튼 색을 #0F766E로 바꿔줘"처럼 바꿀 내용을 말하면 AI가 관련 절을 찾아 바뀐 모습을 보여 주고, "올려줘"라고 하면 반영됩니다. 잘못 바꿨다면 "이전 버전으로 되돌려줘"라고 하세요. 언제든 되돌릴 수 있습니다.</p><p>가이드를 바로 고칠 수 있는 사람은 편집자(소유자가 지정)뿐입니다. 편집자가 아니면 AI가 바꿀 내용을 제안으로 올리고, 편집자가 승인하기 전까지 가이드는 그대로입니다.</p></div></details>
+<details id="faq-update"><summary>가이드를 나중에 고치려면, 그리고 잘못 고쳤다면 어떻게 하나요?</summary><div class="ans"><p>고치기: "주 버튼 색을 #0F766E로 바꿔줘"처럼 바꿀 내용을 말하면 AI가 관련 절을 찾아 바뀐 모습을 보여 주고, "올려줘"라고 하면 반영됩니다. 잘못 바꿨다면 "이전 버전으로 되돌려줘"라고 하세요. 언제든 되돌릴 수 있습니다.</p><p>가이드를 바로 고칠 수 있는 사람은 편집자(소유자가 지정)뿐입니다. 편집자가 아니면 AI가 바꿀 내용을 제안으로 올리고, 편집자가 승인하기 전까지 가이드는 그대로입니다.</p><p>처음 올리는 방법은 위의 "가이드 올리기" 3단계를 보세요.</p></div></details>
 <details id="faq-templates"><summary>Carvit이 제공하는 UX 템플릿은 어디서 고르나요?</summary><div class="ans"><p>두 곳입니다. 로그인한 뒤 위쪽 "UX 가이드" 탭에서 화면으로 시작 템플릿을 고를 수 있고, AI 도구에 "시작 템플릿으로 만들어줘"라고 하면 AI가 선택지를 보여 줍니다.</p><p>템플릿은 여섯 가지입니다. shadcn 기본(깔끔한 기본), 브랜드 사이트형(콘텐츠·브랜드), 인스타그램형(사진·피드), 격자 콘솔형(표·관리 화면), Carvit(흑백 정갈), 스튜디오형(크림 바탕, 내부 도구·보고서)입니다. 가장 가까운 것으로 시작해 회사에 맞게 바꿔 가면 됩니다.</p></div></details>
   </div>
 </div></section>
