@@ -1,0 +1,17 @@
+# 카드 그리드 칸 크기 균일 검사(검사 공백 G-4, 2026-10-11 지투): 휴대폰·태블릿 폭에서 같은 카드들의 폭이 같은지 병합 전에 본다.
+# 실패하면 로컬에서 `python tools/check_card_grid.py`로 어느 페이지·폭에서 틀어졌는지 확인한다(playwright 필요).
+name: card-grid-check
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install playwright==1.48.0 && playwright install --with-deps chromium
+      - run: python tools/check_card_grid.py
