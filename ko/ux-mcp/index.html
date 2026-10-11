@@ -39,23 +39,27 @@
 <header class="pagehead">
   <div class="page">
     <h1><span class="nowrap">Carvit UX MCP</span></h1>
-    <p class="sub">회사의 UX 가이드를 AI 코딩 도구에 연결해, 화면을 만들 때마다 같은 기준을 쓰게 합니다. 어떤 절을 썼는지는 기록으로 남아 팀이 확인할 수 있습니다.</p>
-    <p class="sub">이미 쓰고 계신가요? <a href="https://mcp.carvit.ai/dashboard">대시보드</a> · <a href="https://mcp.carvit.ai/guide">내 UX 가이드</a> · <a href="https://mcp.carvit.ai/connect">연결 방법</a></p>
+    <p class="sub">회사의 UX 가이드를 AI 코딩 도구에 연결해, 화면을 만들 때마다 같은 기준을 쓰게 합니다. 어떤 절(가이드 항목)을 썼는지는 기록으로 남아 팀이 확인할 수 있습니다.</p>
+    <div class="hero-actions"><a class="btn" href="https://mcp.carvit.ai/login?next=connect">연결 시작하기</a><a class="btn outline" href="https://mcp.carvit.ai/dashboard">이미 쓰고 있어요</a></div>
   </div>
 </header>
 <main>
 <section class="sect" id="connect"><div class="page">
   <h2>연결하기.</h2>
-  <p class="lead">쓰시는 도구에 맞는 방법으로 연결합니다. 주소와 설치 코드는 로그인한 뒤 '연결 방법' 화면에서 복사합니다. 아래는 모양을 보여 주는 예시이고, 그대로는 실행되지 않습니다.</p>
-  <h3 class="sub-h">Claude Code</h3>
-  <p class="lead">Claude Code 대화창이나 터미널에 붙여 넣고 Enter를 누릅니다.</p>
-  <div class="term big"><pre class="cmd">claude mcp add --transport http carvit &lt;주소&gt; --scope user --header "Authorization: Bearer &lt;회사 코드&gt;:&lt;설치 코드&gt;"</pre></div>
-  <h3 class="sub-h">Antigravity와 Cursor</h3>
-  <p class="lead">AI 입력창에 아래 문장을 붙여 넣으면 도구가 설정을 대신 만들어 줍니다. 설정 파일을 고쳐도 되는지 물으면 허용하세요.</p>
-  <div class="term big"><pre class="cmd" style="white-space:pre-wrap">아래 MCP 서버를 이 도구에 추가해 줘. 이름: carvit / 종류: 원격 HTTP / 주소: &lt;주소&gt; / 요청 헤더 Authorization: Bearer &lt;회사 코드&gt;:&lt;설치 코드&gt;</pre></div>
-  <div class="actions" style="margin-top:var(--sp-4)"><a class="btn" href="https://mcp.carvit.ai/login?next=connect">로그인하고 내 설치 코드 복사</a></div>
-  <h3 class="sub-h">연결됐는지 확인하기.</h3>
-  <p class="lead">같은 터미널에서 <code>claude mcp list</code>를 실행해 carvit이 Connected로 나오면 연결이 끝난 것입니다. 이 확인은 Claude Code 기준입니다. 다른 도구는 그 도구의 MCP 목록 화면에서 carvit이 보이는지 확인하세요.</p>
+  <p class="lead">쓰시는 도구를 골라 연결합니다. 주소와 설치 코드는 로그인한 뒤 '연결 방법' 화면에서 [복사]로 가져옵니다. 아래 명령은 모양을 보여 주는 예시라서 그대로는 실행되지 않습니다.</p>
+  <div class="tabset">
+    <input type="radio" name="tool" id="t-code" checked><input type="radio" name="tool" id="t-codex"><input type="radio" name="tool" id="t-ag"><input type="radio" name="tool" id="t-cursor">
+    <div class="tablist"><label for="t-code">Claude Code</label><label for="t-codex">Codex</label><label for="t-ag">Antigravity</label><label for="t-cursor">Cursor</label></div>
+    <div class="tp p-code"><p class="lead">Claude Code 대화창이나 터미널에 붙여 넣고 Enter를 누릅니다.</p><div class="term big"><pre class="cmd" style="white-space:pre-wrap">claude mcp add --transport http carvit <span class="nowrap">&lt;주소&gt;</span> --scope user --header <span class="nowrap">"Authorization:</span> <span class="nowrap">Bearer</span> <span class="nowrap">&lt;회사 코드&gt;:&lt;설치 코드&gt;"</span></pre></div></div>
+    <div class="tp p-codex"><p class="lead">터미널에서 세 단계로 연결합니다. 먼저 회사 코드와 설치 코드를 콜론으로 이은 값을 환경 변수에 저장합니다.</p><p class="step-l">macOS·Linux</p><div class="term"><pre class="cmd" style="white-space:pre-wrap">export CARVIT_MCP_TOKEN=<span class="nowrap">"&lt;회사 코드&gt;:&lt;설치 코드&gt;"</span></pre></div><p class="step-l">Windows PowerShell (새 창부터 적용됩니다)</p><div class="term"><pre class="cmd" style="white-space:pre-wrap">setx CARVIT_MCP_TOKEN <span class="nowrap">"&lt;회사 코드&gt;:&lt;설치 코드&gt;"</span></pre></div><p class="step-l">그다음 Codex에 서버를 등록합니다</p><div class="term"><pre class="cmd" style="white-space:pre-wrap">codex mcp add carvit <span class="nowrap">--url &lt;주소&gt;</span> <span class="nowrap">--bearer-token-env-var CARVIT_MCP_TOKEN</span></pre></div><p class="lead" style="margin-top:var(--sp-3)"><code>codex mcp list</code>에 carvit이 보이면 등록이 끝난 것입니다.</p></div>
+    <div class="tp p-ag"><p class="lead">AI 입력창에 아래 문장을 붙여 넣으면 도구가 설정을 대신 만들어 줍니다. 설정 파일을 고쳐도 되는지 물으면 허용하세요.</p><div class="term big"><pre class="cmd" style="white-space:pre-wrap">아래 MCP 서버를 이 도구에 추가해 줘. 이름: carvit / 종류: 원격 HTTP / 주소: &lt;주소&gt; / 요청 헤더 Authorization: <span class='nowrap'>Bearer &lt;회사 코드&gt;:&lt;설치 코드&gt;</span></pre></div></div>
+    <div class="tp p-cursor"><p class="lead">AI 입력창에 아래 문장을 붙여 넣으면 도구가 설정을 대신 만들어 줍니다. 설정 파일을 고쳐도 되는지 물으면 허용하세요.</p><div class="term big"><pre class="cmd" style="white-space:pre-wrap">아래 MCP 서버를 이 도구에 추가해 줘. 이름: carvit / 종류: 원격 HTTP / 주소: &lt;주소&gt; / 요청 헤더 Authorization: <span class='nowrap'>Bearer &lt;회사 코드&gt;:&lt;설치 코드&gt;</span></pre></div><p class="lead" style="margin-top:var(--sp-3)">설정이 안 만들어지면 Cursor 설정의 MCP 화면에서 같은 값으로 직접 추가할 수 있습니다.</p></div>
+  </div>
+  <div class="actions" style="margin-top:var(--sp-6)"><a class="btn outline" href="https://mcp.carvit.ai/login?next=connect">로그인하고 내 값 받기 →</a></div>
+  <h3 class="sub-h">연결됐는지 확인하기</h3>
+  <p class="lead">Claude Code에서는 아래 명령을 실행해 carvit이 Connected로 나오면 연결이 끝난 것입니다. Codex는 위의 <code>codex mcp list</code>, 다른 도구는 그 도구의 MCP 목록 화면에서 carvit이 보이는지 확인하세요.</p>
+  <div class="term"><pre class="cmd">claude mcp list</pre></div>
+  <p class="lead" style="margin-top:var(--sp-3)">Connected가 아니면 연결 방법 화면에서 주소와 설치 코드를 다시 복사해 같은 방법으로 다시 연결하세요.</p>
 </div></section>
 <section class="sect alt" id="register"><div class="page">
   <h2>가이드 올리기.</h2>
@@ -66,7 +70,7 @@
   <h2>이렇게 쓰입니다.</h2>
   <p class="lead">연결한 뒤에는 평소처럼 말하면 됩니다. 아래는 예시 대화이고, 실제로 찾아오는 절은 회사 가이드에 따라 다릅니다.</p>
   <div class="term big"><pre class="cmd">나   설정 화면에 저장 버튼을 만들어줘. 우리 회사 UX 가이드를 따라줘.
-AI   (lookup) '버튼'과 관련된 절 2개를 찾았습니다. 주 버튼은 화면에 하나만 둔다는 절대로 만들었습니다.
+AI   (lookup) '버튼'과 관련된 절(가이드 항목) 2개를 찾았습니다. 주 버튼은 화면에 하나만 둔다는 절에 맞춰 만들었습니다.
 AI   (cite) 근거로 쓴 절을 한 줄 이유와 함께 기록했습니다.</pre></div>
 </div></section>
 <section class="sect alt" id="tools"><div class="page">
@@ -76,7 +80,7 @@ AI   (cite) 근거로 쓴 절을 한 줄 이유와 함께 기록했습니다.</p
 </div></section>
 <section class="sect" id="limits"><div class="page">
   <h2>하지 못하는 것.</h2>
-  <p class="lead">검색은 의미가 아니라 절 제목과 본문의 단어가 맞는지로 찾습니다. 맞는 절이 없으면 빈 결과가 나오고, 그 검색은 찾지 못한 검색으로 기록되며, 전체 목록을 보는 쪽으로 넘어갑니다.</p>
+  <p class="lead">검색은 의미가 아니라 절 제목과 본문의 단어가 맞는지로 찾습니다. 맞는 절이 없으면 빈 결과가 나오고, 그 검색은 찾지 못한 검색으로 기록되며, 전체 목록을 보는 쪽으로 넘어갑니다. 원하는 절이 안 나오면 절 제목에 쓰인 단어로 다시 물어보세요.</p>
 </div></section>
 <section class="sect alt" id="faq"><div class="page">
   <h2>자주 묻는 질문.</h2>
