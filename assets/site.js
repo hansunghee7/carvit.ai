@@ -40,3 +40,27 @@
     b.setAttribute('aria-expanded', o); b.setAttribute('aria-label', o ? close : open);
   });
 })();
+
+/* 로그인 표시: 앱(mcp.carvit.ai)이 로그인할 때 .carvit.ai에 붙이는 신원 없는 쿠키 carvit_li=1이 있으면 머리의 '로그인'을 '대시보드'로, data-li-* 가 달린 버튼을 로그인한 사람용으로 바꾼다(2026-10-11, 로그인했는데 로그인 버튼이 보인다는 지적). 쿠키가 없으면 아무것도 바꾸지 않는다. */
+(function () {
+  try {
+    if (!/(?:^|; )carvit_li=1(?:;|$)/.test(document.cookie)) return;
+    var ko = document.documentElement.lang === 'ko';
+    var heads = document.querySelectorAll('a.login');
+    for (var i = 0; i < heads.length; i++) {
+      heads[i].textContent = ko ? '대시보드' : 'Dashboard';
+      heads[i].setAttribute('href', 'https://mcp.carvit.ai/dashboard');
+    }
+    var plain = document.querySelectorAll('a[href="https://mcp.carvit.ai/login"]');  // 홈 등 머리가 다른 페이지의 로그인·시작 버튼
+    var MAP = {'로그인': ['대시보드', 'dashboard'], 'Log in': ['Dashboard', 'dashboard'], '무료로 시작하기': ['연결 방법 열기', 'connect'], 'Start free': ['Open the Connect screen', 'connect']};
+    for (var k = 0; k < plain.length; k++) {
+      var m = MAP[plain[k].textContent.trim()];
+      if (m) { plain[k].textContent = m[0]; plain[k].setAttribute('href', 'https://mcp.carvit.ai/' + m[1]); }
+    }
+    var els = document.querySelectorAll('[data-li-text]');
+    for (var j = 0; j < els.length; j++) {
+      els[j].textContent = els[j].getAttribute('data-li-text');
+      if (els[j].getAttribute('data-li-href')) els[j].setAttribute('href', els[j].getAttribute('data-li-href'));
+    }
+  } catch (e) {}
+})();
