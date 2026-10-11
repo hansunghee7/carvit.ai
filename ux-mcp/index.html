@@ -46,20 +46,12 @@
 <main>
 <section class="sect" id="connect"><div class="page">
   <h2>Connect it.</h2>
-  <p class="lead">Pick your tool and connect. After you sign in, use [Copy] on the Connect screen to get your address and install code. The commands below only show the shape and will not run as written.</p>
-  <div class="tabset">
-    <input type="radio" name="tool" id="t-code" checked><input type="radio" name="tool" id="t-codex"><input type="radio" name="tool" id="t-ag"><input type="radio" name="tool" id="t-cursor">
-    <div class="tablist"><label for="t-code">Claude Code</label><label for="t-codex">Codex</label><label for="t-ag">Antigravity</label><label for="t-cursor">Cursor</label></div>
-    <div class="tp p-code"><p class="lead">Paste it into the Claude Code chat or your terminal and press Enter.</p><div class="term big"><pre class="cmd" style="white-space:pre-wrap">claude mcp add --transport http carvit <span class="nowrap">&lt;address&gt;</span> --scope user --header <span class="nowrap">"Authorization:</span> <span class="nowrap">Bearer</span> <span class="nowrap">&lt;company code&gt;:&lt;install code&gt;"</span></pre></div></div>
-    <div class="tp p-codex"><p class="lead">Connect in three steps from a terminal. First save your company code and install code, joined by a colon, in an environment variable.</p><p class="step-l">macOS and Linux</p><div class="term"><pre class="cmd" style="white-space:pre-wrap">export CARVIT_MCP_TOKEN=<span class="nowrap">"&lt;company code&gt;:&lt;install code&gt;"</span></pre></div><p class="step-l">Windows PowerShell (applies from a new window)</p><div class="term"><pre class="cmd" style="white-space:pre-wrap">setx CARVIT_MCP_TOKEN <span class="nowrap">"&lt;company code&gt;:&lt;install code&gt;"</span></pre></div><p class="step-l">Then register the server in Codex</p><div class="term"><pre class="cmd" style="white-space:pre-wrap">codex mcp add carvit <span class="nowrap">--url &lt;address&gt;</span> <span class="nowrap">--bearer-token-env-var CARVIT_MCP_TOKEN</span></pre></div><p class="lead" style="margin-top:var(--sp-3)">If carvit appears in <code>codex mcp list</code>, you are done.</p></div>
-    <div class="tp p-ag"><p class="lead">Paste this sentence into the AI input box and the tool sets up the connection for you. If it asks to edit a settings file, allow it.</p><div class="term big"><pre class="cmd" style="white-space:pre-wrap">Add the MCP server below to this tool. Name: carvit / Type: remote HTTP / Address: &lt;address&gt; / Request header Authorization: <span class='nowrap'>Bearer &lt;company code&gt;:&lt;install code&gt;</span></pre></div></div>
-    <div class="tp p-cursor"><p class="lead">Paste this sentence into the AI input box and the tool sets up the connection for you. If it asks to edit a settings file, allow it.</p><div class="term big"><pre class="cmd" style="white-space:pre-wrap">Add the MCP server below to this tool. Name: carvit / Type: remote HTTP / Address: &lt;address&gt; / Request header Authorization: <span class='nowrap'>Bearer &lt;company code&gt;:&lt;install code&gt;</span></pre></div><p class="lead" style="margin-top:var(--sp-3)">If the setup is not created, you can add the same values by hand in Cursor's MCP settings.</p></div>
-  </div>
-  <div class="actions" style="margin-top:var(--sp-6)"><a class="btn outline" href="https://mcp.carvit.ai/login?next=connect">Log in and get my values →</a></div>
-  <h3 class="sub-h">Check that it worked</h3>
-  <p class="lead">In Claude Code, run the command below. If carvit shows as Connected, you are done. In Codex, use <code>codex mcp list</code> above. In other tools, look for carvit in that tool's MCP list.</p>
-  <div class="term"><pre class="cmd">claude mcp list</pre></div>
-  <p class="lead" style="margin-top:var(--sp-3)">If it is not Connected, copy the address and install code again from the Connect screen and connect again the same way.</p>
+  <p class="lead">Connecting takes three steps. The command for each tool, with its copy button, is on the Connect screen after you log in.</p>
+  <ol class="tools"><li>Log in. Create your company or join by invitation.</li><li>On the Connect screen, pick your tool and press [Copy].</li><li>Paste what you copied into that tool. When it connects, the same screen shows it.</li></ol>
+  <h3 class="sub-h">Supported tools</h3>
+  <p class="lead">Choose a tool to open the Connect screen. If you are not logged in, you log in first.</p>
+  <div class="actions"><a class="btn outline" href="https://mcp.carvit.ai/connect?tool=code">Claude Code</a><a class="btn outline" href="https://mcp.carvit.ai/connect?tool=codex">Codex</a><a class="btn outline" href="https://mcp.carvit.ai/connect?tool=antigravity">Antigravity</a><a class="btn outline" href="https://mcp.carvit.ai/connect?tool=cursor">Cursor</a></div>
+  <div class="actions" style="margin-top:var(--sp-6)"><a class="btn" href="https://mcp.carvit.ai/login?next=connect">Log in and start connecting →</a></div>
 </div></section>
 <section class="sect alt" id="register"><div class="page">
   <h2>Add your guide.</h2>
