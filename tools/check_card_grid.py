@@ -3,7 +3,7 @@
 
 배경: 홈 템플릿 카드가 휴대폰에서 좌우 폭이 달랐고 5번째 카드만 전체 폭이었다(사장님이 보고서 화면에서 발견).
 가이드 1.50 ⑤는 가로 넘침만 봐서 이런 불균일을 못 잡았다. 이 검사는 같은 부모 안에서 같은 클래스를 가진 형제가 3개 이상이면
-각 폭이 서로 2px 안에서 같은지 본다(display:grid 부모만 본다: 한 줄에 여러 개든 한 칸씩 쌓이든 같은 폭이어야 한다).
+각 폭이 서로 6% 안에서 같은지 본다(display:grid 부모만 본다: 한 줄에 여러 개든 한 칸씩 쌓이든 같은 폭이어야 한다).
 
 사용: python tools/check_card_grid.py   (playwright 필요, 없으면 건너뛰지 않고 실패)
 종료 코드 0 = 통과, 1 = 불균일 발견.
@@ -20,7 +20,7 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parent.parent
 PAGES = ["/", "/ko/", "/ux-mcp/", "/ko/ux-mcp/"]
 WIDTHS = [375, 768]
-TOL = 2
+TOL = 0.06  # 상대 허용치: 글꼴 차이로 1fr 칸이 몇 px 어긋나는 것(리눅스 CI 212~216)은 통과, 한 카드만 전체 폭이면 실패
 
 JS = """
 () => {
@@ -67,7 +67,7 @@ def main():
                         # 카드처럼 보이는 묶음만: 클래스에 card/plan 이 들어간 것
                         if not any(k in g["key"].lower() for k in ("card", "plan")):
                             continue
-                        if max(g["ws"]) - min(g["ws"]) > TOL:
+                        if (max(g["ws"]) - min(g["ws"])) / max(g["ws"]) > TOL:
                             bad.append(f"{path} @{w}px {g['parent']} > {g['key']} 폭 {g['ws']}")
             browser.close()
         srv.shutdown()
