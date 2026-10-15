@@ -373,4 +373,7 @@ body.team-page .site-nav,body.team-page nav.top,body.team-page .sheet{background
 .tm-link{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 20px;border:1px solid var(--border);border-radius:40px;font-size:14px;font-weight:500;color:var(--foreground);text-decoration:none}
 .tm-foot{display:flex;justify-content:center;padding-block:48px 0}
 @media(max-width:760px){.tm{grid-template-columns:1fr;gap:24px;padding-block:40px}.tm img{max-width:420px}}
+/* 한국어 제목 폭 제한 해제(2026-10-15 요청서 공통 규칙): 22자 안팎 max-width가 불필요한 줄바꿈을 만들었다. keep-all과 text-wrap:balance로 단어 단위 줄바꿈은 유지 */
+:lang(ko) .hero h1,:lang(ko) .pagehead h1,:lang(ko) .sect h2,:lang(ko) .cta-band h2,:lang(ko) .card.report h2{max-width:none}
+:lang(ko) .pagehead h1,:lang(ko) .sect h2,:lang(ko) .cta-band h2{text-wrap:balance}
 
