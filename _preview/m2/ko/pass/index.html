@@ -4,10 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
+<meta property="og:locale" content="ko_KR">
 <title>Carvit Pass · 에이전트가 인프라 세팅을 직접 할 수 있게 합니다</title>
-<meta name="description" content="키 값을 에이전트에게 보여 주지 않고 금고가 대신 넣어 줍니다. 에이전트는 이름으로만 요청하고, 중요한 키는 사람이 확인한 뒤에 넣습니다.">
+<meta name="description" content="키 값을 에이전트에게 보여 주지 않고 금고가 대신 넣어 줍니다. 에이전트는 이름으로만 요청합니다.">
 <meta property="og:title" content="Carvit Pass · 에이전트가 인프라 세팅을 직접 할 수 있게 합니다">
-<meta property="og:description" content="키 값을 에이전트에게 보여 주지 않고 금고가 대신 넣어 줍니다. 에이전트는 이름으로만 요청하고, 중요한 키는 사람이 확인한 뒤에 넣습니다.">
+<meta property="og:description" content="키 값을 에이전트에게 보여 주지 않고 금고가 대신 넣어 줍니다. 에이전트는 이름으로만 요청합니다.">
 <meta property="og:image" content="https://carvit.ai/assets/og-ko.png">
 <link rel="alternate" hreflang="ko" href="/_preview/m2/ko/pass/">
 <link rel="alternate" hreflang="en" href="/_preview/m2/pass/">
@@ -424,7 +425,7 @@ body{background:var(--background);color:var(--foreground)}
 </div></div>
 <header class="pagehead"><div class="page">
 <h1>에이전트가 인프라 세팅을 직접 할 수 있게 합니다<span class="cr-chip">Closed Beta</span></h1>
-<p class="sub">키 값을 에이전트에게 보여 주지 않고 금고가 대신 넣어 줍니다. 에이전트는 이름으로만 요청하고, 중요한 키는 사람이 확인한 뒤에 넣습니다.</p>
+<p class="sub">키 값을 에이전트에게 보여 주지 않고 금고가 대신 넣어 줍니다. 에이전트는 이름으로만 요청합니다.</p>
 </div></header>
 <main>
 <section class="sect"><div class="page"><div class="cr-wrap"><video aria-label="실제 Carvit Pass 확장 화면을 녹화한 영상입니다. 계정과 키 이름은 모두 가상 데이터입니다." autoplay="" class="cr-loop cr-demo" loop="" muted="" playsinline="" poster="/_preview/m2/assets/pass-85a13d15ab.jpg" preload="metadata" src="/_preview/m2/assets/pass-0839b2f1bd.mp4"></video><p class="cr-cap">실제 Carvit Pass 확장 화면을 녹화한 영상입니다. 계정과 키 이름은 모두 가상 데이터입니다.</p></div></div></section>
@@ -438,12 +439,12 @@ body{background:var(--background);color:var(--foreground)}
 <path class="ln" d="M262 115 H343"></path><path class="ln" d="M335 108 L345 115 L335 122"></path><text class="mut" font-size="15" text-anchor="middle" x="306" y="98">이름으로 요청</text>
 <path class="ln" d="M607 115 H688"></path><path class="ln" d="M680 108 L690 115 L680 122"></path><text class="mut" font-size="15" text-anchor="middle" x="651" y="98">값을 넣음</text>
 <path class="dash" d="M480 192 V246 H135 V194"></path><path class="dash" d="M128 203 L135 192 L142 203"></path><text class="mut" font-size="15" text-anchor="middle" x="307" y="278">에이전트에게는 성공·실패와 확인용 값만 돌려줍니다</text>
-</svg></div>
+</svg></div><p class="ps-swipe">옆으로 밀어 보세요 →</p>
 </div></div></section>
 <section class="sect"><div class="page"><div class="cr-wrap">
 <h2 class="cr-h2">이렇게 동작합니다</h2>
-<p class="cr-lead">모든 단계에서 에이전트가 키 값을 보지 않고 진행됩니다.</p>
-<ol class="cr-steps"><li><span class="cr-n">1</span><div><h3>키를 금고에 담습니다</h3><p>키 값은 금고 안에만 있습니다. 에이전트의 대화와 파일에는 남지 않습니다.</p></div></li><li><span class="cr-n">2</span><div><h3>이름으로 요청합니다</h3><p>"결제 서비스 키를 .env에 넣어 줘"처럼 값이 아니라 이름으로만 말합니다.</p></div></li><li><span class="cr-n">3</span><div><h3>키 종류에 따라 넣습니다</h3><p>일반 키는 바로, 중요한 키는 사람이 확인한 뒤에 금고가 정해진 자리에 넣어 줍니다. 기준은 아래에서 설명합니다.</p></div></li><li><span class="cr-n">4</span><div><h3>결과만 돌려줍니다</h3><p>성공 또는 실패와 확인용 값(지문)만 돌려주고, 값은 대화와 기록에 남기지 않습니다.</p></div></li></ol>
+<p class="cr-lead">모든 단계에서 에이전트가 키 값을 보지 않도록 설계했습니다.</p>
+<ol class="cr-steps"><li><span class="cr-n">1</span><div><h3>키를 금고에 담습니다</h3><p>키 값은 금고 안에만 두고, 에이전트의 대화와 파일에 남지 않도록 설계했습니다.</p></div></li><li><span class="cr-n">2</span><div><h3>이름으로 요청합니다</h3><p>"결제 서비스 키를 .env에 넣어 줘"처럼 값이 아니라 이름으로만 말합니다.</p></div></li><li><span class="cr-n">3</span><div><h3>키 종류에 따라 넣습니다</h3><p>일반 키는 바로, 중요한 키는 사람이 확인한 뒤에 금고가 정해진 자리에 넣어 줍니다. 기준은 아래에서 설명합니다.</p></div></li><li><span class="cr-n">4</span><div><h3>결과만 돌려줍니다</h3><p>성공 또는 실패와 확인용 값(지문)만 돌려주고, 값은 대화와 기록에 남기지 않습니다.</p></div></li></ol>
 </div></div></section>
 <section class="sect"><div class="page"><div class="cr-wrap">
 <h2 class="cr-h2">사람이 확인하는 때</h2>
@@ -461,17 +462,33 @@ body{background:var(--background);color:var(--foreground)}
 </div></div></section>
 <section class="sect alt" id="faq"><div class="page">
 <h2>자주 묻는 질문</h2>
-<div class="faq"><details><summary>키 발급 화면에서 금고가 키를 자동으로 담아 가나요?</summary><div class="ans"><p>아직은 아닙니다. 만드는 중입니다.</p></div></details><details><summary>웹 화면의 키 입력칸에도 금고가 넣어 주나요?</summary><div class="ans"><p>아직은 아닙니다. 만드는 중입니다.</p></div></details><details><summary>이미 가진 키 모음을 한 번에 옮길 수 있나요?</summary><div class="ans"><p>아직은 아닙니다. 만드는 중입니다.</p></div></details><details><summary>인증서 로그인도 대신해 주나요?</summary><div class="ans"><p>보관과 확인 뒤 보기·복사까지만 지원합니다. 입력 자동화나 서명 대행은 하지 않습니다.</p></div></details></div>
+<div class="faq"><details><summary>키 발급 화면에서 금고가 키를 자동으로 담아 가나요?</summary><div class="ans"><p>아직은 아닙니다. 만드는 중입니다.</p></div></details><details><summary>웹 화면의 키 입력칸에도 금고가 넣어 주나요?</summary><div class="ans"><p>아직은 아닙니다. 만드는 중입니다.</p></div></details><details><summary>이미 가진 키 모음을 한 번에 옮길 수 있나요?</summary><div class="ans"><p>아직은 아닙니다. 만드는 중입니다.</p></div></details><details><summary>인증서 로그인도 대신해 주나요?</summary><div class="ans"><p>아니요. 인증서는 보관하고, 확인을 거친 뒤 보거나 복사하는 것까지만 지원합니다. 로그인 입력이나 서명은 대신하지 않습니다.</p></div></details></div>
 </div></section>
 <section class="sect"><div class="page"><div class="cr-wrap">
 <h2 class="cr-h2">Pass에 관심이 있으신가요?</h2>
 <p class="cr-lead">클로즈드 베타입니다. 써 보고 싶은 팀은 알려 주세요.</p>
-<div class="cr-cta"><a class="cr-btn" href="mailto:hello@carvit.ai">Pass 문의 메일 보내기</a><a class="cr-btn line" href="/_preview/m2/ko/team/">만드는 팀 보기 →</a></div>
+<div class="cr-cta"><a class="cr-btn" href="mailto:hello@carvit.ai">Pass 문의 메일 보내기</a></div>
 </div></div></section>
 <section class="sect ag-sec"><div class="page"><div class="cr-wrap"><h2 class="cr-h2">Pass를 맡은 에이전트</h2><ul class="ag-mini"><li><img alt="탐, 인프라 에이전트" height="80" loading="lazy" src="/_preview/m2/assets/pass-d502363caf.jpg" width="80"/><div><p class="role">인프라 에이전트</p><h3>탐</h3><p>배포, 크레딧, 감시 같은 인프라를 돌보고 운영을 챙깁니다.</p><p>Carvit Pass를 만들고, 회사 저장소 병합 PR 2,196건<span class="nowrap">(8/29 이후, 2026-10-14 기준)</span>을 쌓았습니다.</p></div></li></ul><p class="ag-more"><a href="/_preview/m2/ko/team/">팀 소개에서 전체 보기 →</a></p></div></div></section>
 </main>
-<footer class="foot"><div class="page"><div class="cols"><div><h5><a href="/_preview/m2/ko/ux-mcp/">UX MCP</a></h5><a href="/_preview/m2/ko/ux-mcp/">소개</a><a href="https://mcp.carvit.ai/dashboard">대시보드</a><a href="https://mcp.carvit.ai/guide">UX 가이드</a><a href="https://mcp.carvit.ai/connect">연결 방법</a></div><div><h5><a href="/ko/tech-report/">테크리포트</a></h5><!--rp:foot--><a href="/ko/tech-report/logo-making-process/">Carvit 로고를 정한 과정</a><a href="/ko/tech-report/pass-security-model/">Carvit Pass가 지키는 것과 지키지 못하는 것</a><a href="/ko/tech-report/agent-launch-qa/">리뷰 통과는 출시 가능이 아니었습니다</a><a href="/ko/tech-report/white-paper/">AI가 고친 코드, 린트 통과만으로는 부족했습니다</a><!--/rp:foot--></div><div><h5><a href="/ko/brand/">브랜드</a></h5><a href="/ko/brand/">브랜드</a></div><div><h5>문의</h5><a href="mailto:hello@carvit.ai">hello@carvit.ai</a></div><div><h5>정책</h5><a href="/ko/terms/">이용약관</a><a href="/ko/privacy/">개인정보 처리방침</a></div></div><p class="fine">Carvit · © 2026</p></div></footer>
-<script>(function(){try{if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('video.cr-loop').forEach(function(v){v.removeAttribute('autoplay');v.pause();});}}catch(e){}})();</script>
+<footer class="foot"><div class="page"><div class="cols"><div><h5>제품</h5><a href="/_preview/m2/ko/ux-mcp/">UX MCP</a><a href="/_preview/m2/ko/create/">Create</a><a href="/_preview/m2/ko/pass/">Pass</a></div><div><h5><a href="/_preview/m2/ko/team/">팀</a></h5><a href="/_preview/m2/ko/team/">팀 소개</a></div><div><h5><a href="/_preview/m2/ko/ux-mcp/">UX MCP</a></h5><a href="/_preview/m2/ko/ux-mcp/">소개</a><a href="https://mcp.carvit.ai/dashboard">대시보드</a><a href="https://mcp.carvit.ai/guide">UX 가이드</a><a href="https://mcp.carvit.ai/connect">연결 방법</a></div><div><h5><a href="/ko/tech-report/">테크리포트</a></h5><!--rp:foot--><a href="/ko/tech-report/logo-making-process/">Carvit 로고를 정한 과정</a><a href="/ko/tech-report/pass-security-model/">Carvit Pass가 지키는 것과 지키지 못하는 것</a><a href="/ko/tech-report/agent-launch-qa/">리뷰 통과는 출시 가능이 아니었습니다</a><a href="/ko/tech-report/white-paper/">AI가 고친 코드, 린트 통과만으로는 부족했습니다</a><!--/rp:foot--></div><div><h5><a href="/ko/brand/">브랜드</a></h5><a href="/ko/brand/">브랜드</a></div><div><h5>문의</h5><a href="mailto:hello@carvit.ai">hello@carvit.ai</a></div><div><h5>정책</h5><a href="/ko/terms/">이용약관</a><a href="/ko/privacy/">개인정보 처리방침</a></div></div><p class="fine">Carvit · © 2026</p></div></footer>
+<script>(function(){try{if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('video.cr-loop').forEach(function(v){v.removeAttribute('autoplay');v.pause();});}}catch(e){}})();</script><style>
+/* 지투 목록1(2026-10-15) */
+.ps-swipe{display:none}
+@media (max-width:760px){
+  .ps-diagram-wrap{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
+  .ps-swipe{display:block;margin:8px 0 0;font-size:14px;color:var(--muted-foreground)}
+  .team-page .tm:not(.tm-founder) img{height:200px;width:100%;object-fit:cover;object-position:top}
+}
+@media (max-width:480px){
+  .tm-li{min-width:44px;min-height:44px;justify-content:center;align-items:center;margin-left:4px}
+  footer.foot .cols h5 a{display:inline-flex;align-items:center;min-height:44px}
+  .foot a,.ag-more a,.cr-btn,.tm-link,.link,.gates a,footer nav a{min-height:44px;display:inline-flex;align-items:center}
+}
+/* 왼쪽 정렬선 하나(목록1 ⑩): 좁은 본문 틀도 페이지 왼쪽 선에서 시작 */
+.cr-wrap,.tm-wrap{margin-left:0}
+.final-mail{display:inline-block;margin-top:20px;color:inherit;text-decoration:underline;text-underline-offset:3px;font-size:14px;min-height:44px;line-height:44px}
+</style>
 
 <style>
 /* 미리보기 공통 보정(지투 결정 2026-10-15) */
@@ -480,7 +497,7 @@ body{background:var(--background);color:var(--foreground)}
   .btn,.login,.logo,.brand,.link{display:inline-flex;align-items:center}
   .burger{min-width:44px}
 }
-.text-page main > .sect:first-of-type,.text-page main > section.sect:first-child{padding-top:80px}
+@media (min-width:761px){.text-page main > .sect:first-of-type,.text-page main > section.sect:first-child{padding-top:80px}}  /* 휴대폰은 56/56(목록1 ⑨) */
 @media (max-width:760px){.text-page .sect,.text-page .cta-band{padding-block:56px}}
 </style>
 <script src="/assets/site.js"></script>
