@@ -89,7 +89,7 @@ def main():
     changed = []
     for p in sorted(ROOT.rglob('*.html')):
         rel = p.relative_to(ROOT).as_posix()
-        if rel.startswith(('assets/', '.git', 'node_modules')) or rel.startswith('google'):
+        if rel.startswith(('assets/', '.git', 'node_modules', '_preview/')) or rel.startswith('google'):  # _preview: 라이브 전 미리보기(메뉴가 다름)
             continue
         raw = p.read_bytes().decode('utf-8')
         crlf = chr(13) + NL in raw
