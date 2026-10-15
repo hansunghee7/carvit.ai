@@ -355,3 +355,22 @@ body:has(main.post) .cta-band{padding-block:clamp(56px,6vw,80px)}
 .btn.outline:hover{background:var(--muted)}
 .hero-actions{display:flex;flex-wrap:wrap;gap:var(--sp-3);margin-top:var(--sp-6)}
 .hero-actions .btn{min-height:44px}
+/* 팀 페이지(2026-10-15, 사장님 개발 컨펌): 이 페이지만 어두운 판 */
+body.team-page{--w:255,255,255;--background:#000;--foreground:#fff;--card:rgba(255,255,255,.12);--muted:rgba(255,255,255,.08);--muted-foreground:rgba(255,255,255,.6);--primary:#fff;--primary-foreground:#000;--border:rgba(255,255,255,.2);--ring:rgba(255,255,255,.5);--input:rgba(255,255,255,.4);background:var(--background);color:var(--foreground);color-scheme:dark}
+body.team-page .site-nav,body.team-page nav.top,body.team-page .sheet{background:var(--background);color:var(--foreground)}
+.pagehead h1{max-width:none}
+.pagehead .sub{max-width:none}
+.tm-wrap{max-width:1080px;margin:0 auto}
+.tm{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:48px;align-items:center;padding-block:48px;border-top:1px solid var(--border)}
+.tm:first-child{border-top:0}
+.tm img{width:100%;height:auto;border-radius:12px;display:block;background:#111}
+.tm-role{font-size:13px;letter-spacing:.06em;color:var(--muted-foreground);margin:0 0 8px;text-transform:uppercase}
+.tm h3{font-size:clamp(24px,.57vw + 21.8px,30px);font-weight:500;letter-spacing:-.02em;margin:0 0 20px}
+.tm ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.tm li{font-size:17px;line-height:1.6;color:var(--foreground);word-break:keep-all}
+.tm li+li{color:var(--muted-foreground)}
+.tm-sec-title{font-size:var(--h2);font-weight:500;letter-spacing:-.02em;margin:0 0 8px}
+.tm-link{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 20px;border:1px solid var(--border);border-radius:40px;font-size:14px;font-weight:500;color:var(--foreground);text-decoration:none}
+.tm-foot{display:flex;justify-content:center;padding-block:48px 0}
+@media(max-width:760px){.tm{grid-template-columns:1fr;gap:24px;padding-block:40px}.tm img{max-width:420px}}
+
