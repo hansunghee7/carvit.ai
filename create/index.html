@@ -1,20 +1,32 @@
 <!doctype html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<meta property="og:locale" content="ko_KR">
-<title>Carvit Pass · 에이전트가 인프라 세팅을 직접 할 수 있게 합니다</title>
-<meta name="description" content="키 값을 에이전트에게 보여 주지 않고 금고가 대신 넣어 줍니다. 에이전트는 이름으로만 요청합니다.">
-<meta property="og:title" content="Carvit Pass · 에이전트가 인프라 세팅을 직접 할 수 있게 합니다">
-<meta property="og:description" content="키 값을 에이전트에게 보여 주지 않고 금고가 대신 넣어 줍니다. 에이전트는 이름으로만 요청합니다.">
-<meta property="og:image" content="https://carvit.ai/assets/og-ko.png">
-<link rel="alternate" hreflang="ko" href="/_preview/m2/ko/pass/">
-<link rel="alternate" hreflang="en" href="/_preview/m2/pass/">
+<meta property="og:locale" content="en_US">
+<title>Carvit Create · Agents run the whole video pipeline</title>
+<meta name="description" content="In Carvit Create, AI agents handle every step in sequence, from performance analysis and topic ideas to video production and publishing on 6 channels.">
+<meta property="og:title" content="Carvit Create · Agents run the whole video pipeline">
+<meta property="og:description" content="In Carvit Create, AI agents handle every step in sequence, from performance analysis and topic ideas to video production and publishing on 6 channels.">
+<meta property="og:image" content="https://carvit.ai/assets/og-en.png">
 <link rel="icon" href="/assets/favicon.svg">
+<link rel="canonical" href="https://carvit.ai/create/">
+<link rel="alternate" hreflang="en" href="https://carvit.ai/create/">
+<link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/create/">
+<link rel="alternate" hreflang="x-default" href="https://carvit.ai/create/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Carvit">
+<meta property="og:url" content="https://carvit.ai/create/">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Carvit Create · Agents run the whole video pipeline">
+<meta name="twitter:description" content="In Carvit Create, AI agents handle every step in sequence, from performance analysis and topic ideas to video production and publishing on 6 channels.">
+<meta name="twitter:image" content="https://carvit.ai/assets/og-en.png">
+<link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png">
 </head>
-<body class="text-page pass-page">
+<body class="text-page create-page">
 <style>@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&display=swap');  /* 한국어는 홈과 같은 Noto Sans KR(가이드 v33) */
 /* Carvit 백서 스타일. 값은 Carvit 가이드 1.34(흑백 정갈, Geist)와 1.37(홈 구성)의 토큰만 쓴다. 라이트 고정, 강조색 없음. 가이드 v29 반영(2026-10-01): 히어로는 이름·한 줄 설명·버튼만(격자·작동 장면 삭제), 머리 높이 72px. */
 @font-face{font-family:'Geist';src:url(https://cdn.jsdelivr.net/npm/geist@1/dist/fonts/geist-sans/Geist-Variable.woff2) format('woff2')}
@@ -387,18 +399,6 @@ body{background:var(--background);color:var(--foreground)}
 .pagehead h1{max-width:none}.pagehead .sub{max-width:60ch}
 .cr-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0}.cr-grid figure{margin:0}.cr-grid img,.cr-grid video{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:10px;background:#111}.cr-grid figcaption{font-size:13px;color:var(--muted-foreground);margin-top:8px;word-break:keep-all}@media(max-width:860px){.cr-grid{grid-template-columns:1fr}}.cr-band{margin:0 0 0;padding:0}.cr-band img{display:block;width:100%;height:auto;border-radius:12px}.cr-cap{font-size:13px;color:var(--muted-foreground);margin:12px 0 0}.cr-agent img{width:100%;height:auto;border-radius:12px;display:block;background:#111}.cr-agent .role{font-size:13px;letter-spacing:.06em;color:var(--muted-foreground);margin:0 0 8px}.cr-agent h3{font-size:28px;font-weight:500;margin:0 0 16px}.cr-agent ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}.cr-agent li{font-size:16px;line-height:1.6;word-break:keep-all}
 @media(max-width:860px){.cr-agent img{max-width:320px}.cr-steps,.cr-gates{grid-template-columns:1fr}.cr-nums{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.cr-demo{display:block;width:100%;max-width:880px;margin-inline:auto;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;background:#111}
-.ps-diagram{width:100%;height:auto;display:block}
-@media(max-width:700px){.ps-diagram-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}.ps-diagram{min-width:720px}}
-.ps-diagram text{font-family:var(--font-sans);fill:var(--foreground)}
-.ps-diagram .mut{fill:var(--muted-foreground)}
-.ps-diagram .box{fill:var(--card);stroke:var(--border)}
-.ps-diagram .dark{fill:var(--primary)}
-.ps-diagram .ln{stroke:var(--foreground);stroke-width:1.5;fill:none}
-.ps-diagram .dash{stroke:var(--muted-foreground);stroke-width:1.5;stroke-dasharray:5 5;fill:none}
-.cr-steps{grid-template-columns:repeat(2,minmax(0,1fr))}
-.cr-gates{grid-template-columns:repeat(2,minmax(0,1fr))}
-@media(max-width:860px){.cr-gates,.cr-steps{grid-template-columns:1fr}.cr-nums{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style><style>
 .ag-mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:32px;list-style:none;margin:32px 0 0;padding:0}
 .ag-mini li{display:flex;gap:20px;align-items:flex-start;min-width:0}
@@ -417,62 +417,57 @@ body{background:var(--background);color:var(--foreground)}
 </style>
 
 <div class="site-nav"><div class="page">
-<nav aria-label="주 메뉴" class="top">
-<a class="brand" href="/_preview/m2/ko/"><svg aria-hidden="true" class="mk" height="22" viewbox="0 0 64 64" width="22"><path d="M46.34 17.00 L55.00 22.00 L55.00 13.00 L48.00 6.00 L23.00 6.00 L9.00 20.00 L9.00 44.00 L23.00 58.00 L48.00 58.00 L55.00 51.00 L55.00 42.00 L46.34 47.00 L28.26 47.00 L21.00 39.74 L21.00 24.26 L28.26 17.00 Z" fill="currentColor"></path></svg><span class="nowrap">Carvit</span></a>
-<div class="links"><!--pv:head--><a href="/_preview/m2/ko/ux-mcp/"><span class="nowrap">UX MCP</span></a><a href="/_preview/m2/ko/create/"><span class="nowrap">Create</span></a><a href="/_preview/m2/ko/pass/" aria-current="page"><span class="nowrap">Pass</span></a><a href="/_preview/m2/ko/team/"><span class="nowrap">팀</span></a><a href="/ko/tech-report/"><span class="nowrap">테크리포트</span></a><!--/pv:head--><a class="lang" data-lang="en" href="/_preview/m2/pass/">English</a><a class="login" href="https://mcp.carvit.ai/login">로그인</a></div><button aria-controls="sheet" aria-expanded="false" aria-label="메뉴 열기" class="burger" data-close="메뉴 닫기" id="burger" type="button"><i></i><i></i><i></i></button>
+<nav aria-label="Main Menu" class="top">
+<a class="brand" href="/"><svg aria-hidden="true" class="mk" height="22" viewbox="0 0 64 64" width="22"><path d="M46.34 17.00 L55.00 22.00 L55.00 13.00 L48.00 6.00 L23.00 6.00 L9.00 20.00 L9.00 44.00 L23.00 58.00 L48.00 58.00 L55.00 51.00 L55.00 42.00 L46.34 47.00 L28.26 47.00 L21.00 39.74 L21.00 24.26 L28.26 17.00 Z" fill="currentColor"></path></svg><span class="nowrap">Carvit</span></a>
+<div class="links"><!--mn:head--><a href="/ux-mcp/"><span class="nowrap">UX MCP</span></a><a href="/create/" aria-current="page"><span class="nowrap">Create</span></a><a href="/pass/"><span class="nowrap">Pass</span></a><a href="/team/"><span class="nowrap">Team</span></a><a href="/tech-report/"><span class="nowrap">Tech Report</span></a><!--/mn:head--><a class="lang" data-lang="ko" href="/ko/create/">한국어</a><a class="login" href="https://mcp.carvit.ai/login">Log in</a></div><button aria-controls="sheet" aria-expanded="false" aria-label="Open Menu" class="burger" data-close="Close menu" id="burger" type="button"><i></i><i></i><i></i></button>
 </nav>
-<div class="sheet" id="sheet"><!--pv:sheet--><a href="/_preview/m2/ko/ux-mcp/"><span class="nowrap">UX MCP</span></a><a href="/_preview/m2/ko/create/"><span class="nowrap">Create</span></a><a href="/_preview/m2/ko/pass/" aria-current="page"><span class="nowrap">Pass</span></a><a href="/_preview/m2/ko/team/"><span class="nowrap">팀</span></a><a href="/ko/tech-report/"><span class="nowrap">테크리포트</span></a><!--/pv:sheet--><a class="lang" data-lang="en" href="/_preview/m2/pass/">English</a></div>
+<div class="sheet" id="sheet"><!--mn:sheet--><a href="/ux-mcp/"><span class="nowrap">UX MCP</span></a><a href="/create/" aria-current="page"><span class="nowrap">Create</span></a><a href="/pass/"><span class="nowrap">Pass</span></a><a href="/team/"><span class="nowrap">Team</span></a><a href="/tech-report/"><span class="nowrap">Tech Report</span></a><!--/mn:sheet--><a class="lang" data-lang="ko" href="/ko/create/">한국어</a></div>
 </div></div>
 <header class="pagehead"><div class="page">
-<h1>에이전트가 인프라 세팅을 직접 할 수 있게 합니다<span class="cr-chip">Closed Beta</span></h1>
-<p class="sub">키 값을 에이전트에게 보여 주지 않고 금고가 대신 넣어 줍니다. 에이전트는 이름으로만 요청합니다.</p>
+<h1>Agents manage the entire video production process<span class="cr-chip">Beta</span></h1>
+<p class="sub">In Carvit Create, AI agents handle every step in sequence, from performance analysis and topic ideas to video production and publishing on 6 channels.</p>
 </div></header>
+<section class="sect"><div class="page"><div class="cr-wrap cr-band"><div class="cr-grid"><figure><video aria-label="Spine model surrounded by red light" autoplay="" class="cr-loop" loop="" muted="" playsinline="" poster="/assets/m2/create-63481c9132.jpg" preload="metadata" src="/assets/m2/create-6b38338fca.mp4"></video><figcaption>Spine model surrounded by red light</figcaption></figure><figure><video aria-label="Building cross-section showing an elevator" autoplay="" class="cr-loop" loop="" muted="" playsinline="" poster="/assets/m2/create-5d4ef0f375.jpg" preload="metadata" src="/assets/m2/create-d2d0cc9cc2.mp4"></video><figcaption>Building cross-section showing an elevator</figcaption></figure><figure><img alt="Person evacuating smoke-filled stairs (AI generated)" src="/assets/m2/create-9f99948105.jpg" width="720" height="720" loading="lazy"><figcaption>Person evacuating smoke-filled stairs (AI generated)</figcaption></figure></div><p class="cr-cap">Scenes from videos created and published with Create. All were generated by AI.</p></div></div></section>
 <main>
-<section class="sect"><div class="page"><div class="cr-wrap"><video aria-label="실제 Carvit Pass 확장 화면을 녹화한 영상입니다. 계정과 키 이름은 모두 가상 데이터입니다." autoplay="" class="cr-loop cr-demo" loop="" muted="" playsinline="" poster="/_preview/m2/assets/pass-85a13d15ab.jpg" preload="metadata" src="/_preview/m2/assets/pass-0839b2f1bd.mp4"></video><p class="cr-cap">실제 Carvit Pass 확장 화면을 녹화한 영상입니다. 계정과 키 이름은 모두 가상 데이터입니다.</p></div></div></section>
 <section class="sect"><div class="page"><div class="cr-wrap">
-<h2 class="cr-h2">이름만 말하면 금고가 값을 넣습니다</h2>
-<p class="cr-lead">Carvit Pass는 API 키를 보관하고 필요한 자리에 대신 넣어 주는 키 보관소입니다.</p>
-<div class="ps-diagram-wrap"><svg aria-label="에이전트는 키 이름만 요청하고, 금고가 값을 정해진 자리에 넣고, 에이전트에게는 성공이나 실패만 돌려줍니다" class="ps-diagram" role="img" viewbox="0 0 960 330">
-<rect class="box" height="130" rx="12" width="230" x="20" y="50"></rect><text font-size="22" font-weight="600" text-anchor="middle" x="135" y="106">AI 에이전트</text><text class="mut" font-size="15" text-anchor="middle" x="135" y="138">키의 이름만 압니다</text>
-<rect class="dark" height="130" rx="12" width="230" x="365" y="50"></rect><text font-size="22" font-weight="600" style="fill:var(--primary-foreground)" text-anchor="middle" x="480" y="106">금고</text><text font-size="15" style="fill:var(--primary-foreground);opacity:.75" text-anchor="middle" x="480" y="138">키 값은 여기에만 있습니다</text>
-<rect class="box" height="130" rx="12" width="230" x="710" y="50"></rect><text font-size="22" font-weight="600" text-anchor="middle" x="825" y="106">정해진 자리</text><text class="mut" font-size="15" text-anchor="middle" x="825" y="138">.env 같은 저장 위치</text>
-<path class="ln" d="M262 115 H343"></path><path class="ln" d="M335 108 L345 115 L335 122"></path><text class="mut" font-size="15" text-anchor="middle" x="306" y="98">이름으로 요청</text>
-<path class="ln" d="M607 115 H688"></path><path class="ln" d="M680 108 L690 115 L680 122"></path><text class="mut" font-size="15" text-anchor="middle" x="651" y="98">값을 넣음</text>
-<path class="dash" d="M480 192 V246 H135 V194"></path><path class="dash" d="M128 203 L135 192 L142 203"></path><text class="mut" font-size="15" text-anchor="middle" x="307" y="278">에이전트에게는 성공·실패와 확인용 값만 돌려줍니다</text>
-</svg></div><p class="ps-swipe">옆으로 밀어 보세요 →</p>
+<h2 class="cr-h2">Agents run all six steps in sequence</h2>
+<p class="cr-lead">Results from previous steps pass directly to the next, and if blocked, the cause is recorded and retried.</p>
+<ol class="cr-steps"><li><span class="cr-n">1</span><div><h3>Performance Analysis</h3><p>Reads channel view and subscriber metrics to summarize which videos performed well.</p></div></li><li><span class="cr-n">2</span><div><h3>Topic Suggestions</h3><p>Suggests topics from the candidate list based on programming criteria (safety, curiosity, mystery).</p></div></li><li><span class="cr-n">3</span><div><h3>Script and audio</h3><p>AI drafts and fact-checks the script, refines it, and adds voiceovers.</p></div></li><li><span class="cr-n">4</span><div><h3>Video cuts</h3><p>Generates cuts matching the script using AI video creation.</p></div></li><li><span class="cr-n">5</span><div><h3>Assembly</h3><p>Automatically assembles cuts, audio, and subtitles into a single video.</p></div></li><li><span class="cr-n">6</span><div><h3>Scheduling and posting</h3><p>Schedules and posts videos across 6 channels: YouTube, TikTok, Instagram, Threads, Facebook, and Naver Clip.</p></div></li></ol>
 </div></div></section>
 <section class="sect"><div class="page"><div class="cr-wrap">
-<h2 class="cr-h2">이렇게 동작합니다</h2>
-<p class="cr-lead">모든 단계에서 에이전트가 키 값을 보지 않도록 설계했습니다.</p>
-<ol class="cr-steps"><li><span class="cr-n">1</span><div><h3>키를 금고에 담습니다</h3><p>키 값은 금고 안에만 두고, 에이전트의 대화와 파일에 남지 않도록 설계했습니다.</p></div></li><li><span class="cr-n">2</span><div><h3>이름으로 요청합니다</h3><p>"결제 서비스 키를 .env에 넣어 줘"처럼 값이 아니라 이름으로만 말합니다.</p></div></li><li><span class="cr-n">3</span><div><h3>키 종류에 따라 넣습니다</h3><p>일반 키는 바로, 중요한 키는 사람이 확인한 뒤에 금고가 정해진 자리에 넣어 줍니다. 기준은 아래에서 설명합니다.</p></div></li><li><span class="cr-n">4</span><div><h3>결과만 돌려줍니다</h3><p>성공 또는 실패와 확인용 값(지문)만 돌려주고, 값은 대화와 기록에 남기지 않습니다.</p></div></li></ol>
-</div></div></section>
-<section class="sect"><div class="page"><div class="cr-wrap">
-<h2 class="cr-h2">사람이 확인하는 때</h2>
-<p class="cr-lead">모든 키에 승인을 요구하지 않습니다. 확인은 꼭 필요한 곳에만 둡니다.</p>
+<h2 class="cr-h2">Humans review in only three places</h2>
+<p class="cr-lead">The rest runs automatically. Review is required in only these three places.</p>
 <ul class="cr-gates">
-<li><b>일반 키</b><span>사람의 승인 없이 금고가 바로 넣어 줍니다.</span></li>
-<li><b>중요한 키</b><span>돈이 걸렸거나 다른 보안 문제로 이어질 수 있는 키는 텔레그램 같은 추가 확인을 거친 뒤 넣습니다. 중요한 키를 화면에서 보거나 복사할 때도 확인합니다.</span></li>
+<li><b>Topic</b><span>Decide what story to make.</span></li>
+<li><b>Audio</b><span>Listen to and confirm the script and voice.</span></li>
+<li><b>Assembled cut</b><span>Review the finished video to decide whether to publish.</span></li>
 </ul>
 </div></div></section>
 <section class="sect"><div class="page"><div class="cr-wrap">
-<h2 class="cr-h2">우리 팀이 직접 쓴 기록</h2>
-<p class="cr-lead">아래는 Pass를 만든 우리 팀의 개발 기록입니다. 고객 사용 수치가 아닙니다.</p>
-<ul class="cr-nums"><li><b>35</b><span>Carvit Pass 개발 PR <span class="nowrap">(10/3 이후)</span></span></li></ul>
-<p class="cr-fine">2026-10-14 기준 우리 팀 자체 기록이며 고객 사용 수치나 매출이 아닙니다.</p>
+<h2 class="cr-h2">AI creates every scene</h2>
+<p class="cr-lead">It generates an image for each scene, turns that image into a video a few seconds long, and stitches them together.</p>
+<div class="cr-band"><div class="cr-grid"><figure><video aria-label="Back view of a woman looking out the window (AI generated)" autoplay="" class="cr-loop" loop="" muted="" playsinline="" poster="/assets/m2/create-83d91059ea.jpg" preload="metadata" src="/assets/m2/create-6c73bd7f00.mp4"></video><figcaption>Back view of a woman looking out the window (AI generated)</figcaption></figure><figure><video aria-label="Person in blue overalls (AI generated)" autoplay="" class="cr-loop" loop="" muted="" playsinline="" poster="/assets/m2/create-2f6dbb977f.jpg" preload="metadata" src="/assets/m2/create-240e5ffabc.mp4"></video><figcaption>Person in blue overalls (AI generated)</figcaption></figure><figure><video aria-label="Small figure viewed from above the stairs (AI generated)" autoplay="" class="cr-loop" loop="" muted="" playsinline="" poster="/assets/m2/create-60afda104f.jpg" preload="metadata" src="/assets/m2/create-3afb364fb3.mp4"></video><figcaption>Small figure viewed from above the stairs (AI generated)</figcaption></figure></div><p class="cr-cap">Scenes from other videos created and published with Create. All were generated by AI.</p></div>
+</div></div></section>
+<section class="sect"><div class="page"><div class="cr-wrap">
+<h2 class="cr-h2">Records from our own team</h2>
+<p class="cr-lead">Create is a tool used directly by our team. These are not customer usage metrics.</p>
+<ul class="cr-nums"><li><b>33</b><span>Videos produced <span class="nowrap">(8/28~10/14)</span></span></li><li><b>22</b><span>Videos published <span class="nowrap">(8/28~10/14)</span></span></li><li><b>6</b><span>Scheduled publishing channels <span class="nowrap">(as of 10/15)</span></span></li><li><b>About 7 weeks</b><span>Time spent building the pipeline <span class="nowrap">(since 8/28)</span></span></li></ul>
+<p class="cr-fine">These are internal team records as of 2026-10-14, not customer usage metrics or revenue.</p>
 </div></div></section>
 <section class="sect alt" id="faq"><div class="page">
-<h2>자주 묻는 질문</h2>
-<div class="faq"><details><summary>키 발급 화면에서 금고가 키를 자동으로 담아 가나요?</summary><div class="ans"><p>아직은 아닙니다. 만드는 중입니다.</p></div></details><details><summary>웹 화면의 키 입력칸에도 금고가 넣어 주나요?</summary><div class="ans"><p>아직은 아닙니다. 만드는 중입니다.</p></div></details><details><summary>이미 가진 키 모음을 한 번에 옮길 수 있나요?</summary><div class="ans"><p>아직은 아닙니다. 만드는 중입니다.</p></div></details><details><summary>인증서 로그인도 대신해 주나요?</summary><div class="ans"><p>아니요. 인증서는 보관하고, 확인을 거친 뒤 보거나 복사하는 것까지만 지원합니다. 로그인 입력이나 서명은 대신하지 않습니다.</p></div></details></div>
+<h2>FAQ</h2>
+<div class="faq"><details><summary>Can customers use it now?</summary><div class="ans"><p>Not yet. Right now, we are running it on our team's experimental channels including YouTube, TikTok, and Instagram, and we are preparing the customer product.</p></div></details></div>
 </div></section>
 <section class="sect"><div class="page"><div class="cr-wrap">
-<h2 class="cr-h2">Pass에 관심이 있으신가요?</h2>
-<p class="cr-lead">클로즈드 베타입니다. 써 보고 싶은 팀은 알려 주세요.</p>
-<div class="cr-cta"><a class="cr-btn" href="mailto:hello@carvit.ai">Pass 문의 메일 보내기</a></div>
+<h2 class="cr-h2">Interested in Create?</h2>
+<p class="cr-lead">Let us know if you have video tasks you would like to try.</p>
+<div class="cr-cta"><a class="cr-btn" href="mailto:hello@carvit.ai">Send inquiry email for Create</a></div>
 </div></div></section>
-<section class="sect ag-sec"><div class="page"><div class="cr-wrap"><h2 class="cr-h2">Pass를 맡은 에이전트</h2><ul class="ag-mini"><li><img alt="탐, 인프라 에이전트" height="80" loading="lazy" src="/_preview/m2/assets/pass-d502363caf.jpg" width="80"/><div><p class="role">인프라 에이전트</p><h3>탐</h3><p>배포, 크레딧, 감시 같은 인프라를 돌보고 운영을 챙깁니다.</p><p>Carvit Pass를 만들고, 회사 저장소 병합 PR 2,196건<span class="nowrap">(8/29 이후, 2026-10-14 기준)</span>을 쌓았습니다.</p></div></li></ul><p class="ag-more"><a href="/_preview/m2/ko/team/">팀 소개에서 전체 보기 →</a></p></div></div></section>
+<section class="sect ag-sec"><div class="page"><div class="cr-wrap"><h2 class="cr-h2">Agent in charge of Create</h2><ul class="ag-mini"><li><img alt="Fit, Video Agent" height="80" loading="lazy" src="/assets/m2/create-e337060c00.jpg" width="80"/><div><p class="role">Video Agent</p><h3>Fit</h3><p>Handles scripts, audio, video cuts, assembly, and scheduling in sequence to publish across multiple channels.</p><p>33 videos produced, 22 published <span class="nowrap">(as of 8/28~10/14)</span></p></div></li></ul><p class="ag-more"><a href="/team/">View all in Team →</a></p></div></div></section>
 </main>
-<footer class="foot"><div class="page"><div class="cols"><div><h5>제품</h5><a href="/_preview/m2/ko/ux-mcp/">UX MCP</a><a href="/_preview/m2/ko/create/">Create</a><a href="/_preview/m2/ko/pass/">Pass</a></div><div><h5><a href="/_preview/m2/ko/team/">팀</a></h5><a href="/_preview/m2/ko/team/">팀 소개</a></div><div><h5><a href="/_preview/m2/ko/ux-mcp/">UX MCP</a></h5><a href="/_preview/m2/ko/ux-mcp/">소개</a><a href="https://mcp.carvit.ai/dashboard">대시보드</a><a href="https://mcp.carvit.ai/guide">UX 가이드</a><a href="https://mcp.carvit.ai/connect">연결 방법</a></div><div><h5><a href="/ko/tech-report/">테크리포트</a></h5><!--rp:foot--><a href="/ko/tech-report/logo-making-process/">Carvit 로고를 정한 과정</a><a href="/ko/tech-report/pass-security-model/">Carvit Pass가 지키는 것과 지키지 못하는 것</a><a href="/ko/tech-report/agent-launch-qa/">리뷰 통과는 출시 가능이 아니었습니다</a><a href="/ko/tech-report/white-paper/">AI가 고친 코드, 린트 통과만으로는 부족했습니다</a><!--/rp:foot--></div><div><h5><a href="/ko/brand/">브랜드</a></h5><a href="/ko/brand/">브랜드</a></div><div><h5>문의</h5><a href="mailto:hello@carvit.ai">hello@carvit.ai</a></div><div><h5>정책</h5><a href="/ko/terms/">이용약관</a><a href="/ko/privacy/">개인정보 처리방침</a></div></div><p class="fine">Carvit · © 2026</p></div></footer>
-<script>(function(){try{if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('video.cr-loop').forEach(function(v){v.removeAttribute('autoplay');v.pause();});}}catch(e){}})();</script><style>
+<footer class="foot"><div class="page"><div class="cols"><div><h5>Product</h5><a href="/ux-mcp/">UX MCP</a><a href="/create/">Create</a><a href="/pass/">Pass</a></div><div><h5><a href="/team/">Team</a></h5><a href="/team/">About the team</a></div><div><h5><a href="/ux-mcp/">UX MCP</a></h5><a href="/ux-mcp/">About</a><a href="https://mcp.carvit.ai/dashboard">Dashboard</a><a href="https://mcp.carvit.ai/guide">UX Guide</a><a href="https://mcp.carvit.ai/connect">How to connect</a></div><div><h5><a href="/tech-report/">Tech Report</a></h5><!--rp:foot--><a href="/tech-report/logo-making-process/">Tech Report 4</a><a href="/tech-report/pass-security-model/">Tech Report 3</a><a href="/tech-report/agent-launch-qa/">Tech Report 2</a><a href="/tech-report/white-paper/">Tech Report 1</a><!--/rp:foot--></div><div><h5><a href="/brand/">Brand</a></h5><a href="/brand/">Brand</a></div><div><h5>Contact</h5><a href="mailto:hello@carvit.ai">hello@carvit.ai</a></div><div><h5>Policies</h5><a href="/terms/">Terms of Service</a><a href="/privacy/">Privacy Policy</a></div></div><p class="fine">Carvit · © 2026</p></div></footer>
+<script>(function(){try{if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('video.cr-loop').forEach(function(v){v.removeAttribute('autoplay');v.pause();});}}catch(e){}})();</script>
+<style>
 /* 지투 목록1(2026-10-15) */
 .ps-swipe{display:none}
 @media (max-width:760px){
@@ -501,5 +496,9 @@ body{background:var(--background);color:var(--foreground)}
 @media (max-width:760px){.text-page .sect,.text-page .cta-band{padding-block:56px}}
 </style>
 <script src="/assets/site.js"></script>
+<style>
+/* 휴대폰 누르는 영역 44(가이드 1.34·1.37 ⑦, 지투 10/15): 머리 로그인 버튼·햄버거 */
+@media (max-width:480px){.links a.login{min-height:44px}.burger{min-width:44px;min-height:44px}}
+</style>
 </body>
 </html>
