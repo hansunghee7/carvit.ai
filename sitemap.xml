@@ -84,6 +84,20 @@
     <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/brand/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/brand/"/>
   </url>
+  <url>
+    <loc>https://carvit.ai/team/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/team/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/team/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/team/"/>
+  </url>
+  <url>
+    <loc>https://carvit.ai/ko/team/</loc>
+    <lastmod>2026-10-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/team/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/team/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/team/"/>
+  </url>
   <!--rp:sitemap-->
   <url>
     <loc>https://carvit.ai/tech-report/logo-making-process/</loc>
