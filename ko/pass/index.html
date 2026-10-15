@@ -70,7 +70,7 @@ header.hero > .page{width:100%}  /* flex 세로 배치에서도 글 칸의 왼�
 .links a[aria-current=page]{background:var(--muted);color:var(--foreground);font-weight:500}
 .links a.login{background:var(--primary);color:var(--primary-foreground);font-weight:600;padding-inline:var(--sp-4)}  /* 로그인 전 주 동작 하나(채움) */
 .links a.login:hover,.links a.login:focus-visible{color:var(--primary-foreground)}
-.hero h1{font-size:clamp(24px,4.2vw,45px);line-height:1.08;letter-spacing:-0.03em;max-width:18ch;margin:0 0 var(--sp-6);font-weight:600;word-break:keep-all}
+.hero h1{font-size:var(--h2);line-height:1.08;letter-spacing:-0.03em;max-width:18ch;margin:0 0 var(--sp-6);font-weight:600;word-break:keep-all}
 :lang(ko) .hero h1{max-width:18ch;line-height:1.15;letter-spacing:-0.03em}
 .hero .sub{font-size:clamp(16px,1.6vw,20px);max-width:56ch;color:var(--hero-muted);margin:0 0 var(--sp-6)}
 :lang(ko) .hero .sub{max-width:56ch}
@@ -101,8 +101,8 @@ header.hero > .page{width:100%}  /* flex 세로 배치에서도 글 칸의 왼�
 .subnav .tab[aria-current=page]{color:var(--foreground);font-weight:500;border-bottom-color:var(--foreground)}
 
 /* 하위 화면 머리: 어두운 바탕은 홈 히어로만(가이드 1.37), 하위 화면은 흰 바탕 */
-.pagehead{padding-block:clamp(48px,7vw,88px) clamp(32px,5vw,56px)}
-.pagehead h1{font-size:clamp(28px,4vw,45px);line-height:1.1;letter-spacing:-0.035em;max-width:24ch;margin:0 0 var(--sp-4);font-weight:600;word-break:keep-all}
+.pagehead{padding-block:96px 48px}
+.pagehead h1{font-size:var(--h2);line-height:1.1;letter-spacing:-0.035em;max-width:24ch;margin:0 0 var(--sp-4);font-weight:600;word-break:keep-all}
 .pagehead .sub,.cta-band .sub{font-size:clamp(16px,1.6vw,20px);max-width:56ch;color:var(--muted-foreground);margin:0 0 var(--sp-6)}
 .hero .sub{color:var(--hero-muted)}
 .btn.ghost{background:transparent;color:var(--foreground);border-color:var(--border)}
@@ -119,7 +119,7 @@ header.hero > .page{width:100%}  /* flex 세로 배치에서도 글 칸의 왼�
 /* 섹션 */
 .sect{padding-block:80px}
 .sect.alt{background:var(--muted)}
-.sect h2{font-size:clamp(20px,2.9vw,31px);line-height:1.15;letter-spacing:-0.02em;max-width:24ch;margin:0 0 var(--sp-6);font-weight:600;word-break:keep-all}
+.sect h2{font-size:var(--h3);line-height:1.15;letter-spacing:-0.02em;max-width:24ch;margin:0 0 var(--sp-6);font-weight:600;word-break:keep-all}
 :lang(ko) .sect h2{max-width:22ch;letter-spacing:-0.035em;line-height:1.18}
 .sect .lead{font-size:clamp(16px,1.3vw,19px);max-width:62ch;margin:0 0 var(--sp-6)}
 .sect .note,.repro{font-size:14px;color:var(--muted-foreground);max-width:72ch}
@@ -196,7 +196,7 @@ body{font-size:17px;line-height:28px;letter-spacing:-.01em}
 .links a{color:rgba(var(--w),.72);border-radius:40px;font-weight:500}
 .links a:hover,.links a:focus-visible{color:var(--foreground);text-decoration:none;background:rgba(var(--w),.08)}
 .links a[aria-current=page]{background:rgba(var(--w),.08);color:var(--foreground)}
-.links a.login{background:var(--primary);color:var(--primary-foreground);min-height:36px;padding-inline:16px;margin-left:6px}
+.links a.login{background:var(--primary);color:var(--primary-foreground);min-height:40px;padding-inline:16px;margin-left:6px}
 .links a.login:hover,.links a.login:focus-visible{background:var(--primary);color:var(--primary-foreground);opacity:.86}
 /* 버튼: 높이 40 알약, 14px/500 (1.37) */
 .btn{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 20px;border-radius:40px;font-size:14px;font-weight:500;background:var(--primary);color:var(--primary-foreground);border:0}
@@ -242,7 +242,7 @@ code{background:rgba(var(--w),.08);border-color:rgba(var(--w),.12)}
 .foot a{color:rgba(var(--w),.72)}
 @media (max-width:760px){
   .page{padding-inline:24px}
-  .pagehead{padding-block:96px 40px}
+  .pagehead{padding-block:96px 48px}
 }
 
 /* 하위 페이지 꼬리: 홈과 같은 4열(머리 메뉴 이름·하위 메뉴와 일치) */
@@ -274,7 +274,7 @@ body{font-family:var(--font-sans),'Noto Sans KR','Apple SD Gothic Neo','Malgun G
   .top{flex-wrap:nowrap}
   .links a:not(.login){display:none}
   .links{margin-left:auto}
-  .links a.login{min-height:36px}
+  .links a.login{min-height:40px}
   .burger{display:block}
   .sheet.open{display:flex;flex-direction:column;background:var(--background);border-bottom:1px solid rgba(var(--w),.12);padding:4px 0 20px}
   .sheet a{font-size:22px;line-height:30px;font-weight:500;padding:12px 0;color:var(--foreground);text-decoration:none;border-bottom:1px solid rgba(var(--w),.08)}
@@ -362,7 +362,7 @@ body{font-family:var(--font-sans),'Noto Sans KR','Apple SD Gothic Neo','Malgun G
 
 /* 글 페이지(UX MCP 소개) 간격: 섹션 위아래 80(휴대폰 56), 머리 위 96 아래 48 (가이드 1.37 ⑪). 150은 홈 전용 */
 .text-page .sect,.text-page .cta-band{padding-block:80px}
-.text-page .pagehead{padding-block:clamp(72px,7vw,96px) 48px}
+.text-page .pagehead{padding-block:96px 48px}
 
 /* UX MCP 소개: 버튼 */
 .btn.outline{background:var(--background);color:var(--foreground);border:2px solid var(--foreground)}
@@ -425,7 +425,7 @@ body{background:var(--background);color:var(--foreground)}
 .pagehead{padding-block:96px 48px !important}
 .sect .page>:last-child,.sect .cr-wrap>:last-child,.cta-band .page>:last-child{margin-bottom:0 !important}
 .cr-wrap>.cr-cap:last-child{margin-bottom:0 !important}
-@media(max-width:760px){.sect,.cta-band{padding-block:56px !important}.pagehead{padding-block:72px 40px !important}}
+@media(max-width:760px){.sect,.cta-band{padding-block:56px !important}.pagehead{padding-block:96px 48px !important}}
 </style>
 
 <div class="site-nav"><div class="page">
