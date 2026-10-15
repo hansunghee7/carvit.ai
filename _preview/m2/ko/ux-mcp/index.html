@@ -373,7 +373,7 @@ body{background:var(--background);color:var(--foreground)}
 .cr-gates b{display:block;font-size:18px;font-weight:600;margin-bottom:8px}
 .cr-gates span{font-size:15px;line-height:1.6;color:var(--muted-foreground);word-break:keep-all}
 .cr-nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;list-style:none;margin:0 0 16px;padding:0}
-.cr-nums b{display:block;font-size:clamp(40px,6vw,72px);font-weight:300;letter-spacing:-.04em;line-height:1.05}
+.cr-nums b{display:block;font-size:clamp(32px,4vw,44px);font-weight:300;letter-spacing:-.04em;line-height:1.05}
 .cr-nums span{font-size:15px;color:var(--muted-foreground)}
 .cr-fine{font-size:13px;line-height:1.7;color:var(--muted-foreground);margin:0;max-width:70ch;word-break:keep-all}
 .cr-limit{margin:0;padding:0;list-style:none;display:grid;gap:12px;max-width:70ch}
@@ -383,24 +383,24 @@ body{background:var(--background);color:var(--foreground)}
 .cr-btn{display:inline-flex;align-items:center;height:40px;padding:0 20px;border-radius:40px;font-size:14px;font-weight:500;background:var(--primary);color:var(--primary-foreground);text-decoration:none}
 .cr-btn.line{background:transparent;color:var(--foreground);border:1px solid var(--border)}
 .pagehead h1{max-width:none}.pagehead .sub{max-width:60ch}
-.cr-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0}.cr-grid figure{margin:0}.cr-grid img,.cr-grid video{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:10px;background:#111}.cr-grid figcaption{font-size:13px;color:var(--muted-foreground);margin-top:8px;word-break:keep-all}@media(max-width:860px){.cr-grid{grid-template-columns:1fr}}.cr-band{margin:0 0 0;padding:0}.cr-band img{display:block;width:100%;height:auto;border-radius:12px}.cr-cap{font-size:13px;color:var(--muted-foreground);margin:12px 0 0}.cr-agent{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:40px;align-items:center}.cr-agent img{width:100%;height:auto;border-radius:12px;display:block;background:#111}.cr-agent .role{font-size:13px;letter-spacing:.06em;color:var(--muted-foreground);margin:0 0 8px}.cr-agent h3{font-size:28px;font-weight:500;margin:0 0 16px}.cr-agent ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}.cr-agent li{font-size:16px;line-height:1.6;word-break:keep-all}
-@media(max-width:860px){.cr-agent{grid-template-columns:1fr}.cr-agent img{max-width:320px}.cr-steps,.cr-gates{grid-template-columns:1fr}.cr-nums{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cr-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0}.cr-grid figure{margin:0}.cr-grid img,.cr-grid video{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:10px;background:#111}.cr-grid figcaption{font-size:13px;color:var(--muted-foreground);margin-top:8px;word-break:keep-all}@media(max-width:860px){.cr-grid{grid-template-columns:1fr}}.cr-band{margin:0 0 0;padding:0}.cr-band img{display:block;width:100%;height:auto;border-radius:12px}.cr-cap{font-size:13px;color:var(--muted-foreground);margin:12px 0 0}.cr-agent img{width:100%;height:auto;border-radius:12px;display:block;background:#111}.cr-agent .role{font-size:13px;letter-spacing:.06em;color:var(--muted-foreground);margin:0 0 8px}.cr-agent h3{font-size:28px;font-weight:500;margin:0 0 16px}.cr-agent ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}.cr-agent li{font-size:16px;line-height:1.6;word-break:keep-all}
+@media(max-width:860px){.cr-agent img{max-width:320px}.cr-steps,.cr-gates{grid-template-columns:1fr}.cr-nums{grid-template-columns:repeat(2,minmax(0,1fr))}}
 
 .cr-agent h3{margin-top:0}.cr-demo{display:block;width:100%;max-width:880px;margin-inline:auto;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;background:#111}.cr-cap{text-align:center}
 .cmp{position:relative;max-width:380px;margin-inline:auto;aspect-ratio:390/563;border-radius:12px;overflow:hidden;border:1px solid var(--border);background:#fff}
 .cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
 .cmp .cmp-a{clip-path:inset(0 50% 0 0)}
 .cmp input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
-.cmp::after{content:"";position:absolute;top:0;bottom:0;left:var(--p,50%);width:2px;background:#171717;transform:translateX(-1px);pointer-events:none}
+.cmp::after{content:"";position:absolute;top:0;bottom:0;left:var(--p,50%);width:2px;background:var(--foreground);transform:translateX(-1px);pointer-events:none}
 .cmp-l,.cmp-r{position:absolute;bottom:12px;padding:5px 12px;border-radius:999px;font-size:13px;font-weight:600;pointer-events:none}
-.cmp-l{left:8px;background:#171717;color:#fff}.cmp-r{right:8px;background:#fff;color:#171717;border:1px solid var(--border)}
+.cmp-l{left:8px;background:var(--foreground);color:#fff}.cmp-r{right:8px;background:#fff;color:var(--foreground);border:1px solid var(--border)}
 
 .phones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .phones figure{margin:0}.phones img{display:block;width:100%;height:auto;border-radius:22px;}
 .phones figcaption{font-size:14px;color:var(--muted-foreground);margin-top:10px;line-height:1.5;word-break:keep-all}.phones figcaption b{display:block;color:var(--foreground);font-size:16px;margin-bottom:2px}
 @media(max-width:860px){.phones{grid-template-columns:1fr;max-width:340px;margin-inline:auto}}
 
-.tpl-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;list-style:none;margin:28px 0 0;padding:0}.tpl-grid li{font-size:15px;line-height:1.45}.tpl-grid img{display:block;width:100%;max-width:260px;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:7.5% / 5.6%;margin-bottom:10px}.tpl-grid span{color:var(--muted-foreground,#6b6b6b)}@media(max-width:900px){.tpl-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.tpl-grid{gap:14px}.tpl-grid li{font-size:13px}}
+.tpl-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;list-style:none;margin:28px 0 0;padding:0}.tpl-grid li{font-size:15px;line-height:1.45}.tpl-grid img{display:block;width:100%;max-width:260px;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:7.5% / 5.6%;margin-bottom:10px}.tpl-grid span{color:var(--muted-foreground,var(--muted-foreground))}@media(max-width:900px){.tpl-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.tpl-grid{gap:14px}.tpl-grid li{font-size:13px}}
 .ux-intro-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;list-style:none;margin:0;padding:0}
 .ux-intro-cards li{padding:24px;border:1px solid var(--border);border-radius:6px;background:var(--card)}
 .ux-intro-cards h3{font-size:18px;font-weight:600;margin:0 0 8px}
@@ -410,7 +410,7 @@ body{background:var(--background);color:var(--foreground)}
 .ux-feat:first-of-type{border-top:0}
 .ux-feat h3{font-size:clamp(22px,2.4vw,28px);font-weight:500;letter-spacing:-.02em;margin:0 0 12px;word-break:keep-all}
 .ux-feat p{font-size:16px;line-height:1.7;color:var(--muted-foreground);margin:0;word-break:keep-all}
-.ux-term{background:#0d0d0d;color:#f2f2f2;border-radius:10px;padding:20px;font-family:var(--font-mono),ui-monospace,monospace;font-size:13.5px;line-height:1.75;white-space:pre-wrap;word-break:normal;overflow-wrap:anywhere}
+.ux-term{background:#0d0d0d;color:#fff;border-radius:10px;padding:20px;font-family:var(--font-mono),ui-monospace,monospace;font-size:14px;line-height:1.75;white-space:pre-wrap;word-break:normal;overflow-wrap:anywhere}
 .ux-term .dim{color:rgba(255,255,255,.55)}
 .ux-tpl{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
 .ux-tpl li{padding:8px 14px;border:1px solid var(--border);border-radius:999px;font-size:14px}
@@ -419,18 +419,18 @@ body{background:var(--background);color:var(--foreground)}
 .ux-memos li{padding:20px;border:1px solid var(--border);border-radius:6px;background:var(--card);font-size:15px;line-height:1.6;word-break:keep-all}
 .ux-memos small{display:block;margin-top:8px;color:var(--muted-foreground);font-size:13px}
 .ux-nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;list-style:none;margin:0 0 8px;padding:0}
-.ux-nums b{display:block;font-size:clamp(36px,5vw,56px);font-weight:300;letter-spacing:-.04em;line-height:1.05}
+.ux-nums b{display:block;font-size:clamp(32px,4vw,44px);font-weight:300;letter-spacing:-.04em;line-height:1.05}
 .ux-nums span{font-size:14px;color:var(--muted-foreground)}
 @media(max-width:860px){.ux-intro-cards,.ux-feat,.ux-memos{grid-template-columns:1fr}.ux-feat{gap:20px}.ux-nums{grid-template-columns:1fr 1fr}}
 </style><style>
 .ag-mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:32px;list-style:none;margin:32px 0 0;padding:0}
 .ag-mini li{display:flex;gap:20px;align-items:flex-start;min-width:0}
 .ag-mini img{width:80px;height:80px;border-radius:8px;object-fit:cover;flex:none;background:#111}
-.ag-mini .role{margin:0 0 2px;font-size:14px;color:var(--muted-foreground,#8a8a8a)}
+.ag-mini .role{margin:0 0 2px;font-size:14px;color:var(--muted-foreground)}
 .ag-mini h3{margin:0 0 8px;font-size:22px;line-height:1.2}
 .ag-mini p{margin:0 0 6px;font-size:16px;line-height:1.55}
 .ag-more{margin:32px 0 0}
-.ag-more a{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 20px;border:1px solid var(--border,#ddd);border-radius:40px;font-size:14px;font-weight:500;color:inherit;text-decoration:none}
+.ag-more a{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 20px;border:1px solid var(--border);border-radius:40px;font-size:14px;font-weight:500;color:inherit;text-decoration:none}
 </style><style id="spacing-fix">
 .sect,.cta-band{padding-block:80px !important}
 .pagehead{padding-block:96px 48px !important}
@@ -477,7 +477,7 @@ query = "결제 확인 버튼 순서"
 <span class="dim">→</span> 1.7 버튼 라벨은 동사와 결과로 쓴다</div></div>
 <div class="ux-feat"><div><h3>말뿐인 원칙이 아니라 실제 값으로</h3><p>가이드에는 색, 여백, 둥글기, 문구가 실제 값으로 들어 있어 해석이 갈릴 여지가 적습니다. 가이드에 없는 결정은 만들어 쓰지 않고, 새 항목으로 넣을지 먼저 묻습니다.</p></div>
 <div class="ux-term"><span class="dim">carvit · draft_screen</span>
-:root{ --primary:#171717; --radius:10px; }
+:root{ --primary:var(--foreground); --radius:10px; }
 .confirm-actions{ justify-content:flex-end; gap:8px; }  <span class="dim">/* 1.38 */</span></div></div>
 <div class="ux-feat"><div><h3>리뷰에서 눈으로 찾던 일을 자동으로</h3><p>만든 뒤에는 바뀐 코드를 가이드와 대조해, 등록되지 않은 색이나 여백을 줄 단위로 알려 줍니다. 고친 뒤 다시 검사해 가이드에 없는 값이 0개인지 확인합니다.</p></div>
 <div class="ux-term"><span class="dim">carvit · check_diff_violations</span>
