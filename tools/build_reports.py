@@ -72,7 +72,7 @@ def sub_between(s, start, end, body, nl, indent=''):
 def build_outputs(reports):
     out = {}  # 경로 → 새 내용
     latest = max(r['date'] for r in reports)
-    files = [f for f in subprocess.check_output(['git', 'ls-files'], cwd=ROOT, text=True, encoding='utf-8').split('\n') if f.endswith('.html')]
+    files = [f for f in subprocess.check_output(['git', 'ls-files'], cwd=ROOT, text=True, encoding='utf-8').split('\n') if f.endswith('.html') and not f.startswith('_preview/')]  # _preview: 라이브 전 미리보기
     # 1) 목록 카드 + 꼬리 메뉴
     for f in files:
         p = ROOT / f
