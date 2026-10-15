@@ -31,9 +31,9 @@
 /* 문의 띠(Create·Pass 형태로 다섯 페이지 통일, 지투 목록1 ⑥) */
 .cr-wrap{max-width:1080px;margin:0 auto}
 .cr-h2{max-width:none;text-wrap:balance;font-size:var(--h2,clamp(32px,4vw,44px));line-height:1.16;letter-spacing:-.03em;font-weight:500;margin:0 0 12px;word-break:keep-all}
-.cr-lead{font-size:17px;line-height:1.7;max-width:60ch;margin:0 0 40px;word-break:keep-all;opacity:.7}
+.cr-lead{font-size:17px;line-height:1.7;color:var(--muted-foreground);max-width:60ch;margin:0 0 40px;word-break:keep-all}
 .cr-cta{display:flex;gap:12px;flex-wrap:wrap}
-.cr-btn{display:inline-flex;align-items:center;height:40px;padding:0 20px;border-radius:40px;font-size:14px;font-weight:500;background:#fff;color:#000;text-decoration:none}
+.cr-btn{display:inline-flex;align-items:center;height:40px;padding:0 20px;border-radius:40px;font-size:14px;font-weight:500;background:var(--primary);color:var(--primary-foreground);text-decoration:none}
 </style>
 <style>@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&display=swap');  /* 한국어는 홈과 같은 Noto Sans KR(가이드 v33) */
 /* Carvit 백서 스타일. 값은 Carvit 가이드 1.34(흑백 정갈, Geist)와 1.37(홈 구성)의 토큰만 쓴다. 라이트 고정, 강조색 없음. 가이드 v29 반영(2026-10-01): 히어로는 이름·한 줄 설명·버튼만(격자·작동 장면 삭제), 머리 높이 72px. */
@@ -379,17 +379,17 @@ body{font-family:var(--font-sans),'Noto Sans KR','Apple SD Gothic Neo','Malgun G
 .hero-actions .btn{min-height:44px}
 </style>
 <style>
-body.team-page{--w:255,255,255;--background:#000;--foreground:#fff;--card:rgba(255,255,255,.12);--muted:rgba(255,255,255,.08);--muted-foreground:rgba(255,255,255,.6);--primary:#fff;--primary-foreground:#000;--border:rgba(255,255,255,.2);--ring:rgba(255,255,255,.5);--input:rgba(255,255,255,.4);background:var(--background);color:var(--foreground);color-scheme:dark}
-body.team-page .site-nav,body.team-page nav.top,body.team-page .sheet{background:var(--background);color:var(--foreground)}
+
+
 .pagehead h1{max-width:none}
 .pagehead .sub{max-width:none}
 .tm-wrap{max-width:1080px;margin:0 auto}
 .tm{display:grid;grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:48px;align-items:center;padding-block:48px;border-top:1px solid var(--border)}
 .tm:first-child{border-top:0}
-.tm img{width:100%;height:auto;border-radius:12px;display:block;background:#111}
+.tm img{width:100%;height:auto;border-radius:12px;display:block;background:var(--muted)}
 .tm-role{font-size:13px;letter-spacing:.06em;color:var(--muted-foreground);margin:0 0 8px;text-transform:uppercase}
-.tm-li{display:inline-flex;vertical-align:middle;margin-left:12px;color:#fff;opacity:.85}.tm-li:hover{opacity:1}
-.tm-li:focus-visible{outline:2px solid #fff;outline-offset:3px;border-radius:4px}
+.tm-li{display:inline-flex;vertical-align:middle;margin-left:12px;color:var(--foreground);opacity:.85}.tm-li:hover{opacity:1}
+.tm-li:focus-visible{outline:2px solid var(--foreground);outline-offset:3px;border-radius:4px}
 .tm h3{font-size:clamp(24px,.57vw + 21.8px,30px);font-weight:500;letter-spacing:-.02em;margin:0 0 20px}
 .tm ul{list-style:none;margin:0;padding:0;display:grid;gap:12px}
 .tm li{font-size:17px;line-height:1.6;color:var(--foreground);word-break:keep-all}
