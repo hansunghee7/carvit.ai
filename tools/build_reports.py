@@ -56,6 +56,11 @@ def card(r, lang):
             f'<div class="actions"><a class="btn" href="{L["base"]}/tech-report/{r["slug"]}/">{L["btn"]}</a></div></div>')
 
 
+def nowrap_names(t):
+    """제목 안의 제품 이름(Carvit Pass, Carvit)은 줄바꿈 때 쪼개지지 않게 nowrap으로 감싼다(가이드 1.34)."""
+    return re.sub(r'Carvit Pass|Carvit', lambda m: f'<span class="nowrap">{m.group(0)}</span>', t)
+
+
 def sub_between(s, start, end, body, nl, indent=''):
     """표시자 사이 내용을 body로 바꾼다. 표시자가 없으면 None."""
     i, j = s.find(start), s.find(end)
@@ -82,6 +87,15 @@ def build_outputs(reports):
             if t is None:
                 raise SystemExit(f'{f}: <!--rp:cards--> 표시자가 없습니다')
             s = t
+        # 홈 테크리포트 목록(제목+화살표 줄, 최신 글이 위): <!--rp:home--> 표시자 사이를 채운다
+        if f in ('index.html', 'ko/index.html'):
+            if '<!--rp:home-->' not in s:
+                raise SystemExit(f'{f}: <!--rp:home--> 표시자가 없습니다')
+            items = ''.join(
+                f'<li><a href="{L["base"]}/tech-report/{r["slug"]}/"><span>{nowrap_names(r["card_title"][lang])}</span><span class="ar" aria-hidden="true">&gt;</span></a></li>'
+                for r in reports)
+            i, j = s.index('<!--rp:home-->'), s.index('<!--/rp:home-->')
+            s = s[:i] + '<!--rp:home-->' + items + s[j:]
         if '<!--rp:foot-->' in s:
             links = ''.join(f'<a href="{L["base"]}/tech-report/{r["slug"]}/">{L["label"]} {r["n"]}</a>' for r in reports)
             i, j = s.index('<!--rp:foot-->'), s.index('<!--/rp:foot-->')
