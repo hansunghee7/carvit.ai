@@ -177,7 +177,7 @@ def main() -> None:
     ap.add_argument("--out", default="C:/work/_ops/context_audit")
     a = ap.parse_args()
     menu = menu_items(a.base)
-    urls = sitemap_urls(a.base) + APP_PAGES
+    urls = [u.replace("https://carvit.ai", a.base) for u in sitemap_urls(a.base)] + APP_PAGES  # --base가 로컬이면 사이트맵 주소도 로컬로
     findings, measured = [], 0
     with sync_playwright() as p:
         b = p.chromium.launch()

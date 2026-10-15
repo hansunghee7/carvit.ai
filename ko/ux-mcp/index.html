@@ -2,95 +2,566 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:locale" content="ko_KR">
 <title>Carvit UX MCP</title>
-<meta name="description" content="회사의 UX 가이드를 AI 코딩 도구에 연결해, 화면을 만들 때마다 같은 기준을 쓰게 합니다. 어떤 절을 썼는지는 기록으로 남아 팀이 확인할 수 있습니다.">
+<meta name="description" content="Carvit UX는 기존 가이드, 서비스 화면, URL을 제공하면 에이전트용 가이드로 만들고, 그 가이드대로 서비스 화면을 만듭니다.">
+<meta property="og:title" content="Carvit UX MCP">
+<meta property="og:description" content="Carvit UX는 기존 가이드, 서비스 화면, URL을 제공하면 에이전트용 가이드로 만들고, 그 가이드대로 서비스 화면을 만듭니다.">
+<meta property="og:image" content="https://carvit.ai/assets/og-ko.png">
+<link rel="icon" href="/assets/favicon.svg">
 <link rel="canonical" href="https://carvit.ai/ko/ux-mcp/">
 <link rel="alternate" hreflang="en" href="https://carvit.ai/ux-mcp/">
 <link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/ux-mcp/">
 <link rel="alternate" hreflang="x-default" href="https://carvit.ai/ux-mcp/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Carvit">
-<meta property="og:title" content="Carvit UX MCP">
-<meta property="og:description" content="회사의 UX 가이드를 AI 코딩 도구에 연결해, 화면을 만들 때마다 같은 기준을 쓰게 합니다. 어떤 절을 썼는지는 기록으로 남아 팀이 확인할 수 있습니다.">
 <meta property="og:url" content="https://carvit.ai/ko/ux-mcp/">
-<meta property="og:locale" content="ko_KR">
 <meta property="og:locale:alternate" content="en_US">
-<meta property="og:image" content="https://carvit.ai/assets/og-ko.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Carvit UX MCP">
-<meta name="twitter:description" content="회사의 UX 가이드를 AI 코딩 도구에 연결해, 화면을 만들 때마다 같은 기준을 쓰게 합니다. 어떤 절을 썼는지는 기록으로 남아 팀이 확인할 수 있습니다.">
+<meta name="twitter:description" content="Carvit UX는 기존 가이드, 서비스 화면, URL을 제공하면 에이전트용 가이드로 만들고, 그 가이드대로 서비스 화면을 만듭니다.">
 <meta name="twitter:image" content="https://carvit.ai/assets/og-ko.png">
-<link rel="stylesheet" href="/assets/style.css">
+<link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png">
 </head>
-<body class="text-page">
+<body class="text-page ux-page">
+<style>@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600&display=swap');  /* 한국어는 홈과 같은 Noto Sans KR(가이드 v33) */
+/* Carvit 백서 스타일. 값은 Carvit 가이드 1.34(흑백 정갈, Geist)와 1.37(홈 구성)의 토큰만 쓴다. 라이트 고정, 강조색 없음. 가이드 v29 반영(2026-10-01): 히어로는 이름·한 줄 설명·버튼만(격자·작동 장면 삭제), 머리 높이 72px. */
+@font-face{font-family:'Geist';src:url(https://cdn.jsdelivr.net/npm/geist@1/dist/fonts/geist-sans/Geist-Variable.woff2) format('woff2')}
+@font-face{font-family:'Geist Mono';src:url(https://cdn.jsdelivr.net/npm/geist@1/dist/fonts/geist-mono/GeistMono-Variable.woff2) format('woff2')}
+:root{
+  --sp-1:4px; --sp-2:8px; --sp-3:12px; --sp-4:16px; --sp-6:24px; --sp-12:48px; --sp-16:64px; --sp-24:96px;
+  --radius:0.625rem;
+  --background:oklch(1 0 0); --foreground:oklch(0.145 0 0); --card:oklch(1 0 0);
+  --muted:oklch(0.97 0 0); --muted-foreground:oklch(0.556 0 0);
+  --primary:oklch(0.205 0 0); --primary-foreground:oklch(0.985 0 0);
+  --border:oklch(0.922 0 0); --ring:oklch(0.708 0 0); --destructive:oklch(0.577 0.245 27.325);
+  --font-sans:'Geist',ui-sans-serif,system-ui,sans-serif;
+  --font-mono:'Geist Mono',ui-monospace,monospace;
+  --warn:oklch(0.65 0.18 75); --input:oklch(0.62 0 0);
+  --hero-bg:oklch(0.13 0 0); --hero-fg:oklch(0.96 0 0); --hero-muted:oklch(0.78 0 0); --hero-line:oklch(1 0 0 / .05);  /* --hero-line은 menu 구분선용(격자는 v29에서 삭제) */
+}
+*{box-sizing:border-box}
+html{color-scheme:light;scroll-behavior:smooth;scroll-padding-top:var(--sp-16)}
+body{margin:0;background:var(--background);color:var(--foreground);font-family:var(--font-sans),'Apple SD Gothic Neo','Malgun Gothic','Noto Sans KR',sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:anywhere}  /* 한국어 본문 전체에 keep-all (가이드 1.34) */
+a{color:var(--foreground)}
+code,pre{font-family:var(--font-mono),ui-monospace,Consolas,monospace;word-break:normal}  /* 고정폭은 코드·값에만 (1.34) */
+code{background:var(--muted);border:1px solid var(--border);border-radius:6px;padding:0 var(--sp-1);overflow-wrap:anywhere}
+.nowrap{white-space:nowrap}
+.page{max-width:1200px;margin-inline:auto;padding-inline:clamp(16px,4vw,32px)}
+.page.narrow{max-width:1200px}  /* 왼쪽 기준선은 .page와 같게. 글 폭은 .lead·.pull·.note의 ch로 줄인다 (1.37) */
+
+/* 히어로: 어두운 한 색, 격자·무늬 없음(가이드 1.37 v29). 첫 화면은 이름·한 줄 설명·버튼 둘만 */
+.hero{background:var(--hero-bg);color:var(--hero-fg)}
+header.hero{min-height:clamp(440px,56vh,540px);display:flex;flex-direction:column;justify-content:center;padding-block:clamp(56px,9vw,104px)}
+header.hero > .page{width:100%}  /* flex 세로 배치에서도 글 칸의 왼쪽 기준선을 머리 로고와 같게 */
+.hero a{color:var(--hero-fg)}
+/* 고정 상단 메뉴: 본문이 비쳐 글자가 겹쳐 보이지 않도록 반투명 배경 + 흐림 */
+.site-nav{position:sticky;top:0;z-index:100;background:color-mix(in oklch,var(--background) 94%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--border)}  /* 가이드 1.39: 흰 머리, 로고 왼쪽·메뉴와 로그인 오른쪽 */
+.site-nav a{color:var(--foreground)}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:var(--sp-2) var(--sp-6);min-height:72px;padding-block:var(--sp-3)}
+.brand{display:inline-flex;align-items:center;min-height:44px;font-weight:600;font-size:20px;text-decoration:none;letter-spacing:-0.035em}
+.links{display:flex;flex-wrap:wrap;gap:var(--sp-1) var(--sp-3);font-size:14px}
+.links{align-items:center}
+.links a{display:inline-flex;align-items:center;min-height:44px;padding-inline:var(--sp-3);border-radius:var(--radius);text-decoration:none;color:var(--muted-foreground)}
+.links a:hover,.links a:focus-visible{color:var(--foreground);text-decoration:underline}
+.links a[aria-current=page]{background:var(--muted);color:var(--foreground);font-weight:500}
+.links a.login{background:var(--primary);color:var(--primary-foreground);font-weight:600;padding-inline:var(--sp-4)}  /* 로그인 전 주 동작 하나(채움) */
+.links a.login:hover,.links a.login:focus-visible{color:var(--primary-foreground)}
+.hero h1{font-size:clamp(24px,4.2vw,45px);line-height:1.08;letter-spacing:-0.03em;max-width:18ch;margin:0 0 var(--sp-6);font-weight:600;word-break:keep-all}
+:lang(ko) .hero h1{max-width:18ch;line-height:1.15;letter-spacing:-0.03em}
+.hero .sub{font-size:clamp(16px,1.6vw,20px);max-width:56ch;color:var(--hero-muted);margin:0 0 var(--sp-6)}
+:lang(ko) .hero .sub{max-width:56ch}
+.actions{display:flex;flex-wrap:wrap;gap:var(--sp-3);margin-bottom:var(--sp-4)}
+.btn{display:inline-block;padding:var(--sp-3) var(--sp-6);border-radius:var(--radius);border:1px solid transparent;font-size:16px;font-weight:600;text-decoration:none;background:var(--primary);color:var(--primary-foreground)}
+.hero .btn{background:var(--hero-fg);color:var(--hero-bg)}
+.hero .btn.ghost{background:transparent;color:var(--hero-fg);border-color:oklch(0.4 0 0)}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--ring);outline-offset:2px}
+.meta{font-size:14px;color:var(--hero-muted);margin:0 0 var(--sp-12)}
+.demo{max-width:1040px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(480px,100%),1fr));gap:var(--sp-4);margin:var(--sp-6) 0 var(--sp-2)}
+.demo + .note{margin:var(--sp-2) 0 var(--sp-6)}
+.term{background:oklch(0.17 0 0);border:1px solid oklch(0.3 0 0);border-radius:var(--radius);padding:var(--sp-4) var(--sp-4) var(--sp-2);overflow:hidden;min-width:0}
+.term-h{font-size:14px;color:var(--hero-muted);margin-bottom:var(--sp-3);font-weight:600}
+.term pre.cmd{white-space:pre;overflow-x:auto;margin:0 0 var(--sp-3);font-size:14px;line-height:1.5;color:var(--hero-fg)}
+.term .ln{display:flex;flex-wrap:wrap;gap:var(--sp-2) var(--sp-3);align-items:baseline;font-size:14px;line-height:1.55;margin:0 0 var(--sp-3);color:var(--hero-muted);min-width:0}
+.term .ln code{background:transparent;border:0;padding:0;color:var(--hero-fg);white-space:pre;overflow-x:auto;max-width:100%}
+.term .k{flex:none;min-width:56px;font-weight:600;color:var(--hero-fg)}
+.term .k.bad{color:var(--destructive)}  /* 물결 밑줄 금지, 거부는 글자 라벨과 --destructive 색 (1.34) */
+.term .k.ok{text-decoration:underline;text-underline-offset:4px}
+
+/* 하위 메뉴: 머리 아래 밑줄 탭(가이드 1.40). 탭 첫 글자의 왼쪽 선은 로고와 같게 */
+.subnav{border-bottom:1px solid var(--border);background:var(--background)}
+.subnav .tabs{display:flex;gap:var(--sp-1);overflow-x:auto;scrollbar-width:none}  /* 줄바꿈 없이 가로로 밀기. 잘린 탭이 밀어 보라는 단서 */
+.subnav .tabs::-webkit-scrollbar{display:none}
+.subnav .tab{display:inline-flex;align-items:center;min-height:48px;padding:12px 14px;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap;color:var(--muted-foreground);text-decoration:none}
+.subnav .tab:first-child{padding-left:0}
+.subnav .tab:hover,.subnav .tab:focus-visible{color:var(--foreground)}
+.subnav .tab[aria-current=page]{color:var(--foreground);font-weight:500;border-bottom-color:var(--foreground)}
+
+/* 하위 화면 머리: 어두운 바탕은 홈 히어로만(가이드 1.37), 하위 화면은 흰 바탕 */
+.pagehead{padding-block:clamp(48px,7vw,88px) clamp(32px,5vw,56px)}
+.pagehead h1{font-size:clamp(28px,4vw,45px);line-height:1.1;letter-spacing:-0.035em;max-width:24ch;margin:0 0 var(--sp-4);font-weight:600;word-break:keep-all}
+.pagehead .sub,.cta-band .sub{font-size:clamp(16px,1.6vw,20px);max-width:56ch;color:var(--muted-foreground);margin:0 0 var(--sp-6)}
+.hero .sub{color:var(--hero-muted)}
+.btn.ghost{background:transparent;color:var(--foreground);border-color:var(--border)}
+.tools{padding-left:var(--sp-6);max-width:72ch;margin:0}
+.tools li{margin-bottom:var(--sp-3)}
+.term.big{max-width:880px;margin-top:var(--sp-6)}
+.term.big .ln{font-size:16px}
+.term.big pre.cmd{white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px}  /* 연결 명령어는 줄을 접어 잘리지 않게 */
+.card.report{max-width:760px}
+.card.report h2{font-size:clamp(20px,2.4vw,28px);line-height:1.15;letter-spacing:-0.03em;margin:0 0 var(--sp-3);max-width:none}
+.card.report .note{margin:0 0 var(--sp-2)}
+.cta-band.alt{background:var(--muted)}
+
+/* 섹션 */
+.sect{padding-block:80px}
+.sect.alt{background:var(--muted)}
+.sect h2{font-size:clamp(20px,2.9vw,31px);line-height:1.15;letter-spacing:-0.02em;max-width:24ch;margin:0 0 var(--sp-6);font-weight:600;word-break:keep-all}
+:lang(ko) .sect h2{max-width:22ch;letter-spacing:-0.035em;line-height:1.18}
+.sect .lead{font-size:clamp(16px,1.3vw,19px);max-width:62ch;margin:0 0 var(--sp-6)}
+.sect .note,.repro{font-size:14px;color:var(--muted-foreground);max-width:72ch}
+.pull{font-size:clamp(18px,1.6vw,22px);line-height:1.5;margin:0 0 var(--sp-6);padding-left:var(--sp-6);border-left:3px solid var(--foreground);max-width:62ch}
+.sub-h{font-size:18px;font-weight:600;margin:var(--sp-12) 0 var(--sp-4)}
+.cases{padding-left:var(--sp-6);max-width:72ch;margin:0}
+.cases li{margin-bottom:var(--sp-4)}
+.bento{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:var(--sp-4);margin-top:var(--sp-6)}
+.bento.four{grid-template-columns:1fr}
+@media (min-width:600px){.bento.four{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1200px){.bento.four{grid-template-columns:repeat(4,1fr)}}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:var(--sp-6)}
+.card h3{font-size:18px;margin:var(--sp-3) 0 var(--sp-2);font-weight:600}
+.card p{margin:0;font-size:14px;color:var(--muted-foreground)}
+.card .num{width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--primary-foreground);display:flex;align-items:center;justify-content:center;font-weight:600;font-size:14px}
+.card.big .stat{font-variant-numeric:tabular-nums;font-size:22px;line-height:1.1;letter-spacing:-0.035em;font-weight:600;margin-bottom:var(--sp-3);white-space:nowrap}
+
+/* 막대 차트: 값과 단위를 글자로 보인다. 가로 막대라 좁은 폭에서도 잘리지 않는다 (가이드 1.36) */
+.chart{margin-top:var(--sp-4);max-width:760px}
+.axis{display:flex;justify-content:space-between;font-size:12px;color:var(--muted-foreground);border-bottom:1px solid var(--border);padding-bottom:var(--sp-1);margin-bottom:var(--sp-3)}
+.bar-row{margin-bottom:var(--sp-6)}
+.bar-label{font-size:14px;font-weight:600;margin-bottom:var(--sp-2)}
+.bar-line{background:var(--muted);border-radius:6px;margin-bottom:var(--sp-2);overflow:hidden}
+.bar{min-width:fit-content;border-radius:6px;padding:var(--sp-1) var(--sp-3);font-size:14px;white-space:nowrap}
+.bar.before{background:var(--ring);color:var(--foreground)}
+.bar.after{background:var(--primary);color:var(--primary-foreground)}
+
+/* 표 (가이드 1.36: 좁은 폭에서 열을 자르지 않고 한 행을 두 줄로) */
+.tbl{width:100%;border-collapse:collapse;font-size:14px;margin-top:var(--sp-2)}
+.tbl th,.tbl td{text-align:left;padding:var(--sp-3);border-bottom:1px solid var(--border);vertical-align:top}
+.tbl thead th{font-size:12px;color:var(--muted-foreground);font-weight:600}
+.tbl th.name{font-weight:600}
+@media (max-width:600px){
+  .tbl thead{position:absolute;inline-size:1px;block-size:1px;overflow:hidden;clip-path:inset(50%)}
+  .tbl tr{display:block;padding:var(--sp-3) 0;border-bottom:1px solid var(--border)}
+  .tbl th,.tbl td{display:block;border:0;padding:var(--sp-1) 0}
+  .tbl td::before{content:attr(data-label) ': ';color:var(--muted-foreground);font-size:12px;display:block}
+}
+.limits{padding-left:var(--sp-6);max-width:72ch;margin:0}
+.limits li{margin-bottom:var(--sp-3)}
+.cta-band{padding-block:80px}
+.cta-band h2{font-size:clamp(20px,2.9vw,31px);line-height:1.15;letter-spacing:-0.02em;max-width:24ch;margin:0 0 var(--sp-4);font-weight:600;word-break:keep-all}
+.foot{background:var(--background);border-top:1px solid var(--border);padding-block:var(--sp-6);font-size:14px;color:var(--muted-foreground)}
+.foot p{margin:0}
+/* 480px 이하: 링크·버튼 누르는 영역 44px (1.34), 코드·작동 장면은 줄을 접는다 (1.37) */
+@media (max-width:480px){
+  .site-nav{position:static}  /* 머리가 세 줄이 되면 고정하지 않는다(화면의 1/5을 가림) */
+  nav a,.btn{display:inline-flex;align-items:center;min-height:44px}
+  .term pre.cmd,.term .ln code{white-space:pre-wrap;overflow-wrap:anywhere}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* ===== 하위 페이지 밝은 판 기본(창업자 2026-10-03: 브랜딩 사이트가 아니면 라이트가 기본). 홈은 따로 검은 판. 위 규칙의 토큰을 덮어쓴다 ===== */
+:root{
+  --w:0,0,0;  /* 글자·선·덮는 색의 기준(밝은 판은 검정, 어두운 판은 흰색 255,255,255) */
+  --background:#fff; --foreground:#000; --card:rgba(var(--w),.04);
+  --muted:rgba(var(--w),.05); --muted-foreground:rgba(var(--w),.6);
+  --primary:#000; --primary-foreground:#fff;
+  --border:rgba(var(--w),.12); --ring:rgba(var(--w),.5); --input:rgba(var(--w),.4);
+  --hero-bg:#fff; --hero-fg:#000; --hero-muted:rgba(var(--w),.6);
+  --radius:6px;
+  --h1:clamp(32px,3.05vw + 20px,64px); --h2:clamp(32px,1.52vw + 26px,48px); --h3:clamp(24px,.57vw + 21.8px,30px);
+}
+:root[data-theme="dark"]{  /* 어두운 판: 지금은 쓰지 않고, 선택 기능을 넣을 때 이 값을 켠다 */
+  --w:255,255,255;
+  --background:#000; --foreground:#fff; --primary:#fff; --primary-foreground:#000;
+  --hero-bg:#000; --hero-fg:#fff;
+}
+html{color-scheme:light}
+:root[data-theme="dark"]{color-scheme:dark}
+body{font-size:17px;line-height:28px;letter-spacing:-.01em}
+/* 머리: 검은 판 위 반투명, 로그인은 흰 알약(1.39) */
+.site-nav{background:color-mix(in srgb,var(--background) 80%,transparent);border-bottom:1px solid rgba(var(--w),.1)}
+.links a{color:rgba(var(--w),.72);border-radius:40px;font-weight:500}
+.links a:hover,.links a:focus-visible{color:var(--foreground);text-decoration:none;background:rgba(var(--w),.08)}
+.links a[aria-current=page]{background:rgba(var(--w),.08);color:var(--foreground)}
+.links a.login{background:var(--primary);color:var(--primary-foreground);min-height:36px;padding-inline:16px;margin-left:6px}
+.links a.login:hover,.links a.login:focus-visible{background:var(--primary);color:var(--primary-foreground);opacity:.86}
+/* 버튼: 높이 40 알약, 14px/500 (1.37) */
+.btn{display:inline-flex;align-items:center;justify-content:center;height:40px;padding:0 20px;border-radius:40px;font-size:14px;font-weight:500;background:var(--primary);color:var(--primary-foreground);border:0}
+.btn.ghost,.hero .btn.ghost{background:rgba(var(--w),.08);color:var(--foreground);border:0}
+.hero .btn{background:var(--primary);color:var(--primary-foreground)}
+/* 제목 크기: 글 페이지 제목 48→32, 섹션 제목 30→24, 본문 17/28 */
+.hero h1,.pagehead h1{font-size:var(--h2);line-height:1.16;letter-spacing:-.03em;font-weight:500;max-width:22ch}
+:lang(ko) .hero h1{line-height:1.2}
+.pagehead{padding-block:96px 48px}
+.pagehead .sub,.hero .sub,.cta-band .sub{font-size:17px;line-height:28px;color:var(--muted-foreground)}
+.sect{padding-block:80px}
+.sect.alt,.cta-band.alt{background:transparent}
+.sect + .sect{border-top:1px solid rgba(var(--w),.08)}
+.sect h2,.cta-band h2{font-size:var(--h3);line-height:1.32;letter-spacing:-.01em;font-weight:500;max-width:28ch}
+:lang(ko) .sect h2{line-height:1.32;letter-spacing:-.01em}
+.sect .lead{font-size:17px;line-height:28px;color:rgba(var(--w),.8)}
+.sub-h{font-size:22px;font-weight:500;letter-spacing:-.01em}
+.pull{border-left-color:var(--foreground);color:var(--foreground)}
+/* 카드: 12% 흰 바탕, 모서리 6 (1.37) */
+.card{background:rgba(var(--w),.03);border:1px solid rgba(var(--w),.12);border-radius:6px}
+.card h3{font-size:22px;line-height:1.26;font-weight:500}
+.card p{color:rgba(var(--w),.6)}
+.card .num{background:var(--primary);color:var(--primary-foreground)}
+.card.big .stat{font-size:clamp(32px,3vw,44px);font-weight:300;letter-spacing:-.04em}
+.card.report{max-width:900px;padding:32px}
+.card.report h2{font-size:var(--h3);font-weight:500}
+code{background:rgba(var(--w),.08);border-color:rgba(var(--w),.12)}
+.term{--hero-fg:#fff;--hero-muted:rgba(255,255,255,.6);background:#111;border-color:rgba(255,255,255,.12);border-radius:12px}  /* 터미널 상자는 밝은 판에서도 어둡게 */
+/* 차트·표 */
+.bar-line{background:rgba(var(--w),.08)}
+.bar.before{background:rgba(var(--w),.2);color:var(--foreground)}
+.bar.after{background:var(--primary);color:var(--primary-foreground)}
+.tbl th,.tbl td{border-bottom-color:rgba(var(--w),.12)}
+/* 하위 메뉴 탭: 검은 판 위 */
+.subnav{background:var(--background);border-bottom-color:rgba(var(--w),.12)}
+.subnav .tab{color:rgba(var(--w),.6)}
+.subnav .tab[aria-current=page]{color:var(--foreground);border-bottom-color:var(--foreground)}
+/* 마무리 띠: 홈과 같은 은빛 그러데이션(그러데이션은 히어로·마무리 띠에만, 1.37) */
+.cta-band{background:radial-gradient(60% 90% at 30% 100%,#c9c7c2,transparent 70%),radial-gradient(50% 80% at 85% 80%,#e3e2de,transparent 70%),linear-gradient(#fff 0%,#f3f2f0 35%,#dcdad5 100%);text-align:center}
+.cta-band h2,.cta-band .sub{margin-inline:auto}
+.cta-band .actions{justify-content:center}
+.foot{background:var(--background);border-top-color:rgba(var(--w),.1);color:rgba(var(--w),.44)}
+.foot a{color:rgba(var(--w),.72)}
+@media (max-width:760px){
+  .page{padding-inline:24px}
+  .pagehead{padding-block:96px 40px}
+}
+
+/* 하위 페이지 꼬리: 홈과 같은 4열(머리 메뉴 이름·하위 메뉴와 일치) */
+.foot{padding-block:64px 48px}
+.foot .cols{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.foot h5{margin:0 0 16px;font-size:13px;font-weight:500;color:rgba(var(--w),.44)}
+.foot h5 a{display:inline;margin:0;color:inherit;text-decoration:none}
+.foot .cols a{display:block;margin-bottom:12px;color:var(--foreground);text-decoration:none;font-size:14px}
+.foot .cols a:hover{opacity:.7}
+.foot .fine{margin-top:48px;font-size:13px;color:rgba(var(--w),.44)}
+@media (max-width:760px){.foot .cols{grid-template-columns:1fr 1fr}}
+/* 글 목록: 제목 바로 아래 카드, 카드 사이 16 */
+
+.card.report + .card.report{margin-top:16px}
+.foot .cols h5 a{color:rgba(var(--w),.44);display:inline;margin:0}
+.card.report h2{max-width:none}
+body{font-family:var(--font-sans),'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif}
+
+/* 로고 마크(안1 단일 C 체계, 2026-10-03 확정) */
+.brand{gap:10px}
+.brand .mk{flex:none}
+
+/* 휴대폰 머리: 로고 + 로그인 + 햄버거, 메뉴·언어는 시트 안(가이드 1.37 ⑦, Cursor·Linear 방식 10/3) */
+.burger{display:none;width:40px;height:40px;border:0;background:transparent;cursor:pointer;padding:0}
+.burger i{display:block;width:18px;height:1.5px;background:var(--foreground);margin:5px auto}
+.sheet{display:none}
+@media (max-width:760px){
+  .site-nav{position:sticky}
+  .top{flex-wrap:nowrap}
+  .links a:not(.login){display:none}
+  .links{margin-left:auto}
+  .links a.login{min-height:36px}
+  .burger{display:block}
+  .sheet.open{display:flex;flex-direction:column;background:var(--background);border-bottom:1px solid rgba(var(--w),.12);padding:4px 0 20px}
+  .sheet a{font-size:22px;line-height:30px;font-weight:500;padding:12px 0;color:var(--foreground);text-decoration:none;border-bottom:1px solid rgba(var(--w),.08)}
+  .sheet a[aria-current=page]{color:var(--foreground)}
+}
+
+/* 브랜드 페이지 그림(로고 견본) */
+.brand-art{display:grid;place-items:center;min-height:180px;border-radius:6px;margin-bottom:12px}
+.brand-art.dark{background:#0d0d0d;border:1px solid rgba(var(--w),.1)}
+.brand-art.light{background:radial-gradient(70% 60% at 50% 40%,#f2f1ee 0%,#cfcdc8 100%);color:#000}
+.brand-art.lock{display:flex;justify-content:center;align-items:center;gap:20px;font-weight:600;font-size:44px;letter-spacing:-.02em;color:#fff}
+.brand-art.light.lock{color:#000}
+.bento.guide{grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr))}
+.card .dl{margin-top:12px;font-size:14px}
+.card .dl a{color:var(--foreground)}
+.brand-fig{margin:40px 0 0}
+.brand-fig img{width:100%;height:auto;border-radius:6px;background:#fff}
+.brand-fig figcaption{font-size:14px;color:rgba(var(--w),.6);margin-top:10px}
+.foot .cols{grid-template-columns:repeat(5,1fr)}
+@media (max-width:760px){.foot .cols{grid-template-columns:1fr 1fr}}
+
+/* 글 페이지(가이드 1.42 v35, 2026-10-03): 본문 17px·줄 간격 1.6(휴대폰 16px)·글 폭 680px, 글 머리 한 줄, 핵심 요약·글 안 목차, 표 설명, 참고·인용, 이전·다음 글.
+   제목 h1·h2 크기는 1.37 ⑧이 이미 맞아 건드리지 않는다(h1=섹션 제목 토큰 32~48, h2=기능 제목 토큰 24~30). 이동 행동은 1.37 ⑨ 알약 보조 버튼. */
+.post-meta{font-size:14px;line-height:1.5;color:rgba(var(--w),.6);margin:0 0 var(--sp-4)}
+.post-top{padding-block:8px 0}
+.summary,.toc{max-width:680px;border-radius:6px;padding:var(--sp-6)}
+.summary{background:rgba(var(--w),.04);margin:0 0 var(--sp-6)}
+.toc{border:1px solid rgba(var(--w),.12);margin:0}
+.box-h{font-size:14px;font-weight:600;line-height:1.5;color:rgba(var(--w),.6);margin:0 0 var(--sp-3)}
+.summary ul,.toc ol{margin:0;padding-left:var(--sp-6)}
+.summary li,.toc li{font-size:17px;line-height:1.6;margin-bottom:var(--sp-2)}
+.toc a,.refs a{text-decoration:underline;text-underline-offset:3px}
+.fig{margin:var(--sp-2) 0 0}
+.fig figcaption{margin:var(--sp-2) 0 var(--sp-6)}
+.refs{padding-left:var(--sp-6);max-width:680px;margin:0}
+.refs li{font-size:17px;line-height:1.6;margin-bottom:var(--sp-2);overflow-wrap:anywhere}
+.cite{font-size:14px;line-height:1.5;max-width:680px;padding:var(--sp-4);border:1px solid rgba(var(--w),.12);border-radius:6px;overflow-wrap:anywhere;margin:0 0 var(--sp-12)}
+.link-btn{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 20px;border:1px solid rgba(var(--w),.2);border-radius:40px;font-size:14px;font-weight:500;color:var(--foreground,#fff);text-decoration:none}
+.link-btn:hover{border-color:rgba(var(--w),.5)}
+.pn{display:flex;flex-wrap:wrap;align-items:center;gap:var(--sp-3) var(--sp-4)}
+.pn-t{font-size:14px;color:rgba(var(--w),.6)}
+@media (max-width:760px){
+
+}
+
+/* 머리 메뉴를 홈과 같은 자리로(창업자 2026-10-03): 메뉴는 로고 바로 옆, English·로그인은 오른쪽 끝, 높이 64, 좌우 32 */
+.site-nav > .page{max-width:none;padding-inline:32px}
+.top{flex-wrap:nowrap;justify-content:flex-start;gap:28px;min-height:64px;padding-block:0}
+.brand{font-size:19px}
+.links{flex:1;flex-wrap:nowrap;gap:0;align-items:center}
+.links a{padding-inline:12px;font-size:14px}
+.links a:first-child{margin-left:-12px}
+.links a.lang{margin-left:auto}
+.links a.login{margin-left:4px}
+@media (max-width:760px){
+  .site-nav > .page{padding-inline:24px}
+  .top{min-height:56px;gap:12px}
+  .links a:first-child{margin-left:0}
+  .links a.lang{margin:0}
+  .links{justify-content:flex-end}
+}
+
+/* 테크리포트 4: 그림·크기 줄 */
+
+.sizes{display:flex;gap:32px;align-items:flex-end;flex-wrap:wrap;padding:24px;border:1px solid var(--border);border-radius:6px}
+.sizes span{display:flex;flex-direction:column;align-items:center;gap:8px}
+.sizes small{font-size:14px;color:var(--muted-foreground)}
+
+/* 하위 탭 모바일 값(N8, 지투·노트 확정 2026-10-04, 앱 mcp.carvit.ai와 같은 값): 760px 이하 15px·좌우 10px·첫 탭 왼쪽 0, 340px 이하 14px·8px, 영어는 380px 이하 14px·8px. 데스크톱은 그대로. */
+@media (max-width:760px){.subnav .tabs{gap:0}.subnav .tab{font-size:15px;padding-inline:10px}.subnav .tab:first-child{padding-left:0}}
+@media (max-width:340px){.subnav .tab{font-size:14px;padding-inline:8px}.subnav .tab:first-child{padding-left:0}}
+@media (max-width:380px){html[lang=en] .subnav .tab{font-size:14px;padding-inline:8px}html[lang=en] .subnav .tab:first-child{padding-left:0}}
+
+/* FAQ: 접는 질문 목록. 상자 없이 구분선만, 글자는 기본 두 색(1.30·1.34·1.37) */
+.faq{max-width:72ch}
+.faq details{border-bottom:1px solid var(--border)}
+.faq details:first-child{border-top:1px solid var(--border)}
+.faq summary{display:flex;align-items:center;justify-content:space-between;gap:var(--sp-4);min-height:56px;padding-block:var(--sp-3);cursor:pointer;list-style:none;font-weight:500;color:var(--foreground)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;font-size:20px;color:var(--muted-foreground)}
+.faq details[open] summary::after{content:"2"}
+.faq summary:focus-visible{outline:2px solid var(--foreground);outline-offset:2px}
+.faq .ans{padding-bottom:var(--sp-4);color:var(--muted-foreground)}
+.faq .ans p{margin:0 0 var(--sp-3);max-width:62ch}
+
+/* 글 페이지(UX MCP 소개) 간격: 섹션 위아래 80(휴대폰 56), 머리 위 96 아래 48 (가이드 1.37 ⑪). 150은 홈 전용 */
+.text-page .sect,.text-page .cta-band{padding-block:80px}
+.text-page .pagehead{padding-block:clamp(72px,7vw,96px) 48px}
+
+/* UX MCP 소개: 버튼 */
+.btn.outline{background:var(--background);color:var(--foreground);border:2px solid var(--foreground)}
+.btn.outline:hover{background:var(--muted)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:var(--sp-3);margin-top:var(--sp-6)}
+.hero-actions .btn{min-height:44px}
+</style><style>
+.cr-wrap{max-width:1080px;margin:0 auto}
+.cr-chip{display:inline-block;margin-left:10px;padding:2px 10px;border-radius:999px;background:var(--muted);color:var(--muted-foreground);font-size:13px;font-weight:500;vertical-align:middle;letter-spacing:0}
+:root{color-scheme:light}
+body{background:var(--background);color:var(--foreground)}
+.cr-h2{max-width:none;text-wrap:balance;font-size:var(--h2);line-height:1.16;letter-spacing:-.03em;font-weight:500;margin:0 0 12px;word-break:keep-all}
+.cr-lead{font-size:17px;line-height:1.7;color:var(--muted-foreground);max-width:60ch;margin:0 0 40px;word-break:keep-all}
+.cr-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.cr-steps li{display:flex;gap:16px;padding:24px;border:1px solid var(--border);border-radius:6px;background:var(--card)}
+.cr-n{flex:none;width:32px;height:32px;border-radius:50%;background:var(--primary);color:var(--primary-foreground);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600}
+.cr-steps h3{font-size:18px;font-weight:600;margin:4px 0 8px;letter-spacing:-.01em}
+.cr-steps p{font-size:15px;line-height:1.6;color:var(--muted-foreground);margin:0;word-break:keep-all}
+.cr-gates{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;list-style:none;margin:0;padding:0}
+.cr-gates li{padding:24px;border-top:1px solid var(--foreground)}
+.cr-gates b{display:block;font-size:18px;font-weight:600;margin-bottom:8px}
+.cr-gates span{font-size:15px;line-height:1.6;color:var(--muted-foreground);word-break:keep-all}
+.cr-nums{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;list-style:none;margin:0 0 16px;padding:0}
+.cr-nums b{display:block;font-size:clamp(32px,4vw,44px);font-weight:300;letter-spacing:-.04em;line-height:1.05}
+.cr-nums span{font-size:15px;color:var(--muted-foreground)}
+.cr-fine{font-size:13px;line-height:1.7;color:var(--muted-foreground);margin:0;max-width:70ch;word-break:keep-all}
+.cr-limit{margin:0;padding:0;list-style:none;display:grid;gap:12px;max-width:70ch}
+.cr-limit li{font-size:16px;line-height:1.7;word-break:keep-all;padding-left:20px;position:relative}
+.cr-limit li::before{content:"";position:absolute;left:0;top:.8em;width:8px;height:1px;background:var(--foreground)}
+.cr-cta{display:flex;gap:12px;flex-wrap:wrap}
+.cr-btn{display:inline-flex;align-items:center;height:40px;padding:0 20px;border-radius:40px;font-size:14px;font-weight:500;background:var(--primary);color:var(--primary-foreground);text-decoration:none}
+.cr-btn.line{background:transparent;color:var(--foreground);border:1px solid var(--border)}
+.pagehead h1{max-width:none}.pagehead .sub{max-width:60ch}
+.cr-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0}.cr-grid figure{margin:0}.cr-grid img,.cr-grid video{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;border-radius:10px;background:#111}.cr-grid figcaption{font-size:13px;color:var(--muted-foreground);margin-top:8px;word-break:keep-all}@media(max-width:860px){.cr-grid{grid-template-columns:1fr}}.cr-band{margin:0 0 0;padding:0}.cr-band img{display:block;width:100%;height:auto;border-radius:12px}.cr-cap{font-size:13px;color:var(--muted-foreground);margin:12px 0 0}.cr-agent img{width:100%;height:auto;border-radius:12px;display:block;background:#111}.cr-agent .role{font-size:13px;letter-spacing:.06em;color:var(--muted-foreground);margin:0 0 8px}.cr-agent h3{font-size:28px;font-weight:500;margin:0 0 16px}.cr-agent ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}.cr-agent li{font-size:16px;line-height:1.6;word-break:keep-all}
+@media(max-width:860px){.cr-agent img{max-width:320px}.cr-steps,.cr-gates{grid-template-columns:1fr}.cr-nums{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.cr-agent h3{margin-top:0}.cr-demo{display:block;width:100%;max-width:880px;margin-inline:auto;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:12px;background:#111}.cr-cap{text-align:center}
+.cmp{position:relative;max-width:380px;margin-inline:auto;aspect-ratio:390/563;border-radius:12px;overflow:hidden;border:1px solid var(--border);background:#fff}
+.cmp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.cmp .cmp-a{clip-path:inset(0 50% 0 0)}
+.cmp input{position:absolute;inset:0;width:100%;height:100%;margin:0;opacity:0;cursor:ew-resize}
+.cmp::after{content:"";position:absolute;top:0;bottom:0;left:var(--p,50%);width:2px;background:var(--foreground);transform:translateX(-1px);pointer-events:none}
+.cmp-l,.cmp-r{position:absolute;bottom:12px;padding:5px 12px;border-radius:999px;font-size:13px;font-weight:600;pointer-events:none}
+.cmp-l{left:8px;background:var(--foreground);color:#fff}.cmp-r{right:8px;background:#fff;color:var(--foreground);border:1px solid var(--border)}
+
+.phones{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.phones figure{margin:0}.phones img{display:block;width:100%;height:auto;border-radius:22px;}
+.phones figcaption{font-size:14px;color:var(--muted-foreground);margin-top:10px;line-height:1.5;word-break:keep-all}.phones figcaption b{display:block;color:var(--foreground);font-size:16px;margin-bottom:2px}
+@media(max-width:860px){.phones{grid-template-columns:1fr;max-width:340px;margin-inline:auto}}
+
+.tpl-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;list-style:none;margin:28px 0 0;padding:0}.tpl-grid li{font-size:15px;line-height:1.45}.tpl-grid img{display:block;width:100%;max-width:260px;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:7.5% / 5.6%;margin-bottom:10px}.tpl-grid span{color:var(--muted-foreground,var(--muted-foreground))}@media(max-width:900px){.tpl-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:520px){.tpl-grid{gap:14px}.tpl-grid li{font-size:13px}}
+.ux-intro-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;list-style:none;margin:0;padding:0}
+.ux-intro-cards li{padding:24px;border:1px solid var(--border);border-radius:6px;background:var(--card)}
+.ux-intro-cards h3{font-size:18px;font-weight:600;margin:0 0 8px}
+.ux-intro-cards p{font-size:15px;line-height:1.6;color:var(--muted-foreground);margin:0 0 12px;word-break:keep-all}
+.ux-intro-cards a{font-size:14px;font-weight:500;color:var(--foreground);text-decoration:underline;text-underline-offset:3px}
+.ux-feat{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:48px;align-items:center;padding-block:40px;border-top:1px solid var(--border)}
+.ux-feat:first-of-type{border-top:0}
+.ux-feat h3{font-size:clamp(22px,2.4vw,28px);font-weight:500;letter-spacing:-.02em;margin:0 0 12px;word-break:keep-all}
+.ux-feat p{font-size:16px;line-height:1.7;color:var(--muted-foreground);margin:0;word-break:keep-all}
+.ux-term{background:#0d0d0d;color:#fff;border-radius:10px;padding:20px;font-family:var(--font-mono),ui-monospace,monospace;font-size:14px;line-height:1.75;white-space:pre-wrap;word-break:normal;overflow-wrap:anywhere}
+.ux-term .dim{color:rgba(255,255,255,.55)}
+.ux-tpl{display:flex;flex-wrap:wrap;gap:10px;list-style:none;margin:0;padding:0}
+.ux-tpl li{padding:8px 14px;border:1px solid var(--border);border-radius:999px;font-size:14px}
+.ux-tpl li span{color:var(--muted-foreground)}
+.ux-memos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;list-style:none;margin:24px 0 0;padding:0}
+.ux-memos li{padding:20px;border:1px solid var(--border);border-radius:6px;background:var(--card);font-size:15px;line-height:1.6;word-break:keep-all}
+.ux-memos small{display:block;margin-top:8px;color:var(--muted-foreground);font-size:13px}
+.ux-nums{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;list-style:none;margin:0 0 8px;padding:0}
+.ux-nums b{display:block;font-size:clamp(32px,4vw,44px);font-weight:300;letter-spacing:-.04em;line-height:1.05}
+.ux-nums span{font-size:14px;color:var(--muted-foreground)}
+@media(max-width:860px){.ux-intro-cards,.ux-feat,.ux-memos{grid-template-columns:1fr}.ux-feat{gap:20px}.ux-nums{grid-template-columns:1fr 1fr}}
+</style><style>
+.ag-mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:32px;list-style:none;margin:32px 0 0;padding:0}
+.ag-mini li{display:flex;gap:20px;align-items:flex-start;min-width:0}
+.ag-mini img{width:80px;height:80px;border-radius:8px;object-fit:cover;flex:none;background:#111}
+.ag-mini .role{margin:0 0 2px;font-size:14px;color:var(--muted-foreground)}
+.ag-mini h3{margin:0 0 8px;font-size:22px;line-height:1.2}
+.ag-mini p{margin:0 0 6px;font-size:16px;line-height:1.55}
+.ag-more{margin:32px 0 0}
+.ag-more a{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 20px;border:1px solid var(--border);border-radius:40px;font-size:14px;font-weight:500;color:inherit;text-decoration:none}
+</style><style id="spacing-fix">
+.sect,.cta-band{padding-block:80px !important}
+.pagehead{padding-block:96px 48px !important}
+.sect .page>:last-child,.sect .cr-wrap>:last-child,.cta-band .page>:last-child{margin-bottom:0 !important}
+.cr-wrap>.cr-cap:last-child{margin-bottom:0 !important}
+@media(max-width:760px){.sect,.cta-band{padding-block:56px !important}.pagehead{padding-block:72px 40px !important}}
+</style>
+<div class="ux-page text-page">
 <div class="site-nav"><div class="page">
-    <nav class="top" aria-label="주 메뉴">
-      <a class="brand" href="/ko/"><svg class="mk" viewBox="0 0 64 64" width="22" height="22" aria-hidden="true"><path d="M46.34 17.00 L55.00 22.00 L55.00 13.00 L48.00 6.00 L23.00 6.00 L9.00 20.00 L9.00 44.00 L23.00 58.00 L48.00 58.00 L55.00 51.00 L55.00 42.00 L46.34 47.00 L28.26 47.00 L21.00 39.74 L21.00 24.26 L28.26 17.00 Z" fill="currentColor"/></svg><span class="nowrap">Carvit</span></a>
-      <div class="links"><!--mn:head--><a href="/ko/ux-mcp/" aria-current="page"><span class="nowrap">UX MCP</span></a><a href="/ko/team/"><span class="nowrap">팀</span></a><a href="/ko/tech-report/"><span class="nowrap">테크리포트</span></a><a href="/ko/brand/"><span class="nowrap">브랜드</span></a><!--/mn:head--><a class="lang" href="/ux-mcp/" data-lang="en">English</a><a class="login" href="https://mcp.carvit.ai/login">로그인</a></div><button class="burger" id="burger" type="button" aria-label="메뉴 열기" data-close="메뉴 닫기" aria-expanded="false" aria-controls="sheet"><i></i><i></i><i></i></button>
-    </nav>
-<div class="sheet" id="sheet"><!--mn:sheet--><a href="/ko/ux-mcp/" aria-current="page"><span class="nowrap">UX MCP</span></a><a href="/ko/team/"><span class="nowrap">팀</span></a><a href="/ko/tech-report/"><span class="nowrap">테크리포트</span></a><a href="/ko/brand/"><span class="nowrap">브랜드</span></a><!--/mn:sheet--><a class="lang" href="/ux-mcp/" data-lang="en">English</a></div>
+<nav aria-label="주 메뉴" class="top">
+<a class="brand" href="/ko/"><svg aria-hidden="true" class="mk" height="22" viewbox="0 0 64 64" width="22"><path d="M46.34 17.00 L55.00 22.00 L55.00 13.00 L48.00 6.00 L23.00 6.00 L9.00 20.00 L9.00 44.00 L23.00 58.00 L48.00 58.00 L55.00 51.00 L55.00 42.00 L46.34 47.00 L28.26 47.00 L21.00 39.74 L21.00 24.26 L28.26 17.00 Z" fill="currentColor"></path></svg><span class="nowrap">Carvit</span></a>
+<div class="links"><!--mn:head--><a href="/ko/ux-mcp/" aria-current="page"><span class="nowrap">UX MCP</span></a><a href="/ko/create/"><span class="nowrap">Create</span></a><a href="/ko/pass/"><span class="nowrap">Pass</span></a><a href="/ko/team/"><span class="nowrap">팀</span></a><a href="/ko/tech-report/"><span class="nowrap">테크리포트</span></a><!--/mn:head--><a class="lang" data-lang="en" href="/ux-mcp/">English</a><a class="login" href="https://mcp.carvit.ai/login">로그인</a></div><button aria-controls="sheet" aria-expanded="false" aria-label="메뉴 열기" class="burger" data-close="메뉴 닫기" id="burger" type="button"><i></i><i></i><i></i></button>
+</nav>
+<div class="sheet" id="sheet"><!--mn:sheet--><a href="/ko/ux-mcp/" aria-current="page"><span class="nowrap">UX MCP</span></a><a href="/ko/create/"><span class="nowrap">Create</span></a><a href="/ko/pass/"><span class="nowrap">Pass</span></a><a href="/ko/team/"><span class="nowrap">팀</span></a><a href="/ko/tech-report/"><span class="nowrap">테크리포트</span></a><!--/mn:sheet--><a class="lang" data-lang="en" href="/ux-mcp/">English</a></div>
 </div></div>
-<nav class="subnav" aria-label="UX MCP"><div class="page"><div class="tabs"><a class="tab" href="/ko/ux-mcp/" aria-current="page">소개</a><a class="tab" href="https://mcp.carvit.ai/dashboard">대시보드</a><a class="tab" href="https://mcp.carvit.ai/guide">UX 가이드</a><a class="tab" href="https://mcp.carvit.ai/connect">연결 방법</a></div></div></nav>
+<nav aria-label="UX MCP" class="subnav"><div class="page"><div class="tabs"><a aria-current="page" class="tab" href="/ko/ux-mcp/">소개</a><a class="tab" href="https://mcp.carvit.ai/dashboard">대시보드</a><a class="tab" href="https://mcp.carvit.ai/guide">UX 가이드</a><a class="tab" href="https://mcp.carvit.ai/connect">연결 방법</a></div></div></nav>
 <header class="pagehead">
-  <div class="page">
-    <h1><span class="nowrap">Carvit UX MCP</span></h1>
-    <p class="sub">회사의 UX 가이드를 AI 코딩 도구에 연결해, 화면을 만들 때마다 같은 기준을 쓰게 합니다. 어떤 절<span class="nowrap">(가이드 항목)</span>을 썼는지는 기록으로 남아 팀이 확인할 수 있습니다.</p>
-    <div class="hero-actions"><a class="btn" href="https://mcp.carvit.ai/login?next=connect" data-li-text="연결 방법 열기" data-li-href="https://mcp.carvit.ai/connect">연결 시작하기</a><a class="btn outline" href="https://mcp.carvit.ai/dashboard" data-li-text="대시보드 열기">이미 쓰고 있어요</a></div>
-  </div>
+<div class="page">
+<h1><span class="nowrap">Carvit UX MCP</span></h1>
+<p class="sub">Carvit UX는 기존 가이드, 서비스 화면, URL을 제공하면 에이전트용 가이드로 만들고, 그 가이드대로 서비스 화면을 만듭니다.</p>
+<div class="hero-actions"><a class="btn" data-li-href="https://mcp.carvit.ai/connect" data-li-text="연결 방법 열기 →" href="https://mcp.carvit.ai/login?next=connect">로그인하고 연결 시작 →</a><a class="btn outline" data-li-text="대시보드 열기" href="https://mcp.carvit.ai/dashboard">대시보드 열기</a></div>
+</div>
 </header>
 <main>
-<section class="sect" id="connect"><div class="page">
-  <h2>연결하기.</h2>
-  <p class="lead">연결은 세 단계입니다. 도구별 명령과 복사 버튼은 로그인한 뒤 '연결 방법' 화면에 있습니다.</p>
-  <ol class="tools"><li>로그인합니다. 회사를 만들거나 초대받아 들어옵니다.</li><li>'연결 방법' 화면에서 쓰시는 도구를 고르고 [복사]를 누릅니다.</li><li>복사한 내용을 그 도구에 붙여 넣습니다. 연결되면 같은 화면에 표시됩니다.</li></ol>
-  <h3 class="sub-h">지원하는 도구</h3>
-  <p class="lead">도구를 누르면 연결 방법 화면이 열립니다. 로그인이 필요하면 먼저 로그인합니다.</p>
-  <div class="actions"><a class="btn outline" href="https://mcp.carvit.ai/connect?tool=code"><span class="nowrap">Claude Code</span></a><a class="btn outline" href="https://mcp.carvit.ai/connect?tool=codex">Codex</a><a class="btn outline" href="https://mcp.carvit.ai/connect?tool=antigravity">Antigravity</a><a class="btn outline" href="https://mcp.carvit.ai/connect?tool=cursor">Cursor</a></div>
-  <div class="actions" style="margin-top:var(--sp-6)"><a class="btn" href="https://mcp.carvit.ai/login?next=connect" data-li-text="연결 방법 열기 →" data-li-href="https://mcp.carvit.ai/connect">로그인하고 연결 시작 →</a></div>
-</div></section>
-<section class="sect alt" id="register"><div class="page">
-  <h2>가이드 올리기.</h2>
-  <p class="lead">연결한 뒤 가이드를 올리는 길은 세 단계입니다.</p>
-  <ol class="tools"><li>문서를 준비합니다. DESIGN.md, 디자인 문서, 화면 캡처, 웹사이트 주소, 기존 스타일 코드 모두 됩니다. 문서가 없으면 로그인 뒤 "UX 가이드" 탭에서 시작 템플릿을 고를 수 있습니다.</li><li>AI 도구에 문서를 첨부하거나 링크를 붙이고 "Carvit UX에 올려줘"라고 말합니다.</li><li>올라간 가이드는 위쪽 <a href="https://mcp.carvit.ai/guide">UX 가이드</a> 탭에서 확인합니다. 편집자가 아니면 AI가 제안으로 올리고, 편집자가 승인하기 전까지 가이드는 그대로입니다.</li></ol>
-</div></section>
-<section class="sect" id="example"><div class="page">
-  <h2>이렇게 쓰입니다.</h2>
-  <p class="lead">연결한 뒤에는 평소처럼 말하면 됩니다. 아래는 예시 대화이고, 실제로 찾아오는 절은 회사 가이드에 따라 다릅니다.</p>
-  <div class="term big"><pre class="cmd">나   설정 화면에 저장 버튼을 만들어줘. 우리 회사 UX 가이드를 따라줘.
-AI   (lookup) '버튼'과 관련된 절(가이드 항목) 2개를 찾았습니다. 주 버튼은 화면에 하나만 둔다는 절에 맞춰 만들었습니다.
-AI   (cite) 근거로 쓴 절을 한 줄 이유와 함께 기록했습니다.</pre></div>
-</div></section>
-<section class="sect alt" id="tools"><div class="page">
-  <h2>연결하면 할 수 있는 일.</h2>
-  <p class="lead">주요 기능입니다. 괄호 안은 AI 도구가 부르는 도구 이름입니다.</p>
-  <ul class="tools"><li>필요한 가이드 찾기 (<code>lookup</code>): 주제에 맞는 절을 몇 개 찾아 본문과 함께 돌려줍니다.</li><li>정확한 절 읽기 (<code>get_section</code>): 절 번호로 한 절을 읽습니다.</li><li>전체 목차 보기 (<code>list_sections</code>): 검색이 비었을 때 전체 절 목록을 봅니다.</li><li>근거 남기기 (<code>cite</code>): 절을 근거로 작업을 고쳤다는 기록을 한 줄 이유와 함께 남깁니다.</li><li>사용 현황 보기 (<code>usage</code>): 조회<span class="nowrap">(찾아본 횟수)</span>, 인용<span class="nowrap">(근거를 남긴 횟수)</span>, 찾지 못한 검색의 수를 날짜별, 사람별로 셉니다.</li></ul>
-</div></section>
-<section class="sect" id="limits"><div class="page">
-  <h2>하지 못하는 것.</h2>
-  <p class="lead">검색은 의미가 아니라 절 제목과 본문의 단어가 맞는지로 찾습니다. 맞는 절이 없으면 빈 결과가 나오고, 그 검색은 찾지 못한 검색으로 기록되며, 전체 목록을 보는 쪽으로 넘어갑니다. 원하는 절이 안 나오면 절 제목에 쓰인 단어로 다시 물어보세요.</p>
-</div></section>
-<section class="sect alt" id="faq"><div class="page">
-  <h2>자주 묻는 질문.</h2>
-  <p class="lead">처음 연결한 분이 가장 많이 묻는 것을 모았습니다.</p>
-  <div class="faq">
-<details id="faq-feedback"><summary>Carvit 팀에 의견은 어떻게 보내나요?</summary><div class="ans"><p>AI 도구에 "Carvit 팀에 의견 보내줘"라고 말하면 됩니다. 불편한 점, 바라는 기능, 칭찬 무엇이든 괜찮습니다. 도구가 말씀하신 내용을 정리해 <code>feedback</code> 도구로 Carvit 팀에 전달합니다.</p><p>답을 받고 싶으면 연락받을 방법<span class="nowrap">(이메일 등)</span>도 같이 말해 주세요. 남기지 않으면 의견은 전달되지만 회신은 드릴 수 없습니다.</p><p>AI 도구가 일하다 막혔을 때 스스로 보내게 할 수도 있습니다. <code>feedback</code>을 호출하라고 시켜 두고, 어느 화면에서 무엇을 하려다 무엇이 막혔는지, 화면에 보인 문구 그대로 네 가지를 한 건에 한 주제로 적게 하세요.</p><p>설치 코드, 비밀번호, 고객 이름, 비공개 사업 내용은 적지 마세요. 문제는 일반적인 말로 설명해 주시면 됩니다.</p></div></details>
-<details><summary>연결했는데 무엇을 할 수 있는지 어떻게 보나요?</summary><div class="ans"><p>AI 도구에 "Carvit 도움말 보여줘"라고 말하거나, <span class="nowrap">Claude Code</span>에서 <code>/carvit:help</code>를 실행하세요. UX 가이드 만들기, 업데이트, 보기, MCP로 서비스 만들기, 동료 초대, 의견 보내기가 번호로 나옵니다.</p></div></details>
-<details id="faq-update"><summary>가이드를 나중에 고치려면, 그리고 잘못 고쳤다면 어떻게 하나요?</summary><div class="ans"><p>고치기: "주 버튼 색을 #0F766E로 바꿔줘"처럼 바꿀 내용을 말하면 AI가 관련 절을 찾아 바뀐 모습을 보여 주고, "올려줘"라고 하면 반영됩니다. 잘못 바꿨다면 "이전 버전으로 되돌려줘"라고 하세요. 언제든 되돌릴 수 있습니다.</p><p>가이드를 바로 고칠 수 있는 사람은 편집자<span class="nowrap">(소유자가 지정)</span>뿐입니다. 편집자가 아니면 AI가 바꿀 내용을 제안으로 올리고, 편집자가 승인하기 전까지 가이드는 그대로입니다.</p><p>처음 올리는 방법은 위의 "가이드 올리기" 3단계를 보세요.</p></div></details>
-<details id="faq-templates"><summary>Carvit이 제공하는 UX 템플릿은 어디서 고르나요?</summary><div class="ans"><p>두 곳입니다. 로그인한 뒤 위쪽 "UX 가이드" 탭에서 화면으로 시작 템플릿을 고를 수 있고, AI 도구에 "시작 템플릿으로 만들어줘"라고 하면 AI가 선택지를 보여 줍니다.</p><p>템플릿은 여섯 가지입니다. shadcn 기본<span class="nowrap">(깔끔한 기본)</span>, 브랜드 사이트형<span class="nowrap">(콘텐츠·브랜드)</span>, 인스타그램형<span class="nowrap">(사진·피드)</span>, 격자 콘솔형<span class="nowrap">(표·관리 화면)</span>, Carvit<span class="nowrap">(흑백 정갈)</span>, 스튜디오형<span class="nowrap">(크림 바탕, 내부 도구·보고서)</span>입니다. 가장 가까운 것으로 시작해 회사에 맞게 바꿔 가면 됩니다.</p></div></details>
-  </div>
-</div></section>
-<section class="cta-band alt"><div class="page">
-  <h2>이미 연결했나요?</h2>
-  <p class="sub">로그인하면 사용 기록, 가이드, 연결 방법을 볼 수 있습니다.</p>
-  <div class="actions"><a class="btn" href="https://mcp.carvit.ai/login" data-li-text="대시보드" data-li-href="https://mcp.carvit.ai/dashboard">로그인</a></div>
-</div></section>
-</main>
-<footer class="foot"><div class="page"><div class="cols"><div><h5><a href="/ko/ux-mcp/">UX MCP</a></h5><a href="/ko/ux-mcp/">소개</a><a href="https://mcp.carvit.ai/dashboard">대시보드</a><a href="https://mcp.carvit.ai/guide">UX 가이드</a><a href="https://mcp.carvit.ai/connect">연결 방법</a></div><div><h5><a href="/ko/tech-report/">테크리포트</a></h5><!--rp:foot--><a href="/ko/tech-report/logo-making-process/">테크리포트 4</a><a href="/ko/tech-report/pass-security-model/">테크리포트 3</a><a href="/ko/tech-report/agent-launch-qa/">테크리포트 2</a><a href="/ko/tech-report/white-paper/">테크리포트 1</a><!--/rp:foot--></div><div><h5><a href="/ko/brand/">브랜드</a></h5><a href="/ko/brand/">브랜드</a></div><div><h5>문의</h5><a href="mailto:hello@carvit.ai">hello@carvit.ai</a></div><div><h5>약관</h5><a href="/ko/privacy/">개인정보처리방침</a><a href="/ko/terms/">이용약관</a></div></div><p class="fine">Carvit · © 2026</p></div></footer>
+<section class="sect"><div class="page"><div class="cr-wrap"><h2 class="cr-h2">같은 요청, 가이드가 있으면 이렇게 달라집니다</h2><p class="cr-lead">"러닝 컨디션 요약 화면 만들어 줘"라는 같은 요청입니다. 가운데 선을 좌우로 끌어 비교해 보세요.</p><div class="cmp" id="cmp"><img alt="가이드를 따라 만든 러닝 요약 화면" class="cmp-b" src="/assets/m2/ux-79c0ad8822.jpg"/><img alt="가이드 없이 AI가 만든 러닝 요약 화면" class="cmp-a" id="cmpA" src="/assets/m2/ux-34a84f8868.jpg"/><input aria-label="비교 위치 조절" id="cmpR" max="100" min="0" type="range" value="50"/><span class="cmp-l">가이드 없이</span><span class="cmp-r">Carvit 가이드로</span></div><p class="cr-cap">가상의 러닝 앱 화면을 같은 요청으로 만든 예시입니다. 숫자의 크기, 색, 버튼 위치가 달라집니다.</p></div></div></section><section class="sect"><div class="page"><div class="cr-wrap"><video aria-label="가이드가 이미 입력돼 있으면 " autoplay="" class="cr-loop cr-demo" loop="" muted="" playsinline="" poster="/assets/m2/ux-875b1431b7.jpg" preload="metadata" src="/assets/m2/ux-3972309d23.mp4" 검색="" 나옵니다."="" 만들어="" 바로="" 줘"="" 한마디로="" 화면=""></video><p class="cr-cap">가이드가 이미 입력돼 있으면 "검색 화면 만들어 줘" 한마디로 바로 나옵니다.</p></div></div></section><section class="sect" id="start"><div class="page">
+<h2>시작하기</h2>
+<p class="lead">연결하고, 가이드를 올리고, 평소처럼 말하면 됩니다. 로그인하면 회사가 만들어지고 설치 코드가 나옵니다.</p>
+<ol class="tools">
+<li><b>연결합니다.</b> '연결 방법' 화면에서 쓰시는 도구를 고르고 [복사]한 뒤, 그 도구에 붙여 넣습니다. 연결되면 같은 화면에 표시됩니다.</li>
+<li><b>가이드를 올립니다.</b> DESIGN.md, 디자인 문서, 화면 캡처, 웹사이트 주소를 AI 도구에 주고 "Carvit UX에 올려줘"라고 말합니다. 문서가 없으면 아래 시작 템플릿에서 고릅니다.</li>
+<li><b>평소처럼 말합니다.</b> 만들 화면을 말하면 AI가 맞는 절<span class="nowrap">(가이드 항목)</span>을 찾아 그 기준으로 만듭니다. 편집자가 아니면 AI가 가이드 변경을 제안으로 올리고, 편집자가 승인해야 반영됩니다.</li>
+</ol>
+<h3 class="sub-h">지원하는 도구</h3>
+<p class="lead">도구를 누르면 연결 방법 화면이 열립니다. 로그인이 필요하면 먼저 로그인합니다.</p>
+<div class="actions"><a class="btn outline" href="https://mcp.carvit.ai/connect?tool=code"><span class="nowrap">Claude Code</span></a><a class="btn outline" href="https://mcp.carvit.ai/connect?tool=codex">Codex</a><a class="btn outline" href="https://mcp.carvit.ai/connect?tool=antigravity">Antigravity</a><a class="btn outline" href="https://mcp.carvit.ai/connect?tool=cursor">Cursor</a></div><div class="actions" style="margin-top:var(--sp-6)"><a class="btn" data-li-href="https://mcp.carvit.ai/connect" data-li-text="연결 방법 열기 →" href="https://mcp.carvit.ai/login?next=connect">로그인하고 연결 시작 →</a></div>
+<p class="lead" style="margin-top:var(--sp-6)">팀이라면 동료를 초대하고, 가이드를 고칠 사람을 역할<span class="nowrap">(소유자·편집자·멤버)</span>로 정합니다.</p>
+</div></section><section class="sect"><div class="page"><div class="cr-wrap">
+<h2 class="cr-h2">가이드가 화면을 만들 때마다 따라갑니다</h2>
+<div class="ux-feat"><div><h3>누가 만들어도 같은 기준으로 시작합니다</h3><p>화면을 만들기 직전, Carvit이 맞는 가이드 항목(절)을 찾아 줍니다. 담당자가 바뀌어도, 사람 대신 AI가 만들어도 같은 기준에서 출발합니다.</p></div>
+<div class="ux-term"><span class="dim">carvit · lookup</span>
+query = "결제 확인 버튼 순서"
+<span class="dim">→</span> 1.38 확인 창은 결과를 말하고, 버튼은 [취소] [주 동작] 순서로
+<span class="dim">→</span> 1.12 주 동작과 보조 동작은 시각적 크기로 구분한다
+<span class="dim">→</span> 1.7 버튼 라벨은 동사와 결과로 쓴다</div></div>
+<div class="ux-feat"><div><h3>말뿐인 원칙이 아니라 실제 값으로</h3><p>가이드에는 색, 여백, 둥글기, 문구가 실제 값으로 들어 있어 해석이 갈릴 여지가 적습니다. 가이드에 없는 결정은 임의로 만들지 않고, 새 항목으로 넣을지 먼저 묻도록 안내합니다.</p></div>
+<div class="ux-term"><span class="dim">carvit · draft_screen</span>
+:root{ --primary:var(--foreground); --radius:10px; }
+.confirm-actions{ justify-content:flex-end; gap:8px; }  <span class="dim">/* 1.38 */</span></div></div>
+<div class="ux-feat"><div><h3>리뷰에서 눈으로 찾던 일을 자동으로</h3><p>만든 뒤에는 바뀐 코드를 가이드와 대조해, 등록되지 않은 색이나 여백을 줄 단위로 알려 줍니다. 고친 뒤 다시 검사해 가이드에 없는 값이 0개인지 확인합니다.</p></div>
+<div class="ux-term"><span class="dim">carvit · check_diff_violations</span>
+checkout.tsx
+− padding-bottom: 56px   <span class="dim">여백 단계에 없는 값</span>
++ padding-bottom: var(--sp-12)
+다시 검사 → violations [] <span class="dim">가이드에 없는 값 0개</span></div></div>
+</div></div></section><section class="sect"><div class="page"><div class="cr-wrap">
+<h2 class="cr-h2">시작 템플릿 여섯 가지</h2>
+<p class="cr-lead">가장 가까운 것으로 시작해 회사에 맞게 바꿔 가면 됩니다. 바꾸기 전 버전으로 되돌릴 수 있습니다.</p>
+<ul class="tpl-grid"><li><img alt="shadcn 기본 시작 템플릿 화면 예시" loading="lazy" src="/assets/m2/ux-d48a03e2f3.jpg"/><b>shadcn 기본</b> <span>깔끔한 기본</span></li><li><img alt="브랜드 사이트형 시작 템플릿 화면 예시" loading="lazy" src="/assets/m2/ux-1312752f23.jpg"/><b>브랜드 사이트형</b> <span>콘텐츠·브랜드</span></li><li><img alt="인스타그램형 시작 템플릿 화면 예시" loading="lazy" src="/assets/m2/ux-2aba7969bd.jpg"/><b>인스타그램형</b> <span>사진·피드</span></li><li><img alt="격자 콘솔형 시작 템플릿 화면 예시" loading="lazy" src="/assets/m2/ux-ddc3c7c7c8.jpg"/><b>격자 콘솔형</b> <span>표·관리 화면</span></li><li><img alt="Carvit 시작 템플릿 화면 예시" loading="lazy" src="/assets/m2/ux-40e93218c1.jpg"/><b>Carvit</b> <span>흑백 정갈</span></li><li><img alt="스튜디오형 시작 템플릿 화면 예시" loading="lazy" src="/assets/m2/ux-959b31c09f.jpg"/><b>스튜디오형</b> <span>크림 바탕, 내부 도구·보고서</span></li></ul>
+</div></div></section><section class="sect"><div class="page"><div class="cr-wrap">
+<h2 class="cr-h2">우리가 먼저 씁니다</h2>
+<p class="cr-lead">Carvit은 Carvit 자신의 화면을 만드는 데 가장 먼저 쓰입니다. 아래는 실제로 남은 기록입니다.</p><div class="ux-feat"><div><h3>가이드를 지켰다는 증거가 남습니다</h3><p>근거가 된 항목마다 한 줄 메모가 남고, 대시보드에서 날짜별로 봅니다. 조회는 AI가 가이드를 찾아본 횟수, 인용은 근거를 남긴 횟수입니다. 대표는 기준이 지켜지는지 확인하고, 실무자는 왜 이렇게 만들었는지 설명하는 수고를 덜 수 있습니다.</p></div>
+<div class="ux-term"><span class="dim">대시보드 · 날짜별 기록(우리 팀 예시)</span>
+1.38 설치 코드 확인 창의 버튼 순서
+1.39 머리 메뉴
+1.35 입력칸</div></div>
+<ul class="ux-nums"><li><b>356</b><span>우리 팀 자체 가이드 조회<span class="nowrap">(10/1~10/14)</span></span></li><li><b>139</b><span>가이드 인용 기록<span class="nowrap">(10/1~10/14)</span></span></li></ul>
+<p class="cr-fine">2026-10-14 기준 우리 팀 자체 기록이며 고객 사용 수치가 아닙니다.</p>
+<ul class="ux-memos">
+<li>"설치 코드 확인 창은 제목을 질문 한 줄로, 버튼은 [취소][설치 코드 받기] 순서로 만들었다."<small>개발 에이전트 · 1.38 확인 창 · 10/2</small></li>
+<li>"입력칸 테두리를 늘 보이게 하고, 넣을 내용 안내를 칸 아래에 두었다."<small>개발 에이전트 · 1.35 입력칸 · 10/2</small></li>
+<li>"오류 문구는 칸 바로 아래에 원인과 할 일을 한 문장으로, 버튼은 동작 이름으로 썼다."<small>제품 에이전트 · 1.7 문구 · 10/2</small></li>
+</ul>
+<p class="cr-fine" style="margin-top:16px">Carvit에 남은 실제 인용 메모입니다. 고객 회사의 기록은 보이지 않습니다.</p>
+</div></div></section><section class="sect alt" id="tools"><div class="page">
+<h2>할 수 있는 일</h2><details class="faq-tools"><summary>AI 도구가 부르는 도구 5가지 보기</summary><p class="lead">주요 기능입니다. 괄호 안은 AI 도구가 부르는 도구 이름입니다.</p><ul class="tools"><li>필요한 가이드 찾기 (<code>lookup</code>): 주제에 맞는 절을 몇 개 찾아 본문과 함께 돌려줍니다.</li><li>정확한 절 읽기 (<code>get_section</code>): 절 번호로 한 절을 읽습니다.</li><li>전체 목차 보기 (<code>list_sections</code>): 검색이 비었을 때 전체 절 목록을 봅니다.</li><li>근거 남기기 (<code>cite</code>): 절을 근거로 작업을 고쳤다는 기록을 한 줄 이유와 함께 남깁니다.</li><li>사용 현황 보기 (<code>usage</code>): 조회<span class="nowrap">(찾아본 횟수)</span>, 인용<span class="nowrap">(근거를 남긴 횟수)</span>, 찾지 못한 검색의 수를 날짜별, 사람별로 셉니다.</li></ul></details>
+</div></section><section class="sect alt" id="faq"><div class="page">
+<h2>자주 묻는 질문</h2>
+<p class="lead">처음 연결한 분이 가장 많이 묻는 것을 모았습니다.</p>
+<div class="faq"><details><summary>원하는 절이 검색에 안 나오면요?</summary><div class="ans"><p>검색은 의미가 아니라 절 제목과 본문의 단어로 찾습니다. 맞는 절이 없으면 빈 결과가 나오고, AI가 전체 목록을 열어 다시 찾습니다. 절 제목에 쓰인 단어로 다시 물어보세요.</p></div></details><details><summary>연결했는데 무엇을 할 수 있는지 어떻게 보나요?</summary><div class="ans"><p>AI 도구에 "Carvit 도움말 보여줘"라고 말하거나, <span class="nowrap">Claude Code</span>에서 <code>/carvit:help</code>를 실행하세요. UX 가이드 만들기, 업데이트, 보기, MCP로 서비스 만들기, 동료 초대, 의견 보내기가 번호로 나옵니다.</p></div></details><details id="faq-update"><summary>가이드를 나중에 고치려면, 그리고 잘못 고쳤다면 어떻게 하나요?</summary><div class="ans"><p>고치기: "주 버튼 색을 #0F766E로 바꿔줘"처럼 바꿀 내용을 말하면 AI가 관련 절을 찾아 바뀐 모습을 보여 주고, "올려줘"라고 하면 반영됩니다. 잘못 바꿨다면 "이전 버전으로 되돌려줘"라고 하세요. 이전 버전으로 되돌릴 수 있습니다.</p><p>가이드를 바로 고칠 수 있는 사람은 편집자<span class="nowrap">(소유자가 지정)</span>뿐입니다. 편집자가 아니면 AI가 바꿀 내용을 제안으로 올리고, 편집자가 승인하기 전까지 가이드는 그대로입니다.</p><p>처음 올리는 방법은 위의 "시작하기"를 보세요.</p></div></details><details id="faq-templates"><summary>Carvit이 제공하는 UX 템플릿은 어디서 고르나요?</summary><div class="ans"><p>두 곳입니다. 로그인한 뒤 위쪽 "UX 가이드" 탭에서 화면으로 시작 템플릿을 고를 수 있고, AI 도구에 "시작 템플릿으로 만들어줘"라고 하면 AI가 선택지를 보여 줍니다.</p></div></details><details id="faq-feedback"><summary>Carvit 팀에 의견은 어떻게 보내나요?</summary><div class="ans"><p>AI 도구에 "Carvit 팀에 의견 보내줘"라고 말하면 됩니다. 불편한 점, 바라는 기능, 칭찬 무엇이든 괜찮습니다. 도구가 말씀하신 내용을 정리해 <code>feedback</code> 도구로 Carvit 팀에 전달합니다.</p><p>답을 받고 싶으면 연락받을 방법<span class="nowrap">(이메일 등)</span>도 같이 말해 주세요. 남기지 않으면 의견은 전달되지만 회신은 드릴 수 없습니다.</p><p>설치 코드, 비밀번호, 고객 이름, 비공개 사업 내용은 적지 마세요. 문제는 일반적인 말로 설명해 주시면 됩니다.</p></div></details></div>
+</div></section><section class="sect"><div class="page"><div class="cr-wrap">
+<h2 class="cr-h2">연결을 시작해 보세요</h2>
+<p class="cr-lead">이미 연결했다면 대시보드로 이동합니다.</p>
+<div class="cr-cta"><a class="cr-btn" data-li-href="https://mcp.carvit.ai/dashboard" data-li-text="대시보드 열기 →" href="https://mcp.carvit.ai/login?next=connect">로그인하고 연결 시작 →</a></div>
+</div></div></section></main>
+<section class="sect ag-sec"><div class="page"><div class="cr-wrap"><h2 class="cr-h2">UX를 맡은 에이전트</h2><ul class="ag-mini"><li><img alt="지투, 제품 에이전트" height="80" loading="lazy" src="/assets/m2/ux-3512a02b6a.jpg" width="80"/><div><p class="role">제품 에이전트</p><h3>지투</h3><p>제품이 고객에게 쓰이는 모습을 살피고 가이드를 관리합니다.</p><p>병합 PR 65건<span class="nowrap">(9/26~10/14)</span>, 데모 고객 가이드 2건을 만들었습니다.</p></div></li><li><img alt="노트, 개발 에이전트" height="80" loading="lazy" src="/assets/m2/ux-44cda2f889.jpg" width="80"/><div><p class="role">개발 에이전트</p><h3>노트</h3><p>Carvit 가이드 서버와 연결 도구, 가입·로그인을 만들고 배포합니다.</p><p>서버 저장소 병합 PR 612건<span class="nowrap">(9/6 이후, 2026-10-14 기준)</span>을 배포했습니다.</p></div></li></ul><p class="ag-more"><a href="/ko/team/">팀 소개에서 전체 보기 →</a></p></div></div></section>
+<footer class="foot"><div class="page"><div class="cols"><div><h5>제품</h5><a href="/ko/ux-mcp/">UX MCP</a><a href="/ko/create/">Create</a><a href="/ko/pass/">Pass</a></div><div><h5><a href="/ko/team/">팀</a></h5><a href="/ko/team/">팀 소개</a></div><div><h5><a href="/ko/ux-mcp/">UX MCP</a></h5><a href="/ko/ux-mcp/">소개</a><a href="https://mcp.carvit.ai/dashboard">대시보드</a><a href="https://mcp.carvit.ai/guide">UX 가이드</a><a href="https://mcp.carvit.ai/connect">연결 방법</a></div><div><h5><a href="/ko/tech-report/">테크리포트</a></h5><!--rp:foot--><a href="/ko/tech-report/logo-making-process/">테크리포트 4</a><a href="/ko/tech-report/pass-security-model/">테크리포트 3</a><a href="/ko/tech-report/agent-launch-qa/">테크리포트 2</a><a href="/ko/tech-report/white-paper/">테크리포트 1</a><!--/rp:foot--></div><div><h5><a href="/ko/brand/">브랜드</a></h5><a href="/ko/brand/">브랜드</a></div><div><h5>문의</h5><a href="mailto:hello@carvit.ai">hello@carvit.ai</a></div><div><h5>정책</h5><a href="/ko/terms/">이용약관</a><a href="/ko/privacy/">개인정보 처리방침</a></div></div><p class="fine">Carvit · © 2026</p></div></footer>
+</div><script>(function(){try{if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.querySelectorAll('video.cr-loop').forEach(function(v){v.removeAttribute('autoplay');v.pause();});}}catch(e){}})();</script><script>(function(){var r=document.getElementById('cmpR'),a=document.getElementById('cmpA'),c=document.getElementById('cmp');if(!r)return;function u(){a.style.clipPath='inset(0 '+(100-r.value)+'% 0 0)';c.style.setProperty('--p',r.value+'%');}r.addEventListener('input',u);u();})();</script><style>
+/* 지투 목록1(2026-10-15) */
+.ps-swipe{display:none}
+@media (max-width:760px){
+  .ps-diagram-wrap{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
+  .ps-swipe{display:block;margin:8px 0 0;font-size:14px;color:var(--muted-foreground)}
+  .team-page .tm:not(.tm-founder) img{height:200px;width:100%;object-fit:cover;object-position:top}
+}
+@media (max-width:480px){
+  .tm-li{min-width:44px;min-height:44px;justify-content:center;align-items:center;margin-left:4px}
+  footer.foot .cols h5 a{display:inline-flex;align-items:center;min-height:44px}
+  .foot a,.ag-more a,.cr-btn,.tm-link,.link,.gates a,footer nav a{min-height:44px;display:inline-flex;align-items:center}
+}
+/* 왼쪽 정렬선 하나(목록1 ⑩): 좁은 본문 틀도 페이지 왼쪽 선에서 시작 */
+.cr-wrap,.tm-wrap{margin-left:0}
+.final-mail{display:inline-block;margin-top:20px;color:inherit;text-decoration:underline;text-underline-offset:3px;font-size:14px;min-height:44px;line-height:44px}
+</style>
+
+<style>
+/* 미리보기 공통 보정(지투 결정 2026-10-15) */
+@media (max-width:480px){
+  .btn,.login,.logo,.brand,.burger,nav a,.sheet a,.link{min-height:44px}
+  .btn,.login,.logo,.brand,.link{display:inline-flex;align-items:center}
+  .burger{min-width:44px}
+}
+@media (min-width:761px){.text-page main > .sect:first-of-type,.text-page main > section.sect:first-child{padding-top:80px}}  /* 휴대폰은 56/56(목록1 ⑨) */
+@media (max-width:760px){.text-page .sect,.text-page .cta-band{padding-block:56px}}
+</style>
 <script src="/assets/site.js"></script>
+<style>
+/* 휴대폰 누르는 영역 44(가이드 1.34·1.37 ⑦, 지투 10/15): 머리 로그인 버튼·햄버거 */
+@media (max-width:480px){.links a.login{min-height:44px}.burger{min-width:44px;min-height:44px}}
+</style>
 </body>
 </html>

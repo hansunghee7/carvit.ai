@@ -2,32 +2,31 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png">
-<title>Carvit · Let AI agents accelerate your startup's growth</title>
-<meta name="description" content="We build the environment where AI agents can handle product design, video production and infrastructure setup.">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta property="og:locale" content="en_US">
+<title>Carvit · AI agents accelerate startup growth</title>
+<meta name="description" content="We build environments where AI agents can handle product design, video production, and infrastructure setup.">
+<meta property="og:title" content="Carvit · AI agents accelerate startup growth">
+<meta property="og:description" content="We build environments where AI agents can handle product design, video production, and infrastructure setup.">
+<meta property="og:image" content="https://carvit.ai/assets/og-en.png">
+<link rel="icon" href="/assets/favicon.svg">
 <link rel="canonical" href="https://carvit.ai/">
 <link rel="alternate" hreflang="en" href="https://carvit.ai/">
 <link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/">
 <link rel="alternate" hreflang="x-default" href="https://carvit.ai/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Carvit">
-<meta property="og:title" content="Let AI agents accelerate your startup's growth">
-<meta property="og:description" content="We build the environment where AI agents can handle product design, video production and infrastructure setup.">
 <meta property="og:url" content="https://carvit.ai/">
-<meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="ko_KR">
-<meta property="og:image" content="https://carvit.ai/assets/og-en.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Let AI agents accelerate your startup's growth">
-<meta name="twitter:description" content="We build the environment where AI agents can handle product design, video production and infrastructure setup.">
+<meta name="twitter:title" content="Carvit · AI agents accelerate startup growth">
+<meta name="twitter:description" content="We build environments where AI agents can handle product design, video production, and infrastructure setup.">
 <meta name="twitter:image" content="https://carvit.ai/assets/og-en.png">
-<!-- 홈 디자인: UX 가이드 1.37(Codex 홈 짜임을 흑백으로, 2026-10-03 사장님 확정). 다른 페이지는 /assets/style.css -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png">
+</head>
+<body>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;600&display=swap">
 <style>
 /* 레이아웃: Codex 한국어 홈(openai.com/ko-KR/codex, 2026-10-03 실측) 영역 순서·폭·글자 수를 그대로 따른다.
@@ -60,7 +59,7 @@ h3{font-size:var(--h3);font-weight:500;line-height:1.32;letter-spacing:-.01em;te
 .btn.soft{background:var(--ink-soft);color:#000}
 .btn.white{background:#fff;color:#000}
 .btn.glass{background:rgba(255,255,255,.16);color:#fff}
-/* 섹션 끝 이동 행동은 테두리 알약 보조 버튼 + 화살표(가이드 1.37 ⑨, v36): 글자 색만 다른 링크는 클릭할 수 있다는 게 안 보인다(사장님 2026-10-03) */
+/* 섹션 끝 이동 행동은 테두리 알약 보조 버튼 + 화살표(가이드 1.37 ⑨, v36): 글자 색만 다른 링크는 클릭할 수 있다는 게 안 보인다(창업자 2026-10-03) */
 .link{display:inline-flex;align-items:center;gap:8px;height:40px;padding:0 20px;border:1px solid var(--line);border-radius:40px;font-size:14px;font-weight:500;color:var(--fg);text-decoration:none}
 .link::after{content:"→"}
 .link:hover{border-color:rgba(255,255,255,.5)}
@@ -137,6 +136,7 @@ h3{font-size:var(--h3);font-weight:500;line-height:1.32;letter-spacing:-.01em;te
 .app .box .bar{display:flex;justify-content:space-between;color:rgba(255,255,255,.45);font-size:12.5px}
 
 /* 공통 섹션 */
+.sec{padding:150px 0}
 .c{max-width:1100px;margin:0 auto;padding:0 32px}
 .w{max-width:1440px;margin:0 auto;padding:0 32px}
 .head{text-align:center;max-width:1000px;margin:0 auto 56px}
@@ -169,7 +169,7 @@ h3{font-size:var(--h3);font-weight:500;line-height:1.32;letter-spacing:-.01em;te
 .pane .prev b{color:#000;font-weight:600;display:block;margin-bottom:6px}
 .pane .prev .acts{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}
 .pane .prev .acts span{height:36px;padding:0 14px;border-radius:10px;display:inline-flex;align-items:center;font-size:13px;font-weight:500}
-.pane .prev .acts .o{border:1px solid #8a8a8a}.pane .prev .acts .f{background:#171717;color:#fff}
+.pane .prev .acts .o{border:1px solid #8a8a8a}.pane .prev .acts .f{background:var(--foreground);color:#fff}
 .pane .bars{display:flex;align-items:flex-end;gap:6px;height:210px;margin:8px 0 14px;border-bottom:1px solid rgba(255,255,255,.12)}
 .pane .bars i{flex:1;background:rgba(255,255,255,.55);border-radius:0;min-height:2px}
 
@@ -248,6 +248,7 @@ footer .fine{margin-top:48px;color:var(--dim);font-size:13px}
   .app{margin:56px 24px 0;height:min(600px,calc(100svh - 120px));min-height:460px;grid-template-columns:1fr}
   .app .side{display:none}
   .app .main{padding:18px 20px}
+  .sec{padding:96px 0}
   .plans,.quotes,.cards{gap:16px}
   .feat + .feat{margin-top:96px}
   .app{margin-top:88px}
@@ -347,7 +348,7 @@ footer .fine{margin-top:48px;color:var(--dim);font-size:13px}
 .tm .av img{width:100%;height:100%;display:block}
 .tm img{width:100%;height:100%;border-radius:0}
 
-/* 히어로 먹물(사장님 확정 2026-10-15: 셰이더 C안, 넓은 무늬, 속도 절반). 가이드 1.37의 은빛 판 위에 색은 바깥쪽에만, 아래는 검게 */
+/* 히어로 먹물(창업자 확정 2026-10-15: 셰이더 C안, 넓은 무늬, 속도 절반). 가이드 1.37의 은빛 판 위에 색은 바깥쪽에만, 아래는 검게 */
 .hero > .hx{position:absolute;left:0;top:0;width:100%;height:calc(100vh + 520px);display:block;z-index:0;pointer-events:none}
 .hero.gl .sheen{display:none}
 /* 마무리 띠: 위는 검게, 아래로 먹물과 은빛(히어로와 위아래로 이어지는 구조, 라이브 카빗 하단과 같은 자리) */
@@ -366,8 +367,8 @@ footer .fine{margin-top:48px;color:var(--dim);font-size:13px}
 .rlist a:hover{background:rgba(255,255,255,.04)}
 @media (max-width:760px){.rlist a{font-size:17px;min-height:64px}}
 @media (prefers-reduced-motion:reduce){.rlist a span.ar{transition:none}}
-/* 사장님 2026-10-15: Beta 칩은 회색, 자세히 보기는 흰 버튼+검정 글씨, 줄선은 목록 중간에만(맨 아래 줄 제거) */
-@media (max-width:760px){.nav .in{gap:0}.nav .btn.black{margin-right:2px}.burger{margin-left:0}}  /* 모바일: 로그인을 햄버거 쪽으로 붙임(사장님 2026-10-15) */
+/* 창업자 2026-10-15: Beta 칩은 회색, 자세히 보기는 흰 버튼+검정 글씨, 줄선은 목록 중간에만(맨 아래 줄 제거) */
+@media (max-width:760px){.nav .in{gap:0}.nav .btn.black{margin-right:2px}.burger{margin-left:0}}  /* 모바일: 로그인을 햄버거 쪽으로 붙임(창업자 2026-10-15) */
 /* 성과 띠(엔비디아 덱 벤치마크, 값은 confirmed_values_for_site.md 기준일 2026-10-14) */
 .stats .w{max-width:1100px}
 .stats h2{margin-bottom:12px}
@@ -381,15 +382,15 @@ footer .fine{margin-top:48px;color:var(--dim);font-size:13px}
 @media (max-width:900px){.stats ul{grid-template-columns:1fr 1fr}}
 @media (max-width:480px){.stats ul{gap:20px 16px}.stats b{font-size:32px}.stats span{font-size:13px;line-height:19px}}  /* 모바일도 2열로 스크롤 절약 */
 .tm .pf{color:rgba(255,255,255,.62);font-size:14px}
-:root{--sec:60px}  /* 섹션 간격 120px(위아래 60씩): Codex 실측 80px의 1.5배(사장님 2026-10-15) */
+:root{--sec:60px}  /* 섹션 간격 120px(위아래 60씩): Codex 실측 80px의 1.5배(창업자 2026-10-15) */
 .sec,.prod,.stats{padding:var(--sec) 0}
-.hero{padding-bottom:var(--sec)}  /* 히어로와 첫 섹션 사이도 다른 섹션 사이와 같은 간격(사장님 2026-10-15) */  /* 홈 섹션 위아래는 이 한 값만 쓴다(가이드 1.37 ⑪, 사장님 2026-10-15 간격 통일) */
-.tm .av{background:#111;width:80px;height:80px}  /* 홈은 상반신 80px(사장님 2026-10-15), 팀 메뉴에서 전체 구도 */
-.teamall{max-width:1100px;margin:28px auto 0;padding:0 24px;text-align:center}  /* 팀 전체 보기 버튼 중앙 정렬(사장님 2026-10-15) */
+.hero{padding-bottom:var(--sec)}  /* 히어로와 첫 섹션 사이도 다른 섹션 사이와 같은 간격(창업자 2026-10-15) */  /* 홈 섹션 위아래는 이 한 값만 쓴다(가이드 1.37 ⑪, 창업자 2026-10-15 간격 통일) */
+.tm .av{background:#111;width:80px;height:80px}  /* 홈은 상반신 80px(창업자 2026-10-15), 팀 메뉴에서 전체 구도 */
+.teamall{max-width:1100px;margin:28px auto 0;padding:0 24px;text-align:center}  /* 팀 전체 보기 버튼 중앙 정렬(창업자 2026-10-15) */
 .aino{max-width:1100px;margin:20px auto 0;padding:0 24px;font-size:13px;color:var(--muted);text-align:left}
-/* 자세히 보기 화살표: 글자 > 가 아니라 선으로 그린 쉐브론(사장님 2026-10-15) */
-.link::after{content:"";width:7px;height:7px;border-top:2px solid currentColor;border-right:2px solid currentColor;transform:rotate(45deg);margin-left:1px;flex:none;transition:transform .2s}
-.link:hover::after{transform:translateX(2px) rotate(45deg)}
+/* 자세히 보기 화살표: 글자 > 가 아니라 선으로 그린 쉐브론(창업자 2026-10-15) */
+
+
 .rlist a span.ar{font-size:0;width:9px;height:9px;border-top:2px solid currentColor;border-right:2px solid currentColor;transform:rotate(45deg);margin-right:4px}
 .rlist a:hover span.ar{transform:translateX(4px) rotate(45deg)}
 @media (prefers-reduced-motion:reduce){.link::after,.rlist a span.ar{transition:none}}
@@ -399,107 +400,103 @@ footer .fine{margin-top:48px;color:var(--dim);font-size:13px}
 .pane .step:last-of-type{border-bottom:0}
 @media (max-width:760px){.shot,.shot .pane{min-height:0}}
 .st.beta{background:rgba(255,255,255,.16);border:0;color:#fff}
-.link{background:#fff;color:#000;border:0}
+
 .link:hover{background:#fff;opacity:.85;border:0}
 .step:last-child{border-bottom:0}
 .rlist{border-top:0}
 .rlist li:last-child{border-bottom:0}
 .btn.edge{box-shadow:0 0 0 1px rgba(255,255,255,.34) inset}
 .final .gates{display:flex;gap:24px;justify-content:center;margin-top:28px;font-size:15px}
-.final .gates a{color:rgba(255,255,255,.85);text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(255,255,255,.35)}
-.final .gates a:hover{color:#fff}
-
-/* 준비 중 표시(클릭 없음, 2차에서 링크를 켠다) */
-.soon{display:inline-flex;align-items:center;height:40px;padding:0 20px;border-radius:40px;background:rgba(255,255,255,.12);color:rgba(255,255,255,.7);font-size:14px;font-weight:500}
-</style>
-</head>
-<body>
+.final .gates a{color:#000;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(0,0,0,.4)}
+.final .gates a:hover{color:#000}
+.tm .li{display:inline-flex;vertical-align:middle;margin:0 6px;color:#fff;opacity:.8}.tm .li:hover{opacity:1}</style>
 <header class="hero" id="top">
   <canvas class="hx" aria-hidden="true"></canvas>
-  <nav class="nav" aria-label="Primary"><div class="in">
-  <a class="logo" href="#top"><svg class="mk" viewBox="0 0 64 64" width="22" height="22" aria-hidden="true"><path d="M46.34 17.00 L55.00 22.00 L55.00 13.00 L48.00 6.00 L23.00 6.00 L9.00 20.00 L9.00 44.00 L23.00 58.00 L48.00 58.00 L55.00 51.00 L55.00 42.00 L46.34 47.00 L28.26 47.00 L21.00 39.74 L21.00 24.26 L28.26 17.00 Z" fill="currentColor"/></svg>Carvit</a>
-  <div class="menu"><!--mn:head--><a href="/ux-mcp/">UX MCP</a><a href="/team/">Team</a><a href="/tech-report/">Tech Report</a><a href="/brand/">Brand</a><!--/mn:head--></div>
+  <nav class="nav" aria-label="Main Menu"><div class="in">
+  <a class="logo" href="/"><svg class="mk" viewBox="0 0 64 64" width="22" height="22" aria-hidden="true"><path d="M46.34 17.00 L55.00 22.00 L55.00 13.00 L48.00 6.00 L23.00 6.00 L9.00 20.00 L9.00 44.00 L23.00 58.00 L48.00 58.00 L55.00 51.00 L55.00 42.00 L46.34 47.00 L28.26 47.00 L21.00 39.74 L21.00 24.26 L28.26 17.00 Z" fill="currentColor"/></svg>Carvit</a>
+  <div class="menu"><!--mn:head--><a href="/ux-mcp/">UX MCP</a><a href="/create/">Create</a><a href="/pass/">Pass</a><a href="/team/">Team</a><a href="/tech-report/">Tech Report</a><!--/mn:head--></div>
   <a class="lang" href="/ko/" hreflang="ko">한국어</a>
   <a class="btn black" href="https://mcp.carvit.ai/login">Log in</a>
-  <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet"><i></i><i></i><i></i></button>
-</div><div class="sheet" id="sheet"><!--mn:sheet--><a href="/ux-mcp/">UX MCP</a><a href="/team/">Team</a><a href="/tech-report/">Tech Report</a><a href="/brand/">Brand</a><!--/mn:sheet--><a href="/ko/" hreflang="ko">한국어</a></div></nav>
+  <button class="burger" id="burger" type="button" aria-label="Open Menu" aria-expanded="false" aria-controls="sheet"><i></i><i></i><i></i></button>
+</div><div class="sheet" id="sheet"><!--mn:sheet--><a href="/ux-mcp/">UX MCP</a><a href="/create/">Create</a><a href="/pass/">Pass</a><a href="/team/">Team</a><a href="/tech-report/">Tech Report</a><!--/mn:sheet--><a href="/ko/" hreflang="ko">한국어</a></div></nav>
   <div class="sheen" aria-hidden="true"></div>
   <div class="first">
     <div class="appicon" aria-hidden="true"><svg viewBox="-2 -4 68 72" aria-hidden="true"><g class="sel"><rect x="3" y="1" width="58" height="62" fill="none" stroke="#111" stroke-width="1.5"/><rect x="0" y="-2" width="6" height="6" fill="#fff" stroke="#111" stroke-width="1.5"/><rect x="58" y="-2" width="6" height="6" fill="#fff" stroke="#111" stroke-width="1.5"/><rect x="0" y="60" width="6" height="6" fill="#fff" stroke="#111" stroke-width="1.5"/><rect x="58" y="60" width="6" height="6" fill="#fff" stroke="#111" stroke-width="1.5"/></g><path d="M46.34 17.00 L55.00 22.00 L55.00 13.00 L48.00 6.00 L23.00 6.00 L9.00 20.00 L9.00 44.00 L23.00 58.00 L48.00 58.00 L55.00 51.00 L55.00 42.00 L46.34 47.00 L28.26 47.00 L21.00 39.74 L21.00 24.26 L28.26 17.00 Z" fill="#111"/></svg></div>
-    <h1>Let AI agents accelerate your startup's growth</h1>
-    <p class="sub">We build the environment where AI agents can handle product design, video production and infrastructure setup.</p>
-    <div class="cta"><a class="btn black" href="#ux">Explore products</a></div>
+    <h1>AI agents accelerate startup growth</h1>
+    <p class="sub">We build environments where AI agents can handle product design, video production, and infrastructure setup.</p>
+    <div class="cta"><a class="btn black" href="#ux">Explore Products</a></div>
   </div>
 <figure>
-    <figcaption>Connect to the AI tools you already use, without learning a new one</figcaption>
-    <div class="marks"><span class="mk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg><span class="nowrap">Claude Code</span></span><span class="mk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></svg>Codex</span><span class="mk">Antigravity</span><span class="mk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.503.131 1.891 5.678a.84.84 0 0 0-.42.726v11.188c0 .3.162.575.42.724l9.609 5.55a1 1 0 0 0 .998 0l9.61-5.55a.84.84 0 0 0 .42-.724V6.404a.84.84 0 0 0-.42-.726L12.497.131a1.01 1.01 0 0 0-.996 0M2.657 6.338h18.55c.263 0 .43.287.297.515L12.23 22.918c-.062.107-.229.064-.229-.06V12.335a.59.59 0 0 0-.295-.51l-9.11-5.257c-.109-.063-.064-.23.061-.23"/></svg>Cursor</span></div>
+    <figcaption>Connect directly to your existing AI tools without learning new ones</figcaption>
+    <div class="marks"><span class="mk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m4.7144 15.9555 4.7174-2.6471.079-.2307-.079-.1275h-.2307l-.7893-.0486-2.6956-.0729-2.3375-.0971-2.2646-.1214-.5707-.1215-.5343-.7042.0546-.3522.4797-.3218.686.0608 1.5179.1032 2.2767.1578 1.6514.0972 2.4468.255h.3886l.0546-.1579-.1336-.0971-.1032-.0972L6.973 9.8356l-2.55-1.6879-1.3356-.9714-.7225-.4918-.3643-.4614-.1578-1.0078.6557-.7225.8803.0607.2246.0607.8925.686 1.9064 1.4754 2.4893 1.8336.3643.3035.1457-.1032.0182-.0728-.164-.2733-1.3539-2.4467-1.445-2.4893-.6435-1.032-.17-.6194c-.0607-.255-.1032-.4674-.1032-.7285L6.287.1335 6.6997 0l.9957.1336.419.3642.6192 1.4147 1.0018 2.2282 1.5543 3.0296.4553.8985.2429.8318.091.255h.1579v-.1457l.1275-1.706.2368-2.0947.2307-2.6957.0789-.7589.3764-.9107.7468-.4918.5828.2793.4797.686-.0668.4433-.2853 1.8517-.5586 2.9021-.3643 1.9429h.2125l.2429-.2429.9835-1.3053 1.6514-2.0643.7286-.8196.85-.9046.5464-.4311h1.0321l.759 1.1293-.34 1.1657-1.0625 1.3478-.8804 1.1414-1.2628 1.7-.7893 1.36.0729.1093.1882-.0183 2.8535-.607 1.5421-.2794 1.8396-.3157.8318.3886.091.3946-.3278.8075-1.967.4857-2.3072.4614-3.4364.8136-.0425.0304.0486.0607 1.5482.1457.6618.0364h1.621l3.0175.2247.7892.522.4736.6376-.079.4857-1.2142.6193-1.6393-.3886-3.825-.9107-1.3113-.3279h-.1822v.1093l1.0929 1.0686 2.0035 1.8092 2.5075 2.3314.1275.5768-.3218.4554-.34-.0486-2.2039-1.6575-.85-.7468-1.9246-1.621h-.1275v.17l.4432.6496 2.3436 3.5214.1214 1.0807-.17.3521-.6071.2125-.6679-.1214-1.3721-1.9246L14.38 17.959l-1.1414-1.9428-.1397.079-.674 7.2552-.3156.3703-.7286.2793-.6071-.4614-.3218-.7468.3218-1.4753.3886-1.9246.3157-1.53.2853-1.9004.17-.6314-.0121-.0425-.1397.0182-1.4328 1.9672-2.1796 2.9446-1.7243 1.8456-.4128.164-.7164-.3704.0667-.6618.4008-.5889 2.386-3.0357 1.4389-1.882.929-1.0868-.0062-.1579h-.0546l-6.3385 4.1164-1.1293.1457-.4857-.4554.0608-.7467.2307-.2429 1.9064-1.3114Z"/></svg>Claude Code</span><span class="mk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></svg>Codex</span><span class="mk">Antigravity</span><span class="mk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11.503.131 1.891 5.678a.84.84 0 0 0-.42.726v11.188c0 .3.162.575.42.724l9.609 5.55a1 1 0 0 0 .998 0l9.61-5.55a.84.84 0 0 0 .42-.724V6.404a.84.84 0 0 0-.42-.726L12.497.131a1.01 1.01 0 0 0-.996 0M2.657 6.338h18.55c.263 0 .43.287.297.515L12.23 22.918c-.062.107-.229.064-.229-.06V12.335a.59.59 0 0 0-.295-.51l-9.11-5.257c-.109-.063-.064-.23.061-.23"/></svg>Cursor</span></div>
   </figure>
 
-  <div class="app" role="img" aria-label="Claude Code with Carvit connected">
+  <div class="app" role="img" aria-label="Claude Code screen connected to Carvit">
     <div class="side">
       <div class="dots"><i></i><i></i><i></i></div>
       <div class="ws">stockly-web</div>
-      <div class="row on">New screen</div>
+      <div class="row on">Create new screen</div>
       <div class="grp">Recent</div>
-      <div class="row">Payment confirmation <em>1.38</em></div>
+      <div class="row">Payment confirmation modal <em>1.38</em></div>
       <div class="row">Inventory list cleanup <em>1.15</em></div>
       <div class="row">Sign-up copy <em>1.7</em></div>
-      <div class="grp">Connected</div>
+      <div class="grp">Connect</div>
       <div class="row">carvit · UX_GUIDE</div>
     </div>
     <div class="main">
-      <div class="top"><span><span class="nowrap">Claude Code</span></span><span>carvit connected</span></div>
+      <div class="top"><span>Claude Code</span><span>carvit connected</span></div>
       <div class="empty">
         <div class="mark">C</div>
-        <h4>What shall we build?</h4>
+        <h4>What would you like to build?</h4>
         <div class="sugg">
-          <div><b>lookup</b> button order for the payment confirmation</div>
-          <div><b>draft_screen</b> inventory list screen with guide values</div>
-          <div><b>check_diff_violations</b> whether this change has values outside the guide</div>
+          <div><b>lookup</b> Button order in payment confirmation modal</div>
+          <div><b>draft_screen</b> Apply guide values to inventory list screen</div>
+          <div><b>check_diff_violations</b> Check if this change contains values outside the guide</div>
         </div>
       </div>
-      <div class="box"><div class="ph">Build the payment confirmation screen to our UX guide</div><div class="bar"><span>stockly-web · main</span><span>Enter</span></div></div>
+      <div class="box"><div class="ph">Build payment confirmation screen following our UX Guide</div><div class="bar"><span>stockly-web · main</span><span>Enter</span></div></div>
     </div>
   </div>
 </header>
 
 <section class="sec prod" id="ux"><div class="w">
   <div class="feat">
-    <div class="txt"><span class="st on">On Air</span><h2>AI builds screens to your team's goals and guide</h2><p>Give us your existing guide, service screens or a URL and we turn it into a guide for agents, then straight into a designed service.</p><a class="link" href="/ux-mcp/">Learn more</a></div>
-    <div class="shot"><div class="pane"><div class="t">carvit · lookup</div>query = <b>"payment confirmation button order"</b><br><br>→ <b>1.38</b> A confirmation dialog states the result; buttons go [Cancel] [Primary action]<br>→ <b>1.12</b> Primary and secondary actions differ in visual weight<br>→ <b>1.7</b> Button text is a verb and a result<br><br><span class="chip">value</span>.confirm-actions{ justify-content:flex-end; gap:8px }</div></div>
+    <div class="txt"><span class="st on">On Air</span><h2>AI creates screens aligned with your team's goals and guides</h2><p>Provide existing guides, service screens, or URLs, and Carvit UX turns them into an agent guide, then builds your service screens to match it.</p><a class="link" href="/ux-mcp/">Learn more</a></div>
+    <div class="shot"><div class="pane"><div class="t">carvit · lookup</div>query = <b>"Payment confirmation modal button order"</b><br><br>→ <b>1.38</b> Modals state the result and buttons follow [Cancel] [Primary Action] order<br>→ <b>1.12</b> Distinguish primary and secondary actions by visual weight<br>→ <b>1.7</b> Button text uses verbs and outcomes<br><br><span class="chip">Value</span>.confirm-actions{ justify-content:flex-end; gap:8px }</div></div>
   </div>
 </div></section>
 
 <section class="sec prod" id="create"><div class="w">
   <div class="feat r">
-    <div class="txt"><span class="st beta">Beta</span><h2>Agents manage the whole video production process</h2><p>Agents run performance analysis, topic proposals, video production and the operation of six channels including YouTube, Instagram and TikTok.</p><span class="soon">Coming soon</span></div>
-    <div class="shot"><div class="pane"><div class="t">carvit · create</div><div class="step"><b>Performance analysis</b>Reads how the last videos did</div><div class="step"><b>Topic proposals</b>Posts candidates for the next episode</div><div class="step"><b>Video production</b>Script, voice, cuts, assembly</div><div class="step"><b>Channel operation</b>Six channels including YouTube, Instagram and TikTok</div></div></div>
+    <div class="txt"><span class="st beta">Beta</span><h2>Agents manage the entire video production process</h2><p>Agents directly handle performance analysis, topic suggestions, video production, and operations across 6 channels including YouTube, Instagram, and TikTok.</p><a class="link" href="/create/">Learn more</a></div>
+    <div class="shot"><div class="pane"><div class="t">carvit · create</div><div class="step"><b>Performance Analysis</b>Reads responses to previous videos</div><div class="step"><b>Topic Suggestions</b>Proposes candidates for the next episode</div><div class="step"><b>Video Production</b>Script, voice, cuts, assembly</div><div class="step"><b>Channel Management</b>6 channels including YouTube, Instagram, and TikTok</div></div></div>
   </div>
 </div></section>
 
 <section class="sec prod" id="pass"><div class="w">
   <div class="feat">
-    <div class="txt"><span class="st beta">Beta</span><h2>Let agents set up infrastructure themselves</h2><p>With agentic vault technology, we minimize the security risk of key values such as API keys and security keys, and give users and agents an easy setup environment.</p><span class="soon">Coming soon</span></div>
-    <div class="shot"><div class="pane"><div class="t">carvit · pass</div><div class="step"><b>What the agent sees</b>YOUTUBE_API_KEY <span class="nowrap">(name only)</span></div><div class="step"><b>What the vault does</b>Takes the value out and puts it into the request</div><div class="step"><b>What the agent cannot see</b>The key value itself</div></div></div>
+    <div class="txt"><span class="st beta">Beta</span><h2>Lets agents set up infrastructure themselves</h2><p>A vault designed so agents can use API keys and secret keys without viewing key values, making setup easier for both humans and agents.</p><a class="link" href="/pass/">Learn more</a></div>
+    <div class="shot"><div class="pane"><div class="t">carvit · pass</div><div class="step"><b>What the agent sees</b>YOUTUBE_API_KEY (name only)</div><div class="step"><b>What the vault does</b>Retrieves values and attaches them to requests</div><div class="step"><b>What agents cannot see</b>The key value itself</div></div></div>
   </div>
 </div></section>
 
 <section class="sec" id="agents"><div class="w">
-  <div class="agents-head"><h2><span class="nowrap">Carvit</span> is built and used by an agent team</h2><p>Agents split video, infrastructure, product, development, writing and code review, and use <span class="nowrap">Carvit</span> as they work.</p></div>
-  <div class="ags"><figure class="tm"><div class="av"><img alt="Simon, AI-generated portrait" src="/assets/team/home-simon.jpg" width="80" height="80" loading="lazy"></div><p><span>Former COO at Bithumb, CPO at Yogiyo, PM at Samsung Electronics and content service team lead at Naver.</span><span>Builds AI Infraware <span class="nowrap">Carvit</span> together with a team of AI agents.</span><span class="pf">Worked with 200+ startups last year.</span></p><figcaption><b>Simon</b>, Founder</figcaption></figure><figure class="tm"><div class="av"><img alt="Fit, AI agent portrait" src="/assets/team/home-fit.jpg" width="80" height="80" loading="lazy"></div><p><span>Handles everything from script to voice, video cuts, assembly and scheduling, and publishes to multiple channels.</span><span>Reports only what it has verified as done; when blocked, records the cause and retries another way.</span><span class="pf">33 videos produced, 22 published <span class="nowrap">(Aug 28 to Oct 14)</span></span></p><figcaption><b>Fit</b>, Video agent</figcaption></figure><figure class="tm"><div class="av"><img alt="Tam, AI agent portrait" src="/assets/team/home-tam.jpg" width="80" height="80" loading="lazy"></div><p><span>Looks after the infrastructure the agent team uses and watches that scheduled jobs run on time.</span><span>Built <span class="nowrap">Carvit Pass</span>, which lets agents use keys without seeing them, and keeps an eye on credit usage.</span><span class="pf">2,196 merged PRs in the company repository <span class="nowrap">(since Aug 29)</span></span></p><figcaption><b>Tam</b>, Infrastructure agent</figcaption></figure><figure class="tm"><div class="av"><img alt="Jitu, AI agent portrait" src="/assets/team/home-jitu.jpg" width="80" height="80" loading="lazy"></div><p><span>Tends the Carvit UX guide and finds and fixes where customers get stuck on screens.</span><span>Records decisions and forecasts with their grounds, and writes down what it could not verify.</span><span class="pf">65 merged PRs <span class="nowrap">(Sep 26 to Oct 14)</span>, 2 demo customer guides</span></p><figcaption><b>Jitu</b>, Product agent</figcaption></figure><figure class="tm"><div class="av"><img alt="Note, AI agent portrait" src="/assets/team/home-note.jpg" width="80" height="80" loading="lazy"></div><p><span>Builds and manages, through deployment, Carvit's guide server, connection tools, and sign-up and login flows.</span><span>Reports done only after tests and real server responses confirm it, and states what it could not check.</span><span class="pf">612 PRs in the server repository <span class="nowrap">(since Sep 6)</span></span></p><figcaption><b>Note</b>, Engineering agent</figcaption></figure><figure class="tm"><div class="av"><img alt="Maya, AI agent portrait" src="/assets/team/home-maya.jpg" width="80" height="80" loading="lazy"></div><p><span>Turns the founder's thoughts and work records into posts for the blog and social media.</span><span>Writes each post from a scene the founder lived through and never writes claims it cannot prove.</span><span class="pf">47 process cards <span class="nowrap">(Sep 20 to Oct 14)</span></span></p><figcaption><b>Maya</b>, Writing agent</figcaption></figure><figure class="tm"><div class="av"><img alt="Dex, AI agent portrait" src="/assets/team/home-dex.jpg" width="80" height="80" loading="lazy"></div><p><span>From a Codex model's view, reviews how code changes behave and what is factual before merging.</span><span>If needed, implements a fix on a copy of the code and passes on the test results.</span></p><figcaption><b>Dex</b>, Code review agent</figcaption></figure><figure class="tm"><div class="av"><img alt="BT, AI agent portrait" src="/assets/team/home-bt.jpg" width="80" height="80" loading="lazy"></div><p><span>Reviews code changes from an Antigravity model's view before they are merged.</span><span>Checks the logic, security and risk factors of the code and reports the result.</span></p><figcaption><b>BT</b>, Code review agent</figcaption></figure></div>
-<div class="teamall"><a class="link" href="/team/">See the whole team</a></div></div></section>
+  <div class="agents-head"><h2>The agent team that builds and uses <span class="nowrap">Carvit</span></h2><p>Agents share responsibilities across video, infrastructure, product, development, writing, and code review, using <span class="nowrap">Carvit</span> as they work.</p></div>
+  <div class="ags"><figure class="tm"><div class="av"><img alt="Simon AI character image" src="/assets/m2/home-f5590342b4.jpg"></div><p><span>Former Bithumb COO, Yogiyo CPO, Samsung Electronics PM, and Naver Content Service Team Lead.</span><span>Building AI Infraware <span class="nowrap">Carvit</span> with an AI agent team.</span><span class="pf">Has coached more than 300 startups.</span></p><figcaption><b>Simon</b><a class="li" href="https://www.linkedin.com/in/simplifier/" target="_blank" rel="noopener noreferrer" aria-label="Simon LinkedIn profile (new window)"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg></a>, Founder</figcaption></figure><figure class="tm"><div class="av"><img alt="Fit AI agent character image" src="/assets/m2/home-e337060c00.jpg"></div><p><span>Handles everything from scripts to voice, video cuts, assembly, and scheduling in sequence to post across multiple channels.</span><span>Reports completion only for verified tasks, and logs the cause when blocked to try another path.</span><span class="pf">Produced 33 videos, published 22 (8/28~10/14)</span></p><figcaption><b>Fit</b>, Video Agent</figcaption></figure><figure class="tm"><div class="av"><img alt="Tam AI agent character image" src="/assets/m2/home-d502363caf.jpg"></div><p><span>Manages infrastructure used by the agent team and makes sure scheduled tasks run on time.</span><span>Built Carvit Pass, designed so agents can use keys without seeing their values, and tracks credit usage.</span><span class="pf">2,196 merged PRs in company repositories (since 8/29)</span></p><figcaption><b>Tam</b>, Infrastructure Agent</figcaption></figure><figure class="tm"><div class="av"><img alt="Jitu AI agent character image" src="/assets/m2/home-3512a02b6a.jpg"></div><p><span>Maintains the Carvit UX Guide and identifies and fixes friction points on user screens.</span><span>Logs decisions and predictions with evidence, and clearly records unverified items as unverified.</span><span class="pf">65 merged PRs (9/26~10/14), 2 demo customer guides</span></p><figcaption><b>Jitu</b>, Product Agent</figcaption></figure><figure class="tm"><div class="av"><img alt="Note AI agent character image" src="/assets/m2/home-44cda2f889.jpg"></div><p><span>Builds the Carvit guide server, integration tools, sign-up and log-in flows, and manages deployment.</span><span>Reports completion only after verifying with tests and live server responses, and says which checks it could not run.</span><span class="pf">612 merged PRs in the server repository (since 9/6)</span></p><figcaption><b>Note</b>, Development Agent</figcaption></figure><figure class="tm"><div class="av"><img alt="Maya AI agent character image" src="/assets/m2/home-f6f38de64e.jpg"></div><p><span>Turns the founder's thoughts and work logs into writing for blogs and social media.</span><span>Bases every article on first-hand experiences of the founder and avoids unverified claims.</span><span class="pf">47 process cards (9/20~10/14)</span></p><figcaption><b>Maya</b>, Writing Agent</figcaption></figure><figure class="tm"><div class="av"><img alt="Dex AI agent character image" src="/assets/m2/home-28f56a1fc9.jpg"></div><p><span>Reviews code changes for behavior and facts from the perspective of the Codex model prior to merging.</span><span>Implements suggested fixes on a copy of the code when needed and delivers inspection results.</span></p><figcaption><b>Dex</b>, Code Review Agent</figcaption></figure><figure class="tm"><div class="av"><img alt="BT AI agent character image" src="/assets/m2/home-ae7d7ad467.jpg"></div><p><span>Reviews code changes prior to merging from the perspective of a model running in Antigravity.</span><span>Checks code logic and security and reports the results.</span></p><figcaption><b>BT</b>, Code Review Agent</figcaption></figure></div>
+<div class="teamall"><a class="link" href="/team/">View all team</a></div></div></section>
 
-<!--aino--><section class="stats" id="proof"><div class="w"><h2>Our team's own record of using and building</h2><p class="sub">Numbers left by the agent team that builds <span class="nowrap">Carvit</span> while actually working.</p><ul><li><b>356</b><span>guide lookups, the agent team's use of Carvit UX <span class="nowrap">(Oct 1 to Oct 14)</span></span></li><li><b>139</b><span>guide citations, cited by 6 roles <span class="nowrap">(Oct 1 to Oct 14)</span></span></li><li><b>806</b><span>merged PRs in the company repository <span class="nowrap">(Oct 1 to Oct 14)</span></span></li><li><b>33</b><span>videos produced, 22 of them published <span class="nowrap">(Aug 28 to Oct 14)</span></span></li></ul><p class="fine">As of 2026-10-14, our team's own records. Not customer usage figures or revenue.</p></div></section>
+<!--aino--><section class="stats" id="proof"><div class="w"><h2>Records created and used by our own team</h2><p class="sub">Numbers our agent team left while building Carvit.</p><ul><li><b>356</b><span>Guide views, Carvit UX usage by the agent team (10/1~10/14)</span></li><li><b>139</b><span>Guide citations across 6 roles</span></li><li><b>806</b><span>Merged PRs in company repositories (10/1~10/14)</span></li><li><b>33</b><span>Videos produced, 22 published (8/28~10/14)</span></li></ul><p class="fine">As of 2026-10-14, these are internal team metrics, not customer usage or revenue figures.</p></div></section>
 <section class="sec" id="techreport"><div class="w">
-  <div class="head"><h2>We publish the problems we hit while building, and how we solved them</h2><p>We write up the technical problems we ran into building <span class="nowrap">Carvit</span> and how we worked them out.</p></div>
-  <ul class="rlist"><!--rp:home--><li><a href="/tech-report/logo-making-process/"><span>How we chose the <span class="nowrap">Carvit</span> logo</span><span class="ar" aria-hidden="true">&gt;</span></a></li><li><a href="/tech-report/pass-security-model/"><span>What <span class="nowrap">Carvit Pass</span> protects, and what it does not</span><span class="ar" aria-hidden="true">&gt;</span></a></li><li><a href="/tech-report/agent-launch-qa/"><span>Passing review did not mean ready to launch</span><span class="ar" aria-hidden="true">&gt;</span></a></li><li><a href="/tech-report/white-paper/"><span>An AI fixed the code. Passing lint was not enough</span><span class="ar" aria-hidden="true">&gt;</span></a></li><!--/rp:home--></ul><div class="more"><a class="link" href="/tech-report/">View all Tech Reports</a></div>
+  <div class="head"><h2>Sharing the challenges and solutions from building Carvit</h2><p>Documenting technical challenges encountered and resolved while building <span class="nowrap">Carvit</span>.</p></div>
+  <ul class="rlist"><!--rp:home--><li><a href="/tech-report/logo-making-process/"><span>How we chose the <span class="nowrap">Carvit</span> logo</span><span class="ar" aria-hidden="true">&gt;</span></a></li><li><a href="/tech-report/pass-security-model/"><span>What <span class="nowrap">Carvit Pass</span> protects, and what it does not</span><span class="ar" aria-hidden="true">&gt;</span></a></li><li><a href="/tech-report/agent-launch-qa/"><span>Passing review did not mean ready to launch</span><span class="ar" aria-hidden="true">&gt;</span></a></li><li><a href="/tech-report/white-paper/"><span>An AI fixed the code. Passing lint was not enough</span><span class="ar" aria-hidden="true">&gt;</span></a></li><!--/rp:home--></ul><div class="more"><a class="link" href="/tech-report/">View Tech Reports</a></div>
 </div></section>
 
-<section class="final" id="start"><canvas class="hx" data-m="1" aria-hidden="true"></canvas><div class="in2"><h2>Start building an environment to work with agents today</h2><p>Connect whichever of UX, Create and Pass you need first.</p><div class="cta"><a class="btn black edge" href="#ux">Explore products</a><a class="btn white" href="#agents">Meet the team</a></div><div class="gates" aria-label="Service shortcuts"><a href="#ux">UX</a><a href="#create">Create</a><a href="#pass">Pass</a></div></div></section><footer class="bottom"><div class="in">
+<section class="final" id="start"><canvas class="hx" data-m="1" aria-hidden="true"></canvas><div class="in2"><h2>Start working with agents today</h2><p>Connect what you need first among UX, Create, and Pass.</p><div class="cta"><a class="btn black edge" href="#ux">Explore Products</a><a class="btn white" href="#agents">Meet the team</a></div><div class="gates" aria-label="Go to service"><a href="#ux">UX</a><a href="#create">Create</a><a href="#pass">Pass</a></div><a class="final-mail" href="mailto:hello@carvit.ai">Contact hello@carvit.ai →</a></div></section><footer class="bottom"><div class="in">
   <span class="brand"><svg class="mk" viewBox="0 0 64 64" width="22" height="22" aria-hidden="true"><path d="M46.34 17.00 L55.00 22.00 L55.00 13.00 L48.00 6.00 L23.00 6.00 L9.00 20.00 L9.00 44.00 L23.00 58.00 L48.00 58.00 L55.00 51.00 L55.00 42.00 L46.34 47.00 L28.26 47.00 L21.00 39.74 L21.00 24.26 L28.26 17.00 Z" fill="currentColor"/></svg>Carvit</span>
-  <nav aria-label="Footer menu"><a href="/brand/">Brand</a><a href="/terms/">Terms</a><a href="/privacy/">Privacy Policy</a><a href="mailto:hello@carvit.ai">Contact</a></nav>
+  <nav aria-label="Footer menu"><a href="/ux-mcp/">UX MCP</a><a href="/create/">Create</a><a href="/pass/">Pass</a><a href="/team/">Team</a><a href="/brand/">Brand</a><a href="/terms/">Terms of Service</a><a href="/privacy/">Privacy Policy</a><a href="mailto:hello@carvit.ai">Contact us</a></nav>
   <p class="fine">Carvit © 2026</p>
 </div></footer>
+
 <script>
 (function(){var b=document.getElementById('burger'),s=document.getElementById('sheet');
 b.addEventListener('click',function(){var o=s.classList.toggle('open');b.setAttribute('aria-expanded',o)});
@@ -541,7 +538,7 @@ cvs.forEach(function(cv){
  if("IntersectionObserver" in window){new IntersectionObserver(function(e){it.vis=e[0].isIntersecting}).observe(cv);}
 });
 function draw(it,now){var cv=it.cv,gl=it.gl,U=it.U;
- /* 로고 줄까지 밝게: 어두워지기 시작하는 곳을 로고 줄 아래로, 완전히 검어지는 곳을 제품 창 위로(사장님 2026-10-15) */
+ /* 로고 줄까지 밝게: 어두워지기 시작하는 곳을 로고 줄 아래로, 완전히 검어지는 곳을 제품 창 위로(창업자 2026-10-15) */
  var mk=document.querySelector('.hero .marks'),ap=document.querySelector('.hero .app'),hr=document.getElementById('top'),hb=hr.getBoundingClientRect(),tp=hb.top;
  if(it.mode===0&&mk&&ap){var mkB=mk.getBoundingClientRect().bottom-tp,apT=ap.getBoundingClientRect().top-tp;cv.style.height=Math.round(apT+200)+'px';var Hc=apT+200;gl.uniform1f(U("fa"),Math.min(.95,(mkB+36)/Hc));gl.uniform1f(U("fb"),Math.min(.99,(apT+60)/Hc));}else{gl.uniform1f(U("fa"),.52);gl.uniform1f(U("fb"),.82);}
  var W=cv.clientWidth,H=cv.clientHeight;
@@ -558,6 +555,33 @@ if(!reduce)requestAnimationFrame(loop);
 window.addEventListener('resize',function(){items.forEach(function(it){draw(it,performance.now());});});
 })();
 </script>
-<script src="/assets/site.js"></script>
+<style>
+/* 지투 목록1(2026-10-15) */
+.ps-swipe{display:none}
+@media (max-width:760px){
+  .ps-diagram-wrap{-webkit-mask-image:linear-gradient(90deg,#000 82%,transparent);mask-image:linear-gradient(90deg,#000 82%,transparent)}
+  .ps-swipe{display:block;margin:8px 0 0;font-size:14px;color:var(--muted-foreground)}
+  .team-page .tm:not(.tm-founder) img{height:200px;width:100%;object-fit:cover;object-position:top}
+}
+@media (max-width:480px){
+  .tm-li{min-width:44px;min-height:44px;justify-content:center;align-items:center;margin-left:4px}
+  footer.foot .cols h5 a{display:inline-flex;align-items:center;min-height:44px}
+  .foot a,.ag-more a,.cr-btn,.tm-link,.link,.gates a,footer nav a{min-height:44px;display:inline-flex;align-items:center}
+}
+/* 왼쪽 정렬선 하나(목록1 ⑩): 좁은 본문 틀도 페이지 왼쪽 선에서 시작 */
+.cr-wrap,.tm-wrap{margin-left:0}
+.final-mail{display:inline-block;margin-top:20px;color:inherit;text-decoration:underline;text-underline-offset:3px;font-size:14px;min-height:44px;line-height:44px}
+</style>
+
+<style>
+/* 미리보기 공통 보정(지투 결정 2026-10-15) */
+@media (max-width:480px){
+  .btn,.login,.logo,.brand,.burger,nav a,.sheet a,.link{min-height:44px}
+  .btn,.login,.logo,.brand,.link{display:inline-flex;align-items:center}
+  .burger{min-width:44px}
+}
+@media (min-width:761px){.text-page main > .sect:first-of-type,.text-page main > section.sect:first-child{padding-top:80px}}  /* 휴대폰은 56/56(목록1 ⑨) */
+@media (max-width:760px){.text-page .sect,.text-page .cta-band{padding-block:56px}}
+</style>
 </body>
 </html>
