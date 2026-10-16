@@ -19,28 +19,26 @@
       if (!login || document.getElementById('cvam-btn')) return;
       var ko = document.documentElement.lang === 'ko';
       var T = ko ? { account: '계정 메뉴', dash: '대시보드', out: '로그아웃' } : { account: 'Account menu', dash: 'Dashboard', out: 'Log out' };
-      var dark = !!login.closest('.hero');  // 홈은 검은 판 위 머리
       var lang = nav.querySelector('a.lang');
 
       if (!document.getElementById('cvam-css')) {
         var st = document.createElement('style');
         st.id = 'cvam-css';
         st.textContent =
-          '.cvam{position:relative;display:inline-flex;margin-left:4px}' +
+          '.cvam{position:relative;display:inline-flex;margin-left:auto}' +
           '.cvam-btn{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:0;border-radius:50%;background:none;cursor:pointer}' +
           '.cvam-c{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#000;color:#fff;font:600 14px/1 Geist,ui-sans-serif,system-ui,sans-serif}' +
-          '.cvam.dark .cvam-c{background:#fff;color:#000}' +
           '.cvam-btn:focus-visible{outline:2px solid currentColor;outline-offset:1px}' +
           '.cvam-menu{position:absolute;right:0;top:calc(100% + 4px);z-index:50;min-width:200px;max-width:min(300px,calc(100vw - 32px));padding:4px;background:#fff;border:1px solid rgba(0,0,0,.12);border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,.08);display:flex;flex-direction:column;text-align:left}' +
           '.cvam-menu[hidden]{display:none}' +
           '.cvam-mail{padding:8px 12px;font-size:12px;color:rgba(0,0,0,.6);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;border-bottom:1px solid rgba(0,0,0,.12);margin-bottom:4px}' +
-          '.cvam-menu a{display:flex;align-items:center;min-height:44px;padding:0 12px;border-radius:6px;font-size:14px;color:#000;text-decoration:none;background:none;border:0;margin:0}' +
-          '.cvam-menu a:hover,.cvam-menu a:focus-visible{background:rgba(0,0,0,.04);outline:none}';
+          '.cvam .cvam-menu a{display:flex!important;align-items:center;min-height:44px;padding:0 12px;border-radius:6px;font-size:14px;color:#000;text-decoration:none;background:none;border:0;margin:0}' +
+          '.cvam .cvam-menu a:hover,.cvam .cvam-menu a:focus-visible{background:rgba(0,0,0,.04);outline:none}';
         document.head.appendChild(st);
       }
 
       var wrap = document.createElement('div');
-      wrap.className = 'cvam' + (dark ? ' dark' : '');
+      wrap.className = 'cvam';  // 홈 머리도 밝은 은빛 판이라 검은 원 하나로 같다
       var b = document.createElement('button');
       b.type = 'button'; b.className = 'cvam-btn'; b.id = 'cvam-btn';
       b.setAttribute('aria-haspopup', 'menu'); b.setAttribute('aria-expanded', 'false');
