@@ -10,7 +10,8 @@
     fetch(APP + '/session/me', { credentials: 'include', cache: 'no-store' })
       .then(function (r) { if (!r.ok) throw 0; return r.json(); })
       .then(function (j) { if (j && j['in'] === true && j.email) render(String(j.email)); })
-      .catch(function () {});
+      .catch(function () {})
+      .then(function () { document.documentElement.classList.remove('cv-li'); });  // 머리의 자리 비움(깜빡임 줄이기)을 푼다: 바뀌었으면 원, 아니면 로그인 버튼이 보인다
 
     function render(email) {
       var nav = document.querySelector('nav');
