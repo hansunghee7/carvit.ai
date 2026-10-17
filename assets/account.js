@@ -55,20 +55,21 @@
         m.appendChild(a); return a;
       }
       item(T.dash, APP + '/dashboard');
-      if (lang) {
-        var li = item(lang.textContent.trim(), lang.getAttribute('href'));
-        var to = lang.getAttribute('data-lang') || (lang.getAttribute('hreflang') || '').slice(0, 2);
-        li.addEventListener('click', function () {
-          if (to !== 'ko' && to !== 'en') return;
-          var d = /(^|\.)carvit\.ai$/.test(location.hostname) ? '; Domain=.carvit.ai' : '';
-          document.cookie = 'carvit_lang=' + to + d + '; Path=/; Max-Age=31536000; SameSite=Lax' + (location.protocol === 'https:' ? '; Secure' : '');
-          try { localStorage.setItem('carvit-lang', to); } catch (e) {}
-        });
-        lang.style.display = 'none';  // 로그인 뒤에는 언어도 메뉴 안으로(오른쪽 끝 요소 하나)
-      }
+      // 언어는 메뉴에 넣지 않고 겉에 그대로 둔다(R-88, 사장님 10/17 "GNB에서 한영 전환 버튼이 전부 사라졌다"): 오른쪽 끝은 언어 글자와 원 두 개
       item(T.out, APP + '/logout');
       wrap.appendChild(b); wrap.appendChild(m);
       login.parentNode.replaceChild(wrap, login);
+      // 언어 글자 끝과 원 사이 16px: 페이지마다 링크 여백이 달라 실제 위치를 재서 맞춘다. 언어가 시트 안에 숨은 휴대폰은 건드리지 않는다
+      function gap() {
+        if (!lang || !lang.offsetWidth) { wrap.style.marginLeft = ''; return; }
+        wrap.style.marginLeft = '0px';
+        var r = document.createRange(); r.selectNodeContents(lang);
+        var d = c.getBoundingClientRect().left - r.getBoundingClientRect().right;
+        if (d > -40 && d < 200) wrap.style.marginLeft = (16 - d) + 'px';
+      }
+      gap();
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(gap);
+      window.addEventListener('resize', gap);
 
       function items() { return Array.prototype.slice.call(m.querySelectorAll('[role=menuitem]')); }
       function open(f) { m.hidden = false; b.setAttribute('aria-expanded', 'true'); var i = items(); if (f && i.length) i[f === 'last' ? i.length - 1 : 0].focus(); }

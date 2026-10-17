@@ -6,5 +6,15 @@
     {"id": "pass", "ko": "Pass", "en": "Pass", "path": "/pass/"},
     {"id": "team", "ko": "팀", "en": "Team", "path": "/team/"},
     {"id": "tech-report", "ko": "테크리포트", "en": "Tech Report", "path": "/tech-report/"}
-  ]
+  ],
+  "subnav": {
+    "ux-mcp": [
+      {"id": "intro", "ko": "소개", "en": "Overview", "path": "/ux-mcp/"},
+      {"id": "dashboard", "ko": "대시보드", "en": "Dashboard", "app": "/dashboard"},
+      {"id": "guide", "ko": "UX 가이드", "en": "UX Guide", "app": "/guide"},
+      {"id": "connect", "ko": "연결 방법", "en": "Connect", "app": "/connect"},
+      {"id": "agents", "ko": "에이전트", "en": "Agents", "app": "/agents"},
+      {"id": "settings", "ko": "설정", "en": "Settings", "app": "/settings"}
+    ]
+  }
 }

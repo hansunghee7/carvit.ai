@@ -54,8 +54,38 @@ def links_home(m, lang):
     return ''.join(f'<a href="{base + it["path"]}">{it[lang]}</a>' for it in m['items'])
 
 
+APP = 'https://mcp.carvit.ai'
+
+
+def sub_href(it, lang):
+    """하위 탭 주소: path는 사이트 경로(한국어는 /ko), app은 앱 경로(로그인 필요 탭은 앱이 로그인으로 보내고 돌아오면 그 탭)."""
+    if 'app' in it:
+        return APP + it['app']
+    return ('/ko' if lang == 'ko' else '') + it['path']
+
+
+def subnav_tabs(m, lang, url):
+    out = []
+    for it in m.get('subnav', {}).get('ux-mcp', []):
+        href = sub_href(it, lang)
+        cur = 'aria-current="page" ' if 'path' in it and url == href else ''
+        out.append(f'<a {cur}class="tab" href="{href}">{it[lang]}</a>')
+    return ''.join(out)
+
+
+def subnav_foot(m, lang):
+    return ''.join(f'<a href="{sub_href(it, lang)}">{it[lang]}</a>' for it in m.get('subnav', {}).get('ux-mcp', []))
+
+
 def rewrite(rel, s, m):
     lang, url = lang_of(rel), page_url(rel)
+    # UX MCP 하위 탭(가이드 1.39·1.40: 공개 화면과 앱이 같은 6개·같은 순서·같은 이름, 정본 menu.json의 subnav)
+    if m.get('subnav'):
+        s = re.sub(r'(<nav aria-label="UX MCP" class="subnav"><div class="page"><div class="tabs">)(.*?)(</div></div></nav>)',
+                   lambda x: x.group(1) + subnav_tabs(m, lang, url) + x.group(3), s, flags=re.S)
+        # 꼬리의 UX MCP 열
+        s = re.sub(r'(<div><h5><a href="(?:/ko)?/ux-mcp/">UX MCP</a></h5>)(.*?)(</div>)',
+                   lambda x: x.group(1) + subnav_foot(m, lang) + x.group(3), s, flags=re.S)
     # 서브 페이지 머리
     pat = re.compile(r'(<nav class="top"[^>]*>.*?<div class="links">)(.*?)(<a class="lang")', re.S)
     mm = pat.search(s)
