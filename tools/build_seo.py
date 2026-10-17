@@ -27,7 +27,7 @@ SKIP = {'google52b4e332bf87f14f.html'}
 ORG = {
     '@type': 'Organization', '@id': ORG_ID, 'name': 'Carvit', 'alternateName': 'Carvit AI', 'url': SITE + '/',
     'logo': {'@type': 'ImageObject', 'url': SITE + '/assets/logo/apple-touch-icon.png', 'width': 180, 'height': 180},
-    'description': 'Carvit builds AI agent tools for startups, including Carvit UX MCP, which connects a company UX guide to AI coding agents.',
+    'description': 'Carvit is agent infrastructure that gives AI agents a better place to work: UX MCP connects your UX guide, Pass injects keys without revealing them, and Create runs the video pipeline.',
     'parentOrganization': {'@type': 'Organization', 'name': 'Simplifier', 'url': 'https://simplifier.co.kr/'},
     'founder': {'@type': 'Person', 'name': 'Simon', 'sameAs': ['https://www.linkedin.com/in/simplifier/']},
 }

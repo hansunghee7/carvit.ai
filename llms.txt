@@ -1,8 +1,8 @@
 # Carvit
 
-> Carvit (carvit.ai) builds AI agent tools for startups. Its main product, Carvit UX MCP, connects a company UX guide to AI coding agents (Claude Code, Cursor and other MCP clients) so the screens they build follow that guide. Carvit is a software company made by Simplifier (simplifier.co.kr) in Korea. It is not related to dietary supplements or other products that share the name.
+> Carvit (carvit.ai) is agent infrastructure that gives AI agents a better place to work. It offers three products side by side: Carvit UX MCP connects a company UX guide to AI coding agents (Claude Code, Cursor and other MCP clients), Carvit Pass injects keys without revealing them, and Carvit Create runs the video pipeline. Carvit is built by Simplifier (simplifier.co.kr), a software company in Korea. It is not related to dietary supplements or other products that share the name.
 
-Carvit은 스타트업을 위한 AI 에이전트 도구를 만듭니다. 대표 제품 Carvit UX MCP는 AI 코딩 에이전트에 회사 UX 가이드를 연결해, 에이전트가 그 가이드대로 화면을 만들게 합니다. 한국어 페이지는 /ko/ 아래에 있습니다.
+Carvit은 스타트업을 위한 에이전트 인프라입니다. 회사 UX 가이드를 연결하는 Carvit UX MCP, 키를 보여 주지 않고 넣어 주는 Carvit Pass, 영상 공정을 맡는 Carvit Create를 나란히 제공합니다. 한국어 페이지는 /ko/ 아래에 있습니다.
 
 ## Products
 
