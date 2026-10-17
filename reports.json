@@ -123,8 +123,8 @@
         "ko": "AI 리뷰어가 잡아낸 5건, 헛짚은 3건"
       },
       "summary": {
-        "en": "In one night, an AI reviewer from a different vendor reviewed 24 PRs 32 times. Of its 18 'no' verdicts, the 8 that reached a conclusion were 5 real bugs and 3 encoding illusions, and we settled both kinds with execution evidence, not argument.",
-        "ko": "하룻밤 PR 24건을 다른 회사 AI 리뷰어가 32번 검수했습니다. '아니오' 18번 가운데 결론이 난 8건은 진짜 문제 5건과 한글 인코딩 착시 3건이었고, 둘 다 말이 아니라 실행 증거로 판정했습니다."
+        "en": "In one night, our team's review agent, running on a different vendor's model, reviewed 24 PRs 32 times. Of its 18 'no' verdicts, the 8 that reached a conclusion were 5 real bugs and 3 encoding illusions, and we settled both kinds with execution evidence, not argument.",
+        "ko": "하룻밤 PR 24건을 다른 회사 모델로 돌아가는 우리 팀 검토 에이전트가 32번 검수했습니다. '아니오' 18번 가운데 결론이 난 8건은 진짜 문제 5건과 한글 인코딩 착시 3건이었고, 둘 다 말이 아니라 실행 증거로 판정했습니다."
       },
       "nav_title": {
         "en": "24 PRs, 18 'no' verdicts: 5 real catches by an AI reviewer, 3 misses.",
