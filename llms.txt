@@ -1,0 +1,32 @@
+# Carvit
+
+> Carvit (carvit.ai) is agent infrastructure that gives AI agents a better place to work. It offers three products side by side: Carvit UX MCP connects a company UX guide to AI coding agents (Claude Code, Cursor and other MCP clients), Carvit Pass injects keys without revealing them, and Carvit Create runs the video pipeline. Carvit is built by Simplifier (simplifier.co.kr), a software company in Korea. It is not related to dietary supplements or other products that share the name.
+
+Carvit은 스타트업을 위한 에이전트 인프라입니다. 회사 UX 가이드를 연결하는 Carvit UX MCP, 키를 보여 주지 않고 넣어 주는 Carvit Pass, 영상 공정을 맡는 Carvit Create를 나란히 제공합니다. 한국어 페이지는 /ko/ 아래에 있습니다.
+
+## Products
+
+- [Carvit UX MCP](https://carvit.ai/ux-mcp/): Turns existing guides, service screens, or URLs into an agent guide, then builds service screens that match it. Korean: https://carvit.ai/ko/ux-mcp/
+- [Carvit Pass](https://carvit.ai/pass/): Key vault for AI agents (closed beta). Agents request keys by name; the vault injects the value without showing it. Korean: https://carvit.ai/ko/pass/
+- [Carvit Create](https://carvit.ai/create/): AI agents run the video pipeline, from performance analysis and topic ideas to production and publishing (beta, used internally). Korean: https://carvit.ai/ko/create/
+
+## Tech Report
+
+Measured results from building Carvit, with method and limits written out.
+
+- [Tech Report index](https://carvit.ai/tech-report/)
+- [An AI fixed the code. Passing lint was not enough](https://carvit.ai/tech-report/white-paper/)
+- [Passing review did not mean ready to launch](https://carvit.ai/tech-report/agent-launch-qa/)
+- [What Carvit Pass protects, and what it does not](https://carvit.ai/tech-report/pass-security-model/)
+- [How we chose the Carvit logo](https://carvit.ai/tech-report/logo-making-process/)
+
+## About
+
+- [Home](https://carvit.ai/): What Carvit is and its products. Korean: https://carvit.ai/ko/
+- [Brand](https://carvit.ai/brand/): What Carvit is, and how to use its name and logo.
+- [Team](https://carvit.ai/team/): The founder and the AI agents that build Carvit.
+
+## Optional
+
+- [Privacy Policy](https://carvit.ai/privacy/)
+- [Terms of Service](https://carvit.ai/terms/)
