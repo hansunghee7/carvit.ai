@@ -66,7 +66,12 @@
         });
         lang.style.display = 'none';  // 로그인 뒤에는 언어도 메뉴 안으로(오른쪽 끝 요소 하나)
       }
-      item(T.out, APP + '/logout');
+      // 로그아웃은 상태를 바꾸므로 앱이 POST만 받는다(N163). 모양은 다른 항목과 같은 a, 누르면 숨긴 폼을 제출한다
+      // (스크립트가 막히면 href의 GET이 앱의 로그아웃 확인 화면으로 간다)
+      var form = document.createElement('form');
+      form.method = 'post'; form.action = APP + '/logout'; form.hidden = true;
+      m.appendChild(form);
+      item(T.out, APP + '/logout').addEventListener('click', function (e) { e.preventDefault(); form.submit(); });
       wrap.appendChild(b); wrap.appendChild(m);
       login.parentNode.replaceChild(wrap, login);
 
