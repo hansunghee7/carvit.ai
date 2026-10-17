@@ -1,0 +1,32 @@
+# Carvit
+
+> Carvit (carvit.ai) builds AI agent tools for startups. Its main product, Carvit UX MCP, connects a company UX guide to AI coding agents (Claude Code, Cursor and other MCP clients) so the screens they build follow that guide. Carvit is a software company made by Simplifier (simplifier.co.kr) in Korea. It is not related to dietary supplements or other products that share the name.
+
+Carvit은 스타트업을 위한 AI 에이전트 도구를 만듭니다. 대표 제품 Carvit UX MCP는 AI 코딩 에이전트에 회사 UX 가이드를 연결해, 에이전트가 그 가이드대로 화면을 만들게 합니다. 한국어 페이지는 /ko/ 아래에 있습니다.
+
+## Products
+
+- [Carvit UX MCP](https://carvit.ai/ux-mcp/): Turns existing guides, service screens, or URLs into an agent guide, then builds service screens that match it. Korean: https://carvit.ai/ko/ux-mcp/
+- [Carvit Pass](https://carvit.ai/pass/): Key vault for AI agents (closed beta). Agents request keys by name; the vault injects the value without showing it. Korean: https://carvit.ai/ko/pass/
+- [Carvit Create](https://carvit.ai/create/): AI agents run the video pipeline, from performance analysis and topic ideas to production and publishing (beta, used internally). Korean: https://carvit.ai/ko/create/
+
+## Tech Report
+
+Measured results from building Carvit, with method and limits written out.
+
+- [Tech Report index](https://carvit.ai/tech-report/)
+- [An AI fixed the code. Passing lint was not enough](https://carvit.ai/tech-report/white-paper/)
+- [Passing review did not mean ready to launch](https://carvit.ai/tech-report/agent-launch-qa/)
+- [What Carvit Pass protects, and what it does not](https://carvit.ai/tech-report/pass-security-model/)
+- [How we chose the Carvit logo](https://carvit.ai/tech-report/logo-making-process/)
+
+## About
+
+- [Home](https://carvit.ai/): What Carvit is and its products. Korean: https://carvit.ai/ko/
+- [Brand](https://carvit.ai/brand/): What Carvit is, and how to use its name and logo.
+- [Team](https://carvit.ai/team/): The founder and the AI agents that build Carvit.
+
+## Optional
+
+- [Privacy Policy](https://carvit.ai/privacy/)
+- [Terms of Service](https://carvit.ai/terms/)
