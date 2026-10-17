@@ -16,7 +16,7 @@
   </url>
   <url>
     <loc>https://carvit.ai/tech-report/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/tech-report/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/tech-report/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/tech-report/"/>
@@ -37,7 +37,7 @@
   </url>
   <url>
     <loc>https://carvit.ai/ko/tech-report/</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-18</lastmod>
     <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/tech-report/"/>
     <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/tech-report/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/tech-report/"/>
@@ -99,6 +99,20 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/team/"/>
   </url>
   <!--rp:sitemap-->
+  <url>
+    <loc>https://carvit.ai/tech-report/ai-reviewer-verdicts/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/tech-report/ai-reviewer-verdicts/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/tech-report/ai-reviewer-verdicts/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/tech-report/ai-reviewer-verdicts/"/>
+  </url>
+  <url>
+    <loc>https://carvit.ai/ko/tech-report/ai-reviewer-verdicts/</loc>
+    <lastmod>2026-10-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="en" href="https://carvit.ai/tech-report/ai-reviewer-verdicts/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://carvit.ai/ko/tech-report/ai-reviewer-verdicts/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://carvit.ai/tech-report/ai-reviewer-verdicts/"/>
+  </url>
   <url>
     <loc>https://carvit.ai/tech-report/logo-making-process/</loc>
     <lastmod>2026-10-03</lastmod>
