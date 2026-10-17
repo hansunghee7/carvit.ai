@@ -29,7 +29,7 @@ ORG = {
     'logo': {'@type': 'ImageObject', 'url': SITE + '/assets/logo/apple-touch-icon.png', 'width': 180, 'height': 180},
     'description': 'Carvit is agent infrastructure that gives AI agents a better place to work: UX MCP connects your UX guide, Pass injects keys without revealing them, and Create runs the video pipeline.',
     'parentOrganization': {'@type': 'Organization', 'name': 'Simplifier', 'url': 'https://simplifier.co.kr/'},
-    'founder': {'@type': 'Person', 'name': 'Simon', 'sameAs': ['https://www.linkedin.com/in/simplifier/']},
+    'founder': {'@type': 'Person', 'name': 'Han Sunghee', 'alternateName': '한성희', 'sameAs': ['https://www.linkedin.com/in/simplifier/', 'https://simplifier.co.kr/']},
 }
 PRODUCTS = {
     'ux-mcp': dict(name='Carvit UX MCP', cat='DeveloperApplication',
