@@ -34,3 +34,8 @@ Limits are stated in the paper: four runs per target, four synthetic targets, py
 3. `reports.json`에 항목을 추가한다(번호, 주소 이름, 날짜, 분야, 한·영 제목·요약·저자).
 4. `python tools/build_reports.py` 를 실행하면 목록 카드, 모든 페이지 꼬리 메뉴, 이전·다음 글 링크, 사이트맵이 갱신된다.
 5. 바뀐 파일을 함께 커밋해 PR을 올린다. 깃허브 검사(`reports-check`)가 정본과 다르면 실패시켜 병합을 막는다.
+
+## 꼬리(footer) 고치는 방법 (한 곳에서 전 페이지)
+정본은 `partials/foot.<종류>.<언어>.html`이다(종류 home·full·short, 언어 en·ko). 페이지의 꼬리는 `<!--shell:foot 종류-->` 표시자 안에 있고 직접 고치지 않는다.
+1. 조각 파일을 고친다. `<!--mn:foot-->`(MCP 열, menu.json), `<!--rp:foot-->`(테크리포트 목록, reports.json), `<!--pg:fine-->`(글별 맨 아래 줄) 칸은 각 주인이 채운다.
+2. `python tools/build_shell.py && python tools/build_menu.py && python tools/build_reports.py` 를 실행하고 바뀐 파일을 같이 커밋한다. 깃허브 검사(`menu-check`)가 조각과 다르면 병합을 막는다.
