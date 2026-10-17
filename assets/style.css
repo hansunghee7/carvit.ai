@@ -379,3 +379,12 @@ body.team-page .site-nav,body.team-page nav.top,body.team-page .sheet{background
 
 /* 휴대폰 누르는 영역 44(가이드 1.34·1.37 ⑦, 지투 10/15): 머리 로그인 버튼·햄버거 */
 @media (max-width:480px){.links a.login{min-height:44px}.burger{min-width:44px;min-height:44px}}
+
+/* 테크리포트 저자 칸: 제품 페이지 맡은 에이전트 요약판과 같은 모양(가이드 1.57 ⑤, 지투 10/18) */
+.ag-mini{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:24px;list-style:none;margin:24px 0;padding:0}
+.ag-mini li{display:flex;gap:20px;align-items:flex-start;min-width:0}
+.ag-mini img{width:80px;height:80px;border-radius:8px;object-fit:cover;object-position:top;flex:none;background:#111}
+.ag-mini .role{margin:0 0 2px;font-size:14px;color:var(--muted-foreground)}
+.ag-mini h3{margin:0 0 8px;font-size:22px;line-height:1.2}
+.ag-mini p{margin:0 0 6px;font-size:16px;line-height:1.55}
+.ag-more{margin:0 0 16px;font-size:14px}
