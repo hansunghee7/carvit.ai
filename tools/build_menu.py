@@ -79,15 +79,15 @@ def subnav_foot(m, lang):
 
 def rewrite(rel, s, m):
     lang, url = lang_of(rel), page_url(rel)
-    # UX MCP 하위 탭(가이드 1.39·1.40: 공개 화면과 앱이 같은 6개·같은 순서·같은 이름, 정본 menu.json의 subnav)
+    # Carvit MCP 하위 탭(가이드 1.39·1.40: 공개 화면과 앱이 같은 6개·같은 순서·같은 이름, 정본 menu.json의 subnav)
     if m.get('subnav'):
-        s = re.sub(r'(<nav aria-label="UX MCP" class="subnav"><div class="page"><div class="tabs">)(.*?)(</div></div></nav>)',
+        s = re.sub(r'(<nav aria-label="(?:UX MCP|Carvit MCP)" class="subnav"><div class="page"><div class="tabs">)(.*?)(</div></div></nav>)',
                    lambda x: x.group(1) + subnav_tabs(m, lang, url) + x.group(3), s, flags=re.S)
-        # 꼬리의 UX MCP 열
-        s = re.sub(r'(<div><h5><a href="(?:/ko)?/ux-mcp/">UX MCP</a></h5>)(.*?)(</div>)',
+        # 꼬리의 Carvit MCP 열(옛 제목 UX MCP도 찾는다)
+        s = re.sub(r'(<div><h5><a href="(?:/ko)?/ux-mcp/">(?:UX MCP|<span class="nowrap">Carvit MCP</span>)</a></h5>)(.*?)(</div>)',
                    lambda x: x.group(1) + subnav_foot(m, lang) + x.group(3), s, flags=re.S)
     # 서브 페이지 머리
-    pat = re.compile(r'(<nav class="top"[^>]*>.*?<div class="links">)(.*?)(<a class="lang")', re.S)
+    pat = re.compile(r'(<nav [^>]*class="top"[^>]*>.*?<div class="links">)(.*?)(<a class="lang")', re.S)
     mm = pat.search(s)
     if mm:
         new = '<!--mn:head-->' + links_sub(m, lang, url) + '<!--/mn:head-->'
