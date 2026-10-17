@@ -19,6 +19,7 @@ Measured results from building Carvit, with method and limits written out.
 - [Passing review did not mean ready to launch](https://carvit.ai/tech-report/agent-launch-qa/)
 - [What Carvit Pass protects, and what it does not](https://carvit.ai/tech-report/pass-security-model/)
 - [How we chose the Carvit logo](https://carvit.ai/tech-report/logo-making-process/)
+- [An AI reviewer: 5 real catches, 3 misses](https://carvit.ai/tech-report/ai-reviewer-verdicts/)
 
 ## About
 

@@ -104,6 +104,32 @@
         "en": "Four rejected candidates and 40 real logos: how we chose the Carvit logo.",
         "ko": "탈락한 첫 후보 4개와 로고 40개: Carvit 로고를 정한 과정."
       }
+    },
+    {
+      "n": 5,
+      "slug": "ai-reviewer-verdicts",
+      "version": "1.0",
+      "date": "2026-10-18",
+      "field": {
+        "en": "Review",
+        "ko": "검수"
+      },
+      "author": {
+        "en": "Jitu",
+        "ko": "지투"
+      },
+      "card_title": {
+        "en": "An AI reviewer: 5 real catches, 3 misses",
+        "ko": "AI 리뷰어가 잡아낸 5건, 헛짚은 3건"
+      },
+      "summary": {
+        "en": "In one night, an AI reviewer from a different vendor reviewed 24 PRs 32 times. Of its 18 'no' verdicts, the 8 that reached a conclusion were 5 real bugs and 3 encoding illusions, and we settled both kinds with execution evidence, not argument.",
+        "ko": "하룻밤 PR 24건을 다른 회사 AI 리뷰어가 32번 검수했습니다. '아니오' 18번 가운데 결론이 난 8건은 진짜 문제 5건과 한글 인코딩 착시 3건이었고, 둘 다 말이 아니라 실행 증거로 판정했습니다."
+      },
+      "nav_title": {
+        "en": "24 PRs, 18 'no' verdicts: 5 real catches by an AI reviewer, 3 misses.",
+        "ko": "PR 24건과 18번의 '아니오': AI 리뷰어가 잡아낸 5건, 헛짚은 3건."
+      }
     }
   ]
 }

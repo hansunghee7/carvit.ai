@@ -35,7 +35,10 @@ def main():
         code, out = sh(tmp)
         assert code == 0, out
         changed = [l for l in out.split(':', 1)[1].split(', ')]
-        assert len(changed) == 8 and all(not c.strip().startswith('ko/') for c in changed), '영어 short 8개만 바뀌어야 함: ' + out
+        # 영어 short 꼬리를 쓰는 페이지 수는 글이 늘면 같이 는다(테크리포트 5 추가로 8→9). 고정 숫자 대신 표시자를 센다
+        n_short_en = sum(1 for p in tmp.rglob('*.html') if '<!--shell:foot short-->' in p.read_text(encoding='utf-8')
+                         and not p.relative_to(tmp).as_posix().startswith(('ko/', 'partials/')))
+        assert len(changed) == n_short_en and all(not c.strip().startswith('ko/') for c in changed), f'영어 short {n_short_en}개만 바뀌어야 함: ' + out
         after = (tmp / rp).read_text(encoding='utf-8')
         assert 'Brand X' in after
         for keep in ('Tech Report 3 · Version 1.0', 'Tech Report 4</a>', 'https://mcp.carvit.ai/settings'):
