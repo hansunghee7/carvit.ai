@@ -83,9 +83,9 @@ def rewrite(rel, s, m):
     if m.get('subnav'):
         s = re.sub(r'(<nav aria-label="(?:UX MCP|Carvit MCP)" class="subnav"><div class="page"><div class="tabs">)(.*?)(</div></div></nav>)',
                    lambda x: x.group(1) + subnav_tabs(m, lang, url) + x.group(3), s, flags=re.S)
-        # 꼬리의 Carvit MCP 열(옛 제목 UX MCP도 찾는다)
-        s = re.sub(r'(<div><h5><a href="(?:/ko)?/ux-mcp/">(?:UX MCP|<span class="nowrap">Carvit MCP</span>)</a></h5>)(.*?)(</div>)',
-                   lambda x: x.group(1) + subnav_foot(m, lang) + x.group(3), s, flags=re.S)
+        # 꼬리의 Carvit MCP 열(옛 제목 UX MCP도 찾는다). <!--mn:foot--> 표시자는 build_shell.py 조각의 칸이다
+        s = re.sub(r'(<div><h5><a href="(?:/ko)?/ux-mcp/">(?:UX MCP|<span class="nowrap">Carvit MCP</span>)</a></h5>)(?:<!--mn:foot-->)?(.*?)(?:<!--/mn:foot-->)?(</div>)',
+                   lambda x: x.group(1) + '<!--mn:foot-->' + subnav_foot(m, lang) + '<!--/mn:foot-->' + x.group(3), s, flags=re.S)
     # 서브 페이지 머리
     pat = re.compile(r'(<nav [^>]*class="top"[^>]*>.*?<div class="links">)(.*?)(<a class="lang")', re.S)
     mm = pat.search(s)
@@ -119,7 +119,7 @@ def main():
     changed = []
     for p in sorted(ROOT.rglob('*.html')):
         rel = p.relative_to(ROOT).as_posix()
-        if rel.startswith(('assets/', '.git', 'node_modules', '_preview/')) or rel.startswith('google'):  # _preview: 라이브 전 미리보기(메뉴가 다름)
+        if rel.startswith(('assets/', '.git', 'node_modules', '_preview/', 'partials/')) or rel.startswith('google'):  # _preview: 라이브 전 미리보기(메뉴가 다름)
             continue
         raw = p.read_bytes().decode('utf-8')
         crlf = chr(13) + NL in raw
