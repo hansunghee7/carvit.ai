@@ -27,12 +27,12 @@ SKIP = {'google52b4e332bf87f14f.html'}
 ORG = {
     '@type': 'Organization', '@id': ORG_ID, 'name': 'Carvit', 'alternateName': 'Carvit AI', 'url': SITE + '/',
     'logo': {'@type': 'ImageObject', 'url': SITE + '/assets/logo/apple-touch-icon.png', 'width': 180, 'height': 180},
-    'description': 'Carvit is agent infrastructure that gives AI agents a better place to work: UX MCP connects your UX guide, Pass injects keys without revealing them, and Create runs the video pipeline.',
+    'description': 'Carvit is agent infrastructure that gives AI agents a better place to work: Carvit MCP connects your UX guide, Pass injects keys without revealing them, and Create runs the video pipeline.',
     'parentOrganization': {'@type': 'Organization', 'name': 'Simplifier', 'url': 'https://simplifier.co.kr/'},
     'founder': {'@type': 'Person', 'name': 'Han Sunghee', 'alternateName': '한성희', 'sameAs': ['https://www.linkedin.com/in/simplifier/', 'https://simplifier.co.kr/']},
 }
 PRODUCTS = {
-    'ux-mcp': dict(name='Carvit UX MCP', cat='DeveloperApplication',
+    'ux-mcp': dict(name='Carvit MCP', alt='Carvit UX MCP', cat='DeveloperApplication',
                    en='MCP server that turns a company UX guide into an agent guide so AI coding agents build screens that follow it.',
                    ko='회사 UX 가이드를 에이전트용 가이드로 만들어 AI 코딩 에이전트가 그 가이드대로 화면을 만들게 하는 MCP 서버.'),
     'pass': dict(name='Carvit Pass', cat='SecurityApplication',
@@ -42,9 +42,9 @@ PRODUCTS = {
                    en='AI agents run the video pipeline, from performance analysis and topic ideas to production and publishing.',
                    ko='성과 분석, 주제 제안, 영상 제작, 채널 운영까지 AI 에이전트가 이어서 하는 영상 제작 도구.'),
 }
-CRUMB = {'en': {'tech-report': 'Tech Report', 'ux-mcp': 'Carvit UX MCP', 'pass': 'Carvit Pass', 'create': 'Carvit Create',
+CRUMB = {'en': {'tech-report': 'Tech Report', 'ux-mcp': 'Carvit MCP', 'pass': 'Carvit Pass', 'create': 'Carvit Create',
                 'brand': 'Brand', 'team': 'Team', 'privacy': 'Privacy Policy', 'terms': 'Terms of Service', 'guide': 'Guide'},
-         'ko': {'tech-report': '테크리포트', 'ux-mcp': 'Carvit UX MCP', 'pass': 'Carvit Pass', 'create': 'Carvit Create',
+         'ko': {'tech-report': '테크리포트', 'ux-mcp': 'Carvit MCP', 'pass': 'Carvit Pass', 'create': 'Carvit Create',
                 'brand': '브랜드', 'team': '팀', 'privacy': '개인정보처리방침', 'terms': '서비스 이용약관', 'guide': '가이드'}}
 
 
@@ -104,6 +104,7 @@ def build(path, s, reports):
     if len(segs) == 1 and segs[0] in PRODUCTS:
         pr = PRODUCTS[segs[0]]
         graph.append({'@type': 'SoftwareApplication', '@id': SITE + '/' + segs[0] + '/#app', 'name': pr['name'],
+                      **({'alternateName': pr['alt']} if 'alt' in pr else {}),
                       'applicationCategory': pr['cat'], 'operatingSystem': 'Any', 'url': url, 'inLanguage': inlang,
                       'description': pr[lang], 'publisher': {'@id': ORG_ID}, 'brand': {'@id': ORG_ID}})
         page['about'] = {'@id': SITE + '/' + segs[0] + '/#app'}

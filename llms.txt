@@ -1,12 +1,12 @@
 # Carvit
 
-> Carvit (carvit.ai) is agent infrastructure that gives AI agents a better place to work. It offers three products side by side: Carvit UX MCP connects a company UX guide to AI coding agents (Claude Code, Cursor and other MCP clients), Carvit Pass injects keys without revealing them, and Carvit Create runs the video pipeline. Carvit is built by Simplifier (simplifier.co.kr), a software company in Korea. It is not related to dietary supplements or other products that share the name.
+> Carvit (carvit.ai) is agent infrastructure that gives AI agents a better place to work. It offers three products side by side: Carvit MCP (formerly Carvit UX MCP; its guide feature is Carvit UX) connects a company UX guide to AI coding agents (Claude Code, Cursor and other MCP clients), Carvit Pass injects keys without revealing them, and Carvit Create runs the video pipeline. Carvit is built by Simplifier (simplifier.co.kr), a software company in Korea. It is not related to dietary supplements or other products that share the name.
 
-Carvit은 스타트업을 위한 에이전트 인프라입니다. 회사 UX 가이드를 연결하는 Carvit UX MCP, 키를 보여 주지 않고 넣어 주는 Carvit Pass, 영상 공정을 맡는 Carvit Create를 나란히 제공합니다. 한국어 페이지는 /ko/ 아래에 있습니다.
+Carvit은 스타트업을 위한 에이전트 인프라입니다. 회사 UX 가이드를 연결하는 Carvit MCP(옛 이름 Carvit UX MCP, 그 안의 가이드 기능 Carvit UX), 키를 보여 주지 않고 넣어 주는 Carvit Pass, 영상 공정을 맡는 Carvit Create를 나란히 제공합니다. 한국어 페이지는 /ko/ 아래에 있습니다.
 
 ## Products
 
-- [Carvit UX MCP](https://carvit.ai/ux-mcp/): Turns existing guides, service screens, or URLs into an agent guide, then builds service screens that match it. Korean: https://carvit.ai/ko/ux-mcp/
+- [Carvit MCP](https://carvit.ai/ux-mcp/): Turns existing guides, service screens, or URLs into an agent guide, then builds service screens that match it. Korean: https://carvit.ai/ko/ux-mcp/
 - [Carvit Pass](https://carvit.ai/pass/): Key vault for AI agents (closed beta). Agents request keys by name; the vault injects the value without showing it. Korean: https://carvit.ai/ko/pass/
 - [Carvit Create](https://carvit.ai/create/): AI agents run the video pipeline, from performance analysis and topic ideas to production and publishing (beta, used internally). Korean: https://carvit.ai/ko/create/
 

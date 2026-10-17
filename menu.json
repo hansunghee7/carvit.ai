@@ -1,7 +1,7 @@
 {
   "version": 1,
   "items": [
-    {"id": "ux-mcp", "ko": "UX MCP", "en": "UX MCP", "path": "/ux-mcp/"},
+    {"id": "ux-mcp", "ko": "MCP", "en": "MCP", "path": "/ux-mcp/"},
     {"id": "create", "ko": "Create", "en": "Create", "path": "/create/"},
     {"id": "pass", "ko": "Pass", "en": "Pass", "path": "/pass/"},
     {"id": "team", "ko": "팀", "en": "Team", "path": "/team/"},
