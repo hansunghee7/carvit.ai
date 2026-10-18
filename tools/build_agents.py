@@ -8,9 +8,9 @@
       partials/agents.mini.<언어>.html(요약판 모양 한 종. <!--ag:item-->은 에이전트마다 반복, <!--ag:stats-->는 숫자 줄)
       reports.json의 author_id·reviewers(테크리포트 글의 저자·검수 에이전트와 검수 표지)
 페이지 표시자(ul.ag-mini부터 p.ag-more까지를 감싼다. 제목 h2와 section은 페이지 몫):
-  <!--shell:agents ids=jitu,note-->...<!--/shell:agents-->  제품 하단 '맡은 에이전트': 정사각 사진, 숫자 줄 있음, 전체 보기 문구 labels.more
+  <!--shell:agents ids=jitu,note-->...<!--/shell:agents-->  제품 하단 '맡은 에이전트': 숫자 줄 있음, 전체 보기 문구 labels.more
   <!--shell:agents report-->...<!--/shell:agents-->         테크리포트 저자 칸: 주소의 글을 reports.json에서 찾아 저자·검수자 순서,
-                                                           역할 앞에 '저자 · '·'검수 표지 · ', 팀 카드 사진, 숫자 줄 없음, 문구 labels.more_report
+                                                           역할 앞에 '저자 · '·'검수 표지 · ', 숫자 줄 없음(사진·전체 보기 문구는 제품 하단과 같다)
 다른 도구와 겹치지 않는다: build_shell.py(머리·꼬리), build_menu.py(메뉴), build_reports.py(목록·이전/다음·꼬리 리포트 칸)는 이 구역을 건드리지 않는다.
 
 사용: python tools/build_agents.py          다시 만들어 파일에 쓴다(표시자가 없는 ag-mini는 처음 한 번 지금 모양과 같은지 보고 표시자를 심는다)
@@ -84,12 +84,12 @@ def render(spec, rel, labels, agents, reports, parts):
         a = agents[i]
         stats = a['stats'][lang] if mode == 'product' else ''
         t = STATS_RE.sub(lambda m: m.group(1) if stats else '', item_t)
-        t = (t.replace('%PHOTO%', a['photo']['mini' if mode == 'product' else 'team'])
+        t = (t.replace('%PHOTO%', a['photo'])
               .replace('%AS%', f'{label} · ' if label else '')
               .replace('%NAME%', a['name'][lang]).replace('%ROLE%', a['role'][lang])
               .replace('%LINE%', a['line'][lang]).replace('%STATS%', stats))
         items.append(t)
-    more = labels['more' if mode == 'product' else 'more_report'][lang]
+    more = labels['more'][lang]
     return ITEM_RE.sub(lambda m: ''.join(items), part).replace('%MORE%', more)
 
 
