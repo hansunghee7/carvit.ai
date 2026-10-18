@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """build_shell.py 시험: 사본 폴더에서 조각을 고치면 ① 검사가 실패하고 ② 다시 돌리면 그 종류 페이지만 바뀌며
-③ 다른 도구·페이지 칸(테크리포트 목록, MCP 열, 글별 맨 아래 줄)은 그대로인지 본다. 사용: python tools/test_build_shell.py"""
+③ 다른 도구·페이지 칸(테크리포트 목록, MCP 열, 글별 맨 아래 줄, 머리 메뉴·언어 링크)은 그대로인지 본다. 꼬리와 머리 둘 다. 사용: python tools/test_build_shell.py"""
 import re, shutil, subprocess, sys, tempfile
 from pathlib import Path
 
@@ -56,7 +56,41 @@ def main():
         assert sh(tmp, '--check')[0] == 1, '표시자 없는 꼬리를 검사가 놓침'
         sh(tmp)
         assert '<!--shell:foot short-->' in new.read_text(encoding='utf-8')
-        print('build_shell 시험 통과(4건)')
+
+        # 머리: 조각을 고치면 검사 실패, 다시 돌리면 영어 하위(sub) 머리 페이지만 바뀌고 메뉴 칸·언어 링크는 그대로
+        hp = tmp / 'partials' / 'head.sub.en.html'
+        hbefore = (tmp / rp).read_text(encoding='utf-8')
+        hp.write_text(hp.read_text(encoding='utf-8').replace('>Log in</a>', '>Log in X</a>'), encoding='utf-8')
+        code, out = sh(tmp, '--check')
+        assert code == 1 and rp in out, '머리 조각을 고쳤는데 검사가 통과함: ' + out
+        code, out = sh(tmp)
+        assert code == 0, out
+        changed = [c.strip() for c in out.split(':', 1)[1].split(', ')]
+        n_sub_en = sum(1 for p in tmp.rglob('*.html') if '<!--shell:head sub-->' in p.read_text(encoding='utf-8')
+                       and not p.relative_to(tmp).as_posix().startswith(('ko/', 'partials/')))
+        assert len(changed) == n_sub_en and not any(c.startswith('ko/') for c in changed) and 'index.html' not in changed,             f'영어 sub 머리 {n_sub_en}개만 바뀌어야 함: ' + out
+        hafter = (tmp / rp).read_text(encoding='utf-8')
+        assert 'Log in X' in hafter
+        for keep in ('<a href="/tech-report/" aria-current="page"><span class="nowrap">Tech Report</span></a><!--/mn:head-->',
+                     '<a class="lang" href="/ko/tech-report/pass-security-model/" data-lang="ko">'):
+            assert keep in hbefore and keep in hafter, '머리 칸·언어 링크가 사라짐: ' + keep
+        assert hafter.count('href="/ko/tech-report/pass-security-model/"') == hbefore.count('href="/ko/tech-report/pass-security-model/"')
+        shutil.copy2(ROOT / 'partials' / 'head.sub.en.html', hp)
+        sh(tmp)
+
+        # 표시자 없고 속성 순서만 다른 머리: 정규형으로 맞는 조각을 찾아 표시자를 심고 조각 모양으로 바꾼다
+        new2 = tmp / 'new-page2' / 'index.html'
+        new2.parent.mkdir()
+        plain = re.sub(r'<!--/?shell:head(?: [a-z]+)?-->', '', src)
+        plain = plain.replace('<nav class="top" aria-label="Main menu">', '<nav aria-label="Main menu" class="top">')
+        new2.write_text(plain, encoding='utf-8')
+        assert sh(tmp, '--check')[0] == 1, '표시자 없는 머리를 검사가 놓침'
+        sh(tmp)
+        t2 = new2.read_text(encoding='utf-8')
+        assert '<!--shell:head sub--><div class="site-nav">' in t2 and '<nav class="top" aria-label="Main menu">' in t2
+        assert 'href="/ko/new-page2/"' in t2, '새 페이지 언어 링크 계산이 틀림'
+        assert sh(tmp, '--check')[0] == 0
+        print('build_shell 시험 통과(7건)')
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
 
