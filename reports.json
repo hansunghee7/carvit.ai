@@ -1,5 +1,5 @@
 {
-  "_설명": "테크리포트 목록 정본. tools/build_reports.py가 읽어 사이트맵·목록 카드·꼬리 메뉴·이전/다음 링크를 만든다. 문자열은 HTML 그대로 들어간다.",
+  "_설명": "테크리포트 목록 정본. tools/build_reports.py가 읽어 사이트맵·목록 카드·꼬리 메뉴·이전/다음 링크를 만든다. 문자열은 HTML 그대로 들어간다. author_id·reviewers(에이전트 id, 검수 표지 as)는 tools/build_agents.py가 글 저자 칸을 채울 때 읽는다(author 이름은 agents.json 이름과 같아야 한다).",
   "reports": [
     {
       "n": 1,
@@ -14,6 +14,8 @@
         "en": "Tam",
         "ko": "탐"
       },
+      "author_id": "tam",
+      "reviewers": [],
       "card_title": {
         "en": "An AI fixed the code. Passing lint was not enough",
         "ko": "AI가 고친 코드, 린트 통과만으로는 부족했습니다"
@@ -40,6 +42,8 @@
         "en": "Jitu",
         "ko": "지투"
       },
+      "author_id": "jitu",
+      "reviewers": [],
       "card_title": {
         "en": "Passing review did not mean ready to launch",
         "ko": "리뷰 통과는 출시 가능이 아니었습니다"
@@ -66,6 +70,8 @@
         "en": "Tam",
         "ko": "탐"
       },
+      "author_id": "tam",
+      "reviewers": [],
       "card_title": {
         "en": "What Carvit Pass protects, and what it does not",
         "ko": "Carvit Pass가 지키는 것과 지키지 못하는 것"
@@ -92,6 +98,8 @@
         "en": "Jitu",
         "ko": "지투"
       },
+      "author_id": "jitu",
+      "reviewers": [],
       "card_title": {
         "en": "How we chose the Carvit logo",
         "ko": "Carvit 로고를 정한 과정"
@@ -118,6 +126,16 @@
         "en": "Jitu",
         "ko": "지투"
       },
+      "author_id": "jitu",
+      "reviewers": [
+        {
+          "id": "maya",
+          "as": {
+            "en": "Technical writing review",
+            "ko": "테크니컬 라이팅 검수"
+          }
+        }
+      ],
       "card_title": {
         "en": "An AI reviewer: 5 real catches, 3 misses",
         "ko": "AI 리뷰어가 잡아낸 5건, 헛짚은 3건"

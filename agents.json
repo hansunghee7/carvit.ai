@@ -1,0 +1,215 @@
+{
+  "_설명": "에이전트 소개 정본. tools/build_agents.py가 읽어 페이지의 <!--shell:agents ...--> 구역(요약판 ul.ag-mini + 팀 소개 링크)을 채운다. 문자열은 HTML 그대로 들어간다. role·line은 팀 소개(team, ko/team) 카드의 역할과 첫 줄, stats는 숫자 한 줄(기준일 포함, 제품 하단만 보인다), photo.mini는 제품 하단 80px용 정사각 이미지(없으면 팀 카드 이미지), photo.team은 팀 카드 이미지(테크리포트 저자 칸). 팀 소개·홈 페이지는 아직 이 정본을 읽지 않는다(2차).",
+  "labels": {
+    "more": {
+      "en": "View all in Team →",
+      "ko": "팀 소개에서 전체 보기 →"
+    },
+    "more_report": {
+      "en": "See the whole team →",
+      "ko": "팀 소개에서 전체 보기 →"
+    },
+    "author": {
+      "en": "Author",
+      "ko": "저자"
+    }
+  },
+  "agents": [
+    {
+      "id": "fit",
+      "name": {
+        "en": "Fit",
+        "ko": "핏"
+      },
+      "role": {
+        "en": "Video Agent",
+        "ko": "영상 에이전트"
+      },
+      "photo": {
+        "mini": "/assets/m2/create-e337060c00.jpg",
+        "team": "/assets/m2/team-161ccbb4e6.jpg"
+      },
+      "line": {
+        "en": "Handles scripts, audio, video cuts, assembly, and scheduling in sequence to publish across multiple channels.",
+        "ko": "대본, 음성, 영상 컷, 조립, 예약까지 이어서 맡아 여러 채널에 올립니다."
+      },
+      "stats": {
+        "en": "33 videos produced, 22 published <span class=\"nowrap\">(as of 8/28~10/14)</span>",
+        "ko": "영상 33편 제작, 22편 공개<span class=\"nowrap\">(8/28~10/14 기준)</span>"
+      },
+      "stats_asof": "2026-10-14",
+      "team": {
+        "en": "/team/",
+        "ko": "/ko/team/"
+      }
+    },
+    {
+      "id": "tam",
+      "name": {
+        "en": "Tam",
+        "ko": "탐"
+      },
+      "role": {
+        "en": "Infrastructure Agent",
+        "ko": "인프라 에이전트"
+      },
+      "photo": {
+        "mini": "/assets/m2/pass-d502363caf.jpg",
+        "team": "/assets/m2/team-e5d7718c7f.jpg"
+      },
+      "line": {
+        "en": "Manages infrastructure such as deployments, credits, and monitoring, handling day-to-day operations.",
+        "ko": "배포, 크레딧, 감시 같은 인프라를 돌보고 운영을 챙깁니다."
+      },
+      "stats": {
+        "en": "Built Carvit Pass and merged 2,196 PRs in company repositories <span class=\"nowrap\">(since 8/29, as of 2026-10-14)</span>.",
+        "ko": "Carvit Pass를 만들고, 회사 저장소 병합 PR 2,196건<span class=\"nowrap\">(8/29 이후, 2026-10-14 기준)</span>을 쌓았습니다."
+      },
+      "stats_asof": "2026-10-14",
+      "team": {
+        "en": "/team/",
+        "ko": "/ko/team/"
+      }
+    },
+    {
+      "id": "jitu",
+      "name": {
+        "en": "Jitu",
+        "ko": "지투"
+      },
+      "role": {
+        "en": "Product Agent",
+        "ko": "제품 에이전트"
+      },
+      "photo": {
+        "mini": "/assets/m2/ux-3512a02b6a.jpg",
+        "team": "/assets/m2/team-d3db31eac9.jpg"
+      },
+      "line": {
+        "en": "Monitors how customers use the product and manages guides.",
+        "ko": "제품이 고객에게 쓰이는 모습을 살피고 가이드를 관리합니다."
+      },
+      "stats": {
+        "en": "Merged 65 PRs <span class=\"nowrap\">(9/26~10/14)</span> and created 2 demo customer guides.",
+        "ko": "병합 PR 65건<span class=\"nowrap\">(9/26~10/14)</span>, 데모 고객 가이드 2건을 만들었습니다."
+      },
+      "stats_asof": "2026-10-14",
+      "team": {
+        "en": "/team/",
+        "ko": "/ko/team/"
+      }
+    },
+    {
+      "id": "note",
+      "name": {
+        "en": "Note",
+        "ko": "노트"
+      },
+      "role": {
+        "en": "Development Agent",
+        "ko": "개발 에이전트"
+      },
+      "photo": {
+        "mini": "/assets/m2/ux-44cda2f889.jpg",
+        "team": "/assets/m2/team-88e032470a.jpg"
+      },
+      "line": {
+        "en": "Builds and deploys the Carvit guide server, connection tools, sign-up, and log-in.",
+        "ko": "Carvit 가이드 서버와 연결 도구, 가입·로그인을 만들고 배포합니다."
+      },
+      "stats": {
+        "en": "Deployed 612 merged PRs in the server repository <span class=\"nowrap\">(since 9/6, as of 2026-10-14)</span>.",
+        "ko": "서버 저장소 병합 PR 612건<span class=\"nowrap\">(9/6 이후, 2026-10-14 기준)</span>을 배포했습니다."
+      },
+      "stats_asof": "2026-10-14",
+      "team": {
+        "en": "/team/",
+        "ko": "/ko/team/"
+      }
+    },
+    {
+      "id": "maya",
+      "name": {
+        "en": "Maya",
+        "ko": "마야"
+      },
+      "role": {
+        "en": "Writing Agent",
+        "ko": "글 에이전트"
+      },
+      "photo": {
+        "mini": "/assets/m2/team-273e48c72e.jpg",
+        "team": "/assets/m2/team-273e48c72e.jpg"
+      },
+      "line": {
+        "en": "Writes posts based on the founder's experiences and work records, publishing them on blogs and social media.",
+        "ko": "창업자의 경험과 일의 기록을 글로 써서 블로그와 SNS에 발행합니다."
+      },
+      "stats": {
+        "en": "",
+        "ko": ""
+      },
+      "stats_asof": "",
+      "team": {
+        "en": "/team/",
+        "ko": "/ko/team/"
+      }
+    },
+    {
+      "id": "dex",
+      "name": {
+        "en": "Dex",
+        "ko": "덱스"
+      },
+      "role": {
+        "en": "Code Review Agent",
+        "ko": "코드 검토 에이전트"
+      },
+      "photo": {
+        "mini": "/assets/m2/team-98f7141f50.jpg",
+        "team": "/assets/m2/team-98f7141f50.jpg"
+      },
+      "line": {
+        "en": "As a Codex model, reviews code changes before merging.",
+        "ko": "코덱스 모델로서 코드 변경을 병합 전에 검토합니다."
+      },
+      "stats": {
+        "en": "",
+        "ko": ""
+      },
+      "stats_asof": "",
+      "team": {
+        "en": "/team/",
+        "ko": "/ko/team/"
+      }
+    },
+    {
+      "id": "bt",
+      "name": {
+        "en": "BT",
+        "ko": "비티"
+      },
+      "role": {
+        "en": "Code Review Agent",
+        "ko": "코드 검토 에이전트"
+      },
+      "photo": {
+        "mini": "/assets/m2/team-3db5bb20a0.jpg",
+        "team": "/assets/m2/team-3db5bb20a0.jpg"
+      },
+      "line": {
+        "en": "As a model running in Antigravity, reviews code changes before merging.",
+        "ko": "안티그래비티에서 돌아가는 모델로서 코드 변경을 병합 전에 검토합니다."
+      },
+      "stats": {
+        "en": "",
+        "ko": ""
+      },
+      "stats_asof": "",
+      "team": {
+        "en": "/team/",
+        "ko": "/ko/team/"
+      }
+    }
+  ]
+}
