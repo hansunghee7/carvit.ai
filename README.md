@@ -39,3 +39,9 @@ Limits are stated in the paper: four runs per target, four synthetic targets, py
 정본은 `partials/head.<종류>.<언어>.html`(종류 home·sub)과 `partials/foot.<종류>.<언어>.html`(종류 home·full·short)이다(언어 en·ko). 페이지의 머리·꼬리는 `<!--shell:head 종류-->`, `<!--shell:foot 종류-->` 표시자 안에 있고 직접 고치지 않는다.
 1. 조각 파일을 고친다. `<!--mn:head-->`·`<!--mn:sheet-->`(머리 메뉴와 현재 메뉴 표시, menu.json), `<!--mn:foot-->`(MCP 열, menu.json), `<!--rp:foot-->`(테크리포트 목록, reports.json), `<!--pg:fine-->`(글별 맨 아래 줄) 칸은 각 주인이 채운다. 머리의 `%ALT%`는 언어 전환 링크로, 페이지 경로에서 계산된다.
 2. `python tools/build_shell.py && python tools/build_menu.py && python tools/build_reports.py` 를 실행하고 바뀐 파일을 같이 커밋한다. 깃허브 검사(`menu-check`)가 조각과 다르면 병합을 막는다.
+
+## 에이전트 소개(요약판) 고치는 방법 (한 곳에서 전 페이지)
+정본은 `agents.json`(이름·역할·사진·한 줄·숫자 한 줄)과 `partials/agents.mini.<언어>.html`(요약판 모양)이다. 제품 하단 '맡은 에이전트'와 테크리포트 저자 칸은 `<!--shell:agents ids=jitu,note-->`, `<!--shell:agents report-->` 표시자 안에 있고 직접 고치지 않는다.
+1. 역할·한 줄·숫자를 바꾸려면 `agents.json`을 고친다. 테크리포트 글의 저자·검수 에이전트는 `reports.json`의 `author_id`·`reviewers`(검수 표지 `as`)에 적는다(`author` 이름은 agents.json 이름과 같아야 한다).
+2. `python tools/build_agents.py` 를 실행하고 바뀐 파일을 같이 커밋한다. 깃허브 검사(`menu-check`)가 정본과 다르면 병합을 막는다.
+3. 팀 소개(`team`)·홈 페이지 카드는 아직 이 정본을 읽지 않으니 같은 내용을 함께 고친다.
