@@ -16,5 +16,24 @@
       {"id": "agents", "ko": "에이전트", "en": "Agents", "app": "/agents"},
       {"id": "settings", "ko": "설정", "en": "Settings", "app": "/settings"}
     ]
+  },
+  "nav": {
+    "entries": [
+      {"id": "builder-step", "ko": "빌더스텝", "en": "Builder Step", "app": "/builder-step"},
+      {"id": "ux-mcp", "ko": "MCP", "en": "MCP", "path": "/ux-mcp/"},
+      {"id": "dashboard", "ko": "대시보드", "en": "Dashboard", "app": "/dashboard"},
+      {"id": "create", "ko": "Create", "en": "Create", "path": "/create/"},
+      {"id": "pass", "ko": "Pass", "en": "Pass", "path": "/pass/"},
+      {"id": "team", "ko": "팀", "en": "Team", "path": "/team/"},
+      {"id": "tech-report", "ko": "테크리포트", "en": "Tech Report", "path": "/tech-report/"}
+    ],
+    "top": {
+      "guest": ["builder-step", "ux-mcp"],
+      "member": ["dashboard", "builder-step", "ux-mcp"]
+    },
+    "footer": {
+      "guest": ["builder-step", "ux-mcp", "create", "pass", "team", "tech-report"],
+      "member": ["dashboard", "builder-step", "ux-mcp", "create", "pass", "team", "tech-report"]
+    }
   }
 }
