@@ -148,6 +148,78 @@
         "en": "24 PRs, 18 'no' verdicts: 5 real catches by an AI reviewer, 3 misses.",
         "ko": "PR 24건과 18번의 '아니오': AI 리뷰어가 잡아낸 5건, 헛짚은 3건."
       }
+    },
+    {
+      "n": 6,
+      "slug": "reviewer-model-replay",
+      "version": "1.0",
+      "date": "2026-11-13",
+      "field": {
+        "en": "Review",
+        "ko": "검수"
+      },
+      "author": {
+        "en": "Tam",
+        "ko": "탐"
+      },
+      "author_id": "tam",
+      "reviewers": [
+        {
+          "id": "maya",
+          "as": {
+            "en": "Technical writing review",
+            "ko": "테크니컬 라이팅 검수"
+          }
+        }
+      ],
+      "card_title": {
+        "en": "Same 15 review cards, six models: how we feed it",
+        "ko": "같은 리뷰 15장, 모델 여섯: 나눠 주는 방식"
+      },
+      "summary": {
+        "en": "We gave 15 real review cards to six model setups. Fed all at once, Claude Sonnet caught 5 of 12 known findings; fed one card at a time, the same model caught 9, at the price of more false positives for humans to filter.",
+        "ko": "실제 리뷰 카드 15장을 모델 여섯 구성에 같은 입력으로 맡겼습니다. 한 번에 넣으면 클로드 소넷이 정답 12개 중 5개를 잡았고, 같은 모델에 한 장씩 보내자 9개를 잡았습니다. 대신 사람이 걸러야 할 헛지적이 늘었습니다."
+      },
+      "nav_title": {
+        "en": "What changed our reviewer was not the model but how we split the work: 15 review cards, six models",
+        "ko": "리뷰어를 바꾼 건 모델이 아니라 나눠 주는 방식이었다: 같은 리뷰 15장, 모델 여섯"
+      }
+    },
+    {
+      "n": 7,
+      "slug": "agent-cloud-migration",
+      "version": "1.0",
+      "date": "2026-11-13",
+      "field": {
+        "en": "Infrastructure",
+        "ko": "인프라"
+      },
+      "author": {
+        "en": "Tam",
+        "ko": "탐"
+      },
+      "author_id": "tam",
+      "reviewers": [
+        {
+          "id": "maya",
+          "as": {
+            "en": "Technical writing review",
+            "ko": "테크니컬 라이팅 검수"
+          }
+        }
+      ],
+      "card_title": {
+        "en": "A cloud migration our CTO agent ran in three days",
+        "ko": "CTO 에이전트가 사흘 만에 옮긴 클라우드"
+      },
+      "summary": {
+        "en": "The founder gave one instruction on 11/09, and traffic to the Carvit server moved to Azure on 11/12. Our CTO agent did the research, rehearsal, data and secret migration, cutover, and verification; the founder pressed about 10 approval buttons.",
+        "ko": "창업자의 한 문장 지시가 11/09에 있었고, 11/12에 카빗 서버의 트래픽이 Azure로 넘어갔습니다. 조사, 리허설, 데이터와 비밀 이전, 전환, 검증은 CTO 에이전트가 했고, 창업자는 승인 버튼 약 10번을 눌렀습니다."
+      },
+      "nav_title": {
+        "en": "A cloud migration our CTO agent ran in three days: the founder pressed about ten approval buttons",
+        "ko": "CTO 에이전트가 사흘 만에 옮긴 클라우드: 창업자는 승인 버튼 열 번"
+      }
     }
   ]
 }
