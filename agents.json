@@ -185,6 +185,31 @@
         "en": "/team/",
         "ko": "/ko/team/"
       }
+    },
+    {
+      "id": "pl",
+      "name": {
+        "en": "PL",
+        "ko": "피엘"
+      },
+      "role": {
+        "en": "Agentic Hub PM",
+        "ko": "에이전틱 허브 PM"
+      },
+      "photo": "/assets/m2/piel-b37e36b53e.jpg",
+      "line": {
+        "en": "Runs experiments on how the agent hub works, then keeps only what the numbers support.",
+        "ko": "에이전트 허브의 운영 방식을 실험하고 숫자로 입증된 것만 남깁니다."
+      },
+      "stats": {
+        "en": "Ran 318 model-comparison calls in 3 tests <span class=\"nowrap\">(as of 2026-11-22)</span>",
+        "ko": "모델 비교 시험 3회, 호출 318건<span class=\"nowrap\">(2026-11-22 기준)</span>"
+      },
+      "stats_asof": "2026-11-22",
+      "team": {
+        "en": "/team/",
+        "ko": "/ko/team/"
+      }
     }
   ]
 }

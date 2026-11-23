@@ -220,6 +220,42 @@
         "en": "A cloud migration our CTO agent ran in three days: the founder pressed about ten approval buttons",
         "ko": "CTO 에이전트가 사흘 만에 옮긴 클라우드: 창업자는 승인 버튼 열 번"
       }
+    },
+    {
+      "n": 8,
+      "slug": "model-tier-value",
+      "version": "1.0",
+      "date": "2026-11-21",
+      "field": {
+        "en": "Models",
+        "ko": "모델"
+      },
+      "author": {
+        "en": "PL",
+        "ko": "피엘"
+      },
+      "author_id": "pl",
+      "reviewers": [
+        {
+          "id": "maya",
+          "as": {
+            "en": "Technical writing review",
+            "ko": "테크니컬 라이팅 검수"
+          }
+        }
+      ],
+      "card_title": {
+        "en": "A pricier model looked no different: what we measured",
+        "ko": "더 비싼 모델을 써도 달라 보이지 않았던 경우"
+      },
+      "summary": {
+        "en": "Only about 7% of our agents' sub-agent calls used a top-tier model. Across five small in-house measurements and then an 84-call test on seven of our real incidents, we found no clear gain from the bigger model on our kind of work. Small samples, so read it as a hypothesis and a next test, not a conclusion.",
+        "ko": "우리 에이전트의 서브에이전트 호출 중 최상위 등급 모델은 약 7%였습니다. 자체 측정 다섯 가지와, 실제 사고 7개로 돌린 84회 시험에서 우리 일에는 더 큰 모델의 뚜렷한 이득이 보이지 않았습니다. 표본이 작아 결론이 아니라 가설과 다음 시험으로 읽어 주세요."
+      },
+      "nav_title": {
+        "en": "Where a pricier model rarely looked different for us: what our agent team measured",
+        "ko": "더 비싼 모델을 써도 달라 보이지 않았던 경우: 우리 에이전트 팀이 측정한 것"
+      }
     }
   ]
 }
